@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Main Menu -->
+    <menuitem id="menu_contracts_management_root"
+              name="Contracts Management"
+              sequence="10"/>
+
+    <!-- Contract Templates Menu -->
+    <menuitem id="menu_contract_templates"
+              name="Contract Templates"
+              parent="menu_contracts_management_root"
+              action="action_contract_template"
+              sequence="10"/>
+</odoo>

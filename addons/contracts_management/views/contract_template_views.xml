@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List View -->
+    <record id="view_contract_template_list" model="ir.ui.view">
+        <field name="name">contract.template.list</field>
+        <field name="model">contract.template</field>
+        <field name="arch" type="xml">
+            <list string="Contract Templates">
+                <field name="name"/>
+                <field name="template_type"/>
+                <field name="extraction_status"/>
+                <field name="file_path"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_contract_template_form" model="ir.ui.view">
+        <field name="name">contract.template.form</field>
+        <field name="model">contract.template</field>
+        <field name="arch" type="xml">
+            <form string="Contract Template">
+                <header>
+                    <button name="extract_contract_fields" 
+                            string="Extract Contract Fields" 
+                            type="object" 
+                            class="oe_highlight"
+                            invisible="extraction_status == 'in_progress'"/>
+                    <field name="extraction_status" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="template_type"/>
+                        </group>
+                        <group>
+                            <field name="file_path"/>
+                        </group>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Extracted Fields" invisible="extraction_status in ['not_extracted', 'in_progress']">
+                            <group>
+                                <field name="required_fields" widget="ace" options="{'mode': 'json'}" nolabel="1"/>
+                            </group>
+                        </page>
+                        <page string="Suggested Defaults" invisible="extraction_status in ['not_extracted', 'in_progress']">
+                            <group>
+                                <field name="suggested_defaults" widget="ace" options="{'mode': 'json'}" nolabel="1"/>
+                            </group>
+                        </page>
+                        <page string="Fields List" invisible="not fields_list">
+                            <group>
+                                <field name="fields_list" widget="ace" options="{'mode': 'json'}" nolabel="1"/>
+                            </group>
+                        </page>
+                        <page string="Extraction Error" invisible="extraction_status != 'error'">
+                            <group>
+                                <field name="extraction_error" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Server Action for Extract Fields -->
+    <record id="action_server_extract_fields" model="ir.actions.server">
+        <field name="name">Extract Contract Fields</field>
+        <field name="model_id" ref="model_contract_template"/>
+        <field name="binding_model_id" ref="model_contract_template"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    for record in records:
+        record.extract_contract_fields()
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_contract_template" model="ir.actions.act_window">
+        <field name="name">Contract Templates</field>
+        <field name="res_model">contract.template</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first contract template
+            </p>
+            <p>
+                Contract templates are automatically loaded from the Contrats_template/ directory.
+            </p>
+        </field>
+    </record>
+</odoo>
