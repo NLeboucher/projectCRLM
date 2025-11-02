@@ -1,3 +1,5 @@
+*.key
+dependencies/onlyoffice/db/
 # sphinx build directories
 _build/
 
