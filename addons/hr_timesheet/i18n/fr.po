@@ -8,13 +8,15 @@
 # Cécile Collart <cco@odoo.com>, 2022
 # Jolien De Paepe, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Manon Rondou (ronm)" <ronm@odoo.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 13:57+0000\n"
-"PO-Revision-Date: 2025-09-14 21:19+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-12-19 18:37+0000\n"
+"PO-Revision-Date: 2025-11-18 13:49+0000\n"
+"Last-Translator: \"Manon Rondou (ronm)\" <ronm@odoo.com>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-19/"
 "hr_timesheet/fr/>\n"
 "Language: fr\n"
@@ -92,8 +94,8 @@ msgid ""
 "'%(missing_plan_names)s' analytic plan(s) required on the project '%"
 "(project_name)s' linked to the timesheet."
 msgstr ""
-"'%(missing_plan_names)s' plan(s) analytique(s) requis pour le projet "
-"'%(project_name)s' lié à la feuille de temps."
+"'%(missing_plan_names)s' plan(s) analytique(s) requis pour le projet '%"
+"(project_name)s' lié à la feuille de temps."
 
 #. module: hr_timesheet
 #. odoo-python
@@ -187,8 +189,8 @@ msgstr ""
 "                            Voici vos deux options : soit supprimer ces "
 "feuilles de temps, soit envisager d’archiver l’employé à la place.\n"
 "                        </span>\n"
-"                        <span invisible=\"has_active_employee\" groups="
-"\"hr_timesheet.group_hr_timesheet_approver\">\n"
+"                        <span invisible=\"has_active_employee\" "
+"groups=\"hr_timesheet.group_hr_timesheet_approver\">\n"
 "                            Veuillez d’abord supprimer toutes leurs feuilles "
 "de temps.\n"
 "                        </span>\n"
@@ -603,7 +605,7 @@ msgstr "Dispose de l'accès responsable du département"
 #. module: hr_timesheet
 #: model:ir.model.fields,field_description:hr_timesheet.field_hr_employee_public__has_timesheet
 msgid "Has Timesheet"
-msgstr ""
+msgstr "A une feuille de temps"
 
 #. module: hr_timesheet
 #: model:ir.model.fields.selection,name:hr_timesheet.selection__res_config_settings__timesheet_encode_method__hours
@@ -635,7 +637,7 @@ msgstr "ID"
 #. odoo-python
 #: code:addons/hr_timesheet/models/hr_timesheet.py:0
 msgid "Import Template for Timesheets"
-msgstr ""
+msgstr "Modèle d’importation pour feuilles de temps"
 
 #. module: hr_timesheet
 #. odoo-python
@@ -771,6 +773,12 @@ msgstr "Pas encore de données !"
 
 #. module: hr_timesheet
 #. odoo-python
+#: code:addons/hr_timesheet/models/hr_timesheet.py:0
+msgid "No timesheets created: employees aren’t working on the selected days"
+msgstr ""
+
+#. module: hr_timesheet
+#. odoo-python
 #: code:addons/hr_timesheet/controllers/portal.py:0
 msgid "None"
 msgstr "Aucun"
@@ -862,7 +870,7 @@ msgstr "Feuilles de temps du projet"
 #. module: hr_timesheet
 #: model:ir.model,name:hr_timesheet.model_hr_employee_public
 msgid "Public Employee"
-msgstr ""
+msgstr "Employé public"
 
 #. module: hr_timesheet
 #: model_terms:ir.actions.act_window,help:hr_timesheet.act_hr_timesheet_line_by_project
@@ -979,6 +987,14 @@ msgid ""
 msgstr ""
 "Certaines entrées de feuille de temps empêchent la suppression de ces "
 "tâches. Veuillez les supprimer en premier lieu !"
+
+#. module: hr_timesheet
+#. odoo-python
+#: code:addons/hr_timesheet/models/hr_timesheet.py:0
+msgid ""
+"Some timesheets were not created: employees aren’t working on the selected "
+"days"
+msgstr ""
 
 #. module: hr_timesheet
 #: model_terms:ir.ui.view,arch_db:hr_timesheet.timesheet_report_subtask
@@ -1338,12 +1354,6 @@ msgid "Timesheets cannot be created on a private task."
 msgstr "Il est impossible de créer des feuilles de temps sur une tâche privée."
 
 #. module: hr_timesheet
-#. odoo-javascript
-#: code:addons/hr_timesheet/static/src/views/timesheet_calendar/timesheet_calendar_model.js:0
-msgid "Timesheets could not be created for any of the selected days"
-msgstr ""
-
-#. module: hr_timesheet
 #. odoo-python
 #: code:addons/hr_timesheet/models/hr_timesheet.py:0
 msgid ""
@@ -1369,10 +1379,10 @@ msgid "Timesheets of %(name)s"
 msgstr "Feuilles de temps de %(name)s"
 
 #. module: hr_timesheet
-#. odoo-javascript
-#: code:addons/hr_timesheet/static/src/views/timesheet_calendar/timesheet_calendar_model.js:0
+#. odoo-python
+#: code:addons/hr_timesheet/models/hr_timesheet.py:0
 msgid "Timesheets successfully created"
-msgstr ""
+msgstr "Feuilles de temps créées avec succès"
 
 #. module: hr_timesheet
 #: model:digest.tip,name:hr_timesheet.digest_tip_hr_timesheet_0
@@ -1388,8 +1398,8 @@ msgid ""
 "timesheets feature."
 msgstr ""
 "Pour utiliser la fonction de feuilles de temps, vous devez disposer d'un "
-"compte analytique pour votre projet. Veuillez en créer un dans le plan "
-"'%(plan_name)s' ou désactiver la fonctionnalité de feuilles de temps."
+"compte analytique pour votre projet. Veuillez en créer un dans le plan '%"
+"(plan_name)s' ou désactiver la fonctionnalité de feuilles de temps."
 
 #. module: hr_timesheet
 #. odoo-python
@@ -1462,6 +1472,17 @@ msgid ""
 "        Make sure to use the right format and order e.g. Improve the "
 "configuration screen 5h #feature #v16 @Mitchell !"
 msgstr ""
+"Utilisez ces mots-clés dans le titre pour créer de nouvelles tâches :\n"
+"\n"
+"    30h Allouer 30 heures à la tâche  \n"
+"    #tags Ajouter des tags à la tâche  \n"
+"    @user Assigner la tâche à un utilisateur  \n"
+"    ! Définir la tâche comme priorité moyenne  \n"
+"    !! Définir la tâche comme priorité élevée  \n"
+"    !!! Définir la tâche comme priorité urgente  \n"
+"\n"
+"    Veillez à utiliser le bon format et l’ordre correct, par exemple : "
+"Améliorer l’écran de configuration 5h #feature #v16 @Mitchell !"
 
 #. module: hr_timesheet
 #: model:ir.model.fields,field_description:hr_timesheet.field_account_analytic_line__user_id
@@ -1584,8 +1605,12 @@ msgid ""
 "                        <span class=\"fw-bold text-dark\"> Sub-tasks</span>)"
 msgstr ""
 "sur\n"
-"                        <span class=\"fw-bold text-dark\"> des sous-"
-"tâches</span>)"
+"                        <span class=\"fw-bold text-dark\"> des sous-tâches</"
+"span>)"
+
+#~ msgid "Timesheets could not be created for any of the selected days"
+#~ msgstr ""
+#~ "Aucune feuille de temps n’a pu être créée pour les jours sélectionnés"
 
 #~ msgid "%s Spent"
 #~ msgstr "%s passé"

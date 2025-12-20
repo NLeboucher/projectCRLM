@@ -4,6 +4,7 @@ from num2words import num2words
 
 from odoo import api, models
 from odoo.exceptions import UserError
+from odoo.tools import html2plaintext
 
 
 class AccountEdiXmlUblTr(models.AbstractModel):
@@ -45,10 +46,10 @@ class AccountEdiXmlUblTr(models.AbstractModel):
         if invoice._l10n_tr_nilvera_einvoice_check_negative_lines():
             raise UserError(self.env._("Nilvera portal cannot process negative quantity nor negative price on invoice lines"))
 
-        # For now, we assume that the sequence is going to be in the format {prefix}/{year}/{invoice_number}.
-        # To send an invoice to Nlvera, the format needs to follow ABC2009123456789.
-        parts = invoice.name.split('/')
-        prefix, year, number = parts[0], parts[1], parts[2].zfill(9)
+        # Using _get_sequence_format_param to extract the invoice sequence components for various formats.
+        # To send an invoice to Nilvera, the format needs to follow ABC2009123456789.
+        _, parts = invoice._get_sequence_format_param(invoice.name)
+        prefix, year, number = parts['prefix1'][:3], parts['year'], str(parts['seq']).zfill(9)
         invoice_id = f"{prefix.upper()}{year}{number}"
 
         document_node.update({
@@ -66,6 +67,9 @@ class AccountEdiXmlUblTr(models.AbstractModel):
                 if vals['currency_id'] != vals['company_currency_id'] else None,
             'cbc:LineCountNumeric': {'_text': len(invoice.line_ids)},
             'cbc:BuyerReference': None,  # Nilvera will reject any <BuyerReference> tag, so remove it
+            'cbc:Note': {
+                '_text': html2plaintext(invoice.narration, include_references=False) if invoice.narration else None,
+            },
         })
 
         if invoice.invoice_line_ids._fields.get('deferred_start_date'):
@@ -169,9 +173,8 @@ class AccountEdiXmlUblTr(models.AbstractModel):
         state = partner['state' if model == 'res.bank' else 'state_id']
 
         return {
-            'cbc:StreetName': {'_text': partner.street},
+            'cbc:StreetName': {'_text': ' '.join(s for s in [partner.street, partner.street2] if s)},
             'cbc:CitySubdivisionName': {'_text': partner.city},
-            'cbc:AdditionalStreetName': {'_text': partner.street2},
             'cbc:CityName': {'_text': state.name},
             'cbc:PostalZone': {'_text': partner.zip},
             'cac:Country': {

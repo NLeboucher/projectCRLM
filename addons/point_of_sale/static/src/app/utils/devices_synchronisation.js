@@ -90,7 +90,7 @@ export default class DevicesSynchronisation {
      * and synchronize the records with other devices.
      */
     async readDataFromServer() {
-        const serverOpenOrders = this.pos.getOpenOrders().filter((o) => typeof o.id === "number");
+        const serverOpenOrders = this.pos.getOpenOrders().filter((o) => o.isSynced);
         const { domain, recordIds } = this.constructOrdersDomain(serverOpenOrders);
         let response = {};
         try {
@@ -124,7 +124,18 @@ export default class DevicesSynchronisation {
             );
 
             this.processStaticRecords(staticR);
-            await this.processDynamicRecords(dynamicR);
+            const res = await this.processDynamicRecords(dynamicR);
+            if (res && res["pos.order"]) {
+                const config = this.pos.config;
+                const session = this.models["pos.session"].get(odoo.pos_session_id);
+
+                for (const order of res["pos.order"]) {
+                    // Clear commands
+                    order.serializeForORM();
+                    order.config_id = config;
+                    order.session_id = session;
+                }
+            }
         }
 
         if (Object.keys(response.deleted_record_ids).length) {
@@ -178,7 +189,7 @@ export default class DevicesSynchronisation {
 
         const recordIdsByModel = {};
         const domainByModel = Object.entries(recordsToCheck).reduce((acc, [model, records]) => {
-            const serverRecs = records.filter((r) => typeof r.id === "number");
+            const serverRecs = records.filter((r) => r.isSynced);
             const ids = serverRecs.map((r) => r.id);
             const config = this.pos.config;
             const domains = [];
@@ -219,7 +230,7 @@ export default class DevicesSynchronisation {
                     new Domain([
                         ["id", "not in", ids],
                         ["state", "=", "draft"],
-                        ["config_id", "in", [config.id, ...config.trusted_config_ids]],
+                        ["config_id", "in", [config.id, ...config.raw.trusted_config_ids]],
                     ]),
                 ]);
 

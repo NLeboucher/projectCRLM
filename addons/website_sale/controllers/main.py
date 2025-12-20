@@ -17,6 +17,7 @@ from odoo.tools import SQL, clean_context, float_round, groupby, lazy, str2bool
 from odoo.tools.json import scriptsafe as json_scriptsafe
 from odoo.tools.translate import LazyTranslate, _
 
+from odoo.addons.payment import utils as payment_utils
 from odoo.addons.payment.controllers import portal as payment_portal
 from odoo.addons.sale.controllers import portal as sale_portal
 from odoo.addons.html_editor.tools import get_video_thumbnail
@@ -288,7 +289,7 @@ class WebsiteSale(payment_portal.PaymentPortal):
     )
     def shop(self, page=0, category=None, search='', min_price=0.0, max_price=0.0, tags='', **post):
         if not request.website.has_ecommerce_access():
-            return request.redirect('/web/login')
+            return request.redirect(f'/web/login?redirect={request.httprequest.path}')
 
         is_category_in_query = category and isinstance(category, str)
         category = self._validate_and_get_category(category)
@@ -378,7 +379,8 @@ class WebsiteSale(payment_portal.PaymentPortal):
         if filter_by_price_enabled:
             # TODO Find an alternative way to obtain the domain through the search metadata.
             Product = request.env['product.template'].with_context(bin_size=True)
-            domain = self._get_shop_domain(search, category, attribute_value_dict)
+            search_term = fuzzy_search_term if fuzzy_search_term else search
+            domain = self._get_shop_domain(search_term, category, attribute_value_dict)
 
             # This is ~4 times more efficient than a search for the cheapest and most expensive products
             query = Product._search(domain)
@@ -406,13 +408,18 @@ class WebsiteSale(payment_portal.PaymentPortal):
 
         ProductTag = request.env['product.tag']
         if filter_by_tags_enabled and search_product:
-            all_tags = ProductTag.search(Domain.AND([
-                Domain('product_ids.is_published', '=', True),
+            all_tags = ProductTag.search_fetch(Domain.AND([
                 Domain('visible_to_customers', '=', True),
+                Domain.OR([
+                    Domain('product_template_ids.is_published', '=', True),
+                    Domain('product_ids.is_published', '=', True),
+                ]),
                 website_domain,
             ]))
         else:
             all_tags = ProductTag
+
+        # categories
 
         Category = request.env['product.public.category']
         categs_domain = Domain('parent_id', '=', False) & website_domain
@@ -425,11 +432,30 @@ class WebsiteSale(payment_portal.PaymentPortal):
             categs_domain &= Domain('id', 'in', search_categories.ids)
         else:
             search_categories = Category
-        categs = lazy(lambda: Category.search(categs_domain))
+        categs = Category.search_fetch(categs_domain)
+
+        category_entries = Category
+        if category:
+            category_entries = not search and category.child_id or category.child_id.filtered(lambda c: c.id in search_categories.ids)
+            if not category_entries:
+                parent = category.parent_id
+                category_entries = not search and parent.child_id or parent.child_id.filtered(lambda c: c.id in search_categories.ids)
+        else:
+            category_entries = categs
+        if not request.env.user._is_internal():
+            category_entries = category_entries.filtered('has_published_products')
+
+        # products for current pager
 
         pager = website.pager(url=url, total=product_count, page=page, step=ppg, scope=5, url_args=post)
         offset = pager['offset']
         products = search_product[offset:offset + ppg]
+        products.fetch()
+
+        # map each product to its variant, and prefetch the variants
+        variants = request.env['product.product'].sudo().browse(product._get_first_possible_variant_id() for product in products)
+        variants.fetch()
+        product_variants = dict(zip(products, variants))
 
         ProductAttribute = request.env['product.attribute']
         if products:
@@ -439,18 +465,20 @@ class WebsiteSale(payment_portal.PaymentPortal):
                     ('product_tmpl_id', 'in', search_product.ids),
                     ('attribute_id.visibility', '=', 'visible'),
                 ],
-                groupby=['attribute_id']
+                groupby=['attribute_id'],
+                order='attribute_id'
             )
-
-            attribute_ids = [attribute.id for attribute, *aggregates in attributes_grouped]
-        attributes = lazy(lambda: ProductAttribute.browse(attribute_ids).sorted())
+            attribute_ids = [attribute.id for attribute, in attributes_grouped]
+            attributes = ProductAttribute.browse(attribute_ids)
+        else:
+            attributes = ProductAttribute.browse(attribute_ids).sorted()
 
         if website.is_view_active('website_sale.products_list_view'):
             layout_mode = 'list'
         else:
             layout_mode = 'grid'
 
-        products_prices = lazy(lambda: products._get_sales_prices(website))
+        products_prices = products._get_sales_prices(website)
         product_query_params = self._get_product_query_params(**post)
 
         grouped_attributes_values = request.env['product.attribute.value'].browse(
@@ -458,9 +486,7 @@ class WebsiteSale(payment_portal.PaymentPortal):
         ).sorted().grouped('attribute_id')
 
         values = {
-            'auto_assign_ribbons': lazy(
-                lambda: self.env['product.ribbon'].sudo().search([('assign', '!=', 'manual')])
-            ),
+            'auto_assign_ribbons': self.env['product.ribbon'].sudo().search([('assign', '!=', 'manual')]),
             'search': fuzzy_search_term or search,
             'original_search': fuzzy_search_term and search,
             'order': post.get('order', ''),
@@ -469,19 +495,20 @@ class WebsiteSale(payment_portal.PaymentPortal):
             'attrib_set': attribute_value_ids,
             'pager': pager,
             'products': products,
+            'product_variants': product_variants,
             'search_product': search_product,
             'search_count': product_count,  # common for all searchbox
-            'bins': lazy(lambda: TableCompute().process(products, ppg, ppr)),
+            'bins': TableCompute().process(products, ppg, ppr),
             'ppg': ppg,
             'ppr': ppr,
             'gap': gap,
             'categories': categs,
+            'category_entries': category_entries,
             'attributes': attributes,
             'keep': keep,
             'search_categories_ids': search_categories.ids,
             'layout_mode': layout_mode,
-            'products_prices': products_prices,
-            'get_product_prices': lambda product: lazy(lambda: products_prices[product.id]),
+            'get_product_prices': lambda product: products_prices[product.id],
             'float_round': float_round,
             'shop_path': SHOP_PATH,
             'product_query_params': product_query_params,
@@ -515,7 +542,7 @@ class WebsiteSale(payment_portal.PaymentPortal):
     )
     def product(self, product, category=None, pricelist=None, **kwargs):
         if not request.website.has_ecommerce_access():
-            return request.redirect('/web/login')
+            return request.redirect(f'/web/login?redirect={request.httprequest.path}')
 
         if pricelist is not None:
             try:
@@ -1529,6 +1556,16 @@ class WebsiteSale(payment_portal.PaymentPortal):
         }
         return checkout_page_values | payment_form_values
 
+    @route(
+        _express_checkout_delivery_route + '/compute_taxes', type='jsonrpc', auth='public',
+        website=True, sitemap=False,
+    )
+    def express_checkout_shipping_address_compute_taxes(self):
+        order_sudo = request.cart
+        order_sudo._recompute_taxes()
+
+        return payment_utils.to_minor_currency_units(order_sudo.amount_total, order_sudo.currency_id)
+
     def _get_shop_payment_errors(self, order):
         """ Check that there is no error that should block the payment.
 
@@ -1901,6 +1938,8 @@ class WebsiteSale(payment_portal.PaymentPortal):
         :rtype: product.public.category
         """
         ProductCategory = request.env['product.public.category']
+        if not isinstance(category, ProductCategory.__class__) and category and not str(category).isdigit():
+            raise ValidationError(_("Invalid category."))
         if (
             (category := ProductCategory.browse(category and int(category)).exists())
             and category.can_access_from_current_website()

@@ -7,6 +7,13 @@ import { setupEditor, testEditor } from "../_helpers/editor";
 import { unformat } from "../_helpers/format";
 import { getContent, setSelection } from "../_helpers/selection";
 import { deleteBackward, insertText, tripleClick, undo } from "../_helpers/user_actions";
+import { EMBEDDED_COMPONENT_PLUGINS, MAIN_PLUGINS } from "@html_editor/plugin_sets";
+import {
+    compareHighlightedContent,
+    highlightedPre,
+    patchPrism,
+} from "../_helpers/syntax_highlighting";
+import { MAIN_EMBEDDINGS } from "@html_editor/others/embedded_components/embedding_sets";
 
 /**
  * content of the "deleteBackward" sub suite in editor.test.js
@@ -102,14 +109,18 @@ describe("Selection collapsed", () => {
                 contentBefore: "<div><p>ab</p><br><i>c[]</i></div>",
                 stepFunction: deleteBackward,
                 contentAfterEdit:
-                    '<div><p>ab</p><br><i data-oe-zws-empty-inline="">[]\u200B</i></div>',
+                    '<p data-selection-placeholder=""><br></p>' +
+                    '<div><p>ab</p><br><i data-oe-zws-empty-inline="">[]\u200B</i></div>' +
+                    '<p data-selection-placeholder=""><br></p>',
                 contentAfter: "<div><p>ab</p><br><br>[]</div>",
             });
             await testEditor({
                 contentBefore: '<div><p>uv</p><br><span class="style">w[]</span></div>',
                 stepFunction: deleteBackward,
                 contentAfterEdit:
-                    '<div><p>uv</p><br><span class="style" data-oe-zws-empty-inline="">[]\u200B</span></div>',
+                    '<p data-selection-placeholder=""><br></p>' +
+                    '<div><p>uv</p><br><span class="style" data-oe-zws-empty-inline="">[]\u200B</span></div>' +
+                    '<p data-selection-placeholder=""><br></p>',
                 contentAfter: '<div><p>uv</p><br><span class="style">[]\u200B</span></div>',
             });
             await testEditor({
@@ -118,7 +129,10 @@ describe("Selection collapsed", () => {
                     deleteBackward(editor);
                     await insertText(editor, "x");
                 },
-                contentAfterEdit: '<div><p>cd</p><br><span class="a">x[]</span></div>',
+                contentAfterEdit:
+                    '<p data-selection-placeholder=""><br></p>' +
+                    '<div><p>cd</p><br><span class="a">x[]</span></div>' +
+                    '<p data-selection-placeholder=""><br></p>',
                 contentAfter: '<div><p>cd</p><br><span class="a">x[]</span></div>',
             });
         });
@@ -502,6 +516,22 @@ describe("Selection collapsed", () => {
                 contentAfter: `<p>a[]</p>`,
             });
         });
+
+        test("should delete empty styled paragraph(s) and move cursor to previous styled inline", async () => {
+            await testEditor({
+                contentBefore: `<p><strong data-oe-zws-empty-inline="">\u200B</strong></p><p><strong data-oe-zws-empty-inline="">[]\u200B</strong></p>`,
+                stepFunction: deleteBackward,
+                contentAfterEdit: `<p o-we-hint-text='Type "/" for commands' class="o-we-hint"><strong data-oe-zws-empty-inline="">\u200B[]</strong><br></p>`,
+                contentAfter: `<p>[]<br></p>`,
+            });
+
+            await testEditor({
+                contentBefore: `<p><strong>abc</strong></p><p><strong data-oe-zws-empty-inline="">\u200B</strong></p><p><strong data-oe-zws-empty-inline="">\u200B</strong></p><p><strong data-oe-zws-empty-inline="">[]\u200B</strong></p>`,
+                stepFunction: deleteBackward,
+                contentAfterEdit: `<p><strong>abc</strong></p><p><strong data-oe-zws-empty-inline="">\u200B</strong><br></p><p o-we-hint-text='Type "/" for commands' class="o-we-hint"><strong data-oe-zws-empty-inline="">\u200B[]</strong><br></p>`,
+                contentAfter: `<p><strong>abc</strong></p><p><br></p><p>[]<br></p>`,
+            });
+        });
     });
 
     describe("Line breaks", () => {
@@ -802,79 +832,256 @@ describe("Selection collapsed", () => {
     });
 
     describe("Pre", () => {
-        test("should delete a character in a pre", async () => {
-            await testEditor({
-                contentBefore: "<pre>ab[]cd</pre>",
-                stepFunction: deleteBackward,
-                contentAfter: "<pre>a[]cd</pre>",
+        describe("with syntax highlighting", () => {
+            const configWithEmbeddings = {
+                Plugins: [...MAIN_PLUGINS, ...EMBEDDED_COMPONENT_PLUGINS],
+                resources: { embedded_components: MAIN_EMBEDDINGS },
+            };
+            const testDeleteInCodeBlock = (selectionStart) => async (editor) => {
+                // Set the given selection in the textarea.
+                const textarea = editor.editable.querySelector("textarea");
+                textarea.focus();
+                textarea.setSelectionRange(selectionStart, selectionStart, "forward");
+                // Trigger native delete backward.
+                await editor.document.execCommand("delete", false, null);
+                // Wait for the input event to resolve so the content is
+                // highlighted and the focus is in the textarea.
+                await animationFrame();
+            };
+
+            beforeEach(patchPrism);
+
+            test("should delete a character in a pre", async () => {
+                await testEditor({
+                    compareFunction: compareHighlightedContent,
+                    contentBefore: "<pre>abcd</pre>",
+                    contentBeforeEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "abcd" }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    stepFunction: testDeleteInCodeBlock(2),
+                    contentAfterEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "acd", textareaRange: 1 }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    contentAfter: `<pre data-embedded="readonlySyntaxHighlighting" data-language-id="plaintext">acd</pre>[]`,
+                    config: configWithEmbeddings,
+                });
+            });
+
+            test("should delete a character in a pre (space before)", async () => {
+                await testEditor({
+                    compareFunction: compareHighlightedContent,
+                    contentBefore: "<pre>     abcd</pre>",
+                    contentBeforeEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "     abcd" }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    stepFunction: testDeleteInCodeBlock(7), // ab[]cd
+                    contentAfterEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "     acd", textareaRange: 6 }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    contentAfter: `<pre data-embedded="readonlySyntaxHighlighting" data-language-id="plaintext">     acd</pre>[]`,
+                    config: configWithEmbeddings,
+                });
+            });
+
+            test("should delete a character in a pre (space after)", async () => {
+                await testEditor({
+                    compareFunction: compareHighlightedContent,
+                    contentBefore: "<pre>abcd     </pre>",
+                    contentBeforeEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "abcd     " }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    stepFunction: testDeleteInCodeBlock(2),
+                    contentAfterEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "acd     ", textareaRange: 1 }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    contentAfter: `<pre data-embedded="readonlySyntaxHighlighting" data-language-id="plaintext">acd     </pre>[]`,
+                    config: configWithEmbeddings,
+                });
+            });
+
+            test("should delete a character in a pre (space before and after)", async () => {
+                await testEditor({
+                    compareFunction: compareHighlightedContent,
+                    contentBefore: "<pre>     abcd     </pre>",
+                    contentBeforeEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "     abcd     " }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    stepFunction: testDeleteInCodeBlock(7), // ab[]cd
+                    contentAfterEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "     acd     ", textareaRange: 6 }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    contentAfter: `<pre data-embedded="readonlySyntaxHighlighting" data-language-id="plaintext">     acd     </pre>[]`,
+                    config: configWithEmbeddings,
+                });
+            });
+
+            test("should delete a space in a pre", async () => {
+                await testEditor({
+                    compareFunction: compareHighlightedContent,
+                    contentBefore: "<pre>     ab</pre>",
+                    contentBeforeEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "     ab" }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    stepFunction: testDeleteInCodeBlock(3), // "   []  ab"
+                    contentAfterEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "    ab", textareaRange: 2 }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    contentAfter: `<pre data-embedded="readonlySyntaxHighlighting" data-language-id="plaintext">    ab</pre>[]`,
+                    config: configWithEmbeddings,
+                });
+            });
+
+            test("should delete a newline in a pre", async () => {
+                await testEditor({
+                    compareFunction: compareHighlightedContent,
+                    contentBefore: "<pre>ab\ncd</pre>",
+                    contentBeforeEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "ab\ncd" }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    stepFunction: testDeleteInCodeBlock(3), // ab\n[]cd
+                    contentAfterEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "abcd", textareaRange: 2 }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    contentAfter: `<pre data-embedded="readonlySyntaxHighlighting" data-language-id="plaintext">abcd</pre>[]`,
+                    config: configWithEmbeddings,
+                });
+            });
+
+            test("should delete all leading space in a pre", async () => {
+                await testEditor({
+                    compareFunction: compareHighlightedContent,
+                    contentBefore: "<pre>     ab</pre>",
+                    contentBeforeEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "     ab" }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    stepFunction: async (editor) => {
+                        await testDeleteInCodeBlock(5)(editor); // "     []ab"
+                        await testDeleteInCodeBlock(4)(editor); // "    []ab"
+                        await testDeleteInCodeBlock(3)(editor); // "   []ab"
+                        await testDeleteInCodeBlock(2)(editor); // "  []ab"
+                        await testDeleteInCodeBlock(1)(editor); // " []ab"
+                    },
+                    contentAfterEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "ab", textareaRange: 0 }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    contentAfter: `<pre data-embedded="readonlySyntaxHighlighting" data-language-id="plaintext">ab</pre>[]`,
+                    config: configWithEmbeddings,
+                });
+            });
+
+            test("should delete all trailing space in a pre", async () => {
+                await testEditor({
+                    compareFunction: compareHighlightedContent,
+                    contentBefore: "<pre>ab     </pre>",
+                    contentBeforeEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "ab     " }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    stepFunction: async (editor) => {
+                        await testDeleteInCodeBlock(7)(editor); // "ab     []"
+                        await testDeleteInCodeBlock(6)(editor); // "ab    []"
+                        await testDeleteInCodeBlock(5)(editor); // "ab   []"
+                        await testDeleteInCodeBlock(4)(editor); // "ab  []"
+                        await testDeleteInCodeBlock(3)(editor); // "ab []"
+                    },
+                    contentAfterEdit:
+                        '<p data-selection-placeholder=""><br></p>' +
+                        highlightedPre({ value: "ab", textareaRange: 2 }) +
+                        '<p data-selection-placeholder="" style="margin: -9px 0px 8px;"><br></p>',
+                    contentAfter: `<pre data-embedded="readonlySyntaxHighlighting" data-language-id="plaintext">ab</pre>[]`,
+                    config: configWithEmbeddings,
+                });
             });
         });
-
-        test("should delete a character in a pre (space before)", async () => {
-            await testEditor({
-                contentBefore: "<pre>     ab[]cd</pre>",
-                stepFunction: deleteBackward,
-                contentAfter: "<pre>     a[]cd</pre>",
+        describe("without syntax highlighting", () => {
+            test("should delete a character in a pre", async () => {
+                await testEditor({
+                    contentBefore: "<pre>ab[]cd</pre>",
+                    stepFunction: deleteBackward,
+                    contentAfter: "<pre>a[]cd</pre>",
+                });
             });
-        });
 
-        test("should delete a character in a pre (space after)", async () => {
-            await testEditor({
-                contentBefore: "<pre>ab[]cd     </pre>",
-                stepFunction: deleteBackward,
-                contentAfter: "<pre>a[]cd     </pre>",
+            test("should delete a character in a pre (space before)", async () => {
+                await testEditor({
+                    contentBefore: "<pre>     ab[]cd</pre>",
+                    stepFunction: deleteBackward,
+                    contentAfter: "<pre>     a[]cd</pre>",
+                });
             });
-        });
 
-        test("should delete a character in a pre (space before and after)", async () => {
-            await testEditor({
-                contentBefore: "<pre>     ab[]cd     </pre>",
-                stepFunction: deleteBackward,
-                contentAfter: "<pre>     a[]cd     </pre>",
+            test("should delete a character in a pre (space after)", async () => {
+                await testEditor({
+                    contentBefore: "<pre>ab[]cd     </pre>",
+                    stepFunction: deleteBackward,
+                    contentAfter: "<pre>a[]cd     </pre>",
+                });
             });
-        });
 
-        test("should delete a space in a pre", async () => {
-            await testEditor({
-                contentBefore: "<pre>   []  ab</pre>",
-                stepFunction: deleteBackward,
-                contentAfter: "<pre>  []  ab</pre>",
+            test("should delete a character in a pre (space before and after)", async () => {
+                await testEditor({
+                    contentBefore: "<pre>     ab[]cd     </pre>",
+                    stepFunction: deleteBackward,
+                    contentAfter: "<pre>     a[]cd     </pre>",
+                });
             });
-        });
 
-        test("should delete a newline in a pre", async () => {
-            await testEditor({
-                contentBefore: "<pre>ab\n[]cd</pre>",
-                stepFunction: deleteBackward,
-                contentAfter: "<pre>ab[]cd</pre>",
+            test("should delete a space in a pre", async () => {
+                await testEditor({
+                    contentBefore: "<pre>   []  ab</pre>",
+                    stepFunction: deleteBackward,
+                    contentAfter: "<pre>  []  ab</pre>",
+                });
             });
-        });
 
-        test("should delete all leading space in a pre", async () => {
-            await testEditor({
-                contentBefore: "<pre>     []ab</pre>",
-                stepFunction: async (BasicEditor) => {
-                    deleteBackward(BasicEditor);
-                    deleteBackward(BasicEditor);
-                    deleteBackward(BasicEditor);
-                    deleteBackward(BasicEditor);
-                    deleteBackward(BasicEditor);
-                },
-                contentAfter: "<pre>[]ab</pre>",
+            test("should delete a newline in a pre", async () => {
+                await testEditor({
+                    contentBefore: "<pre>ab\n[]cd</pre>",
+                    stepFunction: deleteBackward,
+                    contentAfter: "<pre>ab[]cd</pre>",
+                });
             });
-        });
 
-        test("should delete all trailing space in a pre", async () => {
-            await testEditor({
-                contentBefore: "<pre>ab     []</pre>",
-                stepFunction: async (BasicEditor) => {
-                    deleteBackward(BasicEditor);
-                    deleteBackward(BasicEditor);
-                    deleteBackward(BasicEditor);
-                    deleteBackward(BasicEditor);
-                    deleteBackward(BasicEditor);
-                },
-                contentAfter: "<pre>ab[]</pre>",
+            test("should delete all leading space in a pre", async () => {
+                await testEditor({
+                    contentBefore: "<pre>     []ab</pre>",
+                    stepFunction: async (editor) => {
+                        deleteBackward(editor);
+                        deleteBackward(editor);
+                        deleteBackward(editor);
+                        deleteBackward(editor);
+                        deleteBackward(editor);
+                    },
+                    contentAfter: "<pre>[]ab</pre>",
+                });
+            });
+
+            test("should delete all trailing space in a pre", async () => {
+                await testEditor({
+                    contentBefore: "<pre>ab     []</pre>",
+                    stepFunction: async (editor) => {
+                        deleteBackward(editor);
+                        deleteBackward(editor);
+                        deleteBackward(editor);
+                        deleteBackward(editor);
+                        deleteBackward(editor);
+                    },
+                    contentAfter: "<pre>ab[]</pre>",
+                });
             });
         });
     });
@@ -1122,6 +1329,7 @@ describe("Selection collapsed", () => {
         test("should remove the uneditable nesting zone from the outside", async () => {
             await testEditor({
                 contentBefore: unformat(`
+                        <p data-selection-placeholder=""><br></p>
                         <div contenteditable="false">
                             <div contenteditable="true">
                                 <p>content</p>
@@ -1383,7 +1591,9 @@ describe("Selection not collapsed", () => {
                 deleteBackward(editor);
             },
             contentAfterEdit:
-                '<div><p>ab <span class="style" data-oe-zws-empty-inline="">[]\u200B</span> d</p></div>',
+                '<p data-selection-placeholder=""><br></p>' +
+                '<div><p>ab <span class="style" data-oe-zws-empty-inline="">[]\u200B</span> d</p></div>' +
+                '<p data-selection-placeholder=""><br></p>',
             contentAfter: '<div><p>ab <span class="style">[]\u200B</span> d</p></div>',
         });
         await testEditor({
@@ -1392,7 +1602,10 @@ describe("Selection not collapsed", () => {
                 deleteBackward(editor);
                 await insertText(editor, "x");
             },
-            contentAfterEdit: '<div><p>ab <span class="style">x[]</span> d</p></div>',
+            contentAfterEdit:
+                '<p data-selection-placeholder=""><br></p>' +
+                '<div><p>ab <span class="style">x[]</span> d</p></div>' +
+                '<p data-selection-placeholder=""><br></p>',
             contentAfter: '<div><p>ab <span class="style">x[]</span> d</p></div>',
         });
         await testEditor({
@@ -1401,7 +1614,9 @@ describe("Selection not collapsed", () => {
                 deleteBackward(editor);
             },
             contentAfterEdit:
-                '<div><p>ab <span data-oe-zws-empty-inline="">[]\u200B</span> d</p></div>',
+                '<p data-selection-placeholder=""><br></p>' +
+                '<div><p>ab <span data-oe-zws-empty-inline="">[]\u200B</span> d</p></div>' +
+                '<p data-selection-placeholder=""><br></p>',
             contentAfter: "<div><p>ab []&nbsp;d</p></div>",
         });
         await testEditor({
@@ -1410,7 +1625,10 @@ describe("Selection not collapsed", () => {
                 deleteBackward(editor);
                 await insertText(editor, "x");
             },
-            contentAfterEdit: '<div><p>ab<span class="style">x[]</span>d</p></div>',
+            contentAfterEdit:
+                '<p data-selection-placeholder=""><br></p>' +
+                '<div><p>ab<span class="style">x[]</span>d</p></div>' +
+                '<p data-selection-placeholder=""><br></p>',
             contentAfter: '<div><p>ab<span class="style">x[]</span>d</p></div>',
         });
         await testEditor({
@@ -1419,7 +1637,10 @@ describe("Selection not collapsed", () => {
                 deleteBackward(editor);
                 await insertText(editor, "x");
             },
-            contentAfterEdit: '<div><p>ab <span class="style">x[]</span> f</p></div>',
+            contentAfterEdit:
+                '<p data-selection-placeholder=""><br></p>' +
+                '<div><p>ab <span class="style">x[]</span> f</p></div>' +
+                '<p data-selection-placeholder=""><br></p>',
             contentAfter: '<div><p>ab <span class="style">x[]</span> f</p></div>',
         });
     });
@@ -1873,10 +2094,12 @@ describe("Selection not collapsed", () => {
                 </tbody></table>`
             ),
             contentBeforeEdit: unformat(
-                `[<table class="o_selected_table"><tbody>
+                `[<p data-selection-placeholder=""><br></p>
+                <table class="o_selected_table"><tbody>
                     <tr><td class="o_selected_td"><br></td><td class="o_selected_td"><br></td></tr>
                     <tr><td class="o_selected_td"><br></td><td class="o_selected_td">]<br></td></tr>
-                </tbody></table>`
+                </tbody></table>
+                <p data-selection-placeholder=""><br></p>`
             ),
             stepFunction: deleteBackward,
             contentAfter: unformat("<p>[]<br></p>"),
@@ -1891,12 +2114,22 @@ describe("Selection not collapsed", () => {
         });
     });
 
-    test("should delete if first element and append in paragraph", async () => {
+    test("should convert empty blockquote into base container regardless of its position in editable", async () => {
         await testEditor({
             contentBefore: `<blockquote><br>[]</blockquote>`,
             stepFunction: deleteBackward,
-            contentAfter: `<p>[]<br></p>`,
+            contentAfter: `<div>[]<br></div>`,
+            config: { baseContainers: ["DIV"] },
         });
+        await testEditor({
+            contentBefore: `<div><br></div><blockquote><br>[]</blockquote>`,
+            stepFunction: deleteBackward,
+            contentAfter: `<div><br></div><div>[]<br></div>`,
+            config: { baseContainers: ["DIV"] },
+        });
+    });
+
+    test("should delete if first element and append in paragraph", async () => {
         await testEditor({
             contentBefore: `<h1><br>[]</h1>`,
             stepFunction: deleteBackward,

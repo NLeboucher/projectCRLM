@@ -2,6 +2,7 @@ import { isTextNode, isParagraphRelatedElement, isEmptyBlock } from "../utils/do
 import { Plugin } from "../plugin";
 import { closestBlock } from "../utils/blocks";
 import { unwrapContents, wrapInlinesInBlocks, splitTextNode, fillEmpty } from "../utils/dom";
+import { fillClipboardData } from "../utils/clipboard";
 import { childNodes, closestElement } from "../utils/dom_traversal";
 import { parseHTML } from "../utils/html";
 import {
@@ -13,6 +14,8 @@ import { isHtmlContentSupported } from "./selection_plugin";
 
 /**
  * @typedef { import("./selection_plugin").EditorSelection } EditorSelection
+ *
+ * @typedef {(() => boolean)[]} bypass_paste_image_files
  */
 
 const CLIPBOARD_BLACKLISTS = {
@@ -69,6 +72,8 @@ export const CLIPBOARD_WHITELISTS = {
         "img-thumbnail",
         "rounded",
         "rounded-circle",
+        // Odoo tables
+        "o_table",
         "table",
         "table-bordered",
         /^padding-/,
@@ -93,6 +98,20 @@ const ONLY_LINK_REGEX = /^(https?:\/\/)?([\w-]+\.)+[\w-]+(\/[\w-./?%&=]*)?$/i;
 /**
  * @typedef {Object} ClipboardShared
  * @property {ClipboardPlugin['pasteText']} pasteText
+ */
+
+/**
+ * @typedef {((img: HTMLImageElement) => void)[]} added_image_handlers
+ * @typedef {(() => void)[]} after_paste_handlers
+ * @typedef {(() => void)[]} before_paste_handlers
+ *
+ * @typedef {((selection: EditorSelection, text: string) => boolean)[]} paste_text_overrides
+ *
+ * @typedef {((
+ *     clonedContents: DocumentFragment,
+ *     selection: EditorSelection
+ *   ) => void | clonedContents)[]} clipboard_content_processors
+ * @typedef {((textContent: string) => string)[]} clipboard_text_processors
  */
 
 export class ClipboardPlugin extends Plugin {
@@ -147,12 +166,7 @@ export class ClipboardPlugin extends Plugin {
             clonedContents = processor(clonedContents, selection) || clonedContents;
         }
         this.dependencies.dom.removeSystemProperties(clonedContents);
-        const dataHtmlElement = this.document.createElement("data");
-        dataHtmlElement.append(clonedContents);
-        prependOriginToImages(dataHtmlElement, window.location.origin);
-        const htmlContent = dataHtmlElement.innerHTML;
-        ev.clipboardData.setData("text/html", htmlContent);
-        ev.clipboardData.setData("application/vnd.odoo.odoo-editor", htmlContent);
+        fillClipboardData(ev, clonedContents);
     }
 
     /**
@@ -160,7 +174,10 @@ export class ClipboardPlugin extends Plugin {
      */
     onPaste(ev) {
         let selection = this.dependencies.selection.getEditableSelection();
-        if (!selection.anchorNode.isConnected) {
+        if (
+            !selection.anchorNode.isConnected ||
+            !closestElement(selection.anchorNode).isContentEditable
+        ) {
             return;
         }
         ev.preventDefault();
@@ -449,7 +466,19 @@ export class ClipboardPlugin extends Plugin {
                 }
             }
         } else if (node.nodeType !== Node.TEXT_NODE) {
-            if (node.nodeName === "TD") {
+            if (node.nodeName === "THEAD") {
+                const tbody = node.nextElementSibling;
+                if (tbody) {
+                    // If a <tbody> already exists, move all rows from
+                    // <thead> into the start of <tbody>.
+                    tbody.prepend(...node.children);
+                    node.remove();
+                    node = tbody;
+                } else {
+                    // Otherwise, replace the <thead> with <tbody>
+                    node = this.dependencies.dom.setTagName(node, "TBODY");
+                }
+            } else if (["TD", "TH"].includes(node.nodeName)) {
                 // Insert base container into empty TD.
                 if (isEmptyBlock(node)) {
                     const baseContainer = this.dependencies.baseContainer.createBaseContainer();
@@ -688,18 +717,5 @@ function getImageUrl(file) {
             }
             resolve(e.target.result);
         };
-    });
-}
-
-/**
- * Add origin to relative img src.
- * @param {string} origin
- */
-function prependOriginToImages(doc, origin) {
-    doc.querySelectorAll("img").forEach((img) => {
-        const src = img.getAttribute("src");
-        if (src && !/^(http|\/\/|data:)/.test(src)) {
-            img.src = origin + (src.startsWith("/") ? src : "/" + src);
-        }
     });
 }

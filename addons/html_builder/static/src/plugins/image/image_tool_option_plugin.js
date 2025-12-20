@@ -1,13 +1,8 @@
-import {
-    cropperDataFieldsWithAspectRatio,
-    isGif,
-    loadImage,
-    loadImageInfo,
-} from "@html_editor/utils/image_processing";
+import { cropperDataFieldsWithAspectRatio, loadImage } from "@html_editor/utils/image_processing";
 import { registry } from "@web/core/registry";
 import { Plugin } from "@html_editor/plugin";
 import { ImageToolOption } from "./image_tool_option";
-import { isImageCorsProtected, getMimetype } from "@html_editor/utils/image";
+import { isImageCorsProtected } from "@html_editor/utils/image";
 import { withSequence } from "@html_editor/utils/resource";
 import {
     REPLACE_MEDIA,
@@ -20,11 +15,14 @@ import { BuilderAction } from "@html_builder/core/builder_action";
 import { selectElements } from "@html_editor/utils/dom_traversal";
 import { isCSSColor } from "@web/core/utils/colors";
 import { getCSSVariableValue, getHtmlStyle } from "@html_editor/utils/formatting";
+import { BaseOptionComponent } from "@html_builder/core/utils";
 
-export const REPLACE_MEDIA_SELECTOR = "img, .media_iframe_video, span.fa, i.fa";
-export const REPLACE_MEDIA_EXCLUDE =
-    "[data-oe-xpath], a[href^='/website/social/'] > i.fa, a[class*='s_share_'] > i.fa";
-
+export class ImageAndFaOption extends BaseOptionComponent {
+    static template = "html_builder.ImageAndFaOption";
+    static selector = "span.fa, i.fa, img";
+    static exclude = "[data-oe-type='image'] > img, [data-oe-xpath]";
+    static name = "imageAndFaOption";
+}
 class ImageToolOptionPlugin extends Plugin {
     static id = "imageToolOption";
     static dependencies = [
@@ -36,26 +34,12 @@ class ImageToolOptionPlugin extends Plugin {
         "builderOptions",
     ];
     static shared = ["getCSSColorValue"];
+    /** @type {import("plugins").BuilderResources} */
     resources = {
         builder_options: [
-            withSequence(REPLACE_MEDIA, {
-                OptionComponent: ReplaceMediaOption,
-                selector: REPLACE_MEDIA_SELECTOR,
-                exclude: REPLACE_MEDIA_EXCLUDE,
-                name: "replaceMediaOption",
-            }),
-            withSequence(IMAGE_TOOL, {
-                OptionComponent: ImageToolOption,
-                selector: "img",
-                exclude: "[data-oe-type='image'] > img",
-                name: "imageToolOption",
-            }),
-            withSequence(ALIGNMENT_STYLE_PADDING, {
-                template: "html_builder.ImageAndFaOption",
-                selector: "span.fa, i.fa, img",
-                exclude: "[data-oe-type='image'] > img, [data-oe-xpath]",
-                name: "imageAndFaOption",
-            }),
+            withSequence(REPLACE_MEDIA, ReplaceMediaOption),
+            withSequence(IMAGE_TOOL, ImageToolOption),
+            withSequence(ALIGNMENT_STYLE_PADDING, ImageAndFaOption),
         ],
         builder_actions: {
             CropImageAction,
@@ -118,35 +102,8 @@ class ImageToolOptionPlugin extends Plugin {
     setup() {
         this.htmlStyle = getHtmlStyle(this.document);
     }
-
-    async canHaveHoverEffect(img) {
-        const getDataset = async () => Object.assign({}, img.dataset, await loadImageInfo(img));
-        return img.tagName === "IMG"
-            ? !this.isDeviceShape(img) &&
-                  !this.isAnimatedShape(img) &&
-                  this.isImageSupportedForShapes(img, await getDataset()) &&
-                  !(await isImageCorsProtected(img))
-            : null;
-    }
-    isDeviceShape(img) {
-        const shapeName = img.dataset.shape;
-        if (!shapeName) {
-            return false;
-        }
-        const shapeCategory = shapeName.split("/")[1];
-        return shapeCategory === "devices";
-    }
-    isAnimatedShape(img) {
-        // todo: to implement while implementing the animated shapes
-        return false;
-    }
-    isImageSupportedForShapes(img, dataset = img.dataset) {
-        // todo: The hover effect code should probably be define somewhere else.
-        const isHoverEffect = !!dataset["hoverEffect"];
-        return (
-            isHoverEffect ||
-            (dataset.originalId && isImageSupportedForProcessing(getMimetype(img, dataset)))
-        );
+    async canHaveHoverEffect(imgEl) {
+        return imgEl.tagName === "IMG" && !(await isImageCorsProtected(imgEl));
     }
     migrateImages(rootEl) {
         for (const el of selectElements(
@@ -216,7 +173,7 @@ export class ReplaceMediaAction extends BuilderAction {
     static id = "replaceMedia";
     static dependencies = ["media_website"];
     async apply({ editingElement: mediaEl }) {
-        await this.dependencies["media_website"].replaceMedia(mediaEl);
+        await this.dependencies.media_website.replaceMedia(mediaEl);
     }
 }
 export class SetLinkAction extends BuilderAction {
@@ -306,16 +263,3 @@ export class AltAction extends BuilderAction {
 }
 
 registry.category("builder-plugins").add(ImageToolOptionPlugin.id, ImageToolOptionPlugin);
-
-/**
- * @param {String} mimetype
- * @param {Boolean} [strict=false] if true, even partially supported images (GIFs)
- *     won't be accepted.
- * @returns {Boolean}
- */
-function isImageSupportedForProcessing(mimetype, strict = false) {
-    if (isGif(mimetype)) {
-        return !strict;
-    }
-    return ["image/jpeg", "image/png", "image/webp"].includes(mimetype);
-}

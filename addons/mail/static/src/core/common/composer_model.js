@@ -1,5 +1,9 @@
 import { fields, OR, Record } from "@mail/core/common/record";
-import { convertBrToLineBreak, prettifyMessageText } from "@mail/utils/common/format";
+import {
+    convertBrToLineBreak,
+    getNonEditableMentions,
+    prettifyMessageText,
+} from "@mail/utils/common/format";
 import { markup } from "@odoo/owl";
 import { isHtmlEmpty } from "@web/core/utils/html";
 
@@ -54,8 +58,12 @@ export class Composer extends Record {
                 mentionedChannels: this.mentionedChannels,
                 mentionedPartners: this.mentionedPartners,
                 mentionedRoles: this.mentionedRoles,
+                thread: this.targetThread,
             });
-            const prettifiedHtml = prettifyMessageText(this.composerText, { validMentions });
+            const prettifiedHtml = prettifyMessageText(this.composerText, {
+                validMentions,
+                thread: this.targetThread,
+            });
             if (this.composerHtml.toString() !== prettifiedHtml.toString()) {
                 this.updateFrom = "text";
                 this.composerHtml = prettifiedHtml;
@@ -65,7 +73,10 @@ export class Composer extends Record {
     composerHtml = fields.Html(markup("<div class='o-paragraph'><br></div>"), {
         compute() {
             if (this.syncHtmlWithMessage) {
-                return this.message.body || markup("<div class='o-paragraph'><br></div>");
+                return (
+                    getNonEditableMentions(this.message.body) ||
+                    markup("<div class='o-paragraph'><br></div>")
+                );
             }
             return this.composerHtml;
         },
@@ -105,7 +116,7 @@ export class Composer extends Record {
         },
     });
     autofocus = 0;
-    replyToMessage = fields.One("mail.message");
+    replyToMessage = fields.One("mail.message", { inverse: "composerAsReplyToMessage" });
     /** @type {"text" | "html" | undefined} */
     updateFrom = undefined;
 
@@ -114,7 +125,7 @@ export class Composer extends Record {
     }
 
     get targetThread() {
-        return this.replyToMessage?.thread ?? this.thread ?? null;
+        return this.replyToMessage?.thread ?? this.thread ?? this.message?.thread ?? null;
     }
 }
 

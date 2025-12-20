@@ -11,7 +11,6 @@ import {
     isElement,
     isEmptyBlock,
     isEmptyTextNode,
-    isParagraphRelatedElement,
     isSelfClosingElement,
     isTextNode,
     isVisibleTextNode,
@@ -45,6 +44,17 @@ function isFormatted(formatPlugin, format) {
  * @property { FormatPlugin['formatSelection'] } formatSelection
  */
 
+/**
+ * @typedef {((formatName: string, options: {
+ *      formatProps: object,
+ *      applyStyle: boolean,
+ * }) => void | boolean)[]} format_selection_handlers
+ * @typedef {(() => void)[]} remove_all_formats_handlers
+ *
+ * @typedef {((className: string) => boolean)[]} format_class_predicates
+ * @typedef {((node: Node) => boolean)[]} has_format_predicates
+ */
+
 export class FormatPlugin extends Plugin {
     static id = "format";
     static dependencies = ["selection", "history", "input", "split"];
@@ -55,6 +65,7 @@ export class FormatPlugin extends Plugin {
         "mergeAdjacentInlines",
         "formatSelection",
     ];
+    /** @type {import("plugins").EditorResources} */
     resources = {
         user_commands: [
             {
@@ -162,7 +173,8 @@ export class FormatPlugin extends Plugin {
         clean_for_save_handlers: this.cleanForSave.bind(this),
         normalize_handlers: this.normalize.bind(this),
         selectionchange_handlers: this.removeEmptyInlineElement.bind(this),
-        set_tag_handlers: this.removeFontSizeFormat.bind(this),
+        before_set_tag_handlers: this.removeFontSizeFormat.bind(this),
+        before_insert_processors: this.unwrapEmptyFormat.bind(this),
 
         intangible_char_for_keyboard_navigation_predicates: (_, char) => char === "\u200b",
     };
@@ -183,6 +195,26 @@ export class FormatPlugin extends Plugin {
         }
     }
 
+    unwrapEmptyFormat(insertedNode) {
+        const anchorNode = this.dependencies.selection.getEditableSelection().anchorNode;
+        if (!allWhitespaceRegex.test(insertedNode.textContent)) {
+            return insertedNode;
+        }
+        const emptyZWS = closestElement(anchorNode, "[data-oe-zws-empty-inline]");
+        if (
+            !emptyZWS ||
+            !emptyZWS.parentElement.isContentEditable ||
+            this.getResource("unremovable_node_predicates").some((p) => p(emptyZWS))
+        ) {
+            return insertedNode;
+        }
+        const cursors = this.dependencies.selection.preserveSelection();
+        cursors.update(callbacksForCursorUpdate.remove(emptyZWS));
+        emptyZWS.remove();
+        cursors.restore();
+        return insertedNode;
+    }
+
     removeAllFormats() {
         const targetedNodes = this.dependencies.selection.getTargetedNodes();
         this.removeFormats(Object.keys(formatsSpecs), targetedNodes);
@@ -190,12 +222,8 @@ export class FormatPlugin extends Plugin {
         this.dependencies.history.addStep();
     }
 
-    removeFontSizeFormat(els) {
-        if (els.every((el) => isParagraphRelatedElement(el))) {
-            const targetedNodes = this.dependencies.selection.getTargetedNodes();
-            this.removeFormats(["fontSize", "setFontSizeClassName"], targetedNodes);
-            this.dependencies.history.addStep();
-        }
+    removeFontSizeFormat(el) {
+        this.removeFormats(["fontSize", "setFontSizeClassName"], [el, ...descendants(el)]);
     }
 
     /**
@@ -357,8 +385,20 @@ export class FormatPlugin extends Plugin {
 
             const firstBlockOrClassHasFormat = formatSpec.isFormatted(parentNode, formatProps);
             if (firstBlockOrClassHasFormat && !applyStyle) {
-                formatSpec.addNeutralStyle &&
-                    formatSpec.addNeutralStyle(getOrCreateSpan(node, inlineAncestors));
+                const isParentNodeBlockAndCompletelySelected =
+                    isBlock(parentNode) &&
+                    this.dependencies.selection.areNodeContentsFullySelected(parentNode);
+                if (
+                    isParentNodeBlockAndCompletelySelected &&
+                    formatName === "setFontSizeClassName"
+                ) {
+                    for (const node of [parentNode, ...descendants(parentNode).filter(isElement)]) {
+                        removeFormat(node, formatSpec);
+                    }
+                } else {
+                    formatSpec.addNeutralStyle &&
+                        formatSpec.addNeutralStyle(getOrCreateSpan(node, inlineAncestors));
+                }
             } else if (
                 (!firstBlockOrClassHasFormat || parentNode.nodeName === "LI") &&
                 applyStyle

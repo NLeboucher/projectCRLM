@@ -21,6 +21,7 @@ from odoo import api, fields, models, modules, tools, _
 from odoo.addons.base.models.ir_model import MODULE_UNINSTALL_FLAG
 from odoo.exceptions import AccessDenied, UserError, ValidationError
 from odoo.fields import Domain
+from odoo.tools import config
 from odoo.tools.parse_version import parse_version
 from odoo.tools.misc import topological_sort, get_flag
 from odoo.tools.translate import TranslationImporter, get_po_paths, get_datafile_translation_path
@@ -339,8 +340,10 @@ class IrModuleModule(models.Model):
         return [('state', '=', 'installed')]
 
     def check_external_dependencies(self, module_name, newstate='to install'):
+        manifest = modules.Manifest.for_addon(module_name)
+        if not manifest:
+            return  # unavailable module, there is no point in checking dependencies
         try:
-            manifest = modules.Manifest.for_addon(module_name)
             manifest.check_manifest_dependencies()
         except MissingDependency as e:
             if newstate == 'to install':
@@ -353,7 +356,7 @@ class IrModuleModule(models.Model):
             install_package = None
             if platform.system() == 'Linux':
                 distro = platform.freedesktop_os_release()
-                id_likes = {distro['ID'], *distro.get('ID_LIKE').split()}
+                id_likes = {distro['ID'], *distro.get('ID_LIKE', '').split()}
                 if 'debian' in id_likes or 'ubuntu' in id_likes:
                     if package := manifest['external_dependencies'].get('apt', {}).get(e.dependency):
                         install_package = f'apt install {package}'
@@ -415,7 +418,11 @@ class IrModuleModule(models.Model):
             modules._state_update('to install', ['uninstalled'])
 
             # Determine which auto-installable modules must be installed.
-            modules = self.search(auto_domain).filtered(must_install)
+
+            if config.get('skip_auto_install'):
+                modules = None
+            else:
+                modules = self.search(auto_domain).filtered(must_install)
 
         # the modules that are installed/to install/to upgrade
         install_mods = self.search([('state', 'in', list(install_states))])
@@ -481,12 +488,12 @@ class IrModuleModule(models.Model):
     def button_reset_state(self):
         # reset the transient state for all modules in case the module operation is stopped in an unexpected way.
         self.search([('state', '=', 'to install')]).state = 'uninstalled'
-        self.search([('state', 'in', ('to update', 'to remove'))]).state = 'installed'
+        self.search([('state', 'in', ('to upgrade', 'to remove'))]).state = 'installed'
         return True
 
     @api.model
     def check_module_update(self):
-        return bool(self.sudo().search_count([('state', 'in', ('to install', 'to update', 'to remove'))], limit=1))
+        return bool(self.sudo().search_count([('state', 'in', ('to install', 'to upgrade', 'to remove'))], limit=1))
 
     @assert_log_admin_access
     def module_uninstall(self):

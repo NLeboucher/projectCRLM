@@ -501,13 +501,16 @@ class TestAccountMoveSendCommon(AccountTestInvoicingCommon):
             )
 
     def create_send_and_print(self, invoices, default=False, **kwargs):
-        action_send_and_print = invoices.action_send_and_print()
-        if action_send_and_print['res_model'] == 'account.move.send.wizard' and not default and not kwargs.get('sending_methods'):
-            # In most cases, for testing purpose you only want to try to generate the document, no need to send it.
-            # Therefore by default we deactivate sending methods, unless default parameter is set to True,
-            # or they are explicitly given.
-            kwargs['sending_methods'] = []
-        return self.env[action_send_and_print['res_model']].with_context(action_send_and_print['context']).create(kwargs)
+        invoices.action_send_and_print()
+        if len(invoices) == 1:
+            if not default and not kwargs.get('sending_methods'):
+                # In most cases, for testing purpose you only want to try to generate the document, no need to send it.
+                # Therefore by default we deactivate sending methods, unless default parameter is set to True,
+                # or they are explicitly given.
+                kwargs['sending_methods'] = []
+            return self._create_account_move_send_wizard_single(invoices, **kwargs)
+        else:
+            return self._create_account_move_send_wizard_multi(invoices, **kwargs)
 
     def _get_mail_message(self, move, limit=1):
         return self.env['mail.message'].search([('model', '=', move._name), ('res_id', '=', move.id)], limit=limit)
@@ -881,7 +884,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
 
         def call_web_service_after_invoice_pdf_render(record, invoices_data):
             for invoice_data in invoices_data.values():
-                invoice_data['error'] = "turlututu"
+                invoice_data['error'] = {'error_title': "turlututu"}
 
         with patch(
                 'odoo.addons.account.models.account_move_send.AccountMoveSend._call_web_service_after_invoice_pdf_render',
@@ -902,7 +905,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
         wizard = self.create_send_and_print(invoice, sending_methods=['email'])
 
         def _hook_invoice_document_before_pdf_report_render(self, invoice, invoice_data):
-            invoice_data['error'] = 'test_proforma_pdf'
+            invoice_data['error'] = {'error_title': 'test_proforma_pdf'}
 
         # Process.
         with patch(
@@ -923,7 +926,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
         wizard = self.create_send_and_print(invoice, sending_methods=['email'])
 
         def _hook_invoice_document_before_pdf_report_render(self, invoice, invoice_data):
-            invoice_data['error'] = 'prout'
+            invoice_data['error'] = {'error_title': 'prout'}
             invoice_data['error_but_continue'] = True
 
         # Process.
@@ -986,7 +989,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
 
         def _call_web_service_after_invoice_pdf_render(self, invoices_data):
             for move_data in invoices_data.values():
-                move_data['error'] = 'service_failed_after'
+                move_data['error'] = {'error_title': 'service_failed_after'}
 
         # Process.
         with patch(
@@ -1008,7 +1011,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
 
         def _call_web_service_before_invoice_pdf_render(self, invoices_data):
             for move_data in invoices_data.values():
-                move_data['error'] = 'service_failed_before'
+                move_data['error'] = {'error_title': 'service_failed_before'}
 
         # Process.
         with patch(
@@ -1065,7 +1068,7 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
 
         def _hook_invoice_document_before_pdf_report_render(self, invoice, invoice_data):
             if invoice.id in invoices_error.ids:
-                invoice_data['error'] = 'blblblbl'
+                invoice_data['error'] = {'error_title': 'blblblbl'}
 
         self.assertTrue(all(invoice.sending_data for invoice in invoices_success + invoices_error))
         self.assertTrue(all(invoice.sending_data.get('author_partner_id') == sp_partner_1.id for invoice in invoices_success))
@@ -1224,3 +1227,26 @@ class TestAccountMoveSend(TestAccountMoveSendCommon):
         wizard_2 = self.create_send_and_print(move2)
         wizard_2.action_send_and_print()
         self.assertEqual(move2.message_main_attachment_id.name, f"CustomName_{move2._get_report_base_filename().replace('/', '_')}.pdf")
+
+    def test_journal_follower_gets_pdf_on_send_and_print(self):
+        watcher_email = 'watcher@example.com; bob@example.com'
+        journal = self.company_data['default_journal_sale']
+        journal.incoming_einvoice_notification_email = watcher_email
+
+        invoice = self.init_invoice("out_invoice", amounts=[1000], partner=self.partner_a, post=True)
+        wizard = self.create_send_and_print(invoice)
+
+        with patch('odoo.addons.mail.models.mail_template.MailTemplate.send_mail') as patched_send_mail:
+            wizard.action_send_and_print()
+
+        # we send an email for every recipient individually (for separate unsubscribe links)
+        self.assertEqual(patched_send_mail.call_count, 2)
+
+        for call in patched_send_mail.call_args_list:
+            attachments_data = call.kwargs.get('email_values', {}).get('attachment_ids', [])
+            self.assertTrue(invoice.invoice_pdf_report_id)
+            self.assertEqual(len(attachments_data), 1)
+            self.assertRecordValues(invoice.invoice_pdf_report_id, [{
+                'name': attachments_data[0][2]['name'],
+                'raw': attachments_data[0][2]['raw'],
+            }])

@@ -109,6 +109,7 @@ export class Composer extends Component {
         this.isIosPwa = isIOS() && isDisplayStandalone();
         this.store = useService("mail.store");
         this.composerActions = useComposerActions({ composer: () => this.props.composer });
+        this.EDIT_CLICK_TYPE = EDIT_CLICK_TYPE;
         this.OR_PRESS_SEND_KEYBIND = _t("or press %(send_keybind)s", {
             send_keybind: htmlJoin(
                 this.sendKeybinds.map((key) => markup`<samp>${key}</samp>`),
@@ -129,6 +130,7 @@ export class Composer extends Component {
             active: true,
             isFullComposerOpen: false,
         });
+        this.root = useRef("root");
         this.fullComposerBus = new EventBus();
         this.selection = useSelection({
             refName: "textarea",
@@ -181,7 +183,7 @@ export class Composer extends Component {
                 },
                 () =>
                     this.props.allowUpload &&
-                    (!this.store.meetingViewOpened || this.env.inMeetingView)
+                    (!this.store.rtc.state.isFullscreen || this.env.inMeetingView)
             );
         }
         useChildSubEnv({ inComposer: true });
@@ -318,38 +320,25 @@ export class Composer extends Component {
     }
 
     get CANCEL_OR_SAVE_EDIT_TEXT() {
-        if (this.ui.isSmall) {
-            return _t(
-                "%(open_button)s%(icon)s%(open_em)sDiscard editing%(close_em)s%(close_button)s",
-                {
-                    open_button: markup`<button class='btn px-1 py-0' data-type="${EDIT_CLICK_TYPE.CANCEL}">`,
-                    close_button: markup`</button>`,
-                    icon: markup`<i class='fa fa-times-circle pe-1' data-type="${EDIT_CLICK_TYPE.CANCEL}"></i>`,
-                    open_em: markup`<em data-type="${EDIT_CLICK_TYPE.CANCEL}">`,
-                    close_em: markup`</em>`,
-                }
-            );
-        } else {
-            const tags = {
-                open_samp: markup`<samp>`,
-                close_samp: markup`</samp>`,
-                open_em: markup`<em>`,
-                close_em: markup`</em>`,
-                open_cancel: markup`<button class="btn btn-link fst-italic p-0 align-baseline" data-type="${EDIT_CLICK_TYPE.CANCEL}">`,
-                close_cancel: markup`</button>`,
-                open_save: markup`<button class="btn btn-link fst-italic p-0 align-baseline" data-type="${EDIT_CLICK_TYPE.SAVE}">`,
-                close_save: markup`</button>`,
-            };
-            return this.env.inChatter
-                ? _t(
-                      "%(open_samp)sEscape%(close_samp)s %(open_em)sto %(open_cancel)scancel%(close_cancel)s%(close_em)s, %(open_samp)sCTRL-Enter%(close_samp)s %(open_em)sto %(open_save)ssave%(close_save)s%(close_em)s",
-                      tags
-                  )
-                : _t(
-                      "%(open_samp)sEscape%(close_samp)s %(open_em)sto %(open_cancel)scancel%(close_cancel)s%(close_em)s, %(open_samp)sEnter%(close_samp)s %(open_em)sto %(open_save)ssave%(close_save)s%(close_em)s",
-                      tags
-                  );
-        }
+        const tags = {
+            open_samp: markup`<samp>`,
+            close_samp: markup`</samp>`,
+            open_em: markup`<em>`,
+            close_em: markup`</em>`,
+            open_cancel: markup`<button class="btn btn-link fst-italic p-0 align-baseline" data-type="${EDIT_CLICK_TYPE.CANCEL}">`,
+            close_cancel: markup`</button>`,
+            open_save: markup`<button class="btn btn-link fst-italic p-0 align-baseline" data-type="${EDIT_CLICK_TYPE.SAVE}">`,
+            close_save: markup`</button>`,
+        };
+        return this.env.inChatter
+            ? _t(
+                  "%(open_samp)sEscape%(close_samp)s %(open_em)sto %(open_cancel)scancel%(close_cancel)s%(close_em)s, %(open_samp)sCTRL-Enter%(close_samp)s %(open_em)sto %(open_save)ssave%(close_save)s%(close_em)s",
+                  tags
+              )
+            : _t(
+                  "%(open_samp)sEscape%(close_samp)s %(open_em)sto %(open_cancel)scancel%(close_cancel)s%(close_em)s, %(open_samp)sEnter%(close_samp)s %(open_em)sto %(open_save)ssave%(close_save)s%(close_em)s",
+                  tags
+              );
     }
 
     get SEND_TEXT() {
@@ -368,7 +357,7 @@ export class Composer extends Component {
     }
 
     get thread() {
-        return this.props.composer.replyToMessage?.thread ?? this.props.composer.thread ?? null;
+        return this.props.composer.targetThread;
     }
 
     get allowUpload() {
@@ -434,7 +423,8 @@ export class Composer extends Component {
                             };
                         } else {
                             return {
-                                label: suggestion.name,
+                                label: this.thread?.getPersonaName(suggestion) ?? suggestion.name,
+                                thread: this.thread,
                                 partner: suggestion,
                                 classList: "o-mail-Composer-suggestion",
                             };
@@ -446,9 +436,7 @@ export class Composer extends Component {
                     ...props,
                     optionTemplate: "mail.Composer.suggestionThread",
                     options: suggestions.map((suggestion) => ({
-                        label: suggestion.parent_channel_id
-                            ? `${suggestion.parent_channel_id.displayName} > ${suggestion.displayName}`
-                            : suggestion.displayName,
+                        label: suggestion.fullNameWithParent,
                         thread: suggestion,
                         classList: "o-mail-Composer-suggestion",
                     })),
@@ -715,16 +703,11 @@ export class Composer extends Component {
     }
 
     async processMessage(cb) {
-        const attachments = this.props.composer.attachments;
-        if (attachments.some(({ uploading }) => uploading)) {
+        if (this.props.composer.attachments.some(({ uploading }) => uploading)) {
             this.env.services.notification.add(_t("Please wait while the file is uploading."), {
                 type: "warning",
             });
-        } else if (
-            !isHtmlEmpty(this.props.composer.composerHtml) ||
-            attachments.length > 0 ||
-            (this.message && this.message.attachment_ids.length > 0)
-        ) {
+        } else if (this.canProcessMessage) {
             if (!this.state.active) {
                 return;
             }
@@ -737,6 +720,14 @@ export class Composer extends Component {
             this.state.active = true;
             this.ref.el?.focus();
         }
+    }
+
+    get canProcessMessage() {
+        return (
+            !isHtmlEmpty(this.props.composer.composerHtml) ||
+            this.props.composer.attachments.length > 0 ||
+            (this.message && this.message.attachment_ids.length > 0)
+        );
     }
 
     async sendMessage() {
@@ -812,7 +803,7 @@ export class Composer extends Component {
 
     async editMessage() {
         const composer = toRaw(this.props.composer);
-        if (composer.composerText || composer.message.attachment_ids.length > 0) {
+        if (!this.askDeleteFromEdit) {
             await this.processMessage(async (value) =>
                 composer.message.edit(value, composer.attachments, {
                     mentionedChannels: composer.mentionedChannels,
@@ -821,16 +812,25 @@ export class Composer extends Component {
                 })
             );
         } else {
-            this.env.services.dialog.add(MessageConfirmDialog, {
-                message: composer.message,
-                onConfirm: () =>
-                    this.message.remove({
-                        removeFromThread: this.shouldHideFromMessageListOnDelete,
-                    }),
-                prompt: _t("Are you sure you want to bid farewell to this message forever?"),
-            });
+            this.env.services.dialog.add(
+                MessageConfirmDialog,
+                {
+                    message: composer.message,
+                    onConfirm: () =>
+                        this.message.remove({
+                            removeFromThread: this.shouldHideFromMessageListOnDelete,
+                        }),
+                    prompt: _t("Are you sure you want to bid farewell to this message forever?"),
+                },
+                { context: this }
+            );
         }
         this.suggestion?.clearRawMentions();
+    }
+
+    get askDeleteFromEdit() {
+        const composer = toRaw(this.props.composer);
+        return !composer.composerText && composer.message.attachment_ids.length === 0;
     }
 
     onClickInsertCannedResponse(ev) {

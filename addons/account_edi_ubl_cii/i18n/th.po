@@ -3,13 +3,14 @@
 # * account_edi_ubl_cii
 #
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server saas~18.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-01 09:07+0000\n"
-"PO-Revision-Date: 2025-09-16 21:27+0000\n"
-"Last-Translator: \"Tiffany Chang (tic)\" <tic@odoo.com>\n"
+"POT-Creation-Date: 2025-12-19 18:37+0000\n"
+"PO-Revision-Date: 2025-11-08 19:16+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Thai <https://translate.odoo.com/projects/odoo-19/"
 "account_edi_ubl_cii/th/>\n"
 "Language: th\n"
@@ -23,8 +24,8 @@ msgstr ""
 #. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_xml_ubl_bis3.py:0
 msgid ""
-"%s should have a KVK or OIN number set in Company ID field or as Peppol "
-"e-address (EAS code 0106 or 0190)."
+"%s should have a KVK or OIN number set in Company ID field or as Peppol e-"
+"address (EAS code 0106 or 0190)."
 msgstr ""
 "%s ควรมีหมายเลข KVK หรือ OIN ที่ตั้งค่าไว้ในช่อง Company ID หรือเป็นที่อยู่อีเมลของ Peppol "
 "(รหัส EAS 0106 หรือ 0190)"
@@ -35,20 +36,26 @@ msgid "1.0"
 msgstr "1.0"
 
 #. module: account_edi_ubl_cii
-#: model_terms:ir.ui.view,arch_db:account_edi_ubl_cii.account_invoice_facturx_export_22
-msgid "42"
-msgstr ""
-
-#. module: account_edi_ubl_cii
 #. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_common.py:0
 msgid "A payment of %s was detected."
 msgstr "ตรวจพบการชำระเงินของ %s"
 
 #. module: account_edi_ubl_cii
+#. odoo-python
+#: code:addons/account_edi_ubl_cii/models/account_edi_common.py:0
+msgid "A rounding amount of %s was detected."
+msgstr ""
+
+#. module: account_edi_ubl_cii
 #: model:ir.model,name:account_edi_ubl_cii.model_account_edi_xml_ubl_a_nz
 msgid "A-NZ BIS Billing 3.0"
 msgstr "A-NZ BIS Billing 3.0"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_category_code__ae
+msgid "AE - Vat Reverse Charge"
+msgstr "AE - ภาษีมูลค่าเพิ่มแบบเรียกเก็บย้อนหลัง"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__as
@@ -59,6 +66,11 @@ msgstr ""
 #: model:ir.model,name:account_edi_ubl_cii.model_account_move_send
 msgid "Account Move Send"
 msgstr "ส่งย้ายบัญชี"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model,name:account_edi_ubl_cii.model_account_move_send_wizard
+msgid "Account Move Send Wizard"
+msgstr ""
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9923
@@ -80,8 +92,8 @@ msgstr "บทความ 226 ข้อ 11 ถึง 15 Directive 2006/112/EN"
 #. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_common.py:0
 msgid ""
-"At least one of the following fields %(field_list)s is required on "
-"%(record)s."
+"At least one of the following fields %(field_list)s is required on %"
+"(record)s."
 msgstr "ต้องมีฟิลด์ %(field_list)s อย่างน้อยหนึ่งฟิลด์ต่อไปนี้ใน %(record)s"
 
 #. module: account_edi_ubl_cii
@@ -89,6 +101,11 @@ msgstr "ต้องมีฟิลด์ %(field_list)s อย่างน้�
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_move__ubl_cii_xml_id
 msgid "Attachment"
 msgstr "การแนบ"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__invoice_edi_format__ubl_a_nz
+msgid "Australia (BIS Billing 3.0 A-NZ)"
+msgstr ""
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__0151
@@ -106,24 +123,25 @@ msgid "Austria VOKZ"
 msgstr "VOKZ ประเทศออสเตรีย"
 
 #. module: account_edi_ubl_cii
-#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__invoice_edi_format__ubl_bis3
-msgid "BIS Billing 3.0"
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_res_partner__available_peppol_eas
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_res_users__available_peppol_eas
+msgid "Available Peppol Eas"
 msgstr ""
 
 #. module: account_edi_ubl_cii
-#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__invoice_edi_format__ubl_a_nz
-msgid "BIS Billing 3.0 A-NZ"
-msgstr ""
-
-#. module: account_edi_ubl_cii
-#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__invoice_edi_format__ubl_sg
-msgid "BIS Billing 3.0 SG"
-msgstr ""
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_category_code__b
+msgid "B - Transferred (VAT), In Italy"
+msgstr "B - การโอน (VAT) ในประเทศอิตาลี"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model,name:account_edi_ubl_cii.model_account_edi_xml_ubl_de
 msgid "BIS3 DE (XRechnung)"
 msgstr "BIS3 DE (XRechnung)"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model,name:account_edi_ubl_cii.model_account_edi_ubl
+msgid "Base helpers for UBL"
+msgstr ""
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__0208
@@ -161,7 +179,8 @@ msgstr "ตรวจสอบพาร์ทเนอร์"
 #: model:ir.model.fields,help:account_edi_ubl_cii.field_res_users__peppol_eas
 msgid ""
 "Code used to identify the Endpoint for BIS Billing 3.0 and its derivatives.\n"
-"             List available at https://docs.peppol.eu/poacc/billing/3.0/codelist/eas/"
+"             List available at https://docs.peppol.eu/poacc/billing/3.0/"
+"codelist/eas/"
 msgstr ""
 "รหัสที่ใช้ระบุปลายทางสำหรับ BIS Billing 3.0 และอนุพันธ์\n"
 "             ดูรายชื่อได้ที่ https://docs.peppol.eu/poacc/billing/3.0/codelist/eas/"
@@ -184,6 +203,7 @@ msgstr "ฟังก์ชันทั่วไปสำหรับเอกส
 
 #. module: account_edi_ubl_cii
 #. odoo-python
+#: code:addons/account_edi_ubl_cii/models/account_edi_ubl.py:0
 #: code:addons/account_edi_ubl_cii/models/account_edi_xml_ubl_20.py:0
 msgid "Conditional cash/payment discount"
 msgstr "ส่วนลดเงินสด/การชำระเงินแบบมีเงื่อนไข"
@@ -211,8 +231,8 @@ msgstr "ไม่สามารถดึงข้อมูลพาร์ทเ
 #. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_common.py:0
 msgid ""
-"Could not retrieve currency: %s. Did you enable the multicurrency option and"
-" activate the currency?"
+"Could not retrieve currency: %s. Did you enable the multicurrency option and "
+"activate the currency?"
 msgstr ""
 "ไม่สามารถดึงข้อมูลสกุลเงิน: %s คุณได้เปิดใช้งานตัวเลือกหลายสกุลเงินและเปิดใช้งานสกุลเงินหรือไม่?"
 
@@ -234,14 +254,12 @@ msgstr "ไม่สามารถเรียกข้อมูลภาษี
 #. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_common.py:0
 msgid "Could not retrieve the tax: %(tax_percentage)s %% for line '%(line)s'."
-msgstr ""
-"ไม่สามารถเรียกข้อมูลภาษี: %(tax_percentage)s %% สำหรับบรรทัด '%(line)s' ได้"
+msgstr "ไม่สามารถเรียกข้อมูลภาษี: %(tax_percentage)s %% สำหรับบรรทัด '%(line)s' ได้"
 
 #. module: account_edi_ubl_cii
 #. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_common.py:0
-msgid ""
-"Could not retrieve the tax: %s for the document level allowance/charge."
+msgid "Could not retrieve the tax: %s for the document level allowance/charge."
 msgstr "ไม่สามารถเรียกข้อมูลภาษี: %s สำหรับค่าเผื่อ/ค่าธรรมเนียมระดับเอกสาร"
 
 #. module: account_edi_ubl_cii
@@ -290,7 +308,14 @@ msgid "Directorates of the European Commission"
 msgstr "คณะกรรมาธิการยุโรป"
 
 #. module: account_edi_ubl_cii
+#. odoo-python
+#: code:addons/account_edi_ubl_cii/models/account_edi_ubl.py:0
+msgid "Discount"
+msgstr ""
+
+#. module: account_edi_ubl_cii
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_common__display_name
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_ubl__display_name
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_xml_cii__display_name
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_xml_ubl_20__display_name
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_xml_ubl_21__display_name
@@ -302,10 +327,17 @@ msgstr "คณะกรรมาธิการยุโรป"
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_xml_ubl_sg__display_name
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_move__display_name
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_move_send__display_name
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_move_send_wizard__display_name
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_tax__display_name
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_ir_actions_report__display_name
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_res_partner__display_name
 msgid "Display Name"
 msgstr "แสดงชื่อ"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_category_code__e
+msgid "E - Exempt from Tax"
+msgstr "E - ได้รับการยกเว้นภาษี"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model,name:account_edi_ubl_cii.model_account_edi_xml_ubl_efff
@@ -321,6 +353,11 @@ msgstr "รหัสตำแหน่ง EAN"
 #: model_terms:ir.ui.view,arch_db:account_edi_ubl_cii.account_invoice_pdfa_3_facturx_metadata
 msgid "EN 16931"
 msgstr "EN 16931"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__invoice_edi_format__ubl_bis3
+msgid "EU Standard (Peppol Bis 3.0)"
+msgstr ""
 
 #. module: account_edi_ubl_cii
 #. odoo-python
@@ -380,11 +417,6 @@ msgid "Export outside the EU"
 msgstr "ส่งออกนอกสหภาพยุโรป"
 
 #. module: account_edi_ubl_cii
-#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__invoice_edi_format__facturx
-msgid "Factur-X (CII)"
-msgstr ""
-
-#. module: account_edi_ubl_cii
 #: model:ir.model,name:account_edi_ubl_cii.model_account_edi_xml_cii
 msgid "Factur-x/XRechnung CII 2.2.0"
 msgstr "Factur-x/XRechnung CII 2.2.0"
@@ -415,8 +447,7 @@ msgstr "ภาษีมูลค่าเพิ่มของประเทศ
 msgid ""
 "For intracommunity supply, the actual delivery date or the invoicing period "
 "should be included."
-msgstr ""
-"สำหรับการจัดหาภายในคอมมูนิตี้ ควรระบุวันที่จัดส่งจริงหรือระยะเวลาการออกใบแจ้งหนี้ด้วย"
+msgstr "สำหรับการจัดหาภายในคอมมูนิตี้ ควรระบุวันที่จัดส่งจริงหรือระยะเวลาการออกใบแจ้งหนี้ด้วย"
 
 #. module: account_edi_ubl_cii
 #. odoo-python
@@ -433,8 +464,23 @@ msgstr ""
 #. module: account_edi_ubl_cii
 #. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_common.py:0
-msgid "Format used to import the invoice: %s"
-msgstr "รูปแบบที่ใช้ในการนำเข้าใบแจ้งหนี้: %s"
+msgid "Format: %s"
+msgstr ""
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__invoice_edi_format__facturx
+msgid "France (FacturX)"
+msgstr ""
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__0225
+msgid "France FRCTC Electronic Address"
+msgstr ""
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__0240
+msgid "France Register of legal persons"
+msgstr ""
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__0002
@@ -452,9 +498,19 @@ msgid "France VAT"
 msgstr "ภาษีมูลค่าเพิ่มของประเทศฝรั่งเศส"
 
 #. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_category_code__g
+msgid "G - Free export item, VAT not charged"
+msgstr "G - สินค้าส่งออกฟรี ไม่คิดภาษีมูลค่าเพิ่ม"
+
+#. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__0209
 msgid "GS1 identification keys"
 msgstr "คีย์ระบุ GS1"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__invoice_edi_format__xrechnung
+msgid "Germany (XRechnung)"
+msgstr ""
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__0204
@@ -478,6 +534,7 @@ msgstr "ภาษีมูลค่าเพิ่มของประเทศ
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_common__id
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_ubl__id
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_xml_cii__id
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_xml_ubl_20__id
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_xml_ubl_21__id
@@ -489,6 +546,8 @@ msgstr "ภาษีมูลค่าเพิ่มของประเทศ
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_edi_xml_ubl_sg__id
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_move__id
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_move_send__id
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_move_send_wizard__id
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_tax__id
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_ir_actions_report__id
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_res_partner__id
 msgid "ID"
@@ -506,6 +565,12 @@ msgstr "Indirizzo di Posta Elettronica Certificata"
 
 #. module: account_edi_ubl_cii
 #. odoo-python
+#: code:addons/account_edi_ubl_cii/models/account_move_send.py:0
+msgid "Install Chorus Pro"
+msgstr ""
+
+#. module: account_edi_ubl_cii
+#. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_common.py:0
 msgid "Intra-Community supply"
 msgstr "อุปทานภายในคอมมูนิตี้"
@@ -514,6 +579,12 @@ msgstr "อุปทานภายในคอมมูนิตี้"
 #: model_terms:ir.ui.view,arch_db:account_edi_ubl_cii.account_invoice_pdfa_3_facturx_metadata
 msgid "Invoice generated by Odoo"
 msgstr "ใบแจ้งหนี้ที่สร้างโดย Odoo"
+
+#. module: account_edi_ubl_cii
+#. odoo-python
+#: code:addons/account_edi_ubl_cii/models/account_edi_common.py:0
+msgid "Invoice imported"
+msgstr ""
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9935
@@ -558,9 +629,24 @@ msgid "Journal Entry"
 msgstr "รายการสมุดรายวัน"
 
 #. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_category_code__k
+msgid "K - VAT exempt for EEA intra-community supply of goods and services"
+msgstr "K - ยกเว้นภาษีมูลค่าเพิ่มสำหรับการจัดหาสินค้าและบริการภายในคอมมูนิตี้ EEA"
+
+#. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9919
 msgid "Kennziffer des Unternehmensregisters"
 msgstr "เลขประจำตัวผู้จดทะเบียนบริษัท"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_category_code__l
+msgid "L - Canary Islands general indirect tax"
+msgstr "L - ภาษีทางอ้อมทั่วไปของหมู่เกาะคานารี"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__0218
+msgid "Latvia Unified registration number"
+msgstr ""
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9939
@@ -593,6 +679,11 @@ msgid "Luxembourg VAT"
 msgstr ""
 
 #. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_category_code__m
+msgid "M - Tax for production, services and importation in Ceuta and Melilla"
+msgstr "M - ภาษีสำหรับการผลิต การบริการ และการนำเข้าในเซวตาและเมลิลลา"
+
+#. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9942
 msgid "Macedonia VAT"
 msgstr "ภาษีมูลค่าเพิ่มของประเทศมาซิโดเนีย"
@@ -619,7 +710,7 @@ msgstr "ภาษีมูลค่าเพิ่มของประเทศ
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__invoice_edi_format__nlcius
-msgid "NLCIUS"
+msgid "Netherlands (NLCIUS)"
 msgstr ""
 
 #. module: account_edi_ubl_cii
@@ -648,6 +739,11 @@ msgstr "ไม่พบราคารวม ราคาสุทธิ หร�
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__0192
 msgid "Norway Org.nr."
 msgstr "Org.nr. ประเทศนอร์เวย์"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_category_code__o
+msgid "O - Services outside scope of tax"
+msgstr "O - บริการนอกเหนือขอบเขตภาษี"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__an
@@ -696,6 +792,13 @@ msgid ""
 msgstr ""
 
 #. module: account_edi_ubl_cii
+#. odoo-python
+#: code:addons/account_edi_ubl_cii/models/account_move_send.py:0
+msgid ""
+"Please install the french Chorus pro module to have all the specific rules."
+msgstr ""
+
+#. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9945
 msgid "Poland VAT"
 msgstr "ภาษีมูลค่าเพิ่มของประเทศโปแลนด์"
@@ -714,6 +817,17 @@ msgstr "การดําเนินการรายงาน"
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9947
 msgid "Romania VAT"
 msgstr "ภาษีมูลค่าเพิ่มของประเทศโรมาเนีย"
+
+#. module: account_edi_ubl_cii
+#. odoo-python
+#: code:addons/account_edi_ubl_cii/models/account_edi_common.py:0
+msgid "Rounding"
+msgstr "การปัดเศษ"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_category_code__s
+msgid "S - Standard rate"
+msgstr "S - อัตรามาตรฐาน"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9918
@@ -749,6 +863,11 @@ msgstr "ภาษีมูลค่าเพิ่มประเทศซาน
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9948
 msgid "Serbia VAT"
 msgstr "ภาษีมูลค่าเพิ่มของประเทศเซอร์เบีย"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__invoice_edi_format__ubl_sg
+msgid "Singapore (BIS Billing 3.0 SG)"
+msgstr ""
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__0195
@@ -791,10 +910,25 @@ msgid "Swiss VAT"
 msgstr "ภาษีมูลค่าเพิ่มของประเทศสวิตเซอร์แลนด์"
 
 #. module: account_edi_ubl_cii
+#: model:ir.model,name:account_edi_ubl_cii.model_account_tax
+msgid "Tax"
+msgstr "ภาษี"
+
+#. module: account_edi_ubl_cii
 #. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_common.py:0
 msgid "Tax '%(tax_name)s' is invalid: %(error_message)s"
 msgstr "ภาษี '%(tax_name)s' ไม่ถูกต้อง: %(error_message)s"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_tax__ubl_cii_tax_category_code
+msgid "Tax Category Code"
+msgstr "รหัสหมวดภาษี"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_tax__ubl_cii_tax_exemption_reason_code
+msgid "Tax Exemption Reason Code"
+msgstr "รหัสเหตุผลการยกเว้นภาษี"
 
 #. module: account_edi_ubl_cii
 #. odoo-python
@@ -811,8 +945,8 @@ msgid ""
 "The Peppol endpoint is not valid. It should contain exactly 10 digits "
 "(Company Registry number).The expected format is: 1234567890"
 msgstr ""
-"จุดสิ้นสุด Peppol ไม่ถูกต้อง ควรมีตัวเลข 10 หลักพอดี (หมายเลขทะเบียนบริษัท) รูปแบบที่คาดหวังคือ:"
-" 1234567890"
+"จุดสิ้นสุด Peppol ไม่ถูกต้อง ควรมีตัวเลข 10 หลักพอดี (หมายเลขทะเบียนบริษัท) "
+"รูปแบบที่คาดหวังคือ: 1234567890"
 
 #. module: account_edi_ubl_cii
 #. odoo-python
@@ -828,13 +962,17 @@ msgid ""
 msgstr "ตำแหน่งข้อมูล Peppol ไม่ถูกต้อง รูปแบบที่ต้องการคือ: 73282932000074"
 
 #. module: account_edi_ubl_cii
+#: model:ir.model.fields,help:account_edi_ubl_cii.field_account_tax__ubl_cii_tax_category_code
+msgid "The VAT category code used for electronic invoicing purposes."
+msgstr "รหัสประเภทภาษีมูลค่าเพิ่มที่ใช้เพื่อวัตถุประสงค์การออกใบแจ้งหนี้ทางอิเล็กทรอนิกส์"
+
+#. module: account_edi_ubl_cii
 #. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_xml_ubl_bis3.py:0
 msgid ""
 "The VAT number of the supplier does not seem to be valid. It should be of "
 "the form: NO179728982MVA."
-msgstr ""
-"ดูเหมือนว่าหมายเลข VAT ของซัพพลายเออร์ไม่ถูกต้อง ควรอยู่ในรูปแบบ: NO179728982MVA"
+msgstr "ดูเหมือนว่าหมายเลข VAT ของซัพพลายเออร์ไม่ถูกต้อง ควรอยู่ในรูปแบบ: NO179728982MVA"
 
 #. module: account_edi_ubl_cii
 #. odoo-python
@@ -869,8 +1007,7 @@ msgstr "ฟิลด์ %(field)s จำเป็นต้องกรอกใ�
 #. module: account_edi_ubl_cii
 #. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_xml_cii_facturx.py:0
-msgid ""
-"The field 'Sanitized Account Number' is required on the Recipient Bank."
+msgid "The field 'Sanitized Account Number' is required on the Recipient Bank."
 msgstr "ต้องระบุข้อมูล 'หมายเลขบัญชีที่ผ่านการรับรอง' ในธนาคารผู้รับ"
 
 #. module: account_edi_ubl_cii
@@ -883,9 +1020,23 @@ msgid ""
 msgstr "ใบแจ้งหนี้ได้ถูกแปลงเป็นใบลดหนี้และปริมาณได้ถูกแปลงกลับแล้ว"
 
 #. module: account_edi_ubl_cii
+#: model:ir.model.fields,help:account_edi_ubl_cii.field_account_tax__ubl_cii_tax_exemption_reason_code
+msgid ""
+"The reason why the amount is exempted from VAT or why no VAT is being "
+"charged, used for electronic invoicing purposes."
+msgstr ""
+"เหตุผลที่จำนวนเงินดังกล่าวได้รับการยกเว้นภาษีมูลค่าเพิ่ม หรือไม่มีการเรียกเก็บภาษีมูลค่าเพิ่ม "
+"ใช้เพื่อวัตถุประสงค์การออกใบแจ้งหนี้ทางอิเล็กทรอนิกส์"
+
+#. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9952
 msgid "Turkey VAT"
 msgstr "ภาษีมูลค่าเพิ่มของประเทศตุรกี"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__0235
+msgid "UAE Tax Identification Number (TIN)"
+msgstr ""
 
 #. module: account_edi_ubl_cii
 #: model:ir.model,name:account_edi_ubl_cii.model_account_edi_xml_ubl_20
@@ -914,9 +1065,20 @@ msgid "UBL/CII File"
 msgstr "UBL/CII File"
 
 #. module: account_edi_ubl_cii
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_bank_statement_line__ubl_cii_xml_filename
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_move__ubl_cii_xml_filename
+msgid "UBL/CII Filename"
+msgstr ""
+
+#. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9959
 msgid "USA EIN"
 msgstr "EIN สหรัฐอเมริกา"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields,field_description:account_edi_ubl_cii.field_account_tax__ubl_cii_requires_exemption_reason
+msgid "Ubl Cii Requires Exemption Reason"
+msgstr ""
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields,help:account_edi_ubl_cii.field_res_partner__peppol_endpoint
@@ -932,6 +1094,486 @@ msgstr ""
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9932
 msgid "United Kingdom VAT"
 msgstr "ภาษีมูลค่าเพิ่มของสหราชอาณาจักร"
+
+#. module: account_edi_ubl_cii
+#. odoo-python
+#: code:addons/account_edi_ubl_cii/wizard/account_move_send_wizard.py:0
+msgid "Unspported file type via %s"
+msgstr ""
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132
+msgid ""
+"VATEX-EU-132 - Exempt based on article 132 of Council Directive 2006/112/EC"
+msgstr "VATEX-EU-132 - ได้รับการยกเว้นตามมาตรา 132 ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1a
+msgid ""
+"VATEX-EU-132-1A - Exempt based on article 132, section 1 (a) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1A - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (a) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1b
+msgid ""
+"VATEX-EU-132-1B - Exempt based on article 132, section 1 (b) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1B - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (b) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1c
+msgid ""
+"VATEX-EU-132-1C - Exempt based on article 132, section 1 (c) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1C - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (c) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1d
+msgid ""
+"VATEX-EU-132-1D - Exempt based on article 132, section 1 (d) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1D - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (d) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1e
+msgid ""
+"VATEX-EU-132-1E - Exempt based on article 132, section 1 (e) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1E - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (e) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1f
+msgid ""
+"VATEX-EU-132-1F - Exempt based on article 132, section 1 (f) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1F - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (f) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1g
+msgid ""
+"VATEX-EU-132-1G - Exempt based on article 132, section 1 (g) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1G - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (g) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1h
+msgid ""
+"VATEX-EU-132-1H - Exempt based on article 132, section 1 (h) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1H - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (h) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1i
+msgid ""
+"VATEX-EU-132-1I - Exempt based on article 132, section 1 (i) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1I - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (i) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1j
+msgid ""
+"VATEX-EU-132-1J - Exempt based on article 132, section 1 (j) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1J - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (j) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1k
+msgid ""
+"VATEX-EU-132-1K - Exempt based on article 132, section 1 (k) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1K - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (k) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1l
+msgid ""
+"VATEX-EU-132-1L - Exempt based on article 132, section 1 (l) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1L - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (l) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1m
+msgid ""
+"VATEX-EU-132-1M - Exempt based on article 132, section 1 (m) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1M - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (m) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1n
+msgid ""
+"VATEX-EU-132-1N - Exempt based on article 132, section 1 (n) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1N - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (n) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1o
+msgid ""
+"VATEX-EU-132-1O - Exempt based on article 132, section 1 (o) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1O - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (o) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1p
+msgid ""
+"VATEX-EU-132-1P - Exempt based on article 132, section 1 (p) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1P - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (p) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-132-1q
+msgid ""
+"VATEX-EU-132-1Q - Exempt based on article 132, section 1 (q) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-132-1Q - ได้รับการยกเว้นตามมาตรา 132 หมวด 1 (q) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143
+msgid ""
+"VATEX-EU-143 - Exempt based on article 143 of Council Directive 2006/112/EC"
+msgstr "VATEX-EU-143 - ได้รับการยกเว้นตามมาตรา 143 ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1a
+msgid ""
+"VATEX-EU-143-1A - Exempt based on article 143, section 1 (a) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1A - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (a) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1b
+msgid ""
+"VATEX-EU-143-1B - Exempt based on article 143, section 1 (b) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1B - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (b) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1c
+msgid ""
+"VATEX-EU-143-1C - Exempt based on article 143, section 1 (c) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1C - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (c) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1d
+msgid ""
+"VATEX-EU-143-1D - Exempt based on article 143, section 1 (d) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1D - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (d) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1e
+msgid ""
+"VATEX-EU-143-1E - Exempt based on article 143, section 1 (e) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1E - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (e) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1f
+msgid ""
+"VATEX-EU-143-1F - Exempt based on article 143, section 1 (f) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1F - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (f) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1fa
+msgid ""
+"VATEX-EU-143-1FA - Exempt based on article 143, section 1 (fa) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1FA - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (fa) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1g
+msgid ""
+"VATEX-EU-143-1G - Exempt based on article 143, section 1 (g) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1G - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (g) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1h
+msgid ""
+"VATEX-EU-143-1H - Exempt based on article 143, section 1 (h) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1H - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (h) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1i
+msgid ""
+"VATEX-EU-143-1I - Exempt based on article 143, section 1 (i) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1I - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (i) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1j
+msgid ""
+"VATEX-EU-143-1J - Exempt based on article 143, section 1 (j) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1J - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (j) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1k
+msgid ""
+"VATEX-EU-143-1K - Exempt based on article 143, section 1 (k) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1K - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (k) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-143-1l
+msgid ""
+"VATEX-EU-143-1L - Exempt based on article 143, section 1 (l) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-143-1L - ได้รับการยกเว้นตามมาตรา 143 หมวด 1 (l) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-148
+msgid ""
+"VATEX-EU-148 - Exempt based on article 148 of Council Directive 2006/112/EC"
+msgstr "VATEX-EU-148 - ได้รับการยกเว้นตามมาตรา 148 ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-148-a
+msgid ""
+"VATEX-EU-148-A - Exempt based on article 148, section (a) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-148-A - ได้รับการยกเว้นตามมาตรา 148 หมวด (a) ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-148-b
+msgid ""
+"VATEX-EU-148-B - Exempt based on article 148, section (b) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-148-B - ได้รับการยกเว้นตามมาตรา 148 หมวด (b) ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-148-c
+msgid ""
+"VATEX-EU-148-C - Exempt based on article 148, section (c) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-148-C - ได้รับการยกเว้นตามมาตรา 148 หมวด (c) ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-148-d
+msgid ""
+"VATEX-EU-148-D - Exempt based on article 148, section (d) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-148-D - ได้รับการยกเว้นตามมาตรา 148 หมวด (d) ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-148-e
+msgid ""
+"VATEX-EU-148-E - Exempt based on article 148, section (e) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-148-E - ได้รับการยกเว้นตามมาตรา 148 หมวด (e) ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-148-f
+msgid ""
+"VATEX-EU-148-F - Exempt based on article 148, section (f) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-148-F - ได้รับการยกเว้นตามมาตรา 148 หมวด (f) ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-148-g
+msgid ""
+"VATEX-EU-148-G - Exempt based on article 148, section (g) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-148-G - ได้รับการยกเว้นตามมาตรา 148 หมวด (g) ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-151
+msgid ""
+"VATEX-EU-151 - Exempt based on article 151 of Council Directive 2006/112/EC"
+msgstr "VATEX-EU-151 - ได้รับการยกเว้นตามมาตรา 151 ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-151-1a
+msgid ""
+"VATEX-EU-151-1A - Exempt based on article 151, section 1 (a) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-151-1A - ได้รับการยกเว้นตามมาตรา 151 หมวด 1 (a) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-151-1aa
+msgid ""
+"VATEX-EU-151-1AA - Exempt based on article 151, section 1 (aa) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-151-1AA - ได้รับการยกเว้นตามมาตรา 151 หมวด 1 (aa) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-151-1b
+msgid ""
+"VATEX-EU-151-1B - Exempt based on article 151, section 1 (b) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-151-1B - ได้รับการยกเว้นตามมาตรา 151 หมวด 1 (b) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-151-1c
+msgid ""
+"VATEX-EU-151-1C - Exempt based on article 151, section 1 (c) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-151-1C - ได้รับการยกเว้นตามมาตรา 151 หมวด 1 (c) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-151-1d
+msgid ""
+"VATEX-EU-151-1D - Exempt based on article 151, section 1 (d) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-151-1D - ได้รับการยกเว้นตามมาตรา 151 หมวด 1 (d) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-151-1e
+msgid ""
+"VATEX-EU-151-1E - Exempt based on article 151, section 1 (e) of Council "
+"Directive 2006/112/EC"
+msgstr ""
+"VATEX-EU-151-1E - ได้รับการยกเว้นตามมาตรา 151 หมวด 1 (e) ของคำสั่งสภายุโรป "
+"2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-309
+msgid ""
+"VATEX-EU-309 - Exempt based on article 309 of Council Directive 2006/112/EC"
+msgstr "VATEX-EU-309 - ได้รับการยกเว้นตามมาตรา 309 ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-79-c
+msgid ""
+"VATEX-EU-79-C - Exempt based on article 79, point c of Council Directive "
+"2006/112/EC"
+msgstr ""
+"VATEX-EU-79-C - ได้รับการยกเว้นตามมาตรา 79 จุด c ของคำสั่งสภายุโรป 2006/112/EC"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-ae
+msgid "VATEX-EU-AE - Reverse charge"
+msgstr "VATEX-EU-AE - การชาร์จแบบย้อนกลับ"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-d
+msgid ""
+"VATEX-EU-D - Intra-Community acquisition from second hand means of transport"
+msgstr "VATEX-EU-D - การซื้อภายในชุมชนด้วยวิธีการขนส่งมือสอง"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-f
+msgid "VATEX-EU-F - Intra-Community acquisition of second hand goods"
+msgstr "VATEX-EU-F - การได้มาซึ่งสินค้ามือสองภายในชุมชน"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-g
+msgid "VATEX-EU-G - Export outside the EU"
+msgstr "VATEX-EU-G - การส่งออกนอกสหภาพยุโรป"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-i
+msgid "VATEX-EU-I - Intra-Community acquisition of works of art"
+msgstr "VATEX-EU-I - การซื้องานศิลปะภายในชุมชน"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-ic
+msgid "VATEX-EU-IC - Intra-Community supply"
+msgstr "VATEX-EU-IC - การจัดหาภายในชุมชน"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-j
+msgid ""
+"VATEX-EU-J - Intra-Community acquisition of collectors items and antiques"
+msgstr "VATEX-EU-J - การซื้อภายในชุมชนสำหรับนักสะสมและโบราณวัตถุ"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-eu-o
+msgid "VATEX-EU-O - Not subject to VAT"
+msgstr "VATEX-EU-O - ไม่ต้องเสียภาษีมูลค่าเพิ่ม"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-fr-cnwvat
+msgid ""
+"VATEX-FR-CNWVAT - France domestic Credit Notes without VAT, due to supplier "
+"forfeit of VAT for discount"
+msgstr ""
+"VATEX-FR-CNWVAT - ตราสารหนี้ภายในประเทศฝรั่งเศสที่ไม่มีภาษีมูลค่าเพิ่ม "
+"เนื่องจากซัพพลายเออร์สูญเสียภาษีมูลค่าเพิ่มเพื่อรับส่วนลด"
+
+#. module: account_edi_ubl_cii
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_exemption_reason_code__vatex-fr-franchise
+msgid "VATEX-FR-FRANCHISE - France domestic VAT franchise in base"
+msgstr "VATEX-FR-FRANCHISE - แฟรนไชส์ภาษีมูลค่าเพิ่มในประเทศฝรั่งเศสในฐาน"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__9953
@@ -951,8 +1593,8 @@ msgid ""
 "When the Canary Island General Indirect Tax (IGIC) applies, the tax rate on "
 "each invoice line should be greater than 0."
 msgstr ""
-"เมื่อใช้ภาษีทางอ้อมทั่วไปของ Canary Island (IGIC) อัตราภาษีในแต่ละบรรทัดใบแจ้งหนี้ควรมากกว่"
-"า 0"
+"เมื่อใช้ภาษีทางอ้อมทั่วไปของ Canary Island (IGIC) "
+"อัตราภาษีในแต่ละบรรทัดใบแจ้งหนี้ควรมากกว่า 0"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__peppol_eas__aq
@@ -960,25 +1602,20 @@ msgid "X.400 address for mail text"
 msgstr ""
 
 #. module: account_edi_ubl_cii
-#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__res_partner__invoice_edi_format__xrechnung
-msgid "XRechnung CIUS"
-msgstr ""
-
-#. module: account_edi_ubl_cii
 #. odoo-python
 #: code:addons/account_edi_ubl_cii/models/account_edi_xml_cii_facturx.py:0
 msgid ""
 "You should include at least one tax per invoice line. [BR-CO-04]-Each "
-"Invoice line (BG-25) shall be categorized with an Invoiced item VAT category"
-" code (BT-151)."
+"Invoice line (BG-25) shall be categorized with an Invoiced item VAT category "
+"code (BT-151)."
 msgstr ""
-"คุณควรรวมภาษีอย่างน้อยหนึ่งรายการต่อบรรทัดใบแจ้งหนี้ [BR-CO-04]-แต่ละบรรทัดใบแจ้งหนี้ (BG-25)"
-" จะถูกจัดประเภทด้วยรหัสหมวดหมู่ VAT ของรายการในใบแจ้งหนี้ (BT-151)"
+"คุณควรรวมภาษีอย่างน้อยหนึ่งรายการต่อบรรทัดใบแจ้งหนี้ [BR-CO-04]-แต่ละบรรทัดใบแจ้งหนี้ "
+"(BG-25) จะถูกจัดประเภทด้วยรหัสหมวดหมู่ VAT ของรายการในใบแจ้งหนี้ (BT-151)"
 
 #. module: account_edi_ubl_cii
-#: model_terms:ir.ui.view,arch_db:account_edi_ubl_cii.view_partner_property_form
-msgid "Your endpoint"
-msgstr "ปลายทางของคุณ"
+#: model:ir.model.fields.selection,name:account_edi_ubl_cii.selection__account_tax__ubl_cii_tax_category_code__z
+msgid "Z - Zero rated goods"
+msgstr "Z - สินค้าที่มีคะแนนเป็นศูนย์"
 
 #. module: account_edi_ubl_cii
 #: model:ir.model.fields,field_description:account_edi_ubl_cii.field_res_partner__invoice_edi_format
@@ -1000,3 +1637,9 @@ msgstr "fx"
 #: model_terms:ir.ui.view,arch_db:account_edi_ubl_cii.account_invoice_pdfa_3_facturx_metadata
 msgid "urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#"
 msgstr "urn:factur-x:pdfa:CrossIndustryDocument:invoice:1p0#"
+
+#~ msgid "Your endpoint"
+#~ msgstr "ปลายทางของคุณ"
+
+#~ msgid "Format used to import the invoice: %s"
+#~ msgstr "รูปแบบที่ใช้ในการนำเข้าใบแจ้งหนี้: %s"

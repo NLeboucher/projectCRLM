@@ -2,9 +2,26 @@ import uuid
 from markupsafe import Markup
 from urllib.parse import quote, urlencode, urlparse
 
-from odoo import fields, models, _
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
+from odoo.tools import SQL
 from odoo.addons.l10n_tr_nilvera.lib.nilvera_client import _get_nilvera_client
+
+MOVE_TYPE_CATEGORY_MAP = {
+    "out_invoice": {
+        "earchive": "invoices",
+        "einvoice": "sale",
+    },
+    "in_invoice": {
+        "einvoice": "purchase",
+    },
+}
+
+CATEGORY_MOVE_TYPE_MAP = {
+    "invoices": "out_invoice",
+    "sale": "out_invoice",
+    "purchase": "in_invoice",
+}
 
 
 class AccountMove(models.Model):
@@ -15,9 +32,9 @@ class AccountMove(models.Model):
         string="Nilvera Document UUID",
         copy=False,
         readonly=True,
-        default=lambda self: str(uuid.uuid4()),
         help="Universally unique identifier of the Invoice",
     )
+
     l10n_tr_nilvera_send_status = fields.Selection(
         selection=[
             ('error', "Error"),
@@ -41,20 +58,42 @@ class AccountMove(models.Model):
             and (customization_id := file_data['xml_tree'].findtext('{*}CustomizationID'))
             and 'TR1.2' in customization_id
         ):
-            return 'account_edi.xml.ubl.tr'
+            return 'account.edi.xml.ubl.tr'
 
         return super()._get_import_file_type(file_data)
 
+    def _l10n_tr_types_to_update_status(self):
+        return list(MOVE_TYPE_CATEGORY_MAP)
+
+    def _l10n_tr_get_document_category(self, invoice_channel):
+        return MOVE_TYPE_CATEGORY_MAP.get(self.move_type, {}).get(invoice_channel)
+
+    def _l10n_tr_get_category_move_type(self, document_category):
+        return CATEGORY_MOVE_TYPE_MAP.get(document_category.lower())
+
+    @api.model
+    def _get_ubl_cii_builder_from_xml_tree(self, tree):
+        customization_id = tree.find('{*}CustomizationID')
+        if customization_id is not None and 'TR1.2' in customization_id.text:
+            return self.env['account.edi.xml.ubl.tr']
+        return super()._get_ubl_cii_builder_from_xml_tree(tree)
+
     def button_draft(self):
         # EXTENDS account
-        for move in self:
-            if (
-                not move.company_id.l10n_tr_nilvera_use_test_env
-                and move.l10n_tr_nilvera_uuid
-                and move.l10n_tr_nilvera_send_status != 'not_sent'
-            ):
+        for move in self.filtered('l10n_tr_nilvera_uuid'):
+            if move.l10n_tr_nilvera_send_status == 'error':
+                move.message_post(body=_("To preserve accounting integrity and comply with legal requirements, invoices cannot be reused once an error occurs. Please create a new invoice to continue."))
+            elif move.l10n_tr_nilvera_send_status != 'not_sent':
                 raise UserError(_("You cannot reset to draft an entry that has been sent to Nilvera."))
         super().button_draft()
+
+    def _post(self, soft=True):
+        for move in self:
+            if move.l10n_tr_nilvera_send_status == 'error' and move.l10n_tr_nilvera_uuid:
+                raise UserError(_("To preserve accounting integrity and comply with legal requirements, invoices cannot be reused once an error occurs. Please create a new invoice to continue."))
+            if move.country_code == 'TR' and not move.l10n_tr_nilvera_uuid:
+                move.l10n_tr_nilvera_uuid = str(uuid.uuid4())
+        return super()._post(soft=soft)
 
     def _l10n_tr_nilvera_submit_einvoice(self, xml_file, customer_alias):
         self._l10n_tr_nilvera_submit_document(
@@ -102,6 +141,7 @@ class AccountMove(models.Model):
                 # If the sequence/series is not found on Nilvera, add it then retry.
                 if 3009 in error_codes and post_series:
                     self._l10n_tr_nilvera_post_series(endpoint, client)
+                    xml_file.seek(0)    # reset stream before retry, as previous POST moved the buffer to the EOF
                     return self._l10n_tr_nilvera_submit_document(xml_file, endpoint, post_series=False)
                 raise UserError(error_message)
             elif response.status_code == 500:
@@ -135,67 +175,91 @@ class AccountMove(models.Model):
         )
 
     def _l10n_tr_nilvera_get_submitted_document_status(self):
-        with _get_nilvera_client(self.env.company) as client:
-            for invoice in self:
-                response = client.request(
-                    "GET",
-                    f"/einvoice/sale/{invoice.l10n_tr_nilvera_uuid}/Status",
-                )
+        for company, invoices in self.grouped("company_id").items():
+            with _get_nilvera_client(company) as client:
+                for invoice in invoices:
+                    invoice_channel = invoice.partner_id.l10n_tr_nilvera_customer_status
+                    document_category = invoice._l10n_tr_get_document_category(invoice_channel)
+                    if not document_category or not invoice_channel:
+                        continue
 
-                nilvera_status = response.get('InvoiceStatus', {}).get('Code')
-                if nilvera_status in dict(invoice._fields['l10n_tr_nilvera_send_status'].selection):
-                    invoice.l10n_tr_nilvera_send_status = nilvera_status
-                    if nilvera_status == 'error':
-                        invoice.message_post(
-                            body=Markup(
-                                "%s<br/>%s - %s<br/>"
-                            ) % (
-                                _("The invoice couldn't be sent to the recipient."),
-                                response['InvoiceStatus'].get('Description'),
-                                response['InvoiceStatus'].get('DetailDescription'),
+                    response = client.request(
+                        "GET",
+                        f"/{invoice_channel}/{quote(document_category)}/{invoice.l10n_tr_nilvera_uuid}/Status",
+                    )
+
+                    nilvera_status = response.get('InvoiceStatus', {}).get('Code') or response.get('StatusCode')
+                    if nilvera_status in dict(invoice._fields['l10n_tr_nilvera_send_status'].selection):
+                        invoice.l10n_tr_nilvera_send_status = nilvera_status
+                        if nilvera_status == 'error':
+                            invoice.message_post(
+                                body=Markup(
+                                    "%s<br/>%s - %s<br/>"
+                                ) % (
+                                    _("The invoice couldn't be sent to the recipient."),
+                                    response.get('InvoiceStatus', {}).get('Description') or response.get('StatusDetail'),
+                                    response.get('InvoiceStatus', {}).get('DetailDescription') or response.get('ReportStatus'),
+                                )
                             )
-                        )
-                else:
-                    invoice.message_post(body=_("The invoice status couldn't be retrieved from Nilvera."))
+                    else:
+                        invoice.message_post(body=_("The invoice status couldn't be retrieved from Nilvera."))
 
-    def _l10n_tr_nilvera_get_documents(self):
+    def _l10n_tr_nilvera_get_documents(self, invoice_channel="einvoice", document_category="Purchase", journal_type="in_invoice"):
         with _get_nilvera_client(self.env.company) as client:
-            response = client.request(
-                "GET",
-                "/einvoice/Purchase",
-            )
-
+            response = client.request("GET", f"/{invoice_channel}/{quote(document_category)}", params={"StatusCode": ["succeed"]})
             if not response.get('Content'):
                 return
 
-            journal = self.env.company.l10n_tr_nilvera_purchase_journal_id
-            if not journal:
-                journal = self.env['account.journal'].search([
-                    *self.env['account.journal']._check_company_domain(self.env.company),
-                    ('type', '=', 'purchase'),
-                ], limit=1)
-
-            document_uuids = [content.get('UUID') for content in response.get('Content')]
-            document_uuids_count = dict(self.env['account.move']._read_group(
-                [('l10n_tr_nilvera_uuid', 'in', document_uuids)],
-                groupby=['l10n_tr_nilvera_uuid'],
-                aggregates=['__count'],
-            ))
+            journal = self._l10n_tr_get_nilvera_invoice_journal(journal_type)
+            response_document_uuids = [content.get('UUID') for content in response.get('Content')]
+            existing_document_uuids = self.env['account.move'].search([
+                ('l10n_tr_nilvera_uuid', 'in', response_document_uuids),
+            ]).mapped('l10n_tr_nilvera_uuid')
             moves = self.env['account.move']
-            for document_uuid in document_uuids:
+
+            for document_uuid in response_document_uuids:
                 # Skip invoices that have already been downloaded.
-                if document_uuid in document_uuids_count:
+                if document_uuid in existing_document_uuids:
                     continue
-                move = self._l10n_tr_nilvera_get_invoice_from_uuid(client, journal, document_uuid)
-                self._l10n_tr_nilvera_add_pdf_to_invoice(client, move, document_uuid)
+                move = self._l10n_tr_nilvera_get_invoice_from_uuid(client, journal, document_uuid, document_category, invoice_channel)
+                self._l10n_tr_nilvera_add_pdf_to_invoice(client, move, document_uuid, document_category, invoice_channel)
                 moves |= move
                 self.env.cr.commit()
             journal._notify_einvoices_received(moves)
 
-    def _l10n_tr_nilvera_get_invoice_from_uuid(self, client, journal, document_uuid):
+    def _l10n_tr_get_nilvera_invoice_journal(self, journal_type):
+        journal = self._l10n_tr_get_document_category_default_journal(journal_type)
+        if not journal:
+            journal = self.env['account.journal'].search([
+                *self.env['account.journal']._check_company_domain(self.env.company),
+                ('type', '=', f'{journal_type}'),
+            ], limit=1)
+        return journal
+
+    def _l10n_tr_get_document_category_default_journal(self, journal_type):
+        if journal_type == "purchase":
+            return self.env.company.l10n_tr_nilvera_purchase_journal_id
+        return None
+
+    @api.deprecated("Deprecated since 19.0, logic moved to _l10n_tr_nilvera_get_documents")
+    def _l10n_tr_build_document_uuids_list(self, response):
+        contents = response.get("Content", [])
+        document_uuids = [content.get("UUID") for content in contents if content.get("UUID")]
+        # Should be unique per invoice so we get the records with the invoice to use the records
+        document_uuids_records = dict(self.env["account.move"]._read_group([("l10n_tr_nilvera_uuid", "in", document_uuids)], groupby=["l10n_tr_nilvera_uuid", "id"]))
+        document_uuids_references = {
+            content["UUID"]: content["InvoiceNumber"]
+            for content in contents
+            if content.get("UUID") and content.get("InvoiceNumber")
+        }
+
+        return document_uuids, document_uuids_records, document_uuids_references
+
+    def _l10n_tr_nilvera_get_invoice_from_uuid(self, client, journal, document_uuid, document_category="Purchase", invoice_channel="einvoice"):
         response = client.request(
             "GET",
-            f"/einvoice/Purchase/{quote(document_uuid)}/xml",
+            f"/{invoice_channel}/{quote(document_category)}/{quote(document_uuid)}/xml",
+            params={"StatusCode": ["succeed"]},
         )
 
         attachment_vals = {
@@ -206,10 +270,13 @@ class AccountMove(models.Model):
         }
 
         attachment = self.env['ir.attachment'].create(attachment_vals)
+        move_type = self._l10n_tr_get_category_move_type(document_category)
         try:
             move = journal.with_context(
-                default_move_type='in_invoice',
+                default_move_type=move_type,
                 default_l10n_tr_nilvera_uuid=document_uuid,
+                default_message_main_attachment_id=attachment.id,
+                default_l10n_tr_nilvera_send_status='succeed',
             )._create_document_from_attachment(attachment.id)
 
             # If move creation was successful, update the attachment name with the bill reference.
@@ -219,11 +286,13 @@ class AccountMove(models.Model):
             move._message_log(body=_("Nilvera document has been received successfully"))
         except Exception:   # noqa: BLE001
             # If the invoice creation fails, create an empty invoice with the attachment. The PDF will be
-            # added in a later step as well.
+            # added in a later step as well. Nilvera only returns uuid of the successful attachments.
             move = self.env['account.move'].create({
-                'move_type': 'in_invoice',
+                'move_type': move_type,
                 'company_id': self.env.company.id,
                 'l10n_tr_nilvera_uuid': document_uuid,
+                'l10n_tr_nilvera_send_status': 'succeed',
+                'message_main_attachment_id': attachment.id,
             })
             attachment.write({
                 'res_model': 'account.move',
@@ -232,13 +301,13 @@ class AccountMove(models.Model):
 
         return move
 
-    def _l10n_tr_nilvera_add_pdf_to_invoice(self, client, invoice, document_uuid):
+    def _l10n_tr_nilvera_add_pdf_to_invoice(self, client, invoice, document_uuid, document_category="Purchase", invoice_channel="einvoice"):
         response = client.request(
             "GET",
-            f"/einvoice/Purchase/{quote(document_uuid)}/pdf",
+            f"/{invoice_channel}/{quote(document_category)}/{quote(document_uuid)}/pdf",
         )
 
-        filename = f'{invoice.ref}.pdf' if invoice.ref else 'Nilvera PDF.pdf'
+        filename = f'{invoice.ref}.pdf' if invoice.ref else invoice._get_invoice_nilvera_pdf_report_filename()
 
         attachment = self.env['ir.attachment'].create({
             'name': filename,
@@ -248,12 +317,26 @@ class AccountMove(models.Model):
             'type': 'binary',
             'mimetype': 'application/pdf',
         })
+        # The created attachement coming form Nilvera should be the main attachment
+        invoice.message_main_attachment_id = attachment
+        invoice.with_context(no_new_invoice=True).message_post(attachment_ids=attachment.ids)
 
-        if (invoice.message_main_attachment_id
-                and invoice.message_main_attachment_id.name.endswith('.xml')
-                and 'pdf' not in invoice.message_main_attachment_id.mimetype):
-            invoice.message_main_attachment_id = attachment
-        invoice.message_post(attachment_ids=attachment.ids)
+    def l10n_tr_nilvera_get_pdf(self):
+        with _get_nilvera_client(self.env.company) as client:
+            for invoice in self:
+                if (
+                        invoice.l10n_tr_nilvera_customer_status not in {'einvoice', 'earchive'}
+                        or invoice.message_main_attachment_id.id != invoice.invoice_pdf_report_id.id
+                        or invoice.l10n_tr_nilvera_send_status != 'succeed'
+                ):
+                    continue
+                self._l10n_tr_nilvera_add_pdf_to_invoice(
+                    client,
+                    invoice,
+                    invoice.l10n_tr_nilvera_uuid,
+                    document_category="Sale",
+                    invoice_channel=invoice.l10n_tr_nilvera_customer_status,
+                )
 
     def _l10n_tr_nilvera_einvoice_get_error_messages_from_response(self, response):
         msg = ""
@@ -288,15 +371,72 @@ class AccountMove(models.Model):
             for line in self.invoice_line_ids
         )
 
+    def _get_partner_l10n_tr_nilvera_customer_alias_name(self):
+        # Allows overriding the default customer alias with a custom one.
+        self.ensure_one()
+        return self.partner_id.l10n_tr_nilvera_customer_alias_id.name
+
+    def _get_invoice_nilvera_pdf_report_filename(self):
+        """ Get the filename of the Nilvera PDF invoice report. """
+        self.ensure_one()
+        return f"{self._get_move_display_name().replace(' ', '_').replace('/', '_')}_einvoice.pdf"
+
     # -------------------------------------------------------------------------
     # CRONS
     # -------------------------------------------------------------------------
 
-    def _cron_nilvera_get_new_documents(self):
-        self._l10n_tr_nilvera_get_documents()
+    def _l10n_tr_nilvera_company_get_documents(self, invoice_channel, category, journal_type):
+        for company in self.env.companies:
+            if company.country_code != "TR" or not company.l10n_tr_nilvera_api_key:
+                continue
+            self.with_company(company)._l10n_tr_nilvera_get_documents(invoice_channel, category, journal_type)
+
+    def _cron_nilvera_get_new_einvoice_purchase_documents(self):
+        self._l10n_tr_nilvera_company_get_documents("einvoice", "Purchase", "purchase")
+
+    def _cron_nilvera_get_new_einvoice_sale_documents(self):
+        self._l10n_tr_nilvera_company_get_documents("einvoice", "Sale", "sale")
+
+    def _cron_nilvera_get_new_earchive_sale_documents(self):
+        self._l10n_tr_nilvera_company_get_documents("earchive", "Invoices", "sale")
 
     def _cron_nilvera_get_invoice_status(self):
         invoices_to_update = self.env['account.move'].search([
             ('l10n_tr_nilvera_send_status', 'in', ['waiting', 'sent']),
+            ('move_type', 'in', self._l10n_tr_types_to_update_status()),
         ])
         invoices_to_update._l10n_tr_nilvera_get_submitted_document_status()
+
+    def _cron_nilvera_get_sale_pdf(self, batch_size=100):
+        """ Fetches the Nilvera generated PDFs for the sales generated on Odoo. """
+        # We fetch all invoices whose message_main_attachment_id is the same
+        # as their invoice_pdf_report_id attachment. After we add the Nilvera
+        # PDF, `_l10n_tr_nilvera_add_pdf_to_invoice` will set
+        # `message_main_attachment_id` to the Nilvera attachment, so they
+        # won't be picked up by next runs.
+        # This is a workaround to do this in stable without adding a dedicated field.
+        sql = SQL("""
+          SELECT am.id
+            FROM account_move am
+            JOIN ir_attachment ia
+              ON ia.res_model = 'account.move'
+             AND ia.res_id = am.id
+             AND ia.mimetype = 'application/pdf'
+             AND ia.res_field = 'invoice_pdf_report_file'
+           WHERE am.message_main_attachment_id = ia.id
+             AND am.l10n_tr_nilvera_send_status = 'succeed'
+             AND am.move_type = 'out_invoice'
+           LIMIT %s
+        """, batch_size)
+        move_ids = [row[0] for row in self.env.execute_query(sql)]
+        invoice_to_fetch_pdf = self.env['account.move'].browse(move_ids)
+        for company, invoices in invoice_to_fetch_pdf.grouped("company_id").items():
+            with _get_nilvera_client(company) as client:
+                for invoice in invoices:
+                    self._l10n_tr_nilvera_add_pdf_to_invoice(
+                        client,
+                        invoice,
+                        invoice.l10n_tr_nilvera_uuid,
+                        document_category="Sale",
+                        invoice_channel=invoice.l10n_tr_nilvera_customer_status,
+                    )

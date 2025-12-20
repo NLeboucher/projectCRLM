@@ -3648,7 +3648,7 @@ class BaseModel(metaclass=MetaModel):
             for lang, _translations in translations.items():
                 _old_translations = {src: values[lang] for src, values in old_translation_dictionary.items() if lang in values}
                 _new_translations = {**_old_translations, **_translations}
-                new_values[lang] = field.translate(_new_translations.get, old_source_lang_value)
+                new_values[lang] = field.convert_to_cache(field.translate(_new_translations.get, old_source_lang_value), self)
             field._update_cache(self.with_context(prefetch_langs=True), new_values, dirty=True)
 
         # the following write is incharge of
@@ -4149,7 +4149,7 @@ class BaseModel(metaclass=MetaModel):
         if any(self._ids):
             Rule = self.env['ir.rule']
             domain = Rule._compute_domain(self._name, operation)
-            if domain and (forbidden := self - self.sudo().filtered_domain(domain)):
+            if domain and (forbidden := self - self.sudo().with_context(active_test=False).filtered_domain(domain)):
                 return forbidden, functools.partial(Rule._make_access_error, operation, forbidden)
 
         return None

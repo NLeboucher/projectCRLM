@@ -683,7 +683,10 @@ class TestSaleOrder(SaleCommon):
         """Test warnings when partner/products with sale warnings are used."""
         partner_with_warning = self.env['res.partner'].create({
             'name': 'Test Partner', 'sale_warn_msg': 'Highly infectious disease'})
+        child_partner = self.env['res.partner'].create({
+            'type': 'invoice', 'parent_id': partner_with_warning.id, 'sale_warn_msg': 'Slightly infectious disease'})
         sale_order = self.env['sale.order'].create({'partner_id': partner_with_warning.id})
+        sale_order2 = self.env['sale.order'].create({'partner_id': child_partner.id})
 
         product_with_warning1 = self.env['product.product'].create({
             'name': 'Test Product 1', 'sale_line_warn_msg': 'Highly corrosive'})
@@ -703,12 +706,43 @@ class TestSaleOrder(SaleCommon):
                 'order_id': sale_order.id,
                 'product_id': product_with_warning1.id,
             },
+            {
+                'order_id': sale_order2.id,
+                'product_id': product_with_warning1.id,
+            },
+            {
+                'order_id': sale_order2.id,
+                'product_id': product_with_warning2.id,
+            },
+            # Warnings for duplicate products should not appear.
+            {
+                'order_id': sale_order2.id,
+                'product_id': product_with_warning1.id,
+            },
         ])
+
+        group_warning_sale = self.env.ref('sale.group_warning_sale')
+        self.group_user.implied_ids = [Command.link(group_warning_sale.id)]
+        sale_order2.action_confirm()
+        sale_order2._create_invoices()
+        invoice = Form(sale_order2.invoice_ids[0])
 
         expected_warnings = ('Test Partner - Highly infectious disease',
                              'Test Product 1 - Highly corrosive',
                              'Test Product 2 - Toxic pollutant')
+        expected_warnings_for_sale_order2 = ('Test Partner, Invoice - Slightly infectious disease',
+                                             'Test Product 1 - Highly corrosive',
+                                             'Test Product 2 - Toxic pollutant')
         self.assertEqual(sale_order.sale_warning_text, '\n'.join(expected_warnings))
+        self.assertEqual(sale_order2.sale_warning_text, '\n'.join(expected_warnings_for_sale_order2))
+        self.assertEqual(invoice.sale_warning_text, '\n'.join(expected_warnings_for_sale_order2))
+
+        # without warning group, there should be no warning
+        self.group_user.implied_ids = [Command.unlink(group_warning_sale.id)]
+        self.assertEqual(sale_order.sale_warning_text, '')
+        self.assertEqual(sale_order2.sale_warning_text, '')
+        invoice = Form(sale_order2.invoice_ids[0])
+        self.assertEqual(invoice.sale_warning_text, '')
 
     def test_sale_order_email_subtitle(self):
         """Test email notification subtitle for Sale Order with and without partner name."""

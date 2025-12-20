@@ -4,23 +4,25 @@
 #
 # Translators:
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# "Anastasiia Koroleva (koan)" <koan@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-12 13:52+0000\n"
-"PO-Revision-Date: 2025-09-16 02:37+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
-"Language-Team: Russian <https://translate.odoo.com/projects/odoo-19/base/ru/"
-">\n"
+"POT-Creation-Date: 2025-10-09 12:16+0000\n"
+"PO-Revision-Date: 2025-12-20 09:47+0000\n"
+"Last-Translator: \"Anastasiia Koroleva (koan)\" <koan@odoo.com>\n"
+"Language-Team: Russian <https://translate.odoo.com/projects/odoo-19/base/ru/>"
+"\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 5.12.2\n"
+"Plural-Forms: nplurals=4; plural="
+"(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 "
+": n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_at_reports
@@ -141,14 +143,14 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Чат, почтовый шлюз и приватные каналы.\n"
+"Чат, почтовый шлюз и закрытые каналы.\n"
 "=======================================\n"
 "\n"
-"Общайтесь с коллегами, клиентами и гостями внутри Odoo.\n"
+"Общайтесь с коллегами, клиентами и гостями с помощью Odoo.\n"
 "\n"
 "Обсуждения/Чат\n"
 "------------\n"
-"Удобные функции \"Обсуждения\", позволяющие общаться один на один или в "
+"Удобные функции модуля Обсуждения, позволяющие общаться один на один или в "
 "группах\n"
 "(текстовый чат, голосовые и видеозвонки), приглашать гостей и делиться с "
 "ними\n"
@@ -157,16 +159,16 @@ msgstr ""
 "Почтовый шлюз\n"
 "------------\n"
 "Отправка информации и документов стала проще. Вы можете отправлять письма\n"
-"прямо из Odoo с широкими возможностями. Например,\n"
+"прямо из Odoo. Например,\n"
 "создайте красивый шаблон письма для счетов и используйте его\n"
 "для всех клиентов, не повторяя процесс каждый раз.\n"
 "\n"
-"Chatter\n"
+"Чат\n"
 "-------\n"
 "Ведите все контекстные обсуждения по документу. Например, для\n"
-"соискателя: отправьте обновление по email, назначьте следующее "
+"соискателя: отправьте обновление по e-mail, назначьте следующее "
 "собеседование,\n"
-"прикрепите договор, добавьте сотрудника HR в подписчики,\n"
+"прикрепите договор, добавьте сотрудника отдела кадров в наблюдатели,\n"
 "чтобы уведомлять их о важных событиях (с помощью подтипов), ...\n"
 "\n"
 "\n"
@@ -176,26 +178,27 @@ msgstr ""
 "будут автоматически загружены в систему Odoo. Поддерживаются все\n"
 "серверы, совместимые с POP3/IMAP, включая те, что требуют\n"
 "шифрованного соединения SSL/TLS.\n"
-"Это позволяет легко создавать рабочие процессы на основе email для множества "
-"документов Odoo, таких как:\n"
-"----------------------------------------------------------------------------------------------------------\n"
+"Это позволяет легко создавать рабочие процессы на основе e-mail для "
+"множества документов Odoo, таких как:\n"
+"----------------------------------------------------------------------------------------------------------"
+"\n"
 "    * Лиды/возможности CRM\n"
 "    * Претензии CRM\n"
-"    * Проблемы проекта\n"
-"    * Задачи проекта\n"
-"    * Подбор персонала (соискатели)\n"
-"Установите нужное приложение, и вы сможете привязать любой из этих типов "
+"    * Проблемы по проектам\n"
+"    * Задачи проектов\n"
+"    * Подбор персонала (кандидаты)\n"
+"Установите нужный модуль, и вы сможете привязать любой из этих типов "
 "документов\n"
 "(лиды, задачи проекта) к учетным записям входящей почты. Новые письма будут\n"
 "автоматически создавать документы выбранного типа, упрощая интеграцию почты "
 "с Odoo.\n"
 "Еще лучше: эти документы работают как мини-беседы, синхронизированные по "
-"email.\n"
+"e-mail.\n"
 "Вы можете отвечать из Odoo, а ответы будут автоматически собраны и "
 "прикреплены\n"
 "к тому же документу *беседы*.\n"
 "Для специфических задач можно настроить пользовательские действия\n"
-"(технически: серверные действия), которые будут запускаться для каждого "
+"(технически: действия сервера), которые будут запускаться для каждого "
 "входящего письма.\n"
 
 #. module: base
@@ -742,6 +745,14 @@ msgstr ""
 "записи, переключившись на компанию: %s."
 
 #. module: base
+#: model:ir.module.module,description:base.module_pos_imin
+msgid ""
+"\n"
+"\n"
+"Use iMin ePOS Printers without the IoT Box in the Point of Sale\n"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,summary:base.module_l10n_eg_edi_eta
 msgid ""
 "\n"
@@ -864,6 +875,38 @@ msgid ""
 "Especificaciones.doc\n"
 "\n"
 msgstr ""
+"\n"
+"* Add VAT Book report which is a legal requirement in Argentina and that "
+"holds the VAT detail info of sales or purchases made in a period of time.\n"
+"* Add a VAT summary report that is used to analyze invoicing\n"
+"* Add Digital VAT Book functionality that let us generate TXT files to "
+"import in ARCA. The ones we implement are:\n"
+"\n"
+"    * LIBRO_IVA_DIGITAL_VENTAS_CBTE\n"
+"    * LIBRO_IVA_DIGITAL_VENTAS_ALICUOTAS\n"
+"    * LIBRO_IVA_DIGITAL_COMPRAS_CBTE\n"
+"    * LIBRO_IVA_DIGITAL_COMPRAS_ALICUOTAS\n"
+"    * LIBRO_IVA_DIGITAL_IMPORTACION_BIENES_ALICUOTA\n"
+"\n"
+"Official Documentation ARCA\n"
+"\n"
+"* Digital VAT Book - record design https://www.afip.gob.ar/libro-iva-digital/"
+"documentos/libro-iva-digital-diseno-registros.pdf\n"
+"* CITI - record design (same as the Digital VAT Book): https://"
+"www.afip.gob.ar/comprasyventas/documentos/"
+"RegimendeInformaciondeComprasyVentasDisenosdeRegistros1.xls\n"
+"* CITI - specification (provides more information on how to format the "
+"numbers and the fillings of the numeric / alphanumeric fields): https://"
+"www.afip.gob.ar/comprasyventas/documentos/Regimen-Informacion-Compras-Ventas-"
+"Especificaciones.doc\n"
+"\n"
+
+#. module: base
+#: model:ir.module.module,description:base.module_l10n_ar_reports_simple
+msgid ""
+"\n"
+"* Add export of IVA Simple Tax Report.\n"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_ai_app
@@ -925,6 +968,13 @@ msgstr ""
 "- Register as a PEPPOL participant\n"
 "- Send and receive documents via PEPPOL network in Peppol BIS Billing 3.0 "
 "format\n"
+
+#. module: base
+#: model:ir.module.module,description:base.module_l10n_dk_nemhandel
+msgid ""
+"\n"
+"- Send and receive documents via Nemhandel network in OIOUBL 2.1 format\n"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_auth_totp_mail
@@ -2524,6 +2574,13 @@ msgid ""
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,description:base.module_l10n_se_returns
+msgid ""
+"\n"
+"Accounting returns for Sweden\n"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,description:base.module_mrp_subcontracting_account_enterprise
 msgid ""
 "\n"
@@ -3611,6 +3668,121 @@ msgstr ""
 "\n"
 
 #. module: base
+#: model:ir.module.module,description:base.module_l10n_be_hr_payroll_dimona_auto
+msgid ""
+"\n"
+"Automatic DIMONA declarations\n"
+"=============================\n"
+"\n"
+"Prerequisites:\n"
+"--------------\n"
+"\n"
+"- You need a Belgian Government Compliant Digital Certificate, delivered by "
+"Global\n"
+"  Sign. See: https://shop.globalsign.com/en/belgian-government-services\n"
+"\n"
+"- Generate certificate files from your SSL certificate (.pfx file) that are "
+"needed to create\n"
+"  a technical user (.cer file) and to authenticate remotely to the ONSS "
+"(.pfx) file. On a UNIX\n"
+"  system, you may use the following commands:\n"
+"\n"
+"  - PFX -> CRT: openssl pkcs12 -in my_cert.pfx -out my_cert.crt -nokeys "
+"-clcerts\n"
+"\n"
+"  - CRT -> CER: openssl x509 -inform pem -in my_cert.crt -outform der -out "
+"my_cert.cer\n"
+"\n"
+"- Before you can use the social security REST web service, you must create "
+"an account\n"
+"  for yourself or for your client and configure the security. (The whole "
+"procedure is\n"
+"  available at https://www.socialsecurity.be/site_fr/employer/applics/dimona/"
+"introduction/webservice.htm)\n"
+"\n"
+"  - User account management: Follow the Procedure https://"
+"www.socialsecurity.be/site_fr/general/helpcentre/rest/documents/pdf/"
+"procedure_pour_gestion_des_acces_UMan_FR.pdf\n"
+"\n"
+"  - Create a technical user: Your client must now create a technical user in "
+"the Access management\n"
+"    online service. The follow this procedure: https://www.socialsecurity.be/"
+"site_fr/general/helpcentre/rest/documents/pdf/"
+"webservices_creer_le_canal_FR.pdf\n"
+"\n"
+"  - Activate a web service channel: Once the technical user has been "
+"created, your client must\n"
+"    activate the web service channel in Access Management. The following "
+"manual explains the\n"
+"    steps to follow to activate the channel: https://www.socialsecurity.be/"
+"site_fr/general/helpcentre/rest/documents/pdf/"
+"webservices_ajouter_le_canal_FR.pdf\n"
+"\n"
+"  - At the end of the procedure, you should receive a \"ONSS Expeditor "
+"Number\", you may\n"
+"    encode in in the payroll Settings, with the .pem file and the related "
+"password, if any.\n"
+"\n"
+"- Configuration note: The .pfx certificate should be set on the payroll "
+"configuration.\n"
+msgstr ""
+"\n"
+"Automatic DIMONA declarations\n"
+"=============================\n"
+"\n"
+"Prerequisites:\n"
+"--------------\n"
+"\n"
+"- You need a Belgian Government Compliant Digital Certificate, delivered by "
+"Global\n"
+"  Sign. See: https://shop.globalsign.com/en/belgian-government-services\n"
+"\n"
+"- Generate certificate files from your SSL certificate (.pfx file) that are "
+"needed to create\n"
+"  a technical user (.cer file) and to authenticate remotely to the ONSS "
+"(.pfx) file. On a UNIX\n"
+"  system, you may use the following commands:\n"
+"\n"
+"  - PFX -> CRT: openssl pkcs12 -in my_cert.pfx -out my_cert.crt -nokeys "
+"-clcerts\n"
+"\n"
+"  - CRT -> CER: openssl x509 -inform pem -in my_cert.crt -outform der -out "
+"my_cert.cer\n"
+"\n"
+"- Before you can use the social security REST web service, you must create "
+"an account\n"
+"  for yourself or for your client and configure the security. (The whole "
+"procedure is\n"
+"  available at https://www.socialsecurity.be/site_fr/employer/applics/dimona/"
+"introduction/webservice.htm)\n"
+"\n"
+"  - User account management: Follow the Procedure https://"
+"www.socialsecurity.be/site_fr/general/helpcentre/rest/documents/pdf/"
+"procedure_pour_gestion_des_acces_UMan_FR.pdf\n"
+"\n"
+"  - Create a technical user: Your client must now create a technical user in "
+"the Access management\n"
+"    online service. The follow this procedure: https://www.socialsecurity.be/"
+"site_fr/general/helpcentre/rest/documents/pdf/"
+"webservices_creer_le_canal_FR.pdf\n"
+"\n"
+"  - Activate a web service channel: Once the technical user has been "
+"created, your client must\n"
+"    activate the web service channel in Access Management. The following "
+"manual explains the\n"
+"    steps to follow to activate the channel: https://www.socialsecurity.be/"
+"site_fr/general/helpcentre/rest/documents/pdf/"
+"webservices_ajouter_le_canal_FR.pdf\n"
+"\n"
+"  - At the end of the procedure, you should receive a \"ONSS Expeditor "
+"Number\", you may\n"
+"    encode in in the payroll Settings, with the .pem file and the related "
+"password, if any.\n"
+"\n"
+"- Configuration note: The .pfx certificate should be set on the payroll "
+"configuration.\n"
+
+#. module: base
 #: model:ir.module.module,description:base.module_mrp_accountant
 msgid ""
 "\n"
@@ -4007,6 +4179,87 @@ msgid ""
 "requirements and reduces manual interaction with the SFTP portal.\n"
 "\n"
 msgstr ""
+"\n"
+"Belgian Payroll Rules.\n"
+"======================\n"
+"\n"
+"    * Employee Details\n"
+"    * Employee Contracts\n"
+"    * Passport based Contract\n"
+"    * Allowances/Deductions\n"
+"    * Allow to configure Basic/Gross/Net Salary\n"
+"    * Employee Payslip\n"
+"    * Monthly Payroll Register\n"
+"    * Integrated with Leaves Management\n"
+"    * Salary Maj, ONSS, Withholding Tax, Child Allowance, ...\n"
+"\n"
+"Automatic DmfA Signature\n"
+"========================\n"
+"\n"
+"Prerequisites:\n"
+"--------------\n"
+"\n"
+"- You need a Belgian Government Compliant Digital Certificate, delivered by "
+"Global\n"
+"  Sign. See: https://shop.globalsign.com/en/belgian-government-services\n"
+"\n"
+"- Generate certificate files from your SSL certificate (.pfx file) that are "
+"needed to create\n"
+"  a technical user (.cer file) and to authenticate remotely to the ONSS "
+"(.pem) file. On a UNIX\n"
+"  system, you may use the following commands:\n"
+"\n"
+"  - PFX -> CRT: openssl pkcs12 -in my_cert.pfx -out my_cert.crt -nokeys "
+"-clcerts\n"
+"\n"
+"  - CRT -> CER: openssl x509 -inform pem -in my_cert.crt -outform der -out "
+"my_cert.cer\n"
+"\n"
+"  - PFX -> PEM: openssl pkcs12 -in my_cert.pfx -out my_cert.pem -nodes\n"
+"\n"
+"  - PFX -> KEY: openssl pkcs12 -in my_cert.pfx -out my_cert.key -nocerts\n"
+"\n"
+"- Before you can use the social security REST web service, you must create "
+"an account\n"
+"  for yourself or for your client and configure the security. (The whole "
+"procedure is\n"
+"  available at https://www.socialsecurity.be/site_fr/general/helpcentre/"
+"batch/sftp/previewstep.htm)\n"
+"\n"
+"  - Create a technical user + Activate a SFTP channel: Your client must now "
+"create a technical user in the Access management\n"
+"    online service. The follow this procedure: https://www.socialsecurity.be/"
+"site_fr/general/helpcentre/rest/documents/pdf/"
+"webservices_creer_le_canal_FR.pdf\n"
+"\n"
+"  - Configure your SFTP client: https://www.socialsecurity.be/site_fr/"
+"general/helpcentre/batch/document/pdf/step6_sftp_F.pdf\n"
+"\n"
+"  - At the end of the procedure, you should have received a \"ONSS Expeditor "
+"Number\", you may\n"
+"    encode in in the payroll Settings, with the .pem file and the related "
+"password, if any.\n"
+"\n"
+"Synchronize DmfA to ONSS portal\n"
+"===============================\n"
+"\n"
+"Automates the synchronization of DmfA ONSS declarations\n"
+"to the official Belgian SFTP portal.\n"
+"\n"
+"- Upload the FO, FS, and GO files to the correct ONSS environment folder\n"
+"  (IN, INTEST, INTEST-S).\n"
+"- Poll the OUT folders (OUT, OUTTEST, OUTTEST-S) for returned files.\n"
+"- Link received files to the corresponding declarations and employees\n"
+"  when applicable.\n"
+"\n"
+"Technical features include:\n"
+"- Secure connection using a private key and technical user credentials.\n"
+"- XML file parsing for ACRF and notification files.\n"
+"- Error handling and logging for missing directories or malformed files.\n"
+"\n"
+"This feature ensures compliance with ONSS electronic declaration\n"
+"requirements and reduces manual interaction with the SFTP portal.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_pos_blackbox_be
@@ -6284,6 +6537,35 @@ msgid ""
 "country. The document type has a country field\n"
 "\n"
 msgstr ""
+"\n"
+"Functional\n"
+"----------\n"
+"\n"
+"In some Latinamerica countries, including Argentina and Chile, some "
+"accounting transactions like invoices and vendor bills are classified by a "
+"document types defined by the government fiscal authorities "
+"(In Argentina case ARCA, Chile case SII).\n"
+"\n"
+"This module is intended to be extended by localizations in order to manage "
+"these document types and is an essential information that needs to be "
+"displayed in the printed reports and that needs to be easily identified, "
+"within the set of invoices as well of account moves.\n"
+"\n"
+"Each document type have their own rules and sequence number, this last one "
+"is integrated with the invoice number and journal sequence in order to be "
+"easy for the localization user. In order to support or not this document "
+"types a Journal has a new option that lets to use document or not.\n"
+"\n"
+"Technical\n"
+"---------\n"
+"\n"
+"If your localization needs this logic will then need to add this module as "
+"dependency and in your localization module extend:\n"
+"\n"
+"* extend company's _localization_use_documents() method.\n"
+"* create the data of the document types that exists for the specific "
+"country. The document type has a country field\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ar
@@ -7101,6 +7383,22 @@ msgid ""
 "For the creation of API username and password please ref this document: "
 "<https://service.odoo.co.in/einvoice_create_api_user>\n"
 msgstr ""
+"\n"
+"Indian - E-invoicing\n"
+"====================\n"
+"To submit invoicing through API to the government.\n"
+"We use \"Tera Software Limited\" as GSP\n"
+"Step 1: First you need to create an API username and password in the E-"
+"invoice portal.\n"
+"Step 2: Switch to company related to that GST number\n"
+"Step 3: Set that username and password in Odoo (Goto: Invoicing/Accounting -"
+"> Configuration -> Settings -> Customer Invoices or find \"E-invoice\" in "
+"search bar)\n"
+"Step 4: Repeat steps 1,2,3 for all GSTIN you have in odoo. If you have a "
+"multi-company with the same GST number then perform step 1 for the first "
+"company only.\n"
+"For the creation of API username and password please ref this document: "
+"<https://service.odoo.co.in/einvoice_create_api_user>\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_in_ewaybill
@@ -7923,6 +8221,14 @@ msgstr ""
 "\n"
 "Управление послепродажным обслуживанием продуктов на основе заявок в службу "
 "поддержки.\n"
+
+#. module: base
+#: model:ir.module.module,description:base.module_website_sale_mrp
+msgid ""
+"\n"
+"Manage the inventory of your Kit products and display their availability "
+"status in your eCommerce store.\n"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_sale_stock
@@ -9650,23 +9956,10 @@ msgid ""
 "\n"
 "- Chart of Accounts\n"
 "- Taxes\n"
-"- Vat Filling Report\n"
-"- Withholding Tax Report\n"
+"- VAT Return\n"
+"- Withholding Return\n"
 "- Fiscal Positions\n"
 msgstr ""
-"\n"
-"Модуль бухгалтерского учета для Саудовской Аравии\n"
-"===========================================================\n"
-"Основные планы счетов и локализация бухгалтерского учета для Саудовской "
-"Аравии\n"
-"\n"
-"Активирует:\n"
-"\n"
-"- План счетов\n"
-"- Налоги\n"
-"- Отчет по заполнению НДС\n"
-"- Отчет по налогу у источника\n"
-"- Фискальные позиции\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_sa_pos
@@ -9705,6 +9998,15 @@ msgstr ""
 "- Неоплачиваемые отпуска\n"
 "- WPS\n"
 "- Экспорт общей ведомости\n"
+
+#. module: base
+#: model:ir.module.module,description:base.module_l10n_sa_withholding_tax
+msgid ""
+"\n"
+"Saudi Arabia Withholding Tax Module\n"
+"\n"
+"Force the installation of the Withholding Tax on Payment module\n"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,description:base.module_project_forecast
@@ -10478,9 +10780,9 @@ msgstr ""
 "Руководство по доставке необходимо в качестве доказательства\n"
 "того, что вы отправляете товары между пунктами А и Б.\n"
 "\n"
-"Для партнера можно настроить, нужны ли цены в\n"
-"руководстве по доставке и должны ли они быть взяты из заказа на продажу\n"
-"или из карточки товара.\n"
+"Для каждого партнера можно настроить, включать ли цены в\n"
+"руководство по доставке и какой источник использовать – заказ на продажу\n"
+"или карточку товара.\n"
 "\n"
 "Только после подтверждения заказа на доставку можно создать руководство по "
 "доставке.\n"
@@ -13437,6 +13739,13 @@ msgid ""
 "This is designed as a separate, optional module to keep core functionality\n"
 "clean and allow for flexible use cases.\n"
 msgstr ""
+"\n"
+"This module introduces several advanced Peppol-related fields to the Odoo\n"
+"invoice model (`account.move`) and makes them available on a new "
+"'Additional\n"
+"Information' tab within the 'Other Info' section of the invoice form view.\n"
+"This is designed as a separate, optional module to keep core functionality\n"
+"clean and allow for flexible use cases.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_crm_full
@@ -14521,7 +14830,7 @@ msgstr "# Правила записи"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__all_users_count
 msgid "# Users"
-msgstr ""
+msgstr "# Пользователи"
 
 #. module: base
 #. odoo-python
@@ -14834,6 +15143,11 @@ msgid "360 Feedback"
 msgstr "Обратная связь 360"
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_3pl_logistic_company
+msgid "3PL Logistic Company"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,shortdesc:base.module_account_external_tax
 msgid "3rd Party Tax Calculation"
 msgstr "Расчёт налогов третьей стороной"
@@ -15016,6 +15330,15 @@ msgstr "<i class=\"fa fa-envelope me-1\" role=\"img\" aria-label=\"Логин\"/
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "<i class=\"fa fa-fw fa-envelope text-primary\" title=\"Email\"/>"
+msgstr ""
+
+#. module: base
+#: model_terms:ir.ui.view,arch_db:base.view_users_form
+msgid ""
+"<i class=\"fa fa-fw fa-envelope text-primary\" title=\"Login / Email\" "
+"invisible=\"login != email\"/>\n"
+"                                    <i class=\"fa fa-fw fa-key text-"
+"primary\" title=\"Login\" invisible=\"login == email\"/>"
 msgstr ""
 
 #. module: base
@@ -15827,7 +16150,7 @@ msgstr "ABN"
 #: model:ir.module.module,shortdesc:base.module_ai
 #: model:ir.module.module,shortdesc:base.module_ai_app
 msgid "AI"
-msgstr ""
+msgstr "ИИ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_ai_auto_install
@@ -15952,7 +16275,7 @@ msgstr "Максимальная длительность ключей API в д
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_model_search
 msgid "Abstract"
-msgstr ""
+msgstr "Абстрактные"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model__abstract
@@ -15984,7 +16307,7 @@ msgstr "Доступ"
 #. odoo-python
 #: code:addons/base/models/res_users.py:0
 msgid "Access Control"
-msgstr ""
+msgstr "Контроль доступа"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__model_access
@@ -16128,7 +16451,7 @@ msgstr "Онлайн-платежи по счету"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_peppol_advanced_fields
 msgid "Account Peppol Advanced Fields"
-msgstr ""
+msgstr "Account Peppol Advanced Fields"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_qr_code_sepa
@@ -16541,7 +16864,7 @@ msgstr "Добавьте сниппет на сайт для почтовых г
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_kanban
 msgid "Add an action"
-msgstr ""
+msgstr "Добавить действие"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account_reports_cash_basis
@@ -16864,6 +17187,8 @@ msgid ""
 "Adds specific Peppol fields to invoices under an 'Additional Information' "
 "tab."
 msgstr ""
+"Adds specific Peppol fields to invoices under an 'Additional Information' "
+"tab."
 
 #. module: base
 #: model:ir.module.module,description:base.module_auth_ldap
@@ -17069,7 +17394,7 @@ msgstr "Административные/коммунальные услуги"
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_users__role__group_system
 msgid "Administrator"
-msgstr ""
+msgstr "Администратор"
 
 #. module: base
 #. odoo-python
@@ -17513,7 +17838,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_filters_view_form
 msgid "All users"
-msgstr ""
+msgstr "Все пользователи"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_holidays
@@ -17591,7 +17916,7 @@ msgstr ""
 #. module: base
 #: model:res.groups,name:base.group_allow_export
 msgid "Allowed"
-msgstr ""
+msgstr "Разрешить"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__group_ids
@@ -19056,6 +19381,11 @@ msgid "Argentinean - Stock"
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_ar_reports_simple
+msgid "Argentinean Accounting IVA Simple Export"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ar_reports
 msgid "Argentinean Accounting Reports"
 msgstr "Аргентинские бухгалтерские отчёты"
@@ -19818,7 +20148,7 @@ msgstr "Аудит и сертификация"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_accountant_knowledge
 msgid "Audit Reports"
-msgstr ""
+msgstr "Аудиторские отчеты"
 
 #. module: base
 #: model:res.currency,currency_subunit_label:base.ISK
@@ -20387,7 +20717,7 @@ msgstr "Байза"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_bakery
 msgid "Bakery"
-msgstr ""
+msgstr "Пекарня"
 
 #. module: base
 #: model:res.currency,currency_unit_label:base.PAB
@@ -20809,6 +21139,11 @@ msgid "Belgium - Payroll - Dimona"
 msgstr "Бельгия — Зарплата — Dimona"
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_be_hr_payroll_dimona_auto
+msgid "Belgium - Payroll - Dimona - Automation"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_hr_payroll_acerta
 msgid "Belgium - Payroll - Export to Acerta"
 msgstr "Бельгия - Расчет заработной платы - Экспорт в Acerta"
@@ -20898,7 +21233,7 @@ msgstr "Аренда велосипедов"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_bike_shop
 msgid "Bike Shop"
-msgstr ""
+msgstr "Магазин велосипедов"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_ups
@@ -21596,7 +21931,7 @@ msgstr "CUIT"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_cake_shop
 msgid "Cake Shop"
-msgstr ""
+msgstr "Кондитерская"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_esg
@@ -21658,7 +21993,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_campsite
 msgid "Campsite"
-msgstr ""
+msgstr "Кемпинг"
 
 #. module: base
 #. odoo-python
@@ -21763,7 +22098,7 @@ msgstr "Отменить"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_candy_shop
 msgid "Candy Shop"
-msgstr ""
+msgstr "Магазин сладостей"
 
 #. module: base
 #. odoo-python
@@ -21821,7 +22156,7 @@ msgstr "Кабо-Верде"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_carpenter
 msgid "Carpenter"
-msgstr ""
+msgstr "Плотник"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__on_delete__cascade
@@ -22264,7 +22599,7 @@ msgstr "Чон"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "Choose a record..."
-msgstr ""
+msgstr "Выберите запись..."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_country_form
@@ -22379,7 +22714,7 @@ msgstr "Тег действия клиента"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_climbing_gym
 msgid "Climbing Gym"
-msgstr ""
+msgstr "Скалодром"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
@@ -22428,6 +22763,11 @@ msgstr "Кокосовые (Килинг) острова"
 #: model:ir.module.module,shortdesc:base.module_l10n_be_codabox
 msgid "CodaBox"
 msgstr "CodaBox"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_be_codaclean
+msgid "Codaclean"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server_history__code
@@ -22717,7 +23057,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/res_partner.py:0
 msgid "Company Address"
-msgstr ""
+msgstr "Адрес фирмы"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__company_dependent
@@ -22778,7 +23118,7 @@ msgstr "Курс компании"
 #: model:ir.model.fields,field_description:base.field_res_partner__company_registry_placeholder
 #: model:ir.model.fields,field_description:base.field_res_users__company_registry_placeholder
 msgid "Company Registry Placeholder"
-msgstr ""
+msgstr "Маска регистрационного номера компании"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__report_header
@@ -22906,7 +23246,7 @@ msgstr "Компьютер"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_concert_halls
 msgid "Concert Halls"
-msgstr ""
+msgstr "Концертные залы"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_default__condition
@@ -22990,6 +23330,11 @@ msgstr ""
 #: model:ir.module.module,summary:base.module_iot_drivers
 msgid "Connect the Web Client to Hardware Peripherals"
 msgstr "Подключение веб-клиента к аппаратным периферийным устройствам"
+
+#. module: base
+#: model:ir.module.module,description:base.module_l10n_be_codaclean
+msgid "Connect to Codaclean and automatically import CODA statements."
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_gr_edi
@@ -23107,7 +23452,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.category,name:base.res_partner_category_8
 msgid "Consulting Services"
-msgstr "Консультационные услуги"
+msgstr "Консалтинговые услуги"
 
 #. module: base
 #: model:ir.model,name:base.model_res_partner
@@ -23255,7 +23600,7 @@ msgstr "Кордоба"
 #. module: base
 #: model:ir.module.category,name:base.module_category_theme_corporate
 msgid "Corporate"
-msgstr ""
+msgstr "Корпоративный"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_corporate_gifts
@@ -23266,6 +23611,11 @@ msgstr "Корпоративные подарки"
 #: model:ir.module.module,summary:base.module_theme_buzzy
 msgid "Corporate, Services, Technology, Shapes, Illustrations"
 msgstr ""
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_cosmetics_store
+msgid "Cosmetics Store"
+msgstr "Магазин косметики"
 
 #. module: base
 #: model:res.country,name:base.cr
@@ -23393,7 +23743,7 @@ msgstr "Сертификация курсов"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_coworking
 msgid "Coworking"
-msgstr ""
+msgstr "Коворкинг"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_rule__perm_create
@@ -23406,7 +23756,7 @@ msgstr "Создать"
 #. odoo-python
 #: code:addons/base/models/ir_actions.py:0
 msgid "Create %(model_name)s"
-msgstr ""
+msgstr "Создать %(model_name)s"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_access__perm_create
@@ -23479,7 +23829,7 @@ msgstr "Создать группу стран"
 #. module: base
 #: model:ir.model,website_form_label:base.model_res_partner
 msgid "Create a Customer"
-msgstr ""
+msgstr "Создать клиента"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_model_form
@@ -23824,7 +24174,7 @@ msgstr "Сведения о создании"
 #. module: base
 #: model:ir.module.category,name:base.module_category_theme_creative
 msgid "Creative"
-msgstr ""
+msgstr "Креативный"
 
 #. module: base
 #: model:res.country,name:base.hr
@@ -24046,6 +24396,11 @@ msgid "Custom Shortcuts"
 msgstr "Пользовательские ярлыки"
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_theme_test_custo
+msgid "Custom Theme (Testing suite)"
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__selection_value
 #: model:ir.model.fields,field_description:base.field_ir_cron__selection_value
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
@@ -24216,7 +24571,7 @@ msgstr "DIN 5008 — Склад"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_diy_workshops
 msgid "DIY Workshops"
-msgstr ""
+msgstr "DIY мастер-классы"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__report_paperformat__format__dle
@@ -24577,7 +24932,7 @@ msgstr "Доступ на удаление"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_kanban
 msgid "Delete Action"
-msgstr ""
+msgstr "Действие удаления"
 
 #. module: base
 #. odoo-python
@@ -24704,6 +25059,11 @@ msgstr "Дания - Интрастат"
 #: model:ir.module.module,shortdesc:base.module_l10n_dk_saft_import
 msgid "Denmark - SAF-T Import"
 msgstr "Дания - Импорт SAF-T"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_dk_nemhandel
+msgid "Denmark EDI - Nemhandel"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__depends
@@ -25435,7 +25795,7 @@ msgstr "Драм"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_driving_school
 msgid "Driving School"
-msgstr ""
+msgstr "Автошкола"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_dropshipping
@@ -25451,7 +25811,7 @@ msgstr "Управление дропшиппингом и субподрядо�
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_dropshipping
 msgid "Dropshipping"
-msgstr ""
+msgstr "Дропшиппинг"
 
 #. module: base
 #. odoo-python
@@ -25564,7 +25924,7 @@ msgstr "Пакетный платеж EFT"
 #: model:ir.module.category,name:base.module_category_esg
 #: model:ir.module.module,shortdesc:base.module_esg
 msgid "ESG"
-msgstr ""
+msgstr "ESG"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_esg_hr
@@ -26110,7 +26470,7 @@ msgstr "Доставка Envia"
 #. module: base
 #: model:ir.module.category,name:base.module_category_theme_environment
 msgid "Environment"
-msgstr ""
+msgstr "Среда"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_theme_treehouse
@@ -26137,7 +26497,7 @@ msgstr "Оборудование, активы, техника, учет рас�
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_equity
 msgid "Equity"
-msgstr ""
+msgstr "Капитал"
 
 #. module: base
 #: model:res.country,name:base.er
@@ -26219,7 +26579,7 @@ msgstr "Ошибка! Нельзя создавать рекурсивные м�
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_escape_rooms
 msgid "Escape Rooms"
-msgstr ""
+msgstr "Эскейп-румы"
 
 #. module: base
 #: model:res.currency,currency_unit_label:base.CVE
@@ -26229,7 +26589,7 @@ msgstr "Эскудо"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_industry_real_estate
 msgid "Estate Management"
-msgstr ""
+msgstr "Управление недвижимостью"
 
 #. module: base
 #: model:res.country,name:base.ee
@@ -26814,7 +27174,7 @@ msgstr "Участники мероприятий"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_event_management
 msgid "Event Management"
-msgstr ""
+msgstr "Компания по организации мероприятий"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_event_social
@@ -27870,7 +28230,7 @@ msgstr "Автопарк на основе документов"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_florist
 msgid "Florist"
-msgstr ""
+msgstr "Флорист"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_theme_orchid
@@ -27932,12 +28292,12 @@ msgstr "Шрифт"
 #. module: base
 #: model:ir.module.category,name:base.module_category_theme_food
 msgid "Food"
-msgstr ""
+msgstr "Еда"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_food_distribution
 msgid "Food Distribution"
-msgstr ""
+msgstr "Дистрибуция продуктов питания"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_food_trucks
@@ -28367,7 +28727,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_gallery
 msgid "Gallery"
-msgstr ""
+msgstr "Галерея"
 
 #. module: base
 #: model:res.country,name:base.gm
@@ -28920,12 +29280,12 @@ msgstr "Гернси"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_guest_house
 msgid "Guest House"
-msgstr ""
+msgstr "Гостевой дом"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_guided_tours
 msgid "Guided Tours"
-msgstr ""
+msgstr "Экскурсии с гидом"
 
 #. module: base
 #: model:res.currency,currency_unit_label:base.ANG
@@ -29061,7 +29421,7 @@ msgstr "Маршрутизация HTTP"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hvac_services
 msgid "HVAC Services"
-msgstr ""
+msgstr "Системы ОВКВ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hair_salon
@@ -29319,7 +29679,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_theme_hidden
 msgid "Hidden"
-msgstr ""
+msgstr "Скрытый"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_timesheet
@@ -29346,7 +29706,7 @@ msgstr "История"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_holiday_house
 msgid "Holiday House"
-msgstr ""
+msgstr "Аренда жилья для отпуска"
 
 #. module: base
 #: model:res.country,name:base.va
@@ -29404,6 +29764,11 @@ msgid "Hongkong"
 msgstr "Гонконг"
 
 #. module: base
+#: model:ir.module.category,name:base.module_category_hospitaility
+msgid "Hospitaility"
+msgstr ""
+
+#. module: base
 #: model:ir.module.category,name:base.module_category_hospitality
 msgid "Hospitality"
 msgstr "Гостеприимство"
@@ -29416,7 +29781,7 @@ msgstr "Имя хоста или IP-адрес SMTP-сервера"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hotel
 msgid "Hotel"
-msgstr ""
+msgstr "Отель"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_cron__interval_type__hours
@@ -29721,6 +30086,11 @@ msgstr "ИТ Оборудование и поддержка"
 #: model:res.partner.industry,name:base.res_partner_industry_J
 msgid "IT/Communication"
 msgstr "IT/Коммуникации"
+
+#. module: base
+#: model:ir.module.module,summary:base.module_l10n_ar_reports_simple
+msgid "IVA Simple Reporting for Argentinean Localization"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_iap_extract
@@ -30851,6 +31221,15 @@ msgstr ""
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/ir_default.py:0
+#, python-format
+msgid ""
+"Invalid value in Default Value field. Expected type '%(field_type)s' for "
+"'%(model_name)s.%(field_name)s'."
+msgstr ""
+
+#. module: base
+#. odoo-python
 #: code:addons/template_inheritance.py:0
 msgid "Invalid attributes %s in element <attribute>"
 msgstr "Недопустимые атрибуты %s в элементе <attribute>"
@@ -31067,7 +31446,7 @@ msgstr "Обратный курс"
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__type__invoice
 msgid "Invoice"
-msgstr ""
+msgstr "Счет"
 
 #. module: base
 #. odoo-python
@@ -31100,7 +31479,7 @@ msgstr "Выставление счетов"
 #. module: base
 #: model:ir.module.category,name:base.module_category_administration_iot
 msgid "IoT"
-msgstr ""
+msgstr "IoT"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_iot_base
@@ -31652,6 +32031,11 @@ msgstr "Кип"
 #: model:res.country,name:base.ki
 msgid "Kiribati"
 msgstr "Кирибати"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_website_sale_mrp
+msgid "Kit Availability"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_mrp_renting
@@ -32297,6 +32681,11 @@ msgid "Liberia"
 msgstr "Либерия"
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_library
+msgid "Library"
+msgstr "Библиотека"
+
+#. module: base
 #: model:ir.module.module,summary:base.module_theme_bookstore
 msgid "Library, Books, Magazines, Literature, Musics, Media, Store"
 msgstr ""
@@ -32615,7 +33004,7 @@ msgstr "Войти с помощью ключа доступа"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_device_view_kanban
 msgid "Log out"
-msgstr ""
+msgstr "Выйти"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
@@ -32638,6 +33027,7 @@ msgstr "Детали ведения журнала"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__login
 #: model_terms:ir.ui.view,arch_db:base.view_res_users_kanban
+#: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "Login"
 msgstr "Логин"
 
@@ -33027,6 +33417,11 @@ msgstr "Управление встречами с сотрудниками"
 #: model:ir.module.module,summary:base.module_hr_recruitment_integration_website
 msgid "Manage Job board integrations with website"
 msgstr "Управление интеграцией досок вакансий с веб-сайтом"
+
+#. module: base
+#: model:ir.module.module,summary:base.module_website_sale_mrp
+msgid "Manage Kit product inventory & availability"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,summary:base.module_room
@@ -33563,7 +33958,7 @@ msgstr "Массовая рассылка SMS соискателям"
 #. module: base
 #: model:ir.module.category,name:base.module_category_master_data
 msgid "Master Data"
-msgstr ""
+msgstr "Мастер-данные"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_mps
@@ -33625,11 +34020,6 @@ msgid "Meeting Rooms"
 msgstr "Переговорные комнаты"
 
 #. module: base
-#: model:ir.model.fields.selection,name:base.selection__res_users__role__group_user
-msgid "Member"
-msgstr ""
-
-#. module: base
 #: model:res.company,partnership_label:base.main_company
 msgid "Members"
 msgstr "Участники"
@@ -33637,7 +34027,7 @@ msgstr "Участники"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_members_club
 msgid "Members Club"
-msgstr ""
+msgstr "Клуб для участников"
 
 #. module: base
 #: model:ir.model,name:base.model_ir_ui_menu
@@ -33714,7 +34104,7 @@ msgstr "Сообщение"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_metal_fabricator
 msgid "Metal Fabricator"
-msgstr ""
+msgstr "Производитель металлоконструкций"
 
 #. module: base
 #: model:res.currency,currency_unit_label:base.MZN
@@ -34501,7 +34891,7 @@ msgstr "Мультивалютность"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_museum
 msgid "Museum"
-msgstr ""
+msgstr "Музей"
 
 #. module: base
 #: model_terms:res.company,invoice_terms_html:base.main_company
@@ -34885,6 +35275,11 @@ msgid "Nigeria - Accounting Reports"
 msgstr "Нигерия — Бухгалтерские отчеты"
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_night_clubs
+msgid "Night Clubs"
+msgstr "Ночные клубы"
+
+#. module: base
 #: model:res.country,name:base.nu
 msgid "Niue"
 msgstr "Ниуэ"
@@ -35014,8 +35409,8 @@ msgstr "Нет"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_non_profit_organization
-msgid "Nonprofit Organization"
-msgstr "Некоммерческая организация"
+msgid "Nonprofit organization"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.nf
@@ -35041,7 +35436,7 @@ msgstr "Северная Македония"
 #. module: base
 #: model:res.country,name:base.xi
 msgid "Northern Ireland"
-msgstr ""
+msgstr "Северная Ирландия"
 
 #. module: base
 #: model:res.country,name:base.mp
@@ -35085,7 +35480,7 @@ msgstr "Недостаточно прав доступа к внешнему ID 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_bank_form
 msgid "Note"
-msgstr ""
+msgstr "Комментарий"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__comment
@@ -36175,8 +36570,8 @@ msgstr ""
 "-----------------\n"
 "\n"
 "Легко отправляйте массовые рассылки вашим лидам, возможностям или клиентам\n"
-"с помощью Odoo <a href=\"https://www.odoo.com/app/email-marketing\">Email "
-"Marketing</a>. Отслеживайте\n"
+"с помощью Odoo <a href=\"https://www.odoo.com/app/email-marketing\">E-mail "
+"рассылки</a>. Отслеживайте\n"
 "результативность маркетинговых кампаний для повышения коэффициента "
 "конверсии. Создавайте\n"
 "профессиональные письма и используйте шаблоны в несколько кликов.\n"
@@ -36191,41 +36586,42 @@ msgstr ""
 "Определяйте шаблоны писем для повторного использования контента или "
 "специального дизайна для вашей рассылки.\n"
 "Настраивайте несколько почтовых серверов с собственными IP/доменами для "
-"оптимизации уровня открытий.\n"
+"оптимизации количества открытий.\n"
 "\n"
 "Организация маркетинговых кампаний\n"
 "----------------------------\n"
 "\n"
-"Создавайте, отправляйте и отслеживайте кампании с помощью нашего приложения "
-"<a href=\"https://www.odoo.com/app/email-marketing\">Автоматизация лидов</"
-"a>.\n"
+"Создавайте, отправляйте и отслеживайте кампании с помощью нашего модуля <a "
+"href=\"https://www.odoo.com/app/email-marketing\">Автоматизация лидов</a>.\n"
 "\n"
 "Получайте статистику в реальном времени о результативности кампаний для "
 "повышения коэффициента\n"
-"конверсии. Отслеживайте отправленные, полученные, открытые и отвеченные "
-"письма.\n"
+"конверсии. Отслеживайте отправленные, полученные, открытые письма и ответы "
+"на них.\n"
 "\n"
 "Легко управляйте вашими маркетинговыми кампаниями, группами обсуждений, "
 "лидами и\n"
 "возможностями на одной простой и мощной платформе.\n"
 "\n"
-"Интеграция с приложениями Odoo\n"
+"Интеграция с модулями Odoo\n"
 "-------------------------\n"
 "\n"
-"Получите доступ к функциям массовой рассылки из каждого приложения Odoo, "
-"чтобы улучшить способы\n"
-"коммуникации ваших пользователей.\n"
+"Получите доступ к функциям массовой рассылки из любого модуля Odoo, чтобы "
+"улучшить\n"
+"коммуникацию между пользователями.\n"
 "\n"
-"Отправляйте шаблоны писем из Odoo <a href=\"https://www.odoo.com/app/email-"
-"marketing\">возможностей CRM</a>, выбирайте лиды на основе\n"
-"маркетинговых сегментов, отправляйте <a href=\"https://www.odoo.com/app/"
-"recruitment\">предложения о работе</a> и автоматизируйте\n"
+"Отправляйте шаблоны писем из карточек <a href="
+"\"https://www.odoo.com/app/email-marketing\">возможностей модуля CRM</a>, "
+"выбирайте лиды на основе\n"
+"маркетинговых сегментов, отправляйте <a href="
+"\"https://www.odoo.com/app/recruitment\">предложения о работе</a> и "
+"автоматизируйте\n"
 "ответы кандидатам, повторно используйте шаблоны писем в маркетинговых "
 "кампаниях по автоматизации лидов.\n"
 "\n"
 "Ответы на ваши письма автоматически отображаются в истории каждого "
 "документа\n"
-"с помощью модуля социальной сети.\n"
+"с помощью модуля Социальные сети.\n"
 "\n"
 "Очистка базы лидов\n"
 "------------------------\n"
@@ -36245,7 +36641,7 @@ msgstr ""
 "их собственных потенциальных клиентов или\n"
 "документов.\n"
 "\n"
-"Выберите несколько документов (например, лиды, заявки в службу поддержки, "
+"Выберите несколько документов (например, лиды, тикеты в службу поддержки, "
 "поставщики, кандидаты,\n"
 "...) и отправьте письма их контактам в один клик, используя существующие "
 "шаблоны писем.\n"
@@ -36264,23 +36660,23 @@ msgstr ""
 "ответственные менеджеры\n"
 "уведомляются о конкретных событиях.\n"
 "\n"
-"Панель управления кампаниями\n"
+"Дашборды кампаний\n"
 "-------------------\n"
 "\n"
 "Получите информацию, необходимую для создания более эффективных "
 "маркетинговых кампаний. Отслеживайте статистику\n"
 "по каждой кампании: уровень возвратов, отправленные письма, лучший контент и "
-"т.д. Удобные панели\n"
+"т. д. Удобные панели\n"
 "управления дают вам прямой обзор эффективности ваших кампаний.\n"
 "\n"
-"Полная интеграция с другими приложениями\n"
+"Полная интеграция с другими модулями\n"
 "---------------------------------\n"
 "\n"
-"Определяйте правила автоматизации (например, попросить менеджера позвонить, "
-"отправить письмо, ...)\n"
+"Определяйте правила автоматизации "
+"(например, попросить менеджера позвонить, отправить письмо, ...)\n"
 "на основе триггеров (отсутствие активности в течение 20 дней, ответ на "
 "рекламное письмо,\n"
-"и т.д.)\n"
+"и т. д.)\n"
 "\n"
 "Оптимизируйте кампании от лида до закрытия сделки на каждом канале. "
 "Принимайте более обоснованные решения\n"
@@ -36289,15 +36685,15 @@ msgstr ""
 "\n"
 "Легко интегрируйте контактную форму на вашем сайте. Отправленные формы "
 "автоматически создают лиды\n"
-"в Odoo CRM. Лиды могут быть использованы в маркетинговых кампаниях.\n"
+"в модуле CRM Odoo. Лиды могут быть использованы в маркетинговых кампаниях.\n"
 "\n"
 "Управляйте вашей <a href=\"https://www.odoo.com/app/crm\">воронкой продаж</"
-"a> без усилий.\n"
-"Привлекайте лидов, отслеживайте телефонные звонки и встречи. Анализируйте "
-"качество\n"
-"ваших лидов, чтобы принимать обоснованные решения и экономить время, "
-"интегрируя\n"
-"электронную почту непосредственно в приложение.\n"
+"a> без лишних\n"
+"усилий. Привлекайте лидов, отслеживайте телефонные звонки и встречи. "
+"Анализируйте\n"
+"качество ваших лидов, чтобы принимать обоснованные решения и экономить "
+"время, интегрируя\n"
+"электронную почту непосредственно в модуль.\n"
 "\n"
 
 #. module: base
@@ -36458,11 +36854,10 @@ msgid ""
 "interaction history, profiles, and more.\n"
 "\n"
 msgstr ""
-"Точка продаж Odoo\n"
+"POS Odoo\n"
 "-----------------------------\n"
 "\n"
-"<a href=\"https://www.odoo.com/app/point-of-sale-shop\">Точка продаж</a> "
-"Odoo\n"
+"<a href=\"https://www.odoo.com/app/point-of-sale-shop\">POS</a> Odoo\n"
 "предлагает сверхчистый интерфейс без необходимости установки, который "
 "работает\n"
 "онлайн и оффлайн на современном оборудовании.\n"
@@ -36471,21 +36866,20 @@ msgstr ""
 "предоставляет вам статистику\n"
 "и консолидацию данных в реальном времени между всеми магазинами без "
 "необходимости\n"
-"интеграции нескольких приложений.\n"
+"интеграции нескольких программ.\n"
 "\n"
 "Работайте с уже имеющимся оборудованием\n"
 "---------------------------------------\n"
 "\n"
 "### В вашем веб-браузере\n"
 "\n"
-"POS Odoo — это веб-приложение, которое может работать на любом устройстве, "
-"способном отображать\n"
+"POS Odoo – это модуль, который может работать на любом устройстве, способном "
+"отображать\n"
 "веб-сайты, практически без необходимости настройки.\n"
 "\n"
 "### Сенсорный экран или клавиатура?\n"
 "\n"
-"Точка продаж идеально работает на любом устройстве с сенсорным экраном, будь "
-"то\n"
+"POS идеально работает на любом устройстве с сенсорным экраном, будь то\n"
 "многоточечные планшеты, такие как iPad, или терминалы с резистивным "
 "сенсорным экраном без клавиатуры.\n"
 "\n"
@@ -36495,7 +36889,7 @@ msgstr ""
 "Весы, кассовые ящики и другие периферийные устройства могут использоваться "
 "через API прокси.\n"
 "\n"
-"Онлайн и оффлайн\n"
+"Онлайн и офлайн\n"
 "------------------\n"
 "\n"
 "### POS Odoo остается надежным даже без подключения к интернету\n"
@@ -36543,7 +36937,7 @@ msgstr ""
 "\n"
 "Полноценная система управления складом у вас под рукой: получайте информацию "
 "о наличии товаров,\n"
-"запускайте запросы на закупку и т.д.\n"
+"запускайте запросы на закупку и т. д.\n"
 "\n"
 "Обслуживание клиентов в магазине\n"
 "----------------------------------\n"
@@ -36552,9 +36946,9 @@ msgstr ""
 "клиентов\n"
 "в магазине. Управляйте ремонтами, отслеживайте гарантии, следите за "
 "претензиями клиентов,\n"
-"планируйте заказы на доставку и т.д.\n"
+"планируйте заказы на доставку и т. д.\n"
 "\n"
-"Интеграция с выставлением счетов и бухгалтерией\n"
+"Интеграция с модулями Выставление счетов и Бухгалтерия\n"
 "----------------------------------\n"
 "\n"
 "Создавайте счета для клиентов всего в несколько кликов. Контролируйте "
@@ -36580,7 +36974,7 @@ msgstr ""
 "для небольших магазинов,\n"
 "так и для крупных международных компаний.\n"
 "\n"
-"Знайте своих клиентов — в магазине и за его пределами\n"
+"Знайте своих клиентов – в магазине и за его пределами\n"
 "--------------------------------------\n"
 "\n"
 "Успешные бренды интегрируют все свои взаимодействия с клиентами по всем "
@@ -38595,6 +38989,11 @@ msgid "POS UrbanPiper - Uber Eats"
 msgstr "POS — UrbanPiper Uber Eats"
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_pos_imin
+msgid "POS iMin"
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__prc
 msgid "PRC"
 msgstr "КНР"
@@ -39383,7 +39782,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_theme_personal
 msgid "Personal"
-msgstr ""
+msgstr "Личный"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_personal_trainer
@@ -39612,7 +40011,7 @@ msgstr "Размещайте заказы через службу печати �
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups_privilege__placeholder
 msgid "Placeholder"
-msgstr ""
+msgstr "Заполнитель"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_project_forecast
@@ -41103,7 +41502,7 @@ msgstr "Недвижимость"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_real_estate
 msgid "Real Estate Agency"
-msgstr ""
+msgstr "Агентство недвижимости"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_theme_real_estate
@@ -41644,7 +42043,7 @@ msgstr "Розничная торговля"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_server_action_history_wizard__revision
 msgid "Revision"
-msgstr ""
+msgstr "Ревизия"
 
 #. module: base
 #. odoo-python
@@ -41703,16 +42102,11 @@ msgstr "Roboto"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__role
 msgid "Role"
-msgstr ""
+msgstr "Роль"
 
 #. module: base
 #: model:res.groups,name:base.group_system
 msgid "Role / Administrator"
-msgstr ""
-
-#. module: base
-#: model:res.groups,name:base.group_user
-msgid "Role / Member"
 msgstr ""
 
 #. module: base
@@ -41726,9 +42120,14 @@ msgid "Role / Public"
 msgstr ""
 
 #. module: base
+#: model:res.groups,name:base.group_user
+msgid "Role / User"
+msgstr ""
+
+#. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "Roles"
-msgstr ""
+msgstr "Роли"
 
 #. module: base
 #: model:res.country,name:base.ro
@@ -42505,6 +42904,11 @@ msgid "Saudi Arabia - Point of Sale"
 msgstr "Саудовская Аравия — Точка продаж"
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_sa_withholding_tax
+msgid "Saudi Arabia - Withholding Tax"
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_report__attachment
 msgid "Save as Attachment Prefix"
 msgstr "Сохранить как префикс вложения"
@@ -43182,7 +43586,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_service
 msgid "Service"
-msgstr ""
+msgstr "Услуга"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_timesheet_margin
@@ -43325,7 +43729,7 @@ msgstr "Шиллинги"
 #. module: base
 #: model:ir.module.category,name:base.module_category_shipping_connectors
 msgid "Shipping Connectors"
-msgstr ""
+msgstr "Интеграция с курьерскими службами"
 
 #. module: base
 #: model:ir.module.module,description:base.module_delivery_sendcloud
@@ -43340,7 +43744,7 @@ msgstr "Доставка Shiprocket"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_shoe_maker
 msgid "Shoemaker"
-msgstr ""
+msgstr "Производство обуви"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_test_website_sale
@@ -43799,6 +44203,11 @@ msgid "South Sudan"
 msgstr "Южный Судан"
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_spa_resort
+msgid "Spa Resort"
+msgstr "Спа-курорт"
+
+#. module: base
 #. odoo-python
 #: code:addons/base/models/ir_qweb_fields.py:0
 msgid "Space"
@@ -43929,7 +44338,7 @@ msgstr "Спонсоры, Треки, Повестка дня, Новости м
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sport_events
 msgid "Sport Events"
-msgstr ""
+msgstr "Спортивные мероприятия"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sports_club
@@ -44238,7 +44647,7 @@ msgstr "Состояния"
 #: model:ir.model.fields,field_description:base.field_res_partner__application_statistics
 #: model:ir.model.fields,field_description:base.field_res_users__application_statistics
 msgid "Stats"
-msgstr ""
+msgstr "Статистика"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_module_update__state
@@ -44444,7 +44853,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_student_organization
 msgid "Student Organization"
-msgstr ""
+msgstr "Студенческая организация"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_customizations_studio
@@ -44518,7 +44927,7 @@ msgstr "Сводка"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_summer_camps
 msgid "Summer Camps"
-msgstr ""
+msgstr "Летние лагеря"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_lang__week_start__7
@@ -44591,6 +45000,11 @@ msgstr "Швеция — Бухгалтерия"
 #: model:ir.module.module,shortdesc:base.module_l10n_se_reports
 msgid "Sweden - Accounting Reports"
 msgstr "Швеция — Бухгалтерские отчеты"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_se_returns
+msgid "Sweden - Accounting Returns"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_se_sie4_export
@@ -44814,7 +45228,7 @@ msgstr "Така"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_takeaway_restaurant
 msgid "Takeaway Restaurant"
-msgstr ""
+msgstr "Ресторан с едой на вынос"
 
 #. module: base
 #: model:res.currency,currency_unit_label:base.WST
@@ -44913,7 +45327,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_team_sports_club
 msgid "Team Sports Club"
-msgstr ""
+msgstr "Комплекс для командных видов спорта"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_hidden
@@ -44988,7 +45402,7 @@ msgstr "Технический модуль: Реализация матрицы
 #. module: base
 #: model:ir.module.category,name:base.module_category_theme_technology
 msgid "Technology"
-msgstr ""
+msgstr "Технологии"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_theme_kea
@@ -45259,6 +45673,11 @@ msgstr ""
 #: model:ir.module.module,summary:base.module_whatsapp
 msgid "Text your Contacts on WhatsApp"
 msgstr "Отправка сообщений контактам через WhatsApp"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_textile_manufacturing
+msgid "Textile Manufacturing"
+msgstr "Текстильное производство"
 
 #. module: base
 #: model:res.country,name:base.th
@@ -46103,7 +46522,7 @@ msgstr "Значение, отправленное в денежное поле,
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_theater
 msgid "Theater"
-msgstr ""
+msgstr "Театр"
 
 #. module: base
 #: model:res.currency,currency_subunit_label:base.BWP
@@ -46126,6 +46545,11 @@ msgstr ""
 #: model:ir.ui.menu,name:base.theme_store
 msgid "Theme Store"
 msgstr "Магазин тем"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_test_themes
+msgid "Themes Testing Module"
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
@@ -46796,6 +47220,11 @@ msgid "This module is used for Online bank synchronization."
 msgstr "Этот модуль используется для синхронизации с онлайн-банками."
 
 #. module: base
+#: model:ir.module.module,summary:base.module_l10n_dk_nemhandel
+msgid "This module is used to send/receive documents with Nemhandel"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,summary:base.module_account_peppol
 msgid "This module is used to send/receive documents with PEPPOL"
 msgstr "This module is used to send/receive documents with PEPPOL"
@@ -46819,6 +47248,17 @@ msgid ""
 msgstr ""
 "Этот модуль позволяет использовать все возможности сертификации в ваших "
 "курсах."
+
+#. module: base
+#: model:ir.module.module,description:base.module_test_themes
+msgid ""
+"This module will help you to quickly test all the Odoo\n"
+"    themes without having to switch from one theme to another on your "
+"website.\n"
+"    It will simply create a new website for each Odoo theme and install "
+"every\n"
+"    theme on one website."
+msgstr ""
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_upgrade
@@ -46865,6 +47305,11 @@ msgstr "Эти модули не могут быть удалены: %s"
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
 msgid "Thousands Separator"
 msgstr "Разделитель тысяч"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_thrift_store
+msgid "Thrift Store"
+msgstr "Комиссионный магазин"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_lang__week_start__4
@@ -47356,7 +47801,7 @@ msgstr "Тувалу"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sms_twilio
 msgid "Twilio SMS"
-msgstr ""
+msgstr "СМС Twilio"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_auth_totp
@@ -47399,6 +47844,20 @@ msgid ""
 "- 'Multi Actions': define an action that triggers several other server "
 "actions\n"
 msgstr ""
+"Тип действия сервера. Доступны следующие значения:\n"
+"- 'Обновить запись': обновить значения полей выбранной записи\n"
+"- 'Создать дело': запланировать дело (модуль Обсуждения)\n"
+"- 'Отправить e-mail': опубликовать сообщение или отправить e-mail (модуль "
+"Обсуждения)\n"
+"- 'Отправить СМС': отправить СМС и внести заметку в документ\n"
+"- 'Добавить/удалить наблюдателей': добавить или удалить пользователей, "
+"которые следят за данной записью (модуль Обсуждения)\n"
+"- 'Создать запись': создать новую запись с новыми значениями\n"
+"- 'Выполнить код': выполнить блок Python-кода\n"
+"- 'Отправить вебхук-уведомление': отправить POST-запрос во внешнюю систему "
+"(вебхук)\n"
+"- 'Групповое действие': определить действие, которое запускает сразу "
+"несколько действий сервера\n"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_constraint__type
@@ -48313,6 +48772,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_users_apikeys__user_id
 #: model:ir.model.fields,field_description:base.field_res_users_deletion__user_id
 #: model:ir.model.fields,field_description:base.field_res_users_settings__user_id
+#: model:ir.model.fields.selection,name:base.selection__res_users__role__group_user
 #: model_terms:ir.ui.view,arch_db:base.ir_cron_view_search
 #: model_terms:ir.ui.view,arch_db:base.ir_default_search_view
 #: model_terms:ir.ui.view,arch_db:base.ir_filters_view_search
@@ -48618,6 +49078,11 @@ msgid "Vertical bar"
 msgstr "Вертикальная черта"
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_veterinary_clinic
+msgid "Veterinary Clinic"
+msgstr "Ветеринарная клиника"
+
+#. module: base
 #: model:res.country,name:base.vn
 msgid "Vietnam"
 msgstr "Вьетнам"
@@ -48776,7 +49241,7 @@ msgstr "Видимый"
 #: model_terms:ir.ui.view,arch_db:base.view_currency_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Visible to all"
-msgstr ""
+msgstr "Видно всем"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_frontdesk
@@ -49313,7 +49778,7 @@ msgstr "Хранится ли значение в базе данных."
 #: model:ir.model.fields,help:base.field_res_partner__employee
 #: model:ir.model.fields,help:base.field_res_users__employee
 msgid "Whether this contact is an Employee."
-msgstr ""
+msgstr "Является ли этот контакт сотрудником."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_module_module_dependency__auto_install_required
@@ -49324,7 +49789,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model__abstract
 msgid "Whether this model is abstract"
-msgstr ""
+msgstr "Является ли эта модель абстрактной"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_fields__translate
@@ -49349,11 +49814,11 @@ msgid ""
 "number upon assignment, there can still be gaps in the sequence if records "
 "are deleted. The 'no gap' implementation is slower than the standard one."
 msgstr ""
-"При присвоении порядкового номера записи реализация последовательности \"без "
-"пробелов\" гарантирует, что все предыдущие номера уже были назначены. Хотя "
+"При присвоении порядкового номера записи реализация последовательности «без "
+"пробелов» гарантирует, что все предыдущие номера уже были назначены. Хотя "
 "эта реализация не пропускает номера при назначении, пробелы в "
 "последовательности все же могут возникать при удалении записей. Реализация "
-"\"без пробелов\" работает медленнее стандартной."
+"«без пробелов» работает медленнее стандартной."
 
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_G
@@ -49375,7 +49840,7 @@ msgstr "Оконные действия"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_wine_merchant
 msgid "Wine Shop"
-msgstr ""
+msgstr "Винный магазин"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_account_withholding_tax
@@ -49568,7 +50033,7 @@ msgstr "Да, я понимаю риски"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_yoga_pilates
 msgid "Yoga & Pilates Studio"
-msgstr ""
+msgstr "Студия йоги и пилатеса"
 
 #. module: base
 #. odoo-python
@@ -50185,7 +50650,7 @@ msgstr "например, \"B2B\", \"VIP\", \"Консалтинг\", ..."
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_category_form
 msgid "e.g. \"Consulting Services\""
-msgstr "например, \"Консалтинговые услуги\""
+msgstr "например, «Консалтинговые услуги»"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_category_list
@@ -50326,6 +50791,11 @@ msgid "eLearning"
 msgstr "Электронное обучение"
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_elearning_platform
+msgid "eLearning Platform"
+msgstr "Платформа Odoo для электронного обучения"
+
+#. module: base
 #: model:ir.module.category,name:base.module_category_services_expenses
 msgid "expenses"
 msgstr "расходы"
@@ -50393,6 +50863,11 @@ msgstr "html"
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_server__value_field_to_show__html_value
 msgid "html_value"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,summary:base.module_pos_imin
+msgid "iMin ePOS Printers in PoS"
 msgstr ""
 
 #. module: base
@@ -50795,6 +51270,37 @@ msgstr "Аландские острова"
 #: code:addons/base/models/ir_ui_view.py:0
 msgid "“%(attribute)s” value must be an integer (%(value)s)"
 msgstr "Значение “%(attribute)s” должно быть целым числом (%(value)s)"
+
+#~ msgid ""
+#~ "\n"
+#~ "Saudi Arabia Accounting Module\n"
+#~ "===========================================================\n"
+#~ "Saudi Arabia Accounting Basic Charts and Localization\n"
+#~ "\n"
+#~ "Activates:\n"
+#~ "\n"
+#~ "- Chart of Accounts\n"
+#~ "- Taxes\n"
+#~ "- Vat Filling Report\n"
+#~ "- Withholding Tax Report\n"
+#~ "- Fiscal Positions\n"
+#~ msgstr ""
+#~ "\n"
+#~ "Модуль бухгалтерского учета для Саудовской Аравии\n"
+#~ "===========================================================\n"
+#~ "Основные планы счетов и локализация бухгалтерского учета для Саудовской "
+#~ "Аравии\n"
+#~ "\n"
+#~ "Активирует:\n"
+#~ "\n"
+#~ "- План счетов\n"
+#~ "- Налоги\n"
+#~ "- Отчет по заполнению НДС\n"
+#~ "- Отчет по налогу у источника\n"
+#~ "- Фискальные позиции\n"
+
+#~ msgid "Nonprofit Organization"
+#~ msgstr "Некоммерческая организация"
 
 #~ msgid ""
 #~ "\n"

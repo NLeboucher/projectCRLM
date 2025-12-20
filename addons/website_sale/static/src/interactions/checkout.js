@@ -33,6 +33,25 @@ export class Checkout extends Interaction {
         await this.waitFor(this._prepareDeliveryMethods());
     }
 
+    async start() {
+        // Monitor when the page is restored from the bfcache.
+        const boundOnNavigationBack = this._onNavigationBack.bind(this);
+        window.addEventListener("pageshow", boundOnNavigationBack);
+        this.registerCleanup(() => window.removeEventListener("pageshow", boundOnNavigationBack));
+    }
+
+    /**
+     * Reload the page when the page is restored from the bfcache.
+     *
+     * @param {PageTransitionEvent} event - The pageshow event.
+     * @private
+     */
+    _onNavigationBack(event) {
+        if (event.persisted) {
+            window.location.reload();
+        }
+    }
+
     /**
      * Set the billing or delivery address on the order and update the corresponding card.
      *
@@ -451,6 +470,7 @@ export class Checkout extends Interaction {
             if (checkedRadio) {
                 await this.waitFor(this._updateDeliveryMethod(checkedRadio));
                 this._enableMainButton();
+                await this._showPickupLocation(checkedRadio);
             }
         }
         // Asynchronously fetch delivery rates to mitigate delays from third-party APIs

@@ -81,7 +81,7 @@ class AccountEdiXmlUbl_21Zatca(models.AbstractModel):
             return True
 
         def tax_grouping_function(base_line, tax_data):
-            tax = tax_data['tax']
+            tax = tax_data and tax_data['tax']
 
             # Ignore withholding taxes
             if tax and tax.l10n_sa_is_retention:
@@ -554,6 +554,18 @@ class AccountEdiXmlUbl_21Zatca(models.AbstractModel):
                 for grouping_key, values in aggregated_tax_details.items()
                 if grouping_key
             ],
+        }
+
+    def _add_document_line_price_nodes(self, line_node, vals):
+        """
+        Use 10 decimal places for PriceAmount to satisfy ZATCA validation BR-KSA-EN16931-11
+        """
+        currency_suffix = vals['currency_suffix']
+        line_node['cac:Price'] = {
+            'cbc:PriceAmount': {
+                '_text': round(vals[f'gross_price_unit{currency_suffix}'], 10),
+                'currencyID': vals['currency_name'],
+            },
         }
 
     # -------------------------------------------------------------------------

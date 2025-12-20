@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 13:58+0000\n"
-"PO-Revision-Date: 2025-09-16 02:35+0000\n"
+"POT-Creation-Date: 2025-11-21 18:35+0000\n"
+"PO-Revision-Date: 2025-10-22 11:17+0000\n"
 "Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
 "Language-Team: Russian <https://translate.odoo.com/projects/odoo-19/payment/"
 "ru/>\n"
@@ -18,8 +18,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || ("
-"n%100>=11 && n%100<=14)? 2 : 3);\n"
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Generator: Weblate 5.12.2\n"
 
 #. module: payment
@@ -229,8 +229,8 @@ msgstr "Прямой дебет ACH"
 
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.no_pms_available_warning
-msgid "ACTIVATE STRIPE"
-msgstr "АКТИВИРОВАТЬ STRIPE"
+msgid "ACTIVATE"
+msgstr ""
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_abitab
@@ -1892,9 +1892,7 @@ msgstr "Поставщик платежей"
 #: model:ir.actions.act_window,name:payment.action_payment_provider
 #: model_terms:ir.ui.view,arch_db:payment.payment_provider_list
 msgid "Payment Providers"
-msgstr ""
-"Выберите поставщиков платежных услуг и включите способы оплаты при "
-"оформлении заказа"
+msgstr "Платежные провайдеры"
 
 #. module: payment
 #. odoo-python
@@ -1982,7 +1980,7 @@ msgstr "Платежные провайдеры"
 #. module: payment
 #: model:ir.actions.server,name:payment.cron_post_process_payment_tx_ir_actions_server
 msgid "Payment: Post-process transactions"
-msgstr ""
+msgstr "Платеж: постобработка транзакций"
 
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.payment_token_form
@@ -2056,6 +2054,11 @@ msgstr "Пожалуйста, переключитесь на компанию"
 #: model_terms:ir.ui.view,arch_db:payment.state_header
 msgid "Please wait..."
 msgstr "Подождите..."
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_transaction_form
+msgid "Post-process"
+msgstr ""
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_post_finance
@@ -2234,6 +2237,11 @@ msgstr "Revolut Pay"
 #: model:payment.method,name:payment.payment_method_rupay
 msgid "RuPay"
 msgstr "RuPay"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_transaction_form
+msgid "Run the post-processing step for this transaction."
+msgstr ""
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_sepa_direct_debit
@@ -3033,7 +3041,7 @@ msgstr "Недействительный остаток"
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.payment_transaction_form
 msgid "Void Transaction"
-msgstr "Пустая транзакция"
+msgstr "Аннулировать транзакцию"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_wallets_india
@@ -3431,6 +3439,9 @@ msgstr "токенизация не поддерживается"
 #: code:addons/payment/const.py:0
 msgid "tokenization without payment no supported"
 msgstr "токенизация без оплаты не поддерживается"
+
+#~ msgid "ACTIVATE STRIPE"
+#~ msgstr "АКТИВИРОВАТЬ STRIPE"
 
 #~ msgid " Data Fetched"
 #~ msgstr " Полученные данные"

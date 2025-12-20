@@ -1,5 +1,6 @@
 import { reactive } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
+import { serializeDate, serializeDateTime } from "@web/core/l10n/dates";
 const { DateTime } = luxon;
 
 
@@ -22,7 +23,7 @@ export class StockValuationReportController {
 
     async loadReportData() {
         const kwargs = {
-            date: this.state.date.toFormat("yyyy-MM-dd"),
+            date: this.state.date.toISODate() || false,
         };
         const res = await this.orm.call(
             "stock_account.stock.valuation.report",
@@ -49,6 +50,7 @@ export class StockValuationReportController {
             this.data.initial_balance.lines.push({
                 label: account.display_name,
                 value: data.value,
+                account_id: accountId,
             });
             this.data.initial_balance.accounts.push(...data.accounts);
         }
@@ -60,6 +62,7 @@ export class StockValuationReportController {
             this.data.ending_stock.lines.push({
                 label: account?.display_name,
                 value: data.value,
+                account_id: accountId,
             });
             this.data.ending_stock.accounts.push(...data.accounts);
         }
@@ -67,13 +70,17 @@ export class StockValuationReportController {
 
     async setDate(date) {
         this.state.date = date;
-        this.dateAsString = date.toFormat('y-LL-dd HH:mm:ss');
+        this.dateAsString = serializeDateTime(date);
         await this.loadReportData();
     }
 
     // Actions -----------------------------------------------------------------
     async actionGenerateEntry() {
         const args = [[this.companyId]];
+        const date = serializeDate(this.state.date);
+        if (date != serializeDate(DateTime.now())) {
+            args.push(date);
+        }
         const action = await this.orm.call("res.company", "action_close_stock_valuation", args);
         if (action) {
             this.actionService.doAction(action);

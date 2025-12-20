@@ -10,13 +10,15 @@
 # George Tarasidis <george_tarasidis@yahoo.com>, 2018
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# Panagiotis karampaglis <panosdotk@gmail.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 14:03+0000\n"
-"PO-Revision-Date: 2025-09-24 19:23+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-12-12 18:35+0000\n"
+"PO-Revision-Date: 2025-11-15 11:30+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Greek <https://translate.odoo.com/projects/odoo-19/website/el/"
 ">\n"
 "Language: el\n"
@@ -321,12 +323,6 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
-msgid "%s List"
-msgstr ""
-
-#. module: website
-#. odoo-javascript
 #: code:addons/website/static/src/client_actions/website_preview/website_builder_action.js:0
 msgid "%s is not a valid URL."
 msgstr ""
@@ -335,6 +331,12 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/components/views/page_list.js:0
 msgid "%s record(s) selected, are you sure you want to publish them all?"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/customize_translation_tab_plugin.js:0
+msgid "%s text blocks were skipped during translation. Please try again."
 msgstr ""
 
 #. module: website
@@ -771,6 +773,11 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_links
 msgid "8000 Marina Blvd, Suite 300 <br/> Brisbane CA 94005 <br/>United States"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.template_footer_call_to_action
+msgid "8000 Marina Blvd, Suite 300 • Brisbane CA 94005 • United States"
 msgstr ""
 
 #. module: website
@@ -1241,13 +1248,6 @@ msgstr ""
 msgid ""
 "<font style=\"background-image: linear-gradient(45deg, var(--o-color-4) 15%, "
 "var(--o-color-5) 100%);\" class=\"text-gradient\">8+</font>"
-msgstr ""
-
-#. module: website
-#: model_terms:ir.ui.view,arch_db:website.template_footer_call_to_action
-msgid ""
-"<font style=\"color: rgba(255, 255, 255, 0.5);\">8000 Marina Blvd, Suite 300 "
-"• Brisbane CA 94005 • United States</font>"
 msgstr ""
 
 #. module: website
@@ -2666,7 +2666,6 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/floating_blocks/floating_blocks_option.xml:0
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
 msgid "A great subtitle"
 msgstr ""
 
@@ -2853,7 +2852,7 @@ msgstr "Ενέργεια"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/header/header_elements_option.xml:0
 msgid "Actions"
-msgstr ""
+msgstr "Ενέργειες"
 
 #. module: website
 #. odoo-javascript
@@ -2901,7 +2900,6 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
 #: code:addons/website/static/src/builder/plugins/options/card_image_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 #: code:addons/website/static/src/client_actions/configurator/configurator.xml:0
@@ -3003,6 +3001,12 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
+msgid "Add New Option"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/social_media_links.xml:0
 msgid "Add New Social Network"
 msgstr ""
@@ -3064,6 +3068,12 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
+#: code:addons/website/static/src/client_actions/website_preview/website_switcher_systray_item.js:0
+msgid "Add a domain to your website."
+msgstr ""
+
+#. module: website
+#. odoo-javascript
 #: code:addons/website/static/src/client_actions/website_preview/new_content_systray_item.js:0
 msgid "Add a livechat widget"
 msgstr ""
@@ -3112,12 +3122,6 @@ msgstr ""
 #. odoo-python
 #: code:addons/website/models/res_lang.py:0
 msgid "Add languages"
-msgstr ""
-
-#. module: website
-#. odoo-javascript
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
-msgid "Add new cards using the sidebar"
 msgstr ""
 
 #. module: website
@@ -3363,7 +3367,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/dynamic_snippet_carousel_option.xml:0
 msgid "All"
-msgstr ""
+msgstr "Όλα"
 
 #. module: website
 #. odoo-javascript
@@ -3467,7 +3471,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/carousel_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 msgid "Always"
-msgstr ""
+msgstr "Πάντα"
 
 #. module: website
 #. odoo-javascript
@@ -3597,6 +3601,12 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/floating_blocks/floating_blocks_option.xml:0
 msgid "Applies to all cards"
 msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translate_announcement_scroll_plugin.js:0
+msgid "Apply"
+msgstr "Εφαρμογή"
 
 #. module: website
 #. odoo-javascript
@@ -3771,7 +3781,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/carousel_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 msgid "Autoplay"
-msgstr ""
+msgstr "Αυτόματη αναπαραγωγή"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website__auto_redirect_lang
@@ -3831,7 +3841,7 @@ msgstr "Φόντο"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "Background Color"
-msgstr ""
+msgstr "Χρώμα Φόντου"
 
 #. module: website
 #. odoo-javascript
@@ -4264,7 +4274,6 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/layout_option/add_element_option_plugin.js:0
 #: code:addons/website/static/src/builder/plugins/theme/theme_colors_option.xml:0
 #: code:addons/website/static/src/builder/plugins/theme/theme_tab_plugin.js:0
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
 #: model_terms:ir.ui.view,arch_db:website.s_button
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -4468,7 +4477,6 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/floating_blocks/floating_blocks_option.xml:0
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
 msgid "Card Title"
 msgstr ""
 
@@ -4571,7 +4579,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Catalog"
-msgstr ""
+msgstr "Κατάλογος"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -4698,7 +4706,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/components/dialog/seo.xml:0
 msgid "Check"
-msgstr ""
+msgstr "Επιταγή"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_popup
@@ -4727,8 +4735,13 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
-#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
 msgid "Checkbox"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
+msgid "Checkbox List"
 msgstr ""
 
 #. module: website
@@ -4971,7 +4984,6 @@ msgstr ""
 #: code:addons/website/static/src/client_actions/website_preview/create_page_message.xml:0
 #: code:addons/website/static/src/components/resource_editor/resource_editor.xml:0
 #: code:addons/website/static/src/components/views/theme_preview.xml:0
-#: code:addons/website/static/src/snippets/s_image_gallery/000.xml:0
 #: code:addons/website/static/src/snippets/s_image_gallery/001.xml:0
 #: code:addons/website/static/src/xml/website.xml:0
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
@@ -4998,12 +5010,6 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Closer Look"
-msgstr ""
-
-#. module: website
-#. odoo-javascript
-#: code:addons/website/static/src/client_actions/configurator/configurator.xml:0
-msgid "Clothes, Marketing, ..."
 msgstr ""
 
 #. module: website
@@ -5081,7 +5087,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/layout_option/layout_option.xml:0
 msgid "Column"
-msgstr ""
+msgstr "Στήλη"
 
 #. module: website
 #. odoo-javascript
@@ -5187,7 +5193,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
 msgid "Conditions"
-msgstr ""
+msgstr "Συνθήκες"
 
 #. module: website
 #: model:ir.model,name:website.model_res_config_settings
@@ -5390,7 +5396,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/website_builder.js:0
 #: code:addons/website/static/src/components/dialog/edit_menu.xml:0
 msgid "Continue"
-msgstr ""
+msgstr "Συνέχεια"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_media_list
@@ -5407,6 +5413,7 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
+#: code:addons/website/static/src/interactions/cookies/cookies_bar.js:0
 #: code:addons/website/static/src/xml/website.cookies_bar.xml:0
 #: model_terms:ir.ui.view,arch_db:website.cookie_policy
 msgid "Cookie Policy"
@@ -5573,7 +5580,7 @@ msgstr "Δημιουργία"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
 msgid "Create New"
-msgstr ""
+msgstr "Δημιουργία Νέου"
 
 #. module: website
 #. odoo-javascript
@@ -5590,7 +5597,7 @@ msgstr ""
 #. module: website
 #: model:ir.model,website_form_label:website.model_res_partner
 msgid "Create a Customer"
-msgstr ""
+msgstr "Δημιουργία Πελάτη"
 
 #. module: website
 #. odoo-javascript
@@ -5945,7 +5952,7 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/header/header_font_option.xml:0
-msgid "Default Text Color"
+msgid "Default Text Size and Color"
 msgstr ""
 
 #. module: website
@@ -5989,7 +5996,7 @@ msgstr "Καθυστέρηση"
 #. odoo-javascript
 #: code:addons/website/static/src/components/dialog/page_properties.xml:0
 msgid "Delete"
-msgstr ""
+msgstr "Διαγραφή"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_features_grid
@@ -6207,6 +6214,12 @@ msgid "Directive"
 msgstr ""
 
 #. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/options/website_page_config_option.xml:0
+msgid "Disable to hide the footer on this page"
+msgstr ""
+
+#. module: website
 #: model:ir.actions.server,name:website.website_disable_unused_snippets_assets_ir_actions_server
 msgid "Disable unused snippets assets"
 msgstr ""
@@ -6352,6 +6365,11 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_key_benefits
 msgid "Discover our<br/>main three benefits"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_intro_pill
+msgid "Discover our<br/>services"
 msgstr ""
 
 #. module: website
@@ -6502,14 +6520,16 @@ msgid "Display Name"
 msgstr "Εμφάνιση Ονόματος"
 
 #. module: website
-#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
-msgid "Display a customizable cookies bar on your website"
-msgstr ""
-
-#. module: website
 #: model:ir.model.fields,help:website.field_res_config_settings__website_cookies_bar
 #: model:ir.model.fields,help:website.field_website__cookies_bar
 msgid "Display a customizable cookies bar on your website."
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"Display a customizable cookies bar on your website. Please ensure your site "
+"is GDPR-compliant (e.g. Google Fonts usage)."
 msgstr ""
 
 #. module: website
@@ -6671,7 +6691,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_banner_categories
 #: model_terms:ir.ui.view,arch_db:website.s_ecomm_categories_showcase
 msgid "Drawers"
-msgstr ""
+msgstr "Συρτάρια"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_menus_logos
@@ -7073,12 +7093,6 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/builder/plugins/options/website_page_config_option.xml:0
-msgid "Enable to hide the footer on this page"
-msgstr ""
-
-#. module: website
-#. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/carousel_slides_option.xml:0
 msgid "Enable to make the slide clickable"
 msgstr ""
@@ -7104,6 +7118,12 @@ msgstr ""
 msgid ""
 "Enhance your experience with our user-focused designs, ensuring you get the "
 "best value.<br/>"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/xml/html_editor.xml:0
+msgid "Enter URL, /page, or #anchor"
 msgstr ""
 
 #. module: website
@@ -7226,7 +7246,7 @@ msgstr "Σφάλμα"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
 msgid "Error Message"
-msgstr ""
+msgstr "Μήνυμα σφάλματος"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_pricelist_cafe
@@ -7334,11 +7354,6 @@ msgstr ""
 msgid ""
 "Experience the power of our software without breaking the bank – choose a "
 "plan that suits you best and start unlocking its full potential today."
-msgstr ""
-
-#. module: website
-#: model_terms:ir.ui.view,arch_db:website.s_intro_pill
-msgid "Experience the<br/>best quality services"
 msgstr ""
 
 #. module: website
@@ -7636,6 +7651,12 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/dynamic_snippet_option.xml:0
 msgid "Fetched Elements"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/form/utils.js:0
+msgid "Field"
 msgstr ""
 
 #. module: website
@@ -8183,7 +8204,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "General"
-msgstr ""
+msgstr "Γενικά"
 
 #. module: website
 #. odoo-javascript
@@ -8358,7 +8379,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/social_media_option_plugin.js:0
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_res_config_settings__has_google_analytics
@@ -8685,7 +8706,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Help"
-msgstr ""
+msgstr "Βοήθεια"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_images_subtitles
@@ -8819,7 +8840,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "History"
-msgstr ""
+msgstr "Ιστορικό"
 
 #. module: website
 #. odoo-javascript
@@ -9250,7 +9271,6 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/snippets/s_image_gallery/000.xml:0
 #: code:addons/website/static/src/snippets/s_image_gallery/001.xml:0
 msgid "Image Gallery Dialog"
 msgstr ""
@@ -9378,7 +9398,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/accordion_option.xml:0
 msgid "Inactive"
-msgstr ""
+msgstr "Ανενεργή"
 
 #. module: website
 #: model:ir.model.fields.selection,name:website.selection__theme_ir_asset__directive__include
@@ -10077,7 +10097,7 @@ msgstr "Θέση Εργασίας"
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Jobs"
-msgstr ""
+msgstr "Θέσεις Εργασίας"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_call_to_action
@@ -10513,7 +10533,7 @@ msgstr "Υπόμνημα"
 #: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "Let your customers log in to see their documents"
 msgstr ""
-"Επιτρέψτε τους πελάτες σας να συνδεθούν για να δουν τα δικά τους έγγραφα."
+"Επιτρέψτε τους πελάτες σας να συνδεθούν για να δουν τα δικά τους έγγραφα"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_process_steps
@@ -10721,7 +10741,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/client_actions/website_preview/edit_website_systray_item.xml:0
 msgid "Loading"
-msgstr ""
+msgstr "Γίνεται φόρτωση"
 
 #. module: website
 #. odoo-javascript
@@ -11598,7 +11618,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/carousel_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 msgid "Never"
-msgstr ""
+msgstr "Ποτέ"
 
 #. module: website
 #. odoo-javascript
@@ -11686,7 +11706,6 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 #: code:addons/website/static/src/snippets/s_dynamic_snippet_carousel/000.xml:0
-#: code:addons/website/static/src/snippets/s_image_gallery/000.xml:0
 #: code:addons/website/static/src/snippets/s_image_gallery/001.xml:0
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
 #: model_terms:ir.ui.view,arch_db:website.s_carousel
@@ -11792,21 +11811,21 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/customize_translation_tab_plugin.js:0
+msgid "No translatable content found in the current webpage."
+msgstr ""
+
+#. module: website
+#. odoo-javascript
 #: code:addons/website/static/src/components/dialog/seo.xml:0
 msgid "No warning on images"
 msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/client_actions/website_preview/website_switcher_systray_item.js:0
-msgid "No website domain configured for this website."
-msgstr ""
-
-#. module: website
-#. odoo-javascript
 #: code:addons/website/static/src/components/dialog/page_properties.xml:0
 msgid "No, keep it"
-msgstr ""
+msgstr "Όχι, κράτα το"
 
 #. module: website
 #. odoo-javascript
@@ -11997,7 +12016,7 @@ msgstr "ΟΚ"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/translation_components/translatorInfoDialog.js:0
 msgid "Ok, never show me this again"
-msgstr "ΟΚ, να μην εμφανιστεί ξανά."
+msgstr "ΟΚ, να μην εμφανιστεί ξανά"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_page_properties__old_url
@@ -12196,12 +12215,6 @@ msgstr "Βελτιστοποίηση SEO"
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
-msgid "Option"
-msgstr ""
-
-#. module: website
-#. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/utils.js:0
 msgid "Option 1"
 msgstr ""
@@ -12216,6 +12229,12 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/utils.js:0
 msgid "Option 3"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
+msgid "Option List"
 msgstr ""
 
 #. module: website
@@ -12767,6 +12786,7 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/announcement_scroll_option.xml:0
+#: code:addons/website/static/src/builder/snippet_model.js:0
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Parallax"
 msgstr ""
@@ -12843,7 +12863,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/announcement_scroll_option.xml:0
 msgid "Pause"
-msgstr ""
+msgstr "Παύση"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_process_steps
@@ -12865,7 +12885,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "People"
-msgstr ""
+msgstr "Άνθρωποι"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_features
@@ -13110,7 +13130,6 @@ msgstr "Προεπισκόπηση του"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 #: code:addons/website/static/src/snippets/s_dynamic_snippet_carousel/000.xml:0
-#: code:addons/website/static/src/snippets/s_image_gallery/000.xml:0
 #: code:addons/website/static/src/snippets/s_image_gallery/001.xml:0
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
 #: model_terms:ir.ui.view,arch_db:website.s_carousel
@@ -13459,9 +13478,14 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
-#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
 msgid "Radio"
 msgstr "Κουμπί Επιλογής"
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
+msgid "Radio Button List"
+msgstr ""
 
 #. module: website
 #. odoo-javascript
@@ -13561,7 +13585,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/dynamic_snippet_option.xml:0
 msgid "Record"
-msgstr ""
+msgstr "Εγγραφή"
 
 #. module: website
 #: model:ir.model,name:website.model_ir_rule
@@ -13748,6 +13772,12 @@ msgid "Remove theme"
 msgstr ""
 
 #. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/options/background_video_option.xml:0
+msgid "Remove video"
+msgstr ""
+
+#. module: website
 #. odoo-python
 #: code:addons/website/models/res_users.py:0
 msgid "Remove website on related partner before they become internal user."
@@ -13845,6 +13875,12 @@ msgid "Ressources"
 msgstr ""
 
 #. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/client_actions/configurator/configurator.xml:0
+msgid "Restaurant, Hair Salon, Clothing Store,..."
+msgstr ""
+
+#. module: website
 #: model_terms:ir.ui.view,arch_db:website.qweb_500
 msgid "Restore previous version (soft reset)."
 msgstr ""
@@ -13873,7 +13909,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Returns"
-msgstr ""
+msgstr "Επιστροφές"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
@@ -14081,6 +14117,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/embed_code_option_dialog.xml:0
 #: code:addons/website/static/src/builder/plugins/options/google_maps_option/google_maps_api_key_dialog.xml:0
+#: code:addons/website/static/src/builder/plugins/translate_announcement_scroll_plugin.js:0
 #: code:addons/website/static/src/builder/website_builder.xml:0
 #: code:addons/website/static/src/components/dialog/edit_menu.xml:0
 #: code:addons/website/static/src/components/dialog/seo.js:0
@@ -14125,7 +14162,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/accordion_option.xml:0
 msgid "Scale"
-msgstr ""
+msgstr "Κλίμακα"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_thumbnails
@@ -14423,12 +14460,6 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/builder/customize_translation_tab.xml:0
-msgid "Select content on your page to translate it."
-msgstr ""
-
-#. module: website
-#. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
 msgid "Selection"
 msgstr "Επιλογή"
@@ -14638,12 +14669,12 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Shipping"
-msgstr ""
+msgstr "Αποστολή"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 msgid "Shipping Information"
-msgstr ""
+msgstr "Πληροφορίες αποστολής"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_menus_logos
@@ -14780,7 +14811,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/header/header_elements_option.xml:0
 msgid "Sign In"
-msgstr ""
+msgstr "Σύνδεση"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_process_steps
@@ -14833,7 +14864,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/dynamic_snippet_carousel_option.xml:0
 msgid "Single"
-msgstr ""
+msgstr "Άγαμος"
 
 #. module: website
 #: model:ir.ui.menu,name:website.menu_site
@@ -15385,7 +15416,7 @@ msgstr "Προτάσεις"
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Support"
-msgstr ""
+msgstr "Υποστήριξη"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_faq_horizontal
@@ -15429,14 +15460,13 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/snippets/s_floating_blocks/floating_blocks.edit.xml:0
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
 msgid "TIP:"
 msgstr ""
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Tab"
-msgstr ""
+msgstr "Tab"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -15591,7 +15621,7 @@ msgstr "Εφεδρικό πρότυπο"
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_columns
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Όροι και Προϋποθέσεις"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
@@ -15752,8 +15782,25 @@ msgid ""
 msgstr ""
 
 #. module: website
+#. odoo-python
+#: code:addons/website/models/website.py:0
+msgid ""
+"The domain path cannot contain relative path segments like '/./' or '/../'."
+msgstr ""
+
+#. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_striped
 msgid "The evolution of our company"
+msgstr ""
+
+#. module: website
+#. odoo-python
+#: code:addons/website/models/website_form.py:0
+msgid ""
+"The field '%(field)s' cannot be deleted because it is referenced in a "
+"website view.\n"
+"Model: %(model)s\n"
+"View: %(view)s"
 msgstr ""
 
 #. module: website
@@ -15879,6 +15926,12 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,help:website.field_website_controller_page__name_slugified
 msgid "The name of the page usable in a URL"
+msgstr ""
+
+#. module: website
+#. odoo-python
+#: code:addons/website/models/website.py:0
+msgid "The provided website domain is not a valid URL."
 msgstr ""
 
 #. module: website
@@ -16221,16 +16274,6 @@ msgid "This website does not have a domain configured."
 msgstr ""
 
 #. module: website
-#. odoo-javascript
-#: code:addons/website/static/src/client_actions/website_preview/website_switcher_systray_item.js:0
-msgid ""
-"This website does not have a domain configured. To avoid unexpected "
-"behaviours during website edition, we recommend closing (or refreshing) "
-"other browser tabs.\n"
-"To remove this message please set a domain in your website settings"
-msgstr ""
-
-#. module: website
 #: model_terms:ir.ui.view,arch_db:website.view_edit_third_party_domains
 msgid ""
 "Those services will be blocked on your website for users until they accept "
@@ -16394,12 +16437,6 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_tabs
 msgid "To be successful your content needs to be useful to your readers."
-msgstr ""
-
-#. module: website
-#. odoo-javascript
-#: code:addons/website/static/src/builder/plugins/font/add_font_dialog.xml:0
-msgid "To comply with some local regulations"
 msgstr ""
 
 #. module: website
@@ -16600,7 +16637,7 @@ msgstr "Ροή"
 #: code:addons/website/static/src/builder/plugins/options/accordion_option.xml:0
 #: code:addons/website/static/src/client_actions/website_preview/edit_website_systray_item.xml:0
 msgid "Translate"
-msgstr ""
+msgstr "Μετάφραση"
 
 #. module: website
 #. odoo-javascript
@@ -16622,8 +16659,26 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translate_announcement_scroll_plugin.js:0
+msgid "Translate Text"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/translation_plugin.js:0
 msgid "Translate header in the text. Menu is generated automatically."
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/translate_webpage_option.xml:0
+msgid "Translate the whole content with AI"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/translate_webpage_option.xml:0
+msgid "Translate to"
 msgstr ""
 
 #. module: website
@@ -16631,6 +16686,31 @@ msgstr ""
 #: code:addons/website/static/src/builder/translation_components/translatorInfoDialog.xml:0
 msgid "Translated content"
 msgstr "Μεταφρασμένο Περιεχόμενο"
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/translate_webpage_option.xml:0
+msgid "Translating..."
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translate_announcement_scroll_plugin.js:0
+#: code:addons/website/static/src/builder/plugins/translation_tab/customize_translation_tab_plugin.js:0
+msgid "Translation"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/customize_translation_tab_plugin.js:0
+msgid "Translation Error"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/customize_translation_tab_plugin.js:0
+msgid "Translation Info"
+msgstr ""
 
 #. module: website
 #. odoo-javascript
@@ -16690,12 +16770,6 @@ msgid ""
 "url. (Eg: /shop -> /garden - Both url will be accessible but /shop will "
 "automatically be redirected to /garden)\n"
 "    "
-msgstr ""
-
-#. module: website
-#. odoo-javascript
-#: code:addons/website/static/src/xml/html_editor.xml:0
-msgid "Type your URL"
 msgstr ""
 
 #. module: website
@@ -16779,9 +16853,8 @@ msgstr ""
 msgid ""
 "Understand how visitors engage with our website, via Google Analytics.\n"
 "                                                Learn more about <a "
-"class=\"o_translate_inline\" href=\"https://developers.google.com/analytics/"
-"resources/concepts/gaConceptsCookies?hl=en\">Analytics cookies and privacy "
-"information.</a>"
+"class=\"o_translate_inline\" href=\"https://support.google.com/analytics/"
+"answer/11397207?hl=en\">Analytics cookies and privacy information.</a>"
 msgstr ""
 
 #. module: website
@@ -16897,6 +16970,12 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/google_maps_option/google_maps_api_key_dialog.xml:0
 msgid "Use Google Map on your website (Contact Us page, snippets, etc)."
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/font/add_font_dialog.xml:0
+msgid "Use Google’s servers for fonts. It may impact GDPR compliance"
 msgstr ""
 
 #. module: website
@@ -17111,7 +17190,7 @@ msgstr "Βίντεο"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/background_option_plugin.js:0
 msgid "Videos"
-msgstr ""
+msgstr "Βίντεος"
 
 #. module: website
 #: model:ir.model,name:website.model_ir_ui_view
@@ -18318,7 +18397,6 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/snippets/s_floating_blocks/floating_blocks.edit.xml:0
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
 msgid "You need at least two cards to perform the effect"
 msgstr ""
 
@@ -18526,14 +18604,14 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/client_actions/configurator/configurator.js:0
-msgid "a business website"
+#: code:addons/website/static/src/client_actions/configurator/configurator.xml:0
+msgid "a new image"
 msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/client_actions/configurator/configurator.xml:0
-msgid "a new image"
+#: code:addons/website/static/src/client_actions/configurator/configurator.js:0
+msgid "a website"
 msgstr ""
 
 #. module: website
@@ -18661,7 +18739,7 @@ msgstr "Κλείσιμο"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/highlight/highlight_configurator.xml:0
 msgid "color"
-msgstr ""
+msgstr "χρώμα"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -19366,7 +19444,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/client_actions/website_preview/edit_website_systray_item.xml:0
 msgid "page"
-msgstr ""
+msgstr "σελίδα"
 
 #. module: website
 #. odoo-javascript
@@ -19618,7 +19696,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/animate_option.xml:0
 msgid "to"
-msgstr ""
+msgstr "σε"
 
 #. module: website
 #: model:ir.model.constraint,message:website.constraint_website_controller_page_unique_name_slugified
@@ -19674,6 +19752,9 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_key_benefits
 msgid "✽  What We Offer"
 msgstr ""
+
+#~ msgid "Option"
+#~ msgstr "Επιλογή"
 
 #~ msgid " Add Images"
 #~ msgstr "Προσθήκη Εικόνων"

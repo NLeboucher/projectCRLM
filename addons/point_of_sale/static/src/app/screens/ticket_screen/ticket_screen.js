@@ -156,18 +156,11 @@ export class TicketScreen extends Component {
     async onClickScanOrder(qrcode) {
         if (qrcode) {
             const uuid = new URL(qrcode).searchParams.get("order_uuid");
-            const results = await this.pos.data.callRelated(
-                "pos.order",
-                "read_pos_orders",
-                [[["uuid", "=", uuid]]],
-                {},
-                false,
-                true
-            );
-            const order = results["pos.order"][0];
+            const orders = await this.pos.data.loadServerOrders([["uuid", "=", uuid]]);
+            const order = orders[0];
             if (order) {
                 this.state.filter = "SYNCED";
-                this.state.selectedOrder = order;
+                this.setSelectedOrder(order);
                 this.pos.scanning = !this.pos.scanning;
             } else {
                 this.env.services.notification.add(_t("Invalid QR Code! Please, Scan again!"), {
@@ -314,10 +307,18 @@ export class TicketScreen extends Component {
         const destinationOrder = this._getEmptyOrder(partner);
 
         destinationOrder.is_refund = true;
+        destinationOrder.pricelist_id = order.pricelist_id;
         // Add orderline for each toRefundDetail to the destinationOrder.
         const lines = [];
         for (const refundDetail of this._getRefundableDetails(partner, order)) {
             const refundLine = refundDetail.line;
+            const alreadyRefundedLots = refundLine.refund_orderline_ids
+                .filter((item) => !["cancel", "draft"].includes(item.order_id.state))
+                .flatMap((item) => item.pack_lot_ids)
+                .map((pack_lot) => pack_lot.lot_name);
+            const options = refundLine.pack_lot_ids
+                .map((p) => p.lot_name)
+                .filter((lotName) => !alreadyRefundedLots.includes(lotName));
             const line = this.pos.models["pos.order.line"].create({
                 qty: -refundDetail.qty,
                 price_unit: refundLine.price_unit,
@@ -326,10 +327,10 @@ export class TicketScreen extends Component {
                 discount: refundLine.discount,
                 tax_ids: refundLine.tax_ids.map((tax) => ["link", tax]),
                 refunded_orderline_id: refundLine,
-                pack_lot_ids: refundLine.pack_lot_ids.map((packLot) => [
-                    "create",
-                    { lot_name: packLot.lot_name },
-                ]),
+                // Only include as many pack_lot_ids as the refunded quantity requires.
+                pack_lot_ids: options
+                    .slice(0, refundDetail.qty)
+                    .map((lotName) => ["create", { lot_name: lotName }]),
                 price_type: "automatic",
             });
             lines.push(line);
@@ -463,7 +464,7 @@ export class TicketScreen extends Component {
         return this.pos.getDate(order.date_order);
     }
     getTotal(order) {
-        return this.env.utils.formatCurrency(order.getTotalWithTax());
+        return this.env.utils.formatCurrency(order.priceIncl);
     }
     getPartner(order) {
         return order.getPartnerName();
@@ -661,6 +662,16 @@ export class TicketScreen extends Component {
         this.pos.setOrder(order);
         this.pos.navigateToOrderScreen(order);
     }
+
+    onClickNewOrder() {
+        const order = this.pos.createNewOrder({
+            preset_id: this.state.selectedPreset || null,
+        });
+        this.pos.selectedOrderUuid = order.uuid;
+        this.pos.addPendingOrder([order.id]);
+        this.pos.navigateToOrderScreen(order);
+    }
+
     _getFilterOptions() {
         const orderStates = this._getOrderStates();
         orderStates.set("SYNCED", { text: _t("Paid") });
@@ -825,14 +836,9 @@ export class TicketScreen extends Component {
             .map((info) => info[0]);
 
         if (idsNotInCacheOrOutdated.length > 0) {
-            await this.pos.data.callRelated(
-                "pos.order",
-                "read_pos_orders",
-                [[["id", "in", Array.from(new Set(idsNotInCacheOrOutdated))]]],
-                {},
-                false,
-                true
-            );
+            await this.pos.data.loadServerOrders([
+                ["id", "in", Array.from(new Set(idsNotInCacheOrOutdated))],
+            ]);
         }
     }
     //#endregion

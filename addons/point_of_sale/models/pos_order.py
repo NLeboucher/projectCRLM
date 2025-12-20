@@ -111,6 +111,9 @@ class PosOrder(models.Model):
 
             del order['uuid']
             del order['access_token']
+            if order.get('state') == 'paid':
+                # The "paid" state will be assigned later by `_process_saved_order`
+                order['state'] = pos_order.state
             pos_order.write(order)
 
         for model_name, mapping in record_uuid_mapping.items():
@@ -185,7 +188,7 @@ class PosOrder(models.Model):
             return_payment_vals = {
                 'name': _('return'),
                 'pos_order_id': order.id,
-                'amount': -pos_order['amount_return'],
+                'amount': pos_order['amount_return'],
                 'payment_date': fields.Datetime.now(),
                 'payment_method_id': cash_payment_method.id,
                 'is_change': True,
@@ -206,7 +209,7 @@ class PosOrder(models.Model):
     @api.model
     def _get_invoice_lines_values(self, line_values, pos_line, move_type):
         # correct quantity sign based on move type and if line is refund.
-        is_refund_order = pos_line.order_id.amount_total < 0.0
+        is_refund_order = pos_line.order_id.is_refund
         qty_sign = -1 if (
             (move_type == 'out_invoice' and is_refund_order)
             or (move_type == 'out_refund' and not is_refund_order)
@@ -275,7 +278,7 @@ class PosOrder(models.Model):
             .mapped('picking_ids.move_ids')\
             .filtered(lambda m: m.is_valued and m.product_id.valuation == 'real_time')\
             .sorted(lambda x: x.date)
-        return moves._get_average_price_unit()
+        return moves._get_price_unit()
 
     name = fields.Char(string='Order Ref', required=True, readonly=True, copy=False, default='/')
     last_order_preparation_change = fields.Char(string='Last preparation change', help="Last printed state of the order")
@@ -299,7 +302,8 @@ class PosOrder(models.Model):
     country_code = fields.Char(related='company_id.account_fiscal_country_id.code')
     pricelist_id = fields.Many2one('product.pricelist', string='Pricelist')
     partner_id = fields.Many2one('res.partner', string='Customer', change_default=True, index='btree_not_null')
-    sequence_number = fields.Integer(string='Sequence Number', help='A session-unique sequence number for the order. Negative if generated from the client', default=1)
+    sequence_number = fields.Integer(string='Sequence Number', copy=False,
+                                     help='A session-unique sequence number for the order. Negative if generated from the client')
     session_id = fields.Many2one('pos.session', string='Session', index=True, domain="[('state', '=', 'opened')]")
     config_id = fields.Many2one('pos.config', compute='_compute_order_config_id', string="Point of Sale", readonly=False, store=True)
     currency_id = fields.Many2one('res.currency', related='config_id.currency_id', string="Currency")
@@ -405,7 +409,7 @@ class PosOrder(models.Model):
     def _compute_refund_related_fields(self):
         for order in self:
             order.refund_orders_count = len(order.mapped('lines.refund_orderline_ids.order_id'))
-            order.refunded_order_id = order.lines.refunded_orderline_id.order_id
+            order.refunded_order_id = next(iter(order.lines.refunded_orderline_id.order_id), False)
 
     @api.depends('lines.refunded_qty', 'lines.qty')
     def _compute_has_refundable_lines(self):
@@ -532,6 +536,9 @@ class PosOrder(models.Model):
             vals = self._complete_values_from_session(session, vals)
         return super().create(vals_list)
 
+    def _update_sequence_number(self, session, values):
+        values['sequence_number'] = session.config_id.order_seq_id._next()  # Some localization needs orders to have a sequence number
+
     @api.model
     def _complete_values_from_session(self, session, values):
         values.setdefault('pricelist_id', session.config_id.pricelist_id.id)
@@ -544,7 +551,7 @@ class PosOrder(models.Model):
             values['tracking_number'] = tracking_number
 
         if not values.get('sequence_number'):
-            values['sequence_number'] = session.config_id.order_seq_id._next()  # Some localization needs orders to have a sequence number
+            self._update_sequence_number(session, values)
 
         return values
 
@@ -844,8 +851,7 @@ class PosOrder(models.Model):
         fiscal_position = self.fiscal_position_id
         pos_config = self.config_id
         rounding_method = pos_config.rounding_method
-        amount_total = sum(order.amount_total for order in self)
-        move_type = 'out_invoice' if amount_total >= 0 else 'out_refund'
+        move_type = 'out_invoice' if not any(order.is_refund for order in self) else 'out_refund'
         invoice_payment_term_id = (
             self.partner_id.property_payment_term_id.id
             if self.partner_id.property_payment_term_id and any(p.payment_method_id.type == 'pay_later' for p in self.payment_ids)
@@ -860,6 +866,7 @@ class PosOrder(models.Model):
             'journal_id': self.config_id.invoice_journal_id.id,
             'move_type': move_type,
             'partner_id': self.partner_id.address_get(['invoice'])['invoice'],
+            'partner_shipping_id': self.partner_id.address_get(['delivery'])['delivery'],
             'partner_bank_id': self._get_partner_bank_id(),
             'currency_id': self.currency_id.id,
             'invoice_date': invoice_date.astimezone(timezone).date(),
@@ -965,6 +972,33 @@ class PosOrder(models.Model):
                         'balance': balance,
                         'display_type': 'rounding',
                     })
+        # Stock.
+        if self.company_id.anglo_saxon_accounting and self.picking_ids.ids:
+            stock_moves = self.env['stock.move'].sudo().search([
+                ('picking_id', 'in', self.picking_ids.ids),
+                ('product_id.valuation', '=', 'real_time'),
+            ])
+            for stock_move in stock_moves:
+                product_accounts = stock_move.product_id._get_product_accounts()
+                expense_account = product_accounts['expense']
+                stock_account = product_accounts['stock_valuation']
+                balance = -sum(stock_move.mapped('value'))
+                aml_vals_list_per_nature['stock'].append({
+                    'name': _("Stock variation for %s", stock_move.product_id.name),
+                    'account_id': expense_account.id,
+                    'partner_id': commercial_partner.id,
+                    'currency_id': self.company_id.currency_id.id,
+                    'amount_currency': balance,
+                    'balance': balance,
+                })
+                aml_vals_list_per_nature['stock'].append({
+                    'name': _("Stock variation for %s", stock_move.product_id.name),
+                    'account_id': stock_account.id,
+                    'partner_id': commercial_partner.id,
+                    'currency_id': self.company_id.currency_id.id,
+                    'amount_currency': -balance,
+                    'balance': -balance,
+                })
 
         # sort self.payment_ids by is_split_transaction:
         for payment_id in self.payment_ids:
@@ -1033,12 +1067,12 @@ class PosOrder(models.Model):
             line.filtered(lambda l: not l.reconciled).reconcile()
 
     def action_pos_order_invoice(self):
-        if len(self.company_id) > 1:
-            raise UserError(_("You cannot invoice orders belonging to different companies."))
-        self.write({'to_invoice': True})
-        if self.company_id.anglo_saxon_accounting and self.session_id.update_stock_at_closing and self.session_id.state != 'closed':
-            self._create_order_picking()
-        move = self._generate_pos_order_invoice()
+        self.ensure_one()
+        if not (move := self.account_move):
+            self.write({'to_invoice': True})
+            if self.company_id.anglo_saxon_accounting and self.session_id.update_stock_at_closing and self.session_id.state != 'closed':
+                self._create_order_picking()
+            move = self._generate_pos_order_invoice()
         return {
             'name': _('Customer Invoice'),
             'view_mode': 'form',
@@ -1054,6 +1088,8 @@ class PosOrder(models.Model):
         return {"skip_invoice_sync": True}
 
     def _generate_pos_order_invoice(self):
+        if not self.env['res.company']._with_locked_records(self, allow_raising=False):
+            raise UserError(_("Some orders are already being invoiced. Please try again later."))
         self.state = 'done'
 
         company = self.company_id
@@ -1103,6 +1139,8 @@ class PosOrder(models.Model):
         next_days_orders = self.filtered(lambda order: order.preset_time and order.preset_time.date() > fields.Date.today() and order.state == 'draft')
         next_days_orders.session_id = False
         today_orders.write({'state': 'cancel'})
+        for config in today_orders.config_id:
+            config.notify_synchronisation(config.current_session_id.id, self.env.context.get('login_number', 0))
         return {
             'pos.order': self._load_pos_data_read(today_orders, self.config_id)
         }
@@ -1282,6 +1320,7 @@ class PosOrder(models.Model):
             refund_order._compute_prices()
             refund_orders |= refund_order
             refund_order.config_id.notify_synchronisation(current_session.id, 0)
+        refund_orders._compute_prices()
         return refund_orders
 
     def refund(self):
@@ -1378,14 +1417,13 @@ class PosOrder(models.Model):
     @api.model
     def search_paid_order_ids(self, config_id, domain, limit, offset):
         """Search for 'paid' orders that satisfy the given domain, limit and offset."""
-        default_domain = Domain('state', '!=', 'draft') & Domain('state', '!=', 'cancel')
-        domain = Domain(domain) or Domain('config_id', '=', config_id)
-        real_domain = domain & default_domain
+        pos_config = self.env['pos.config'].browse(config_id)
+        default_domain = Domain('state', '!=', 'draft') & Domain('state', '!=', 'cancel') & Domain('config_id', 'in', [config_id] + pos_config.trusted_config_ids.ids)
+        real_domain = Domain(domain) & default_domain
         orders = self.search(real_domain, limit=limit, offset=offset, order='create_date desc')
         # We clean here the orders that does not have the same currency.
         # As we cannot use currency_id in the domain (because it is not a stored field),
         # we must do it after the search.
-        pos_config = self.env['pos.config'].browse(config_id)
         orders = orders.filtered(lambda order: order.currency_id == pos_config.currency_id)
         orderlines = self.env['pos.order.line'].search(['|', ('refunded_orderline_id.order_id', 'in', orders.ids), ('order_id', 'in', orders.ids)])
 
@@ -1626,7 +1664,7 @@ class PosOrderLine(models.Model):
                 self.price_subtotal = taxes['total_excluded']
                 self.price_subtotal_incl = taxes['total_included']
 
-    @api.depends('order_id', 'order_id.fiscal_position_id')
+    @api.depends('order_id', 'order_id.fiscal_position_id', 'tax_ids')
     def _get_tax_ids_after_fiscal_position(self):
         for line in self:
             line.tax_ids_after_fiscal_position = line.order_id.fiscal_position_id.map_tax(line.tax_ids)
@@ -1660,7 +1698,7 @@ class PosOrderLine(models.Model):
             'date_deadline': date_deadline,
             'route_ids': self.order_id.config_id.route_id,
             'warehouse_id': self.order_id.config_id.warehouse_id or False,
-            'partner_id': self.order_id.partner_id.id,
+            'partner': self.order_id.partner_id,
             'product_description_variants': self.full_product_name,
             'company_id': self.order_id.company_id,
             'reference_ids': self.order_id.stock_reference_ids,
@@ -1719,14 +1757,15 @@ class PosOrderLine(models.Model):
         """
         for line in self.filtered(lambda l: not l.is_total_cost_computed):
             product = line.product_id
+            cost_currency = product.sudo().cost_currency_id
             if line._is_product_storable_fifo_avco() and stock_moves:
                 moves = line._get_stock_moves_to_consider(stock_moves, product)
-                product_cost = moves._get_average_price_unit()
-                if (product.cost_currency_id.is_zero(product_cost) and line.order_id.shipping_date and line.refunded_orderline_id):
+                product_cost = moves._get_price_unit()
+                if (cost_currency.is_zero(product_cost) and line.order_id.shipping_date and line.refunded_orderline_id):
                     product_cost = line.refunded_orderline_id.total_cost / line.refunded_orderline_id.qty
             else:
                 product_cost = product.standard_price
-            line.total_cost = line.qty * product.cost_currency_id._convert(
+            line.total_cost = line.qty * cost_currency._convert(
                 from_amount=product_cost,
                 to_currency=line.currency_id,
                 company=line.company_id or self.env.company,

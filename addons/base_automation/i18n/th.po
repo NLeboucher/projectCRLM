@@ -7,13 +7,14 @@
 # Martin Trigaux, 2022
 # Wichanon Jamwutthipreecha, 2022
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.5alpha1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 13:54+0000\n"
-"PO-Revision-Date: 2025-09-16 21:32+0000\n"
-"Last-Translator: \"Tiffany Chang (tic)\" <tic@odoo.com>\n"
+"POT-Creation-Date: 2025-10-08 18:37+0000\n"
+"PO-Revision-Date: 2025-11-09 15:11+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Thai <https://translate.odoo.com/projects/odoo-19/"
 "base_automation/th/>\n"
 "Language: th\n"
@@ -46,8 +47,8 @@ msgid ""
 "\"On live update\" automation rules can only be used with \"Execute Python "
 "Code\" action type."
 msgstr ""
-"กฎอัตโนมัติ \"ในการอัปเดตแบบไลฟ์\" สามารถใช้ได้เฉพาะกับประเภทการดำเนินการ "
-"\"เรียกใช้โค้ด Python\" เท่านั้น"
+"กฎอัตโนมัติ \"ในการอัปเดตแบบไลฟ์\" สามารถใช้ได้เฉพาะกับประเภทการดำเนินการ \"เรียกใช้โค้ด "
+"Python\" เท่านั้น"
 
 #. module: base_automation
 #. odoo-javascript
@@ -114,8 +115,8 @@ msgid ""
 "save or not</em>."
 msgstr ""
 "<i class=\"fa fa-warning\"/>กฎการทำงานอัตโนมัติที่ทริกเกอร์โดยการเปลี่ยนแปลง UI "
-"จะถูกดำเนินการ<em>ทุกครั้ง</em>ที่มีการเปลี่ยนแปลงฟิลด์ที่เฝ้าดู "
-"<em>ไม่ว่าคุณจะบันทึกหรือไม่ก็ตาม</em>"
+"จะถูกดำเนินการ<em>ทุกครั้ง</em>ที่มีการเปลี่ยนแปลงฟิลด์ที่เฝ้าดู <em>ไม่ว่าคุณจะบันทึกหรือไม่ก็ตาม</"
+"em>"
 
 #. module: base_automation
 #: model_terms:ir.ui.view,arch_db:base_automation.view_server_action_form
@@ -190,7 +191,6 @@ msgstr "ใช้เมื่อ"
 #. module: base_automation
 #: model_terms:ir.ui.view,arch_db:base_automation.view_base_automation_form
 #: model_terms:ir.ui.view,arch_db:base_automation.view_base_automation_kanban
-#: model_terms:ir.ui.view,arch_db:base_automation.view_base_automation_search
 msgid "Archived"
 msgstr "เก็บถาวรแล้ว"
 
@@ -428,8 +428,7 @@ msgstr "หากมี ต้องปฏิบัติตามเงื่�
 msgid ""
 "If present, this condition must be satisfied before the update of the "
 "record. Not checked on record creation."
-msgstr ""
-"หากมี เงื่อนไขนี้ต้องเป็นไปตามก่อนอัปเดตบันทึก ไม่ใช่ตรวจสอบเมื่อสร้างบันทึก"
+msgstr "หากมี เงื่อนไขนี้ต้องเป็นไปตามก่อนอัปเดตบันทึก ไม่ใช่ตรวจสอบเมื่อสร้างบันทึก"
 
 #. module: base_automation
 #: model_terms:ir.ui.view,arch_db:base_automation.view_base_automation_form
@@ -437,6 +436,11 @@ msgid ""
 "If renewed, update the secret URL in the third-party app that calls this "
 "webhook."
 msgstr ""
+
+#. module: base_automation
+#: model_terms:ir.ui.view,arch_db:base_automation.view_base_automation_search
+msgid "Include Archived"
+msgstr "รวมที่เก็บถาวรแล้ว"
 
 #. module: base_automation
 #: model:ir.model.fields,field_description:base_automation.field_base_automation__message_is_follower
@@ -513,8 +517,7 @@ msgstr "ชื่อโมเดล"
 msgid ""
 "Model of action %(action_name)s should match the one from automated rule %"
 "(rule_name)s."
-msgstr ""
-"รูปแบบการกระทำ %(action_name)s ควรตรงกับรูปแบบจากกฎอัตโนมัติ %(rule_name)s"
+msgstr "รูปแบบการกระทำ %(action_name)s ควรตรงกับรูปแบบจากกฎอัตโนมัติ %(rule_name)s"
 
 #. module: base_automation
 #: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trg_date_range_type__month
@@ -741,16 +744,14 @@ msgstr "ตั้งชื่อที่ชัดเจน"
 msgid ""
 "Some triggers need a reference to a selection field. This field is used to "
 "store it."
-msgstr ""
-"การเปิดใช้งานบางตัวจำเป็นต้องมีการอ้างอิงไปยังช่องการเลือก ช่องนี้ใช้เพื่อจัดเก็บ"
+msgstr "การเปิดใช้งานบางตัวจำเป็นต้องมีการอ้างอิงไปยังช่องการเลือก ช่องนี้ใช้เพื่อจัดเก็บ"
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__trg_field_ref
 msgid ""
 "Some triggers need a reference to another field. This field is used to store "
 "it."
-msgstr ""
-"การเปิดใช้งานบางตัวจำเป็นต้องมีการอ้างอิงไปยังช่องอื่น ช่องนี้ใช้เพื่อจัดเก็บ"
+msgstr "การเปิดใช้งานบางตัวจำเป็นต้องมีการอ้างอิงไปยังช่องอื่น ช่องนี้ใช้เพื่อจัดเก็บ"
 
 #. module: base_automation
 #: model:ir.model.fields.selection,name:base_automation.selection__base_automation__trigger__on_stage_set
@@ -804,8 +805,8 @@ msgid ""
 "The \"%(trigger_value)s\" %(trigger_label)s can only be used with the \"%"
 "(state_value)s\" action type"
 msgstr ""
-"\"%(trigger_value)s\" %(trigger_label)s ใช้ได้กับประเภทการกระทำ "
-"\"%(state_value)s\" เท่านั้น"
+"\"%(trigger_value)s\" %(trigger_label)s ใช้ได้กับประเภทการกระทำ \"%"
+"(state_value)s\" เท่านั้น"
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__trigger_field_ids
@@ -956,8 +957,7 @@ msgstr "ประวัติการสื่อสารของเว็บ
 msgid ""
 "When calculating a day-based timed condition, it is possible to use a "
 "calendar to compute the date based on working days."
-msgstr ""
-"เมื่อคำนวณเงื่อนไขการจับเวลาแบบอิงวัน คุณสามารถใช้ปฏิทินเพื่อคำนวณวันที่ตามวันทำการได้"
+msgstr "เมื่อคำนวณเงื่อนไขการจับเวลาแบบอิงวัน คุณสามารถใช้ปฏิทินเพื่อคำนวณวันที่ตามวันทำการได้"
 
 #. module: base_automation
 #: model:ir.model.fields,help:base_automation.field_base_automation__trg_date_id

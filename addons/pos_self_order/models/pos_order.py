@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
+import logging
 
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError
+
+_logger = logging.getLogger(__name__)
 
 
 class PosOrderLine(models.Model):
@@ -41,6 +44,12 @@ class PosOrder(models.Model):
         ('kiosk', 'Self-Order Kiosk')
     ])
 
+    def write(self, vals):
+        if 'table_id' in vals and self.self_ordering_table_id:
+            # Clear stale self-order table link when the order is transferred to a new table.
+            vals['self_ordering_table_id'] = vals['table_id']
+        return super().write(vals)
+
     @api.model
     def _load_pos_self_data_domain(self, data, config):
         return [('id', '=', False)]
@@ -72,6 +81,13 @@ class PosOrder(models.Model):
             config.notify_synchronisation(config.current_session_id.id, self.env.context.get('device_identifier', 0))
             config._notify('ORDER_STATE_CHANGED', {})
 
+    def _send_self_order_receipt(self):
+        if self.email:
+            try:
+                self.action_send_self_order_receipt(self.email, self.preset_id.mail_template_id.id, False, False)
+            except UserError as e:
+                _logger.warning("Error while sending email: %s", e.args[0])
+
     def action_send_self_order_receipt(self, email, mail_template_id, ticket_image, basic_image):
         self.ensure_one()
         self.email = email
@@ -79,7 +95,7 @@ class PosOrder(models.Model):
         if not mail_template:
             raise UserError(_("The mail template with xmlid %s has been deleted.", mail_template_id))
         email_values = {'email_to': email}
-        if self.state == 'paid':
+        if self.state == 'paid' and ticket_image:
             email_values['attachment_ids'] = self._get_mail_attachments(self.name, ticket_image, basic_image)
         mail_template.send_mail(self.id, force_send=True, email_values=email_values)
 
@@ -89,8 +105,14 @@ class PosOrder(models.Model):
             'payment_result': payment_result,
             'data': {
                 'pos.order': self.read(self._load_pos_self_data_fields(self.config_id), load=False),
-                'pos.order.line': self.lines.read(self._load_pos_self_data_fields(self.config_id), load=False),
+                'pos.order.line': self.lines.read(self.lines._load_pos_self_data_fields(self.config_id), load=False),
             }
         })
         if payment_result == 'Success':
             self._send_order()
+
+    def _load_pos_self_data_fields(self, config):
+        return ['id', 'uuid', 'name', 'display_name', 'access_token', 'last_order_preparation_change', 'date_order', 'amount_total', 'amount_paid', 'amount_return', 'user_id', 'amount_tax', 'lines', 'pricelist_id', 'company_id', 'country_code', 'sequence_number', 'session_id',
+                'config_id', 'currency_id', 'currency_rate', 'is_refund', 'has_refundable_lines', 'state', 'account_move', 'preset_id', 'floating_order_name', 'general_customer_note', 'internal_note', 'nb_print', 'pos_reference', 'fiscal_position_id', 'payment_ids', 'to_invoice',
+                'shipping_date', 'preset_time', 'is_invoiced', 'is_tipped', 'tip_amount', 'ticket_code', 'tracking_number', 'email', 'mobile', 'table_id', 'course_ids',
+                'table_stand_number', 'self_ordering_table_id', 'create_date', 'write_date', 'source', 'partner_id', 'customer_count']

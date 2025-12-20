@@ -8,22 +8,24 @@
 # Martin Trigaux, 2023
 # Jolien De Paepe, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# "Manon Rondou (ronm)" <ronm@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 13:56+0000\n"
-"PO-Revision-Date: 2025-09-14 21:17+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-12-12 18:35+0000\n"
+"PO-Revision-Date: 2025-12-20 09:34+0000\n"
+"Last-Translator: \"Manon Rondou (ronm)\" <ronm@odoo.com>\n"
 "Language-Team: French <https://translate.odoo.com/projects/odoo-19/"
 "hr_expense/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : ((n != 0 && n % "
-"1000000 == 0) ? 1 : 2);\n"
-"X-Generator: Weblate 5.12.2\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : "
+"((n != 0 && n % 1000000 == 0) ? 1 : 2);\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.report_expense
@@ -480,6 +482,8 @@ msgid ""
 "Create prepaid virtual and physical cards for both one-time and recurring "
 "expenses, integrated into Odoo through Stripe Issuing."
 msgstr ""
+"Créez des cartes prépayées virtuelles et physiques pour gérer des dépenses "
+"ponctuelles ou récurrentes, entièrement intégrées à Odoo via Stripe Issuing."
 
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__create_uid
@@ -538,7 +542,8 @@ msgstr "Journal par défaut pour les dépenses"
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
 msgid "Default accounting journal for expenses paid by employees."
-msgstr "Journal comptable par défaut pour les dépenses payées par les employés."
+msgstr ""
+"Journal comptable par défaut pour les dépenses payées par les employés."
 
 #. module: hr_expense
 #: model:ir.model,name:hr_expense.model_hr_department
@@ -708,7 +713,7 @@ msgstr "Approbateur des dépenses"
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
 msgid "Expense Card"
-msgstr ""
+msgstr "Carte de frais"
 
 #. module: hr_expense
 #: model:ir.actions.act_window,name:hr_expense.hr_expense_product
@@ -941,7 +946,7 @@ msgstr "Cadeaux aux clients ou aux fournisseurs"
 #. odoo-python
 #: code:addons/hr_expense/models/hr_expense.py:0
 msgid "Go to Account"
-msgstr ""
+msgstr "Accéder au compte"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.product_product_expense_form_view
@@ -1071,7 +1076,7 @@ msgstr "Journal"
 #: model:ir.model,name:hr_expense.model_account_move
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__account_move_id
 msgid "Journal Entry"
-msgstr "Pièce comptable"
+msgstr "Écriture comptable"
 
 #. module: hr_expense
 #: model:mail.message.subtype,name:hr_expense.mt_expense_entry_delete
@@ -1163,8 +1168,8 @@ msgid ""
 "Link your stripe issuing account to manage company credit cards for your "
 "employees through Odoo"
 msgstr ""
-"Liez votre compte émetteur Stripe pour gérer les cartes de crédit de l’"
-"entreprise pour les employés via Odoo"
+"Liez votre compte émetteur Stripe pour gérer les cartes de crédit de "
+"l’entreprise pour les employés via Odoo"
 
 #. module: hr_expense
 #. odoo-python
@@ -1560,7 +1565,7 @@ msgstr "Comptabiliser les dépenses payées par l'employé"
 #. module: hr_expense
 #: model:ir.model.fields.selection,name:hr_expense.selection__hr_expense__state__posted
 msgid "Posted"
-msgstr "Publié"
+msgstr "Comptabilisé"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_template_register_no_user
@@ -1606,7 +1611,7 @@ msgstr "Variantes de produit"
 #. module: hr_expense
 #: model:ir.model,name:hr_expense.model_hr_employee_public
 msgid "Public Employee"
-msgstr "Fonctionnaire"
+msgstr "Employé public"
 
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__quantity
@@ -1732,6 +1737,8 @@ msgstr "Dépense avec le même justificatif"
 #: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
 msgid "Save this page and come back here to set up the feature."
 msgstr ""
+"Enregistrez cette page, vous pouvez y revenir pour configurer la "
+"fonctionnalité."
 
 #. module: hr_expense
 #. odoo-javascript
@@ -1755,8 +1762,8 @@ msgid ""
 msgstr ""
 "Sélectionnez l'utilisateur responsable de la validation des \"Dépenses\" de "
 "cet employé.\n"
-"Si vide, la validation est faite par un administrateur ou un approbateur ("
-"déterminé dans les paramètres/utilisateurs)."
+"Si vide, la validation est faite par un administrateur ou un approbateur "
+"(déterminé dans les paramètres/utilisateurs)."
 
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__selectable_payment_method_line_ids
@@ -1945,7 +1952,7 @@ msgstr "Approbateur de l'équipe"
 #. odoo-python
 #: code:addons/hr_expense/models/hr_expense.py:0
 msgid "The account %(name)s (%(code)s) is archived. Activate it to continue"
-msgstr ""
+msgstr "Le compte %(name)s (%(code)s) est archivé. Activez-le pour continuer"
 
 #. module: hr_expense
 #: model:ir.model.fields,help:hr_expense.field_res_company__expense_journal_id
@@ -1980,6 +1987,18 @@ msgstr ""
 "Les dépenses approuvées suivantes ont un employé, un montant et une "
 "catégorie similaires à certaines dépenses de ce rapport. Veuillez vérifier "
 "que ce rapport ne contient pas de doublons."
+
+#. module: hr_expense
+#. odoo-python
+#: code:addons/hr_expense/models/hr_expense.py:0
+msgid ""
+"The following expenses payment method leads to several accounts payable and "
+"this isn't supported:\n"
+"%(expenses)s"
+msgstr ""
+"Le mode de paiement des dépenses suivant entraîne la création de plusieurs "
+"comptes fournisseurs, ce qui n’est pas pris en charge :\n"
+"%(expenses)s"
 
 #. module: hr_expense
 #: model:ir.model.fields,help:hr_expense.field_hr_expense_post_wizard__employee_journal_id
@@ -2115,8 +2134,8 @@ msgid ""
 msgstr ""
 "Oups ! Vous ne pouvez pas modifier cette dépense.\n"
 "\n"
-"Contactez les administrateurs, affichez votre plus beau sourire, et voyez s’"
-"ils acceptent de vous accorder l’accès magique que vous recherchez."
+"Contactez les administrateurs, affichez votre plus beau sourire, et voyez "
+"s’ils acceptent de vous accorder l’accès magique que vous recherchez."
 
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__product_uom_id
@@ -2169,11 +2188,6 @@ msgstr "Valider les dépenses en double"
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__vendor_id
 msgid "Vendor"
 msgstr "Fournisseur"
-
-#. module: hr_expense
-#: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_view_expenses_analysis_tree
-msgid "View Attachments"
-msgstr "Voir les pièces jointes"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_template_register
@@ -2445,6 +2459,15 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_view_form
 msgid "with the same receipt already exists."
 msgstr "existe déjà avec le même reçu."
+
+#~ msgid "View Attachments"
+#~ msgstr "Voir les pièces jointes"
+
+#~ msgid "Accounting Settings"
+#~ msgstr "Paramètres de comptabilité"
+
+#~ msgid "You should install a Fiscal Localization first."
+#~ msgstr "Vous devez d'abord installer une localisation fiscale."
 
 #~ msgid ""
 #~ "'Expenses - %s - %s' % (object.employee_id.name, "

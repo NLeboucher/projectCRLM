@@ -50,3 +50,37 @@ registry.category("web_tour.tours").add("test_online_payment_self_multi_company"
         Utils.clickBtn("Pay"),
     ],
 });
+
+registry
+    .category("web_tour.tours")
+    .add("test_online_payment_mobile_self_order_preparation_changes", {
+        steps: () =>
+            [
+                Utils.checkIsNoBtn("My Order"),
+                Utils.clickBtn("Order Now"),
+                ProductPage.clickProduct("Coca-Cola"),
+                ProductPage.clickProduct("Fanta"),
+                Utils.clickBtn("Checkout"),
+                CartPage.checkProduct("Fanta", "2.53", "1"),
+                CartPage.checkProduct("Coca-Cola", "2.53", "1"),
+                Utils.clickBtn("Pay"),
+                ...CartPage.selectTable("1"),
+            ].flat(),
+    });
+
+registry.category("web_tour.tours").add("test_kiosk_cart_restore_and_cancel", {
+    steps: () => [
+        Utils.clickBtn("Order Now"),
+        ProductPage.clickProduct("Coca-Cola"),
+        ProductPage.clickProduct("Fanta"),
+        Utils.clickBtn("Checkout"),
+        CartPage.checkProduct("Coca-Cola", "2.53", "1"),
+        CartPage.checkProduct("Fanta", "2.53", "1"),
+        Utils.clickBtn("Pay"),
+        Utils.clickBtn("Back"),
+        CartPage.checkProduct("Coca-Cola", "2.53", "1"),
+        CartPage.checkProduct("Fanta", "2.53", "1"),
+        Utils.clickBackBtn(),
+        ...ProductPage.clickCancel(),
+    ],
+});

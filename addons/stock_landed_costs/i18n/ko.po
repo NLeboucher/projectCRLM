@@ -7,13 +7,14 @@
 # Sarah Park, 2023
 #
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# "Kwanghee Park (kwpa)" <kwpa@odoo.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.5alpha1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 14:02+0000\n"
-"PO-Revision-Date: 2025-09-16 04:43+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-11-21 18:35+0000\n"
+"PO-Revision-Date: 2025-11-20 07:05+0000\n"
+"Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19/"
 "stock_landed_costs/ko/>\n"
 "Language: ko\n"
@@ -22,6 +23,18 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.12.2\n"
+
+#. module: stock_landed_costs
+#. odoo-python
+#: code:addons/stock_landed_costs/models/stock_move.py:0
+msgid "+ %(value)s (Landed Cost: %(landed_cost)s)"
+msgstr "+ %(value)s (양륙 비용: %(landed_cost)s)"
+
+#. module: stock_landed_costs
+#. odoo-python
+#: code:addons/stock_landed_costs/models/stock_move.py:0
+msgid "+ %(value)s from %(vendor_bill)s (Landed Cost: %(landed_cost)s)"
+msgstr ""
 
 #. module: stock_landed_costs
 #: model_terms:ir.ui.view,arch_db:stock_landed_costs.stock_landed_cost_view_kanban
@@ -74,6 +87,14 @@ msgstr "추가 비용"
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_valuation_adjustment_lines__additional_landed_cost
 msgid "Additional Landed Cost"
 msgstr "추가 양륙 비용"
+
+#. module: stock_landed_costs
+#. odoo-python
+#: code:addons/stock_landed_costs/models/stock_move.py:0
+msgid ""
+"Additional landed costs:\n"
+"%(landed_cost)s"
+msgstr ""
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_landed_cost__target_model
@@ -161,7 +182,8 @@ msgstr "비용 명세서"
 msgid ""
 "Cost and adjustments lines do not match. You should maybe recompute the "
 "landed costs."
-msgstr "비용 및 조정 명세가 일치하지 않습니다. 양륙 비용을 다시 계산해야 합니다."
+msgstr ""
+"비용 및 조정 명세가 일치하지 않습니다. 양륙 비용을 다시 계산해야 합니다."
 
 #. module: stock_landed_costs
 #: model_terms:ir.ui.view,arch_db:stock_landed_costs.account_view_move_form_inherited
@@ -296,8 +318,9 @@ msgstr "향후 활동"
 msgid ""
 "Goods are tangible materials and merchandise you provide.\n"
 "A service is a non-material product you provide."
-msgstr "상품이란 상대에게 제공하는 유형적인 자재와 물품을 말합니다. 서비스는 "
-"상대에게 제공하는 비물질적 상품입니다."
+msgstr ""
+"상품이란 상대에게 제공하는 유형적인 자재와 물품을 말합니다. 서비스는 상대에"
+"게 제공하는 비물질적 상품입니다."
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_landed_cost__has_message
@@ -345,8 +368,9 @@ msgstr "이 옵션을 선택하면 일부 정보가 전달 오류를 생성합�
 msgid ""
 "Indicates whether the product is a landed cost: when receiving a vendor "
 "bill, you can allocate this cost on preceding receipts."
-msgstr "품목이 양륙 비용인지 여부를 나타냅니다. 업체 청구서를 받을 경우 이전 수령 "
-"품목에 이 비용을 배분할 수 있습니다."
+msgstr ""
+"품목이 양륙 비용인지 여부를 나타냅니다. 업체 청구서를 받을 경우 이전 수령 품"
+"목에 이 비용을 배분할 수 있습니다."
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_landed_cost__message_is_follower
@@ -393,6 +417,8 @@ msgid "Landed Cost"
 msgstr "양륙 비용"
 
 #. module: stock_landed_costs
+#. odoo-python
+#: code:addons/stock_landed_costs/models/account_move.py:0
 #: model:ir.actions.act_window,name:stock_landed_costs.action_stock_landed_cost
 #: model:ir.model.fields,field_description:stock_landed_costs.field_account_bank_statement_line__landed_costs_ids
 #: model:ir.model.fields,field_description:stock_landed_costs.field_account_move__landed_costs_ids
@@ -421,7 +447,8 @@ msgstr "승인된 양륙 비용"
 msgid ""
 "Landed costs allow you to include additional costs (shipment, insurance, "
 "customs duties, etc) into the cost of the product."
-msgstr "수입부대비용에서 품목 원가에 추가 비용 (선적비, 보험료, 관세 등)을 포함시킬 "
+msgstr ""
+"수입부대비용에서 품목 원가에 추가 비용 (선적비, 보험료, 관세 등)을 포함시킬 "
 "수 있습니다."
 
 #. module: stock_landed_costs
@@ -676,7 +703,8 @@ msgstr "승인"
 msgid ""
 "Validated landed costs cannot be cancelled, but you could create negative "
 "landed costs to reverse them"
-msgstr "승인된 양륙 비용은 취소할 수 없습니다. 대신 마이너스의 양륙 비용을 생성하여 "
+msgstr ""
+"승인된 양륙 비용은 취소할 수 없습니다. 대신 마이너스의 양륙 비용을 생성하여 "
 "복구시킬 수 있습니다."
 
 #. module: stock_landed_costs
@@ -722,8 +750,8 @@ msgid ""
 "You cannot apply landed costs on the chosen %s(s). Landed costs can only be "
 "applied for products with FIFO or average costing method."
 msgstr ""
-"선택한 %s 항목에 양륙 비용을 적용시킬 수 없습니다. 양륙 비용은 FIFO "
-"(선입선출법)이나 평균원가법을 사용하는 품목에만 적용하실 수 있습니다."
+"선택한 %s 항목에 양륙 비용을 적용시킬 수 없습니다. 양륙 비용은 FIFO (선입선출"
+"법)이나 평균원가법을 사용하는 품목에만 적용하실 수 있습니다."
 
 #. module: stock_landed_costs
 #. odoo-python
@@ -731,8 +759,9 @@ msgstr ""
 msgid ""
 "You cannot change the product type or disable landed cost option because the "
 "product is used in an account move line."
-msgstr "해당 품목이 계정 이동 내역에서 사용되기 때문에 품목 유형을 변경하거나 "
-"수입부대비용 옵션을 비활성화시킬 수 없습니다."
+msgstr ""
+"해당 품목이 계정 이동 내역에서 사용되기 때문에 품목 유형을 변경하거나 수입부"
+"대비용 옵션을 비활성화시킬 수 없습니다."
 
 #~ msgid " already out"
 #~ msgstr " 이미 종료"

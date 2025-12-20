@@ -16,13 +16,14 @@
 # Maksym <ms@myodoo.pl>, 2023
 # Tadeusz Karpiński <tadeuszkarpinski@gmail.com>, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 13:58+0000\n"
-"PO-Revision-Date: 2025-09-16 10:05+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-11-07 18:36+0000\n"
+"PO-Revision-Date: 2025-11-08 21:53+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-19/"
 "mrp_subcontracting/pl/>\n"
 "Language: pl\n"
@@ -97,7 +98,7 @@ msgstr "Zmień Ilość Produkcji"
 #. odoo-javascript
 #: code:addons/mrp_subcontracting/static/src/components/subcontracting_production_form_controller.js:0
 msgid "Check Availability"
-msgstr ""
+msgstr "Sprawdź dostępność"
 
 #. module: mrp_subcontracting
 #: model:ir.model.fields,help:mrp_subcontracting.field_product_supplierinfo__is_subcontractor
@@ -350,11 +351,6 @@ msgid "Ready"
 msgstr "Gotowe"
 
 #. module: mrp_subcontracting
-#: model_terms:ir.ui.view,arch_db:mrp_subcontracting.stock_picking_form_view
-msgid "Register Production"
-msgstr ""
-
-#. module: mrp_subcontracting
 #: model_terms:ir.ui.view,arch_db:mrp_subcontracting.subcontracting_portal_production_form_view
 msgid "Register components for subcontracted product"
 msgstr "Rejestrowanie komponentów dla produktu podwykonawczego"
@@ -401,6 +397,7 @@ msgstr "Zaplanowana data"
 
 #. module: mrp_subcontracting
 #: model:ir.model.fields,field_description:mrp_subcontracting.field_stock_move__show_subcontracting_details_visible
+#: model:ir.model.fields,field_description:mrp_subcontracting.field_stock_picking__show_subcontracting_details_visible
 msgid "Show Subcontracting Details Visible"
 msgstr "Pokaż widoczne szczegóły podwykonawstwa"
 
@@ -462,6 +459,7 @@ msgstr "Lokalizacje podwykonawstwa"
 #. module: mrp_subcontracting
 #. odoo-python
 #: code:addons/mrp_subcontracting/models/stock_move.py:0
+#: code:addons/mrp_subcontracting/models/stock_picking.py:0
 msgid "Subcontracting MOs"
 msgstr ""
 
@@ -484,6 +482,11 @@ msgstr "Podwykonawstwo Typ operacji"
 #: model:ir.actions.act_window,name:mrp_subcontracting.subcontracting_portal_view_production_action
 msgid "Subcontracting Portal"
 msgstr "Portal podwykonawczy"
+
+#. module: mrp_subcontracting
+#: model_terms:ir.ui.view,arch_db:mrp_subcontracting.stock_picking_form_view
+msgid "Subcontracting Productions"
+msgstr ""
 
 #. module: mrp_subcontracting
 #: model:ir.model.fields,field_description:mrp_subcontracting.field_stock_warehouse__subcontracting_resupply_type_id
@@ -543,6 +546,12 @@ msgstr ""
 "wysyłania towarów do tego kontaktu w procesie podwykonawstwa."
 
 #. module: mrp_subcontracting
+#. odoo-python
+#: code:addons/mrp_subcontracting/models/mrp_production.py:0
+msgid "The subcontracted goods have already been received."
+msgstr ""
+
+#. module: mrp_subcontracting
 #: model_terms:ir.ui.view,arch_db:mrp_subcontracting.portal_my_productions
 msgid "There are currently no productions for your account."
 msgstr "Obecnie nie ma żadnych produkcji dla Twojego konta."
@@ -578,6 +587,12 @@ msgid ""
 msgstr ""
 "Nie można ustawić listy materiałowej z operacjami lub linią produktów "
 "ubocznych jako podwykonawstwo."
+
+#. module: mrp_subcontracting
+#. odoo-python
+#: code:addons/mrp_subcontracting/models/mrp_unbuild.py:0
+msgid "You can't unbuild a subcontracted Manufacturing Order."
+msgstr ""
 
 #. module: mrp_subcontracting
 #. odoo-python

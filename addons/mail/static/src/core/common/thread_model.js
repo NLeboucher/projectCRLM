@@ -321,7 +321,7 @@ export class Thread extends Record {
      * @returns {string}
      */
     getPersonaName(persona) {
-        return persona.displayName || persona.name;
+        return persona?.displayName || persona?.name;
     }
 
     get hasAttachmentPanel() {
@@ -350,6 +350,13 @@ export class Thread extends Record {
 
     get allowDescription() {
         return ["channel", "group"].includes(this.channel_type);
+    }
+
+    get fullNameWithParent() {
+        const text = this.parent_channel_id
+            ? `${this.parent_channel_id.displayName} > ${this.displayName}`
+            : this.displayName;
+        return text;
     }
 
     get isTransient() {

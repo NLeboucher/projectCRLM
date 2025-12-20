@@ -4,15 +4,16 @@
 #
 # "Tiffany Chang (tic)" <tic@odoo.com>, 2025.
 # Oakarmin Iron <oakarminiron@gmail.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server saas~18.4+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-12 13:52+0000\n"
-"PO-Revision-Date: 2025-09-23 02:47+0000\n"
-"Last-Translator: Oakarmin Iron <oakarminiron@gmail.com>\n"
-"Language-Team: Burmese <https://translate.odoo.com/projects/odoo-19/base/my/>"
-"\n"
+"POT-Creation-Date: 2025-10-09 12:16+0000\n"
+"PO-Revision-Date: 2025-11-16 15:30+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Burmese <https://translate.odoo.com/projects/odoo-19/base/my/"
+">\n"
 "Language: my\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -374,6 +375,14 @@ msgid ""
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,description:base.module_pos_imin
+msgid ""
+"\n"
+"\n"
+"Use iMin ePOS Printers without the IoT Box in the Point of Sale\n"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,summary:base.module_l10n_eg_edi_eta
 msgid ""
 "\n"
@@ -476,6 +485,13 @@ msgid ""
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,description:base.module_l10n_ar_reports_simple
+msgid ""
+"\n"
+"* Add export of IVA Simple Tax Report.\n"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,description:base.module_ai_app
 msgid ""
 "\n"
@@ -519,6 +535,13 @@ msgid ""
 "- Register as a PEPPOL participant\n"
 "- Send and receive documents via PEPPOL network in Peppol BIS Billing 3.0 "
 "format\n"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,description:base.module_l10n_dk_nemhandel
+msgid ""
+"\n"
+"- Send and receive documents via Nemhandel network in OIOUBL 2.1 format\n"
 msgstr ""
 
 #. module: base
@@ -1700,6 +1723,13 @@ msgid ""
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,description:base.module_l10n_se_returns
+msgid ""
+"\n"
+"Accounting returns for Sweden\n"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,description:base.module_mrp_subcontracting_account_enterprise
 msgid ""
 "\n"
@@ -2451,6 +2481,66 @@ msgid ""
 "    encode in in the payroll Settings, with the .pem file and the related "
 "password, if any.\n"
 "\n"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,description:base.module_l10n_be_hr_payroll_dimona_auto
+msgid ""
+"\n"
+"Automatic DIMONA declarations\n"
+"=============================\n"
+"\n"
+"Prerequisites:\n"
+"--------------\n"
+"\n"
+"- You need a Belgian Government Compliant Digital Certificate, delivered by "
+"Global\n"
+"  Sign. See: https://shop.globalsign.com/en/belgian-government-services\n"
+"\n"
+"- Generate certificate files from your SSL certificate (.pfx file) that are "
+"needed to create\n"
+"  a technical user (.cer file) and to authenticate remotely to the ONSS "
+"(.pfx) file. On a UNIX\n"
+"  system, you may use the following commands:\n"
+"\n"
+"  - PFX -> CRT: openssl pkcs12 -in my_cert.pfx -out my_cert.crt -nokeys "
+"-clcerts\n"
+"\n"
+"  - CRT -> CER: openssl x509 -inform pem -in my_cert.crt -outform der -out "
+"my_cert.cer\n"
+"\n"
+"- Before you can use the social security REST web service, you must create "
+"an account\n"
+"  for yourself or for your client and configure the security. (The whole "
+"procedure is\n"
+"  available at https://www.socialsecurity.be/site_fr/employer/applics/dimona/"
+"introduction/webservice.htm)\n"
+"\n"
+"  - User account management: Follow the Procedure https://"
+"www.socialsecurity.be/site_fr/general/helpcentre/rest/documents/pdf/"
+"procedure_pour_gestion_des_acces_UMan_FR.pdf\n"
+"\n"
+"  - Create a technical user: Your client must now create a technical user in "
+"the Access management\n"
+"    online service. The follow this procedure: https://www.socialsecurity.be/"
+"site_fr/general/helpcentre/rest/documents/pdf/"
+"webservices_creer_le_canal_FR.pdf\n"
+"\n"
+"  - Activate a web service channel: Once the technical user has been "
+"created, your client must\n"
+"    activate the web service channel in Access Management. The following "
+"manual explains the\n"
+"    steps to follow to activate the channel: https://www.socialsecurity.be/"
+"site_fr/general/helpcentre/rest/documents/pdf/"
+"webservices_ajouter_le_canal_FR.pdf\n"
+"\n"
+"  - At the end of the procedure, you should receive a \"ONSS Expeditor "
+"Number\", you may\n"
+"    encode in in the payroll Settings, with the .pem file and the related "
+"password, if any.\n"
+"\n"
+"- Configuration note: The .pfx certificate should be set on the payroll "
+"configuration.\n"
 msgstr ""
 
 #. module: base
@@ -5355,6 +5445,14 @@ msgid ""
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,description:base.module_website_sale_mrp
+msgid ""
+"\n"
+"Manage the inventory of your Kit products and display their availability "
+"status in your eCommerce store.\n"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,description:base.module_website_sale_stock
 msgid ""
 "\n"
@@ -6432,8 +6530,8 @@ msgid ""
 "\n"
 "- Chart of Accounts\n"
 "- Taxes\n"
-"- Vat Filling Report\n"
-"- Withholding Tax Report\n"
+"- VAT Return\n"
+"- Withholding Return\n"
 "- Fiscal Positions\n"
 msgstr ""
 
@@ -6459,6 +6557,15 @@ msgid ""
 "- Unpaid leaves\n"
 "- WPS\n"
 "- Master Payroll Export\n"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,description:base.module_l10n_sa_withholding_tax
+msgid ""
+"\n"
+"Saudi Arabia Withholding Tax Module\n"
+"\n"
+"Force the installation of the Withholding Tax on Payment module\n"
 msgstr ""
 
 #. module: base
@@ -9670,7 +9777,7 @@ msgstr ""
 #: code:addons/base/models/res_partner.py:0
 #: code:addons/base/models/res_users.py:0
 msgid "%s (copy)"
-msgstr ""
+msgstr "(ကူးထားသော) %s"
 
 #. module: base
 #. odoo-python
@@ -9869,7 +9976,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__base_enable_profiling_wizard__duration__hours_1
 msgid "1 Hour"
-msgstr ""
+msgstr "၁ နာရီ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__base_enable_profiling_wizard__duration__months_1
@@ -9894,6 +10001,11 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_appraisal_survey
 msgid "360 Feedback"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_3pl_logistic_company
+msgid "3PL Logistic Company"
 msgstr ""
 
 #. module: base
@@ -10056,6 +10168,15 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "<i class=\"fa fa-fw fa-envelope text-primary\" title=\"Email\"/>"
+msgstr ""
+
+#. module: base
+#: model_terms:ir.ui.view,arch_db:base.view_users_form
+msgid ""
+"<i class=\"fa fa-fw fa-envelope text-primary\" title=\"Login / Email\" "
+"invisible=\"login != email\"/>\n"
+"                                    <i class=\"fa fa-fw fa-key text-"
+"primary\" title=\"Login\" invisible=\"login == email\"/>"
 msgstr ""
 
 #. module: base
@@ -10512,7 +10633,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_A
 msgid "A - AGRICULTURE, FORESTRY AND FISHING"
-msgstr ""
+msgstr "A - စိုက်ပျိုးရေး၊ သစ်တောနှင့် ငါးဖမ်းလုပ်ငန်း"
 
 #. module: base
 #. odoo-python
@@ -10948,7 +11069,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_model__access_ids
 #: model_terms:ir.ui.view,arch_db:base.ir_access_view_form
 msgid "Access"
-msgstr ""
+msgstr "အသုံးပြုခွင့်"
 
 #. module: base
 #. odoo-python
@@ -10959,17 +11080,17 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__model_access
 msgid "Access Controls"
-msgstr ""
+msgstr "အသုံးပြုခွင့် ထိန်းချုပ်မှုများ"
 
 #. module: base
 #: model:ir.model,name:base.model_res_groups
 msgid "Access Groups"
-msgstr ""
+msgstr "အသုံးပြုခွင့် အဖွဲ့များ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__menu_access
 msgid "Access Menu"
-msgstr ""
+msgstr "အသုံးပြုခွင့် မီနူး"
 
 #. module: base
 #. odoo-python
@@ -10989,18 +11110,18 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_users_simple_form
 #: model_terms:ir.ui.view,arch_db:base.view_view_form
 msgid "Access Rights"
-msgstr ""
+msgstr "အသုံးပြုခွင့် အခွင့်အရေးများ"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/ir_ui_view.py:0
 msgid "Access Rights Inconsistency"
-msgstr ""
+msgstr "အသုံးပြုခွင့် အခွင့်အရေး ကိုက်ညီမှုမရှိခြင်း"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment__access_token
 msgid "Access Token"
-msgstr ""
+msgstr "အသုံးပြုခွင့် တိုကင်"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_hr
@@ -11068,12 +11189,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_bank__partner_id
 msgid "Account Holder"
-msgstr ""
+msgstr "အကောင့် ကိုင်ဆောင်သူ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_bank__acc_holder_name
 msgid "Account Holder Name"
-msgstr ""
+msgstr "အကောင့် ကိုင်ဆောင်သူ အမည်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_invoice_extract
@@ -11088,12 +11209,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_bank__acc_number
 msgid "Account Number"
-msgstr ""
+msgstr "အကောင့် နံပါတ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_online_payment
 msgid "Account Online Payment"
-msgstr ""
+msgstr "အကောင့် အွန်လိုင်း ပေးချေမှူ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_peppol_advanced_fields
@@ -11103,7 +11224,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_qr_code_sepa
 msgid "Account SEPA QR Code"
-msgstr ""
+msgstr "အကောင့် SEPA QR ကုဒ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_transfer
@@ -11131,7 +11252,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_accounting
 #: model:ir.module.module,shortdesc:base.module_accountant
 msgid "Accounting"
-msgstr ""
+msgstr "စာရင်းအင်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_accountant_hr_expense
@@ -11232,7 +11353,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.action_view_tree
 #: model_terms:ir.ui.view,arch_db:base.view_window_action_search
 msgid "Action"
-msgstr ""
+msgstr "အက်ရှင်"
 
 #. module: base
 #. odoo-python
@@ -11325,7 +11446,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.module_view_kanban
 #: model_terms:ir.ui.view,arch_db:base.res_lang_tree
 msgid "Activate"
-msgstr ""
+msgstr "သွင်းပါ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__active
@@ -11350,7 +11471,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_currency_search
 #: model_terms:ir.ui.view,arch_db:base.view_view_search
 msgid "Active"
-msgstr ""
+msgstr "အက်တစ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__active_lang_count
@@ -11383,7 +11504,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_language_install
 msgid "Add"
-msgstr ""
+msgstr "ထည့်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
@@ -11399,7 +11520,7 @@ msgstr ""
 #. module: base
 #: model:ir.actions.act_window,name:base.action_view_base_language_install
 msgid "Add Languages"
-msgstr ""
+msgstr "ဘာသာစကားများ ထည့်ရန်"
 
 #. module: base
 #: model:ir.module.module,description:base.module_data_merge_helpdesk
@@ -11439,7 +11560,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "Add a language"
-msgstr ""
+msgstr "ဘာသာစကား တစ်ခု ထည့်ရန်"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_transifex
@@ -11672,7 +11793,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_company_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_address_form
 msgid "Address"
-msgstr ""
+msgstr "လိပ်စာ"
 
 #. module: base
 #: model:ir.model,name:base.model_format_address_mixin
@@ -11882,12 +12003,12 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_N
 msgid "Administrative/Utilities"
-msgstr ""
+msgstr "စီမံရေးရာ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_users__role__group_system
 msgid "Administrator"
-msgstr ""
+msgstr "အုပ်ချုပ်ရေးမှူး"
 
 #. module: base
 #. odoo-python
@@ -11958,7 +12079,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.af
 msgid "Afghanistan"
-msgstr ""
+msgstr "အာဖဂန်နစ္စတန်"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__africa/abidjan
@@ -12028,7 +12149,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__africa/cairo
 msgid "Africa/Cairo"
-msgstr ""
+msgstr "အာဖရိက/ကိုင်ရို"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__africa/casablanca
@@ -12253,12 +12374,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_agriculture_shop
 msgid "Agricultural Store"
-msgstr ""
+msgstr "စိုက်ပျိုးရေး ဆိုင်"
 
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_A
 msgid "Agriculture"
-msgstr ""
+msgstr "စိုက်ပျိုးရေး"
 
 #. module: base
 #: model:res.country,name:base.al
@@ -12283,7 +12404,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_cron_view_search
 msgid "All"
-msgstr ""
+msgstr "အားလုံး"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__all_child_ids
@@ -13601,7 +13722,7 @@ msgstr ""
 #: model:ir.model,name:base.model_ir_module_category
 #: model:ir.model.fields,field_description:base.field_ir_module_module__application
 msgid "Application"
-msgstr ""
+msgstr "အပလီကေးရှင်း"
 
 #. module: base
 #: model:ir.ui.menu,name:base.menu_translation_app
@@ -13611,7 +13732,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_config_view_base
 msgid "Apply"
-msgstr ""
+msgstr "လုပ်ဆောင်"
 
 #. module: base
 #. odoo-python
@@ -13629,7 +13750,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_services_appointment
 msgid "Appointment"
-msgstr ""
+msgstr "အပွိုင့်မန့်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_appointment_google_calendar
@@ -13665,7 +13786,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_appointment
 msgid "Appointments"
-msgstr ""
+msgstr "အပွိုင့်မန့်များ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_appraisal_skills
@@ -13681,7 +13802,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_human_resources_appraisals
 #: model:ir.module.module,shortdesc:base.module_hr_appraisal
 msgid "Appraisals"
-msgstr ""
+msgstr "အကဲဖြတ်ခြင်းများ"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_approvals
@@ -13692,17 +13813,17 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_human_resources_approvals
 #: model:ir.module.module,shortdesc:base.module_approvals
 msgid "Approvals"
-msgstr ""
+msgstr "ခွင့်ပြုချက်များ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_approvals_purchase
 msgid "Approvals - Purchase"
-msgstr ""
+msgstr "ဝယ်ယူခွင့်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_approvals_purchase_stock
 msgid "Approvals - Purchase - Stock"
-msgstr ""
+msgstr "ဝယ်ယူခွင့် စတော့အခွင့်"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.open_module_tree
@@ -13711,7 +13832,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.module_tree
 #: model_terms:ir.ui.view,arch_db:base.view_module_filter
 msgid "Apps"
-msgstr ""
+msgstr "အက်ပ်များ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_language_export__modules
@@ -13731,7 +13852,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodeloverview
 msgid "Apps:"
-msgstr ""
+msgstr "အက်ပ်မျာ:"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view__arch_db
@@ -13756,7 +13877,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_view_form
 msgid "Architecture"
-msgstr ""
+msgstr "အာခီတက်ချာ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_reset_view_arch_wizard__arch_diff
@@ -13771,7 +13892,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_bank_form
 msgid "Archive"
-msgstr ""
+msgstr "ခေါက်သိမ်း"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.edit_menu_access_search
@@ -13793,7 +13914,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_sequence_search
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "Archived"
-msgstr ""
+msgstr "သိမ်းဆည်းထားသည်"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__arctic/longyearbyen
@@ -13834,6 +13955,11 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_ar_stock
 #: model:ir.module.module,shortdesc:base.module_l10n_ar_stock
 msgid "Argentinean - Stock"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_ar_reports_simple
+msgid "Argentinean Accounting IVA Simple Export"
 msgstr ""
 
 #. module: base
@@ -13963,7 +14089,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/bangkok
 msgid "Asia/Bangkok"
-msgstr ""
+msgstr "အာရှ/ဘန်ကောက်"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/barnaul
@@ -14038,7 +14164,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/dubai
 msgid "Asia/Dubai"
-msgstr ""
+msgstr "အာရှ/ဒူဘိုင်း"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/dushanbe
@@ -14068,12 +14194,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/ho_chi_minh
 msgid "Asia/Ho_Chi_Minh"
-msgstr ""
+msgstr "အာရှ/ဟိုချီမင်"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/hong_kong
 msgid "Asia/Hong_Kong"
-msgstr ""
+msgstr "အာရှ/ဟောင်ကောင်"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/hovd
@@ -14093,7 +14219,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/jakarta
 msgid "Asia/Jakarta"
-msgstr ""
+msgstr "အာရှ/ဂျကာတာ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/jayapura
@@ -14103,7 +14229,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/jerusalem
 msgid "Asia/Jerusalem"
-msgstr ""
+msgstr "အာရှ/ဂျေရုဆလင်"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/kabul
@@ -14163,7 +14289,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/kuwait
 msgid "Asia/Kuwait"
-msgstr ""
+msgstr "အာရှ/ကူဝိတ်"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/macao
@@ -14333,7 +14459,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/tokyo
 msgid "Asia/Tokyo"
-msgstr ""
+msgstr "အာရှ/တိုကျို"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/tomsk
@@ -14383,7 +14509,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/yangon
 msgid "Asia/Yangon"
-msgstr ""
+msgstr "အာရှ/ရန်ကုန်"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__asia/yekaterinburg
@@ -14408,7 +14534,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_asset
 msgid "Asset"
-msgstr ""
+msgstr "ပိုင်ဆိုင်မှု"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_asset
@@ -14418,17 +14544,17 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.asset_view_search
 #: model_terms:ir.ui.view,arch_db:base.asset_view_tree
 msgid "Assets"
-msgstr ""
+msgstr "ပိုင်ဆိုင်မှူများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_asset
 msgid "Assets Management"
-msgstr ""
+msgstr "ပိုင်ဆိုင်မှုစီမံခန့်ခွဲမှု"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_asset_fleet
 msgid "Assets/Fleet bridge"
-msgstr ""
+msgstr "ပိုင်ဆိုင်မှု/ယာဉ် (ချိတ်ဆက်ခြင်း)"
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_partner_category_form
@@ -14462,12 +14588,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__atlantic/azores
 msgid "Atlantic/Azores"
-msgstr ""
+msgstr "အတ္တလန်တိတ်/Azores"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__atlantic/bermuda
 msgid "Atlantic/Bermuda"
-msgstr ""
+msgstr "အတ္တလန်တိတ်/ဘာမြူဒါ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__atlantic/canary
@@ -14497,7 +14623,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__atlantic/madeira
 msgid "Atlantic/Madeira"
-msgstr ""
+msgstr "အတ္တလန်တိတ်/မာဒီရာ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__atlantic/reykjavik
@@ -14517,7 +14643,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__atlantic/stanley
 msgid "Atlantic/Stanley"
-msgstr ""
+msgstr "အတ္တလန်တိတ်/စတန်လေ"
 
 #. module: base
 #: model:res.currency,currency_subunit_label:base.LAK
@@ -14538,7 +14664,7 @@ msgstr ""
 #: model:ir.model,name:base.model_ir_attachment
 #: model_terms:ir.ui.view,arch_db:base.view_attachment_search
 msgid "Attachment"
-msgstr ""
+msgstr "ပူးတွဲ"
 
 #. module: base
 #. odoo-python
@@ -14553,7 +14679,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_attachment_search
 #: model_terms:ir.ui.view,arch_db:base.view_attachment_tree
 msgid "Attachments"
-msgstr ""
+msgstr "ပူးတွဲများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_attachment_indexation
@@ -14574,7 +14700,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_human_resources_attendances
 #: model:ir.module.module,shortdesc:base.module_hr_attendance
 msgid "Attendances"
-msgstr ""
+msgstr "ရုံးတက်မှတ်တမ်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_work_entry_planning_attendance
@@ -14595,7 +14721,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_accountant_knowledge
 msgid "Audit Reports"
-msgstr ""
+msgstr "အောဒစ် ရီပို့များ"
 
 #. module: base
 #: model:res.currency,currency_subunit_label:base.ISK
@@ -14605,7 +14731,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.au
 msgid "Australia"
-msgstr ""
+msgstr "သြစတြေးလျ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_anz_ubl_pint
@@ -14755,7 +14881,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.at
 msgid "Austria"
-msgstr ""
+msgstr "သြစတြီးယား"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_at
@@ -14825,12 +14951,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_module_module__author
 #: model_terms:ir.ui.view,arch_db:base.view_module_filter
 msgid "Author"
-msgstr ""
+msgstr "စာရေးသူ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.module_form
 msgid "Author Name"
-msgstr ""
+msgstr "စာရေးသူ အမည်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module_dependency__auto_install_required
@@ -14910,7 +15036,7 @@ msgstr ""
 #. module: base
 #: model:ir.ui.menu,name:base.menu_automation
 msgid "Automation"
-msgstr ""
+msgstr "အလိုအလျှောက်လုပ်ဆောင်ချက်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_automation
@@ -15044,7 +15170,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_B
 msgid "B - MINING AND QUARRYING"
-msgstr ""
+msgstr "B - သတ္တုတွင်းနှင့် ကျောက်မျက်တူးဖော်ရေးလုပ်ငန်း"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__report_paperformat__format__b0
@@ -15109,7 +15235,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__layout_background_image
 msgid "Background Image"
-msgstr ""
+msgstr "နောက်ခံ ရုပ်ပုံ"
 
 #. module: base
 #. odoo-python
@@ -15145,7 +15271,7 @@ msgstr ""
 #. module: base
 #: model:res.currency,currency_unit_label:base.THB
 msgid "Baht"
-msgstr ""
+msgstr "ဘတ်"
 
 #. module: base
 #: model:res.currency,currency_subunit_label:base.OMR
@@ -15155,7 +15281,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_bakery
 msgid "Bakery"
-msgstr ""
+msgstr "မုန့်တိုက်"
 
 #. module: base
 #: model:res.currency,currency_unit_label:base.PAB
@@ -15216,28 +15342,28 @@ msgstr "ဘဏ်"
 #: model_terms:ir.ui.view,arch_db:base.view_partner_bank_search
 #: model_terms:ir.ui.view,arch_db:base.view_partner_bank_tree
 msgid "Bank Accounts"
-msgstr ""
+msgstr "ဘဏ်အကောင့်များ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_bank_form
 msgid "Bank Address"
-msgstr ""
+msgstr "ဘာဏ် လိပ်စာ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_bank__bic
 #: model:ir.model.fields,field_description:base.field_res_partner_bank__bank_bic
 msgid "Bank Identifier Code"
-msgstr ""
+msgstr "ဘဏ် အမှတ်အသား ကုဒ်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_bank_search
 msgid "Bank Name"
-msgstr ""
+msgstr "ဘာဏ် အမည်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_bank_form
 msgid "Bank account"
-msgstr ""
+msgstr "ဘာဏ်အကောင့်"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner_bank__acc_type
@@ -15252,7 +15378,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_users__bank_ids
 #: model_terms:ir.ui.view,arch_db:base.view_res_bank_tree
 msgid "Banks"
-msgstr ""
+msgstr "ဘာဏ်များ"
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_res_bank_form
@@ -15277,13 +15403,13 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_barcodes
 #: model:ir.module.module,shortdesc:base.module_stock_barcode
 msgid "Barcode"
-msgstr ""
+msgstr "ဘားကုဒ်"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/ir_qweb_fields.py:0
 msgid "Barcode %s"
-msgstr ""
+msgstr "ဘားကုဒ်%s"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_barcodes_gs1_nomenclature
@@ -15333,7 +15459,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_model_fields_search
 #: model_terms:ir.ui.view,arch_db:base.view_model_search
 msgid "Base"
-msgstr ""
+msgstr "အခြေခံ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_install_request
@@ -15474,7 +15600,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_asset__directive__before
 msgid "Before"
-msgstr ""
+msgstr "မတိုင်မှီ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_country__name_position__before
@@ -15567,6 +15693,11 @@ msgid "Belgium - Payroll - Dimona"
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_be_hr_payroll_dimona_auto
+msgid "Belgium - Payroll - Dimona - Automation"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_hr_payroll_acerta
 msgid "Belgium - Payroll - Export to Acerta"
 msgstr ""
@@ -15636,7 +15767,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.bm
 msgid "Bermuda"
-msgstr ""
+msgstr "ဘာမြူဒါ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_beverage_distributor
@@ -15646,12 +15777,12 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.bt
 msgid "Bhutan"
-msgstr ""
+msgstr "ဘူတန်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_bike_leasing
 msgid "Bike Leasing"
-msgstr ""
+msgstr "စက်ဘီး အငှား"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_bike_shop
@@ -15788,7 +15919,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_bookstore
 msgid "Bookstore"
-msgstr ""
+msgstr "စာအုပ်ဆိုင်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_theme_bookstore
@@ -15824,7 +15955,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_paperformat__margin_bottom
 msgid "Bottom Margin (mm)"
-msgstr ""
+msgstr "အောက်ခြေ မာဂျင် (mm)"
 
 #. module: base
 #: model:res.country,name:base.bv
@@ -16225,7 +16356,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_C
 msgid "C - MANUFACTURING"
-msgstr ""
+msgstr "C - ထုတ်လုပ်မှုလုပ်ငန်း"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__report_paperformat__format__c5e
@@ -16266,7 +16397,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_sales_crm
 #: model:ir.module.module,shortdesc:base.module_crm
 msgid "CRM"
-msgstr ""
+msgstr "စီအာအမ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_data_merge_crm
@@ -16349,7 +16480,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "Calendar"
-msgstr ""
+msgstr "ပြက္ခဒိန်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_calendar_sms
@@ -16364,7 +16495,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.kh
 msgid "Cambodia"
-msgstr ""
+msgstr "ကမ္ဘောဒီးယား"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_kh
@@ -16418,7 +16549,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.ca
 msgid "Canada"
-msgstr ""
+msgstr "ကနေဒါ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ca
@@ -16492,7 +16623,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_model_menu_create
 #: model_terms:ir.ui.view,arch_db:base.wizard_lang_export
 msgid "Cancel"
-msgstr ""
+msgstr "မလုပ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_candy_shop
@@ -16548,7 +16679,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_carpenter
 msgid "Carpenter"
-msgstr ""
+msgstr "လက်သမား"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__on_delete__cascade
@@ -16573,7 +16704,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_module_filter
 #: model_terms:ir.ui.view,arch_db:base.view_partner_category_list
 msgid "Category"
-msgstr ""
+msgstr "အမျိုးအမည်"
 
 #. module: base
 #: model:res.country,name:base.ky
@@ -16898,7 +17029,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.cl
 msgid "Chile"
-msgstr ""
+msgstr "ချီလီ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_cl
@@ -16949,7 +17080,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.cn
 msgid "China"
-msgstr ""
+msgstr "တရုပ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_cn
@@ -17027,7 +17158,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_res_bank_form
 msgid "City"
-msgstr ""
+msgstr "မြို့"
 
 #. module: base
 #: model:ir.module.module,description:base.module_theme_clean
@@ -17044,7 +17175,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_cleaning_services
 msgid "Cleaning Services"
-msgstr ""
+msgstr "သန့်ရှင်းရေး လုပ်ငန်း"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_bank__clearing_number
@@ -17059,7 +17190,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_collect
 msgid "Click & Collect"
-msgstr ""
+msgstr "ကိုယ်တိုင်ယူ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_logging__type__client
@@ -17095,17 +17226,17 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_update
 #: model_terms:ir.ui.view,arch_db:base.wizard_lang_export
 msgid "Close"
-msgstr ""
+msgstr "ပိတ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_clothing_boutique
 msgid "Clothing Store"
-msgstr ""
+msgstr "အဝတ်အထည် စတိုး"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_cloud_storage
 msgid "Cloud Storage"
-msgstr ""
+msgstr "Cloud တွင် သိမ်းခြင်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_cloud_storage_azure
@@ -17138,12 +17269,17 @@ msgid "CodaBox"
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_be_codaclean
+msgid "Codaclean"
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server_history__code
 #: model:ir.model.fields,field_description:base.field_res_country_group__code
 #: model_terms:ir.ui.view,arch_db:base.view_base_import_language
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "Code"
-msgstr ""
+msgstr "ကုဒ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_server_action_history_wizard__code_diff
@@ -17200,7 +17336,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.co
 msgid "Colombia"
-msgstr ""
+msgstr "ကိုလမ်ဘီယာ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_co
@@ -17250,13 +17386,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner_category__color
 #: model_terms:ir.ui.view,arch_db:base.res_partner_category_view_search
 msgid "Color"
-msgstr ""
+msgstr "အရောင်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__color
 #: model:ir.model.fields,field_description:base.field_res_users__color
 msgid "Color Index"
-msgstr ""
+msgstr "အရောင်ညွှန်းကိန်း"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__column1
@@ -17320,7 +17456,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__comment
 msgid "Comment"
-msgstr ""
+msgstr "ကော်မန့်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__commercial_partner_id
@@ -17331,7 +17467,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_sales_commission
 msgid "Commission"
-msgstr ""
+msgstr "ကော်မရှင်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_payroll_sale_commission
@@ -17372,7 +17508,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_res_partner_filter
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "Companies"
-msgstr ""
+msgstr "ကုမ္ပဏီများ"
 
 #. module: base
 #. odoo-python
@@ -17393,7 +17529,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_users_search
 #: model_terms:ir.ui.view,arch_db:base.view_users_simple_form
 msgid "Company"
-msgstr ""
+msgstr "ကုမ္ပဏီ"
 
 #. module: base
 #. odoo-python
@@ -17402,6 +17538,8 @@ msgid ""
 "Company %(company_name)s is not in the allowed companies for user %"
 "(user_name)s (%(company_allowed)s)."
 msgstr ""
+"ကုမ္ပဏီ %(company_name)s သည် %(user_name)s အားခွင့်ပြုထားသော {(%(company_allowed)s)} "
+"တွင်မပါဝင်ပါ။"
 
 #. module: base
 #. odoo-python
@@ -17417,7 +17555,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__company_details
 msgid "Company Details"
-msgstr ""
+msgstr "ကုမ္ပဏီ၏ အသေးစိတ်အချက်အလက်များ"
 
 #. module: base
 #. odoo-python
@@ -17426,25 +17564,25 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__company_registry
 #: model:ir.model.fields,field_description:base.field_res_users__company_registry
 msgid "Company ID"
-msgstr ""
+msgstr "ကုမ္ပဏီ ID"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__company_registry_label
 #: model:ir.model.fields,field_description:base.field_res_users__company_registry_label
 msgid "Company ID Label"
-msgstr ""
+msgstr "ကုမ္ပဏီ ID Label"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__logo
 msgid "Company Logo"
-msgstr ""
+msgstr "ကုမ္ပဏီ လိုဂို"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__name
 #: model:ir.model.fields,field_description:base.field_res_partner__company_name
 #: model:ir.model.fields,field_description:base.field_res_users__company_name
 msgid "Company Name"
-msgstr ""
+msgstr "ကုမ္ပဏီ အမည်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__commercial_company_name
@@ -17461,7 +17599,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_currency_rate__company_rate
 msgid "Company Rate"
-msgstr ""
+msgstr "ကုမ္ပဏီ နှုန်းထား"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__company_registry_placeholder
@@ -17479,7 +17617,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__company_type
 #: model:ir.model.fields,field_description:base.field_res_users__company_type
 msgid "Company Type"
-msgstr ""
+msgstr "ကုမ္ပဏီ အမျိုးအစား"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_company__report_header
@@ -17536,7 +17674,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__complete_name
 #: model:ir.model.fields,field_description:base.field_res_users__complete_name
 msgid "Complete Name"
-msgstr ""
+msgstr "အမည် အပြည့်အစုံ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__compute
@@ -17544,7 +17682,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_model_fields_form
 #: model_terms:ir.ui.view,arch_db:base.view_model_form
 msgid "Compute"
-msgstr ""
+msgstr "တွက်"
 
 #. module: base
 #. odoo-python
@@ -17580,7 +17718,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base.selection__res_device_log__device_type__computer
 #: model_terms:ir.ui.view,arch_db:base.res_device_view_kanban
 msgid "Computer"
-msgstr ""
+msgstr "ကွန်ပျူတာ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_concert_halls
@@ -17616,7 +17754,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_config_view_base
 msgid "Configuration"
-msgstr ""
+msgstr "ပြင်ဆင်ရန်"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.act_ir_actions_todo_form
@@ -17638,12 +17776,12 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_upgrade
 msgid "Confirm"
-msgstr ""
+msgstr "အတည်ပြုသည်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_users_identitycheck_view_form
 msgid "Confirm Password"
-msgstr ""
+msgstr "စကားဝှက် အတည်ပြု"
 
 #. module: base
 #: model:res.country,name:base.cd
@@ -17668,6 +17806,11 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_iot_drivers
 msgid "Connect the Web Client to Hardware Peripherals"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,description:base.module_l10n_be_codaclean
+msgid "Connect to Codaclean and automatically import CODA statements."
 msgstr ""
 
 #. module: base
@@ -17764,7 +17907,7 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_construction
 #: model:res.partner.industry,name:base.res_partner_industry_F
 msgid "Construction"
-msgstr ""
+msgstr "ဆောက်လုပ်ရေး"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_theme_paptic
@@ -17774,7 +17917,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.category,name:base.res_partner_category_8
 msgid "Consulting Services"
-msgstr ""
+msgstr "အကြံပေး ဝန်ဆောင်မှူလုပ်ငန်းများ"
 
 #. module: base
 #: model:ir.model,name:base.model_res_partner
@@ -17785,28 +17928,28 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_company_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_simple_form
 msgid "Contact"
-msgstr ""
+msgstr "ဆက်သွယ်ရန်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Contact / Address"
-msgstr ""
+msgstr "ဆက်သွယ်ရန် / လိပ်စာ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_crm
 msgid "Contact Form"
-msgstr ""
+msgstr "ဆက်သွယ်ရန် ဖောင်ပုံစံ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_category_form
 msgid "Contact Tag"
-msgstr ""
+msgstr "ဆက်သွယ်သည့် တက်ဂ်"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_partner_category_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_category_list
 msgid "Contact Tags"
-msgstr ""
+msgstr "ဆက်သွယ်သည့် တက်ဂ်များ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_partner_kanban_view
@@ -17826,7 +17969,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_tree
 msgid "Contacts"
-msgstr ""
+msgstr "အဆက်အသွယ်များ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_contacts_enterprise
@@ -17870,7 +18013,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_sign
 msgid "Contract - Signature"
-msgstr ""
+msgstr "စာချုပ် - လက်မှတ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module__contributors
@@ -17933,6 +18076,11 @@ msgid "Corporate, Services, Technology, Shapes, Illustrations"
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_cosmetics_store
+msgid "Cosmetics Store"
+msgstr ""
+
+#. module: base
 #: model:res.country,name:base.cr
 msgid "Costa Rica"
 msgstr ""
@@ -17966,7 +18114,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_country_group__country_ids
 #: model_terms:ir.ui.view,arch_db:base.view_country_search
 msgid "Countries"
-msgstr ""
+msgstr "နိုင်ငံများ"
 
 #. module: base
 #: model:ir.model,name:base.model_res_country
@@ -17986,12 +18134,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_res_bank_form
 #: model_terms:ir.ui.view,arch_db:base.view_res_partner_filter
 msgid "Country"
-msgstr ""
+msgstr "နိုင်ငံ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__phone_code
 msgid "Country Calling Code"
-msgstr ""
+msgstr "နိုင်ငံခေါ်ဆိုမှုကုဒ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_bank__country_code
@@ -18001,7 +18149,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner_bank__country_code
 #: model:ir.model.fields,field_description:base.field_res_users__country_code
 msgid "Country Code"
-msgstr ""
+msgstr "နိုင်ငံ ကုဒ်"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_country_group
@@ -18009,7 +18157,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_country_group_form
 #: model_terms:ir.ui.view,arch_db:base.view_country_group_tree
 msgid "Country Group"
-msgstr ""
+msgstr "နိုင်ငံ အုပ်စု"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__country_group_codes
@@ -18019,12 +18167,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__country_group_ids
 msgid "Country Groups"
-msgstr ""
+msgstr "နိုင်ငံ အုပ်စုများ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__name
 msgid "Country Name"
-msgstr ""
+msgstr "နိုင်ငံအမည်"
 
 #. module: base
 #: model:ir.model,name:base.model_format_vat_label_mixin
@@ -18061,7 +18209,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Create"
-msgstr ""
+msgstr "အသစ်ဖန်တီး"
 
 #. module: base
 #. odoo-python
@@ -18072,7 +18220,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_access__perm_create
 msgid "Create Access"
-msgstr ""
+msgstr "ဖန်တီးခွင့်"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_accountant_knowledge
@@ -18088,7 +18236,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_model_relation__create_date
 #: model:ir.model.fields,field_description:base.field_res_users__create_date
 msgid "Create Date"
-msgstr ""
+msgstr "ဖန်တီးသောနေ့"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.act_menu_create
@@ -18115,7 +18263,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_res_bank_form
 msgid "Create a Bank"
-msgstr ""
+msgstr "ဘာဏ်တစ်ခု ဖန်တီးရန်"
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_res_partner_bank_account_form
@@ -18453,7 +18601,7 @@ msgstr "ဖန်တီးသူ"
 #: model:ir.model.fields,field_description:base.field_server_action_history_wizard__create_date
 #: model:ir.model.fields,field_description:base.field_wizard_ir_model_menu_create__create_date
 msgid "Created on"
-msgstr ""
+msgstr "တည်ဆောက်သည့်အချိန်"
 
 #. module: base
 #: model:res.groups,name:base.group_partner_manager
@@ -18467,7 +18615,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.ir_logging_search_view
 #: model_terms:ir.ui.view,arch_db:base.view_attachment_search
 msgid "Creation Date"
-msgstr ""
+msgstr "ဖန်တီးသောရက်စွဲ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_logging_form_view
@@ -18555,7 +18703,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_currency_search
 #: model_terms:ir.ui.view,arch_db:base.view_currency_tree
 msgid "Currencies"
-msgstr ""
+msgstr "ငွေကြေးများ"
 
 #. module: base
 #: model:ir.model,name:base.model_res_currency
@@ -18567,7 +18715,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_currency_form
 #: model_terms:ir.ui.view,arch_db:base.view_currency_search
 msgid "Currency"
-msgstr ""
+msgstr "ငွေကြေး"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_currency__name
@@ -18583,7 +18731,7 @@ msgstr ""
 #: model:ir.model,name:base.model_res_currency_rate
 #: model_terms:ir.ui.view,arch_db:base.view_currency_rate_form
 msgid "Currency Rate"
-msgstr ""
+msgstr "ငွေလဲနှုန်း"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_currency_rate_search
@@ -18697,6 +18845,11 @@ msgid "Custom Shortcuts"
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_theme_test_custo
+msgid "Custom Theme (Testing suite)"
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__selection_value
 #: model:ir.model.fields,field_description:base.field_ir_cron__selection_value
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
@@ -18744,7 +18897,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:base.action_partner_customer_form
 #: model:ir.actions.act_window,name:base.action_partner_form
 msgid "Customers"
-msgstr ""
+msgstr "ဖောက်သည်များ"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_customizations
@@ -18810,7 +18963,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_D
 msgid "D - ELECTRICITY, GAS, STEAM AND AIR CONDITIONING SUPPLY"
-msgstr ""
+msgstr "D - လျှပ်စစ်၊ ဓာတ်ငွေ့၊ ရေနွေးငွေ့နှင့် လေအားလုပ်ငန်းများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_dhl_rest
@@ -18891,12 +19044,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_productivity_dashboard
 msgid "Dashboard"
-msgstr ""
+msgstr "ဒက်ရှ်ဘုတ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_board
 msgid "Dashboards"
-msgstr ""
+msgstr "ဒက်ရှ်ဘုတ်များ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_window__cache
@@ -18953,18 +19106,18 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_currency_rate__name
 #: model_terms:ir.ui.view,arch_db:base.view_currency_rate_search
 msgid "Date"
-msgstr ""
+msgstr "နေ့စွဲ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__date_format
 msgid "Date Format"
-msgstr ""
+msgstr "နေ့စွဲ ပုံစံ"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/ir_qweb_fields.py:0
 msgid "Date format"
-msgstr ""
+msgstr "နေ့စွဲ ပုံစံ"
 
 #. module: base
 #. odoo-python
@@ -19003,7 +19156,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_cron__interval_type__days
 msgid "Days"
-msgstr ""
+msgstr "ရက်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron_progress__deactivate
@@ -19031,12 +19184,12 @@ msgstr ""
 #: model:ir.actions.act_window,name:base.action_decimal_precision_form
 #: model:ir.ui.menu,name:base.menu_decimal_precision_form
 msgid "Decimal Accuracy"
-msgstr ""
+msgstr "ဒဿမ တိကျမှူ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_currency__decimal_places
 msgid "Decimal Places"
-msgstr ""
+msgstr "ဒဿမ နေရာများ"
 
 #. module: base
 #: model:ir.model,name:base.model_decimal_precision
@@ -19048,7 +19201,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__decimal_point
 msgid "Decimal Separator"
-msgstr ""
+msgstr "ဒဿမ ပိုင်းခြားချက်"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_currency__decimal_places
@@ -19104,7 +19257,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "Default Company"
-msgstr ""
+msgstr "ပုံမှန် ကုမ္ပဏီ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_filters__is_default
@@ -19186,7 +19339,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.res_users_apikeys_view_kanban
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Delete"
-msgstr ""
+msgstr "ဖျက်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_apikeys
@@ -19196,7 +19349,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_access__perm_unlink
 msgid "Delete Access"
-msgstr ""
+msgstr "ဖျက်ခွင့်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_kanban
@@ -19215,7 +19368,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base.selection__res_partner__type__delivery
 #: model:ir.module.category,name:base.module_category_sales_delivery
 msgid "Delivery"
-msgstr ""
+msgstr "ဒလီဗာရီ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_delivery
@@ -19226,7 +19379,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/res_partner.py:0
 msgid "Delivery Address"
-msgstr ""
+msgstr "ပို့ဆောင်ရန် လိပ်စာ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery
@@ -19241,7 +19394,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_demo
 msgid "Demo"
-msgstr ""
+msgstr "ဒီမို"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module__demo
@@ -19326,6 +19479,11 @@ msgid "Denmark - SAF-T Import"
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_dk_nemhandel
+msgid "Denmark EDI - Nemhandel"
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__depends
 #: model:ir.model.fields,field_description:base.field_ir_module_module__dependencies_id
 #: model_terms:ir.ui.view,arch_db:base.module_form
@@ -19355,7 +19513,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_users_apikeys_description__name
 #: model_terms:ir.ui.view,arch_db:base.view_attachment_form
 msgid "Description"
-msgstr ""
+msgstr "ဖော်ပြချက်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module__description_html
@@ -19498,7 +19656,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__direction
 msgid "Direction"
-msgstr ""
+msgstr "ဉီးတည်ရာ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_asset__directive
@@ -19516,7 +19674,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_tree
 msgid "Disable"
-msgstr ""
+msgstr "မလုပ်နိုင်ပါ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_paperformat__disable_shrinking
@@ -19528,13 +19686,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "Discard"
-msgstr ""
+msgstr "မလုပ်တော့"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_productivity_discuss
 #: model:ir.module.module,shortdesc:base.module_mail
 msgid "Discuss"
-msgstr ""
+msgstr "ဆွေးနွေးရန်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__disjoint_ids
@@ -19666,7 +19824,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_server_action_history_wizard__display_name
 #: model:ir.model.fields,field_description:base.field_wizard_ir_model_menu_create__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "ပြသသော အမည်"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_restaurant_preparation_display
@@ -19788,19 +19946,19 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
 msgid "Document"
-msgstr ""
+msgstr "စာရွက်စာတမ်း"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_layout__view_id
 #: model:ir.model.fields,field_description:base.field_res_company__external_report_layout_id
 msgid "Document Template"
-msgstr ""
+msgstr "စာရွက် ပုံစံ"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_productivity_documents
 #: model:ir.module.module,shortdesc:base.module_documents
 msgid "Documents"
-msgstr ""
+msgstr "စာရွက်စာတမ်း(များ)"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_account
@@ -19997,7 +20155,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_todo__state__done
 #: model:ir.model.fields.selection,name:base.selection__res_users_deletion__state__done
 msgid "Done"
-msgstr ""
+msgstr "ပြီးဆုံးသည်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_show
@@ -20086,12 +20244,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_profile__duration
 #: model:ir.model.fields,field_description:base.field_res_users_apikeys_description__duration
 msgid "Duration"
-msgstr ""
+msgstr "ကြာချိန်"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_E
 msgid "E - WATER SUPPLY; SEWERAGE, WASTE MANAGEMENT AND REMEDIATION ACTIVITIES"
-msgstr ""
+msgstr "E - ရေပေးဝေရေး၊ မိလ္လာစနစ်နှင့် စွန့်ပစ်ပစ္စည်းစီမံခန့်ခွဲမှုလုပ်ငန်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_marketing_automation_website_sale
@@ -20283,13 +20441,13 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_theme_education
 #: model:res.partner.industry,name:base.res_partner_industry_P
 msgid "Education"
-msgstr ""
+msgstr "ပညာရေး"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__egypt
 #: model:res.country,name:base.eg
 msgid "Egypt"
-msgstr ""
+msgstr "အီဂျစ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_eg
@@ -20363,7 +20521,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_electronic_store
 msgid "Electronic Store"
-msgstr ""
+msgstr "လျှပ်စစ် ဆိုင်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_co_edi
@@ -20408,7 +20566,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "Email"
-msgstr ""
+msgstr "အီးမေးလ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__email_domain_placeholder
@@ -20419,12 +20577,12 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_marketing_email_marketing
 #: model:ir.module.module,shortdesc:base.module_mass_mailing
 msgid "Email Marketing"
-msgstr ""
+msgstr "အီးမေးလ် မားကက်တင်း"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__signature
 msgid "Email Signature"
-msgstr ""
+msgstr "အီမေးလ် လက်မှတ်"
 
 #. module: base
 #. odoo-python
@@ -20459,18 +20617,18 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__employee
 #: model:ir.model.fields,field_description:base.field_res_users__employee
 msgid "Employee"
-msgstr ""
+msgstr "ဝန်ထမ်း"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_services_employee_hourly_cost
 msgid "Employee Hourly Cost"
-msgstr ""
+msgstr "ဝန်ထမ်း နာရီအလိုက် ကုန်ကျစရိတ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_hourly_cost
 #: model:ir.module.module,summary:base.module_hr_hourly_cost
 msgid "Employee Hourly Wage"
-msgstr ""
+msgstr "ဝန်ထမ်း နာရီအလိုက် လုပ်အားခ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_presence
@@ -20487,7 +20645,7 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_hr
 #: model:res.partner.category,name:base.res_partner_category_3
 msgid "Employees"
-msgstr ""
+msgstr "ဝန်ထမ်းများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_workorder_hr_account
@@ -20597,7 +20755,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_D
 msgid "Energy supply"
-msgstr ""
+msgstr "စွမ်းအင်"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_crm_iap_enrich
@@ -20678,7 +20836,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_R
 msgid "Entertainment"
-msgstr ""
+msgstr "ဖျော်ဖြေရေး"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_profile__entry_count
@@ -20720,7 +20878,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_equity
 msgid "Equity"
-msgstr ""
+msgstr "အရင်းအနှီး"
 
 #. module: base
 #: model:res.country,name:base.er
@@ -20730,7 +20888,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_demo_failure__error
 msgid "Error"
-msgstr ""
+msgstr "အယ်ရာ"
 
 #. module: base
 #. odoo-python
@@ -21019,7 +21177,7 @@ msgstr ""
 #. module: base
 #: model:res.country.group,name:base.eurasian_economic_union
 msgid "Eurasian Economic Union"
-msgstr ""
+msgstr "ယူရေရှားစီးပွားရေးသမဂ္ဂ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__europe/amsterdam
@@ -21344,7 +21502,7 @@ msgstr ""
 #. module: base
 #: model:res.country.group,name:base.europe
 msgid "European Union"
-msgstr ""
+msgstr "ဥရောပသမဂ္ဂ"
 
 #. module: base
 #: model:res.country.group,name:base.europe_prefix
@@ -21412,7 +21570,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_marketing_events
 #: model:ir.module.module,shortdesc:base.module_website_event
 msgid "Events"
-msgstr ""
+msgstr "ပွဲများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_event_booth
@@ -21545,7 +21703,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_human_resources_expenses
 #: model:ir.module.module,shortdesc:base.module_hr_expense
 msgid "Expenses"
-msgstr ""
+msgstr "အသုံးစရိတ်များ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_payroll_expense
@@ -21573,7 +21731,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_users_apikeys__expiration_date
 #: model:ir.model.fields,field_description:base.field_res_users_apikeys_description__expiration_date
 msgid "Expiration Date"
-msgstr ""
+msgstr "သက်တမ်းကုန်ရက်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_users_apikeys_view_kanban
@@ -21598,7 +21756,7 @@ msgstr ""
 #: model:res.groups.privilege,name:base.res_groups_privilege_export
 #: model_terms:ir.ui.view,arch_db:base.wizard_lang_export
 msgid "Export"
-msgstr ""
+msgstr "အိတ်စ်ပို့"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_se_sie4_export
@@ -21629,7 +21787,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:base.action_wizard_lang_export
 #: model:ir.ui.menu,name:base.menu_wizard_lang_export
 msgid "Export Translation"
-msgstr ""
+msgstr "ဘာသာပြန် ထုတ်ပါ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.wizard_lang_export
@@ -21854,7 +22012,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_U
 msgid "Extraterritorial"
-msgstr ""
+msgstr "ပိုင်နက်စီးပွားရေး"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_eyewear_shop
@@ -21864,7 +22022,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_F
 msgid "F - CONSTRUCTION"
-msgstr ""
+msgstr "F - ဆောက်လုပ်ရေးလုပ်ငန်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_fedex
@@ -21884,7 +22042,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_users_deletion__state__fail
 msgid "Failed"
-msgstr ""
+msgstr "မအောင်မြင်"
 
 #. module: base
 #: model:ir.actions.server,name:base.demo_failure_action
@@ -21930,7 +22088,7 @@ msgstr ""
 #. module: base
 #: model:ir.actions.act_window,name:base.action_country_state
 msgid "Fed. States"
-msgstr ""
+msgstr "တိုင်း နှင့် ပြည်နယ်များ"
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_country_state
@@ -22020,7 +22178,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_services_field_service
 #: model:ir.module.module,shortdesc:base.module_industry_fsm
 msgid "Field Service"
-msgstr ""
+msgstr "ကွင်းဆင်းဝန်ဆောင်မှု"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_industry_fsm_sale
@@ -22160,7 +22318,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_base_language_import__data
 #: model:ir.model.fields.selection,name:base.selection__ir_attachment__type__binary
 msgid "File"
-msgstr ""
+msgstr "ဖိုင်"
 
 #. module: base
 #. odoo-python
@@ -22238,18 +22396,18 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_window__filter
 #: model:ir.model.fields,field_description:base.field_ir_embedded_actions__filter_ids
 msgid "Filter"
-msgstr ""
+msgstr "စစ်ထုတ်ခြင်း"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_filters__name
 #: model_terms:ir.ui.view,arch_db:base.ir_filters_view_search
 msgid "Filter Name"
-msgstr ""
+msgstr "စစ်ထုတ်ခြင်း အမည်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_report__domain
 msgid "Filter domain"
-msgstr ""
+msgstr "စစ်ထုတ်ခြင်း ဒိုမိန်း"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_attachment_search
@@ -22263,7 +22421,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.ir_filters_view_tree
 #: model_terms:ir.ui.view,arch_db:base.view_window_action_form
 msgid "Filters"
-msgstr ""
+msgstr "စစ်ထုတ်ခြင်းများ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_filters_view_search
@@ -22278,7 +22436,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_K
 msgid "Finance/Insurance"
-msgstr ""
+msgstr "ငွေကြေး/အာမခံ"
 
 #. module: base
 #: model:ir.module.module,description:base.module_data_merge_crm
@@ -22343,12 +22501,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_device__first_activity
 #: model:ir.model.fields,field_description:base.field_res_device_log__first_activity
 msgid "First Activity"
-msgstr ""
+msgstr "ဉီးဆုံး လုပ်ဆောင်ခဲ့ချိန်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__week_start
 msgid "First Day of Week"
-msgstr ""
+msgstr "ရက်သတ္တပါတ်၏ ဦးဆုံးနေ့"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__first_failure_date
@@ -22393,7 +22551,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_human_resources_fleet
 #: model:ir.module.module,shortdesc:base.module_fleet
 msgid "Fleet"
-msgstr ""
+msgstr "ယာဉ်အုပ်စု"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_fleet
@@ -22482,7 +22640,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_I
 msgid "Food/Hospitality"
-msgstr ""
+msgstr "အစားအသောက်/ဧည့်ဝတ်ပြုရေး"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_company__report_footer
@@ -22561,13 +22719,13 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base.selection__ir_ui_view__type__form
 #: model_terms:ir.ui.view,arch_db:base.view_view_search
 msgid "Form"
-msgstr ""
+msgstr "ဖောင်"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/ir_qweb_fields.py:0
 msgid "Format"
-msgstr ""
+msgstr "ဖော်မက်"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner__email_formatted
@@ -22709,12 +22867,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_lang__week_start__5
 msgid "Friday"
-msgstr ""
+msgstr "သောကြာ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence_date_range__date_from
 msgid "From"
-msgstr ""
+msgstr "မှ"
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_res_partner_bank_account_form
@@ -22731,7 +22889,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_human_resources_frontdesk
 #: model:ir.module.module,shortdesc:base.module_frontdesk
 msgid "Frontdesk"
-msgstr ""
+msgstr "ဧည့်ကြို စားပွဲ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_access_view_search
@@ -22742,7 +22900,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_industry__full_name
 msgid "Full Name"
-msgstr ""
+msgstr "အမည် အပြည့်အစုံ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_menu__complete_name
@@ -22769,7 +22927,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_furniture_store
 msgid "Furniture Store"
-msgstr ""
+msgstr "ပရိဘောဂ ဆိုင်"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_theme_loftspace
@@ -22780,7 +22938,7 @@ msgstr ""
 #: model:res.partner.industry,full_name:base.res_partner_industry_G
 msgid ""
 "G - WHOLESALE AND RETAIL TRADE; REPAIR OF MOTOR VEHICLES AND MOTORCYCLES"
-msgstr ""
+msgstr "G - ကုန်သွယ် ရောင်းဝယ်ရေးနှင့် မော်တော်ယာဉ်ပြင်ဆင်ရေးလုပ်ငန်း"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__gb
@@ -22895,7 +23053,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_gamification
 msgid "Gamification"
-msgstr ""
+msgstr "ဂိမ်းဖန်တီးခြင်း"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_attendance_gantt
@@ -22930,13 +23088,13 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_company_form
 msgid "General Information"
-msgstr ""
+msgstr "အထွေထွေ အချက်အလက်"
 
 #. module: base
 #: model:ir.ui.menu,name:base.menu_config
 #: model_terms:ir.ui.view,arch_db:base.view_window_action_form
 msgid "General Settings"
-msgstr ""
+msgstr "အထွေထွေ ဆက်တင်များ"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_mx_edi_landing
@@ -23125,7 +23283,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.ir_filters_view_search
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Global"
-msgstr ""
+msgstr "ဂလိုဘယ်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_form
@@ -23169,27 +23327,27 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_google_calendar
 msgid "Google Calendar"
-msgstr ""
+msgstr "ဂူဂဲ ပြက္ခဒိန်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_google_gmail
 msgid "Google Gmail"
-msgstr ""
+msgstr "ဂူဂဲ ဂျီမေးလ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_google_map
 msgid "Google Maps"
-msgstr ""
+msgstr "ဂူဂဲ မြေပုံ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_google_account
 msgid "Google Users"
-msgstr ""
+msgstr "ဂူဂဲ သုံးသူများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_autocomplete
 msgid "Google places autocompletion"
-msgstr ""
+msgstr "နေရာများ အလိုလျှောက်ဖြည့်ဖြင်း(ဂူဂဲ )"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_google_recaptcha
@@ -23249,7 +23407,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__greenwich
 msgid "Greenwich"
-msgstr ""
+msgstr "ဂရင်းနစ်"
 
 #. module: base
 #: model:res.country,name:base.gd
@@ -23277,14 +23435,14 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_groups_search
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Group"
-msgstr ""
+msgstr "အုပ်စု"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups__full_name
 #: model_terms:ir.ui.view,arch_db:base.view_country_group_form
 #: model_terms:ir.ui.view,arch_db:base.view_groups_form
 msgid "Group Name"
-msgstr ""
+msgstr "အုပ်စု အမည်"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_groups__share
@@ -23336,7 +23494,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_res_groups_privilege_form
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "Groups"
-msgstr ""
+msgstr "အုပ်စုများ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_form
@@ -23465,7 +23623,7 @@ msgstr ""
 #. module: base
 #: model:res.country.group,name:base.gulf_cooperation_council
 msgid "Gulf Cooperation Council (GCC)"
-msgstr ""
+msgstr "ပင်လယ်ကွေ့ ပူးပေါင်းဆောင်ရွက်ရေးကောင်စီ (GCC)"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_gcc_invoice
@@ -23490,7 +23648,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_H
 msgid "H - TRANSPORTATION AND STORAGE"
-msgstr ""
+msgstr "H - သယ်ယူပို့ဆောင်ရေးနှင့် သိုလှောင်ရေးလုပ်ငန်း"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_localizations_uk_hmrc
@@ -23643,7 +23801,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_Q
 msgid "Health/Social"
-msgstr ""
+msgstr "ကျန်းမာရေး/လူမှူရေး"
 
 #. module: base
 #: model:res.country,name:base.hm
@@ -23827,7 +23985,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_attachment_form
 msgid "History"
-msgstr ""
+msgstr "သမိုင်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_holiday_house
@@ -23842,7 +24000,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__action_id
 msgid "Home Action"
-msgstr ""
+msgstr "ဟုမ်း လုပ်ဆောင်ချက်"
 
 #. module: base
 #: model:ir.actions.act_url,name:base.action_open_website
@@ -23890,6 +24048,11 @@ msgid "Hongkong"
 msgstr ""
 
 #. module: base
+#: model:ir.module.category,name:base.module_category_hospitaility
+msgid "Hospitaility"
+msgstr ""
+
+#. module: base
 #: model:ir.module.category,name:base.module_category_hospitality
 msgid "Hospitality"
 msgstr ""
@@ -23907,12 +24070,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_cron__interval_type__hours
 msgid "Hours"
-msgstr ""
+msgstr "နာရီ"
 
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_T
 msgid "Households"
-msgstr ""
+msgstr "အိမ်ထောင်မှူ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_model_fields_form
@@ -23985,7 +24148,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_I
 msgid "I - ACCOMMODATION AND FOOD SERVICE ACTIVITIES"
-msgstr ""
+msgstr "I - အခြေခံအိမ်ရာနှင့် အစားအသောက်ဝန်ဆောင်မှုလုပ်ငန်း"
 
 #. module: base
 #. odoo-python
@@ -24142,7 +24305,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_server_action_history_wizard__id
 #: model:ir.model.fields,field_description:base.field_wizard_ir_model_menu_create__id
 msgid "ID"
-msgstr ""
+msgstr "နံပါတ်"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_server__xml_id
@@ -24174,7 +24337,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_device__ip_address
 #: model:ir.model.fields,field_description:base.field_res_device_log__ip_address
 msgid "IP Address"
-msgstr ""
+msgstr "အိုင်ပီ လိပ်စာ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_profile_view_form
@@ -24184,7 +24347,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_language_import__code
 msgid "ISO Code"
-msgstr ""
+msgstr "ISO ကုဒ်"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_base_language_import__code
@@ -24194,7 +24357,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__iso_code
 msgid "ISO code"
-msgstr ""
+msgstr "ISO ကုဒ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_it_hardware
@@ -24204,6 +24367,11 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_J
 msgid "IT/Communication"
+msgstr "နည်းပညာ/ဆက်သွယ်ရေး"
+
+#. module: base
+#: model:ir.module.module,summary:base.module_l10n_ar_reports_simple
+msgid "IVA Simple Reporting for Argentinean Localization"
 msgstr ""
 
 #. module: base
@@ -24222,7 +24390,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.module_view_kanban
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
 msgid "Icon"
-msgstr ""
+msgstr "အိုင်ကွန်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module__icon
@@ -24404,7 +24572,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__image_1920
 #: model:ir.model.fields,field_description:base.field_res_users__image_1920
 msgid "Image"
-msgstr ""
+msgstr "ရုပ်ပုံ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_avatar_mixin__image_1024
@@ -24522,12 +24690,12 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_import_language
 msgid "Import"
-msgstr ""
+msgstr "အင်ပို့"
 
 #. module: base
 #: model:ir.ui.menu,name:base.menu_translation_export
 msgid "Import / Export"
-msgstr ""
+msgstr "အသွင်း / အထုတ်"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_fr_fec_import
@@ -24598,7 +24766,7 @@ msgstr ""
 #: model:ir.ui.menu,name:base.menu_view_base_import_language
 #: model_terms:ir.ui.view,arch_db:base.view_base_import_language
 msgid "Import Translation"
-msgstr ""
+msgstr "ဘာသာပြန် သွင်းပါ"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_generator
@@ -24890,7 +25058,7 @@ msgstr ""
 #. module: base
 #: model:ir.actions.act_window,name:base.res_partner_industry_action
 msgid "Industries"
-msgstr ""
+msgstr "လုပ်ငန်း အမျိုးအစားများ"
 
 #. module: base
 #: model:ir.model,name:base.model_res_partner_industry
@@ -24899,7 +25067,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.res_partner_industry_view_form
 #: model_terms:ir.ui.view,arch_db:base.res_partner_industry_view_tree
 msgid "Industry"
-msgstr ""
+msgstr "စက်မှူလုပ်ငန်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_industry_data
@@ -24910,7 +25078,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_model__info
 #: model_terms:ir.ui.view,arch_db:base.module_form
 msgid "Information"
-msgstr ""
+msgstr "အချက်အလက်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_view_search
@@ -24974,7 +25142,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_base_language_install
 msgid "Install Language"
-msgstr ""
+msgstr "ဘာသာစကား သွင်းရန်"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_module_module__state__installed
@@ -25253,6 +25421,15 @@ msgstr ""
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/ir_default.py:0
+#, python-format
+msgid ""
+"Invalid value in Default Value field. Expected type '%(field_type)s' for "
+"'%(model_name)s.%(field_name)s'."
+msgstr ""
+
+#. module: base
+#. odoo-python
 #: code:addons/template_inheritance.py:0
 msgid "Invalid attributes %s in element <attribute>"
 msgstr ""
@@ -25428,7 +25605,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_supply_chain_inventory
 #: model:ir.module.module,shortdesc:base.module_stock
 msgid "Inventory"
-msgstr ""
+msgstr "ပစ္စည်းစာရင်း"
 
 #. module: base
 #: model_terms:res.partner,website_description:base.res_partner_2
@@ -25454,13 +25631,13 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__type__invoice
 msgid "Invoice"
-msgstr ""
+msgstr "ပြေစာ"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/res_partner.py:0
 msgid "Invoice Address"
-msgstr ""
+msgstr "ပြေစာလိပ်စာ"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account
@@ -25548,12 +25725,12 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__iran
 #: model:res.country,name:base.ir
 msgid "Iran"
-msgstr ""
+msgstr "အီရန်"
 
 #. module: base
 #: model:res.country,name:base.iq
 msgid "Iraq"
-msgstr ""
+msgstr "အီရတ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_iq
@@ -25563,7 +25740,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.ie
 msgid "Ireland"
-msgstr ""
+msgstr "အိုင်ယာလန်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ie
@@ -25626,7 +25803,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__israel
 #: model:res.country,name:base.il
 msgid "Israel"
-msgstr ""
+msgstr "အစ္စရေး"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_il
@@ -25687,7 +25864,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.it
 msgid "Italy"
-msgstr ""
+msgstr "အီတလီ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it
@@ -25747,19 +25924,19 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_J
 msgid "J - INFORMATION AND COMMUNICATION"
-msgstr ""
+msgstr "J - သတင်းအချက်အလက်နှင့် ဆက်သွယ်ရေးလုပ်ငန်း"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__jamaica
 #: model:res.country,name:base.jm
 msgid "Jamaica"
-msgstr ""
+msgstr "ဂျမေကာ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__japan
 #: model:res.country,name:base.jp
 msgid "Japan"
-msgstr ""
+msgstr "ဂျပန်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_jp
@@ -25784,7 +25961,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.je
 msgid "Jersey"
-msgstr ""
+msgstr "ဂျာစီ"
 
 #. module: base
 #. odoo-python
@@ -25811,7 +25988,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__function
 #: model:ir.model.fields,field_description:base.field_res_users__function
 msgid "Job Position"
-msgstr ""
+msgstr "ရာထူး"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
@@ -25821,7 +25998,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.jo
 msgid "Jordan"
-msgstr ""
+msgstr "ဂျော်ဒန်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_jo
@@ -25862,7 +26039,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_K
 msgid "K - FINANCIAL AND INSURANCE ACTIVITIES"
-msgstr ""
+msgstr "K - ငွေကြေးနှင့် အာမခံလုပ်ငန်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_digest
@@ -25975,7 +26152,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_users_apikeys_show__key
 #: model_terms:ir.ui.view,arch_db:base.view_ir_config_search
 msgid "Key"
-msgstr ""
+msgstr "ကီး"
 
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_ir_config_parameter_key_uniq
@@ -26014,6 +26191,11 @@ msgid "Kiribati"
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_website_sale_mrp
+msgid "Kit Availability"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,summary:base.module_sale_mrp_renting
 msgid "Kits rental"
 msgstr ""
@@ -26022,7 +26204,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_productivity_knowledge
 #: model:ir.module.module,shortdesc:base.module_knowledge
 msgid "Knowledge"
-msgstr ""
+msgstr "အသိပညာ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_knowledge
@@ -26084,7 +26266,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.kw
 msgid "Kuwait"
-msgstr ""
+msgstr "ကူဝိတ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_kw
@@ -26110,7 +26292,7 @@ msgstr ""
 #. module: base
 #: model:res.currency,currency_unit_label:base.MMK
 msgid "Kyat"
-msgstr ""
+msgstr "ကျပ်"
 
 #. module: base
 #: model:res.country,name:base.kg
@@ -26120,7 +26302,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_L
 msgid "L - REAL ESTATE ACTIVITIES"
-msgstr ""
+msgstr "L - အိမ်ခြံမြေအကျိုးဆောင်လုပ်ငန်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_latam_invoice_document
@@ -26196,28 +26378,28 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_users__lang
 #: model_terms:ir.ui.view,arch_db:base.res_lang_search
 msgid "Language"
-msgstr ""
+msgstr "ဘာသာစကား"
 
 #. module: base
 #: model:ir.model,name:base.model_base_language_export
 msgid "Language Export"
-msgstr ""
+msgstr "ဘာသာစကား ထုတ်ပါ"
 
 #. module: base
 #: model:ir.model,name:base.model_base_language_import
 msgid "Language Import"
-msgstr ""
+msgstr "ဘာသာစကား သွင်းပါ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_language_import__name
 msgid "Language Name"
-msgstr ""
+msgstr "ဘာသာစကား အမည်"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/res_lang.py:0
 msgid "Language code cannot be modified."
-msgstr ""
+msgstr "ဘာသာစကားကုဒ်ကို ပြင်လို့မရပါ။"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.res_lang_act_window
@@ -26228,12 +26410,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.res_lang_search
 #: model_terms:ir.ui.view,arch_db:base.res_lang_tree
 msgid "Languages"
-msgstr ""
+msgstr "ဘာသာစကားများ"
 
 #. module: base
 #: model:res.country,name:base.la
 msgid "Laos"
-msgstr ""
+msgstr "လာအို"
 
 #. module: base
 #: model:res.currency,currency_unit_label:base.GEL
@@ -26244,7 +26426,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_device__last_activity
 #: model:ir.model.fields,field_description:base.field_res_device_log__last_activity
 msgid "Last Activity"
-msgstr ""
+msgstr "နောက်ဆုံး လုပ်ဆောင်ခဲ့ချိန်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__lastcall
@@ -26254,7 +26436,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_device_view_form
 msgid "Last IP Address"
-msgstr ""
+msgstr "နောက်ဆုံး အိုင်ပီလိပ်စာ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_currency_tree
@@ -26436,7 +26618,7 @@ msgstr "နောက်ဆုံးပြင်ဆင်သူ"
 #: model:ir.model.fields,field_description:base.field_server_action_history_wizard__write_date
 #: model:ir.model.fields,field_description:base.field_wizard_ir_model_menu_create__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "နောက်ဆုံးပြင်ဆင်ချိန်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_currency_kanban
@@ -26533,7 +26715,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.module_view_kanban
 msgid "Learn More"
-msgstr ""
+msgstr "ထပ်မံ လေ့လာရန်"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_in_hr_holidays
@@ -26558,12 +26740,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_paperformat__margin_left
 msgid "Left Margin (mm)"
-msgstr ""
+msgstr "ဘယ်ဘက် မာဂျင် (mm)"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_lang__direction__ltr
 msgid "Left-to-Right"
-msgstr ""
+msgstr "ဘယ် မှ ညာ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__report_paperformat__format__legal
@@ -26644,11 +26826,16 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_logging__level
 #: model_terms:ir.ui.view,arch_db:base.ir_logging_search_view
 msgid "Level"
-msgstr ""
+msgstr "လယ်ဗယ်"
 
 #. module: base
 #: model:res.country,name:base.lr
 msgid "Liberia"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_library
+msgid "Library"
 msgstr ""
 
 #. module: base
@@ -26695,7 +26882,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_logging__line
 msgid "Line"
-msgstr ""
+msgstr "လိုင်း"
 
 #. module: base
 #. odoo-python
@@ -26706,7 +26893,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_partner_merge_automatic_wizard__line_ids
 msgid "Lines"
-msgstr ""
+msgstr "လိုင်းများ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__link_field_id
@@ -26833,7 +27020,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base.selection__ir_ui_view__type__list
 #: model_terms:ir.ui.view,arch_db:base.view_view_search
 msgid "List"
-msgstr ""
+msgstr "စာရင်း"
 
 #. module: base
 #. odoo-python
@@ -26936,13 +27123,13 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__code
 msgid "Locale Code"
-msgstr ""
+msgstr "Locale ကုဒ်"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_localization
 #: model:ir.module.category,name:base.module_category_accounting_localizations
 msgid "Localization"
-msgstr ""
+msgstr "ဘာသာစကား"
 
 #. module: base
 #: model:ir.module.module,description:base.module_theme_loftspace
@@ -26957,7 +27144,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_logging_form_view
 msgid "Log"
-msgstr ""
+msgstr "မှတ်"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_auth_passkey
@@ -26990,6 +27177,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__login
 #: model_terms:ir.ui.view,arch_db:base.view_res_users_kanban
+#: model_terms:ir.ui.view,arch_db:base.view_users_form
 msgid "Login"
 msgstr ""
 
@@ -27054,7 +27242,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_M
 msgid "M - PROFESSIONAL, SCIENTIFIC AND TECHNICAL ACTIVITIES"
-msgstr ""
+msgstr "M - ပညာရပ်ဆိုင်ရာ၊ သိပ္ပံနှင့် နည်းပညာလုပ်ငန်း"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__met
@@ -27254,7 +27442,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_supply_chain_maintenance
 #: model:ir.module.module,shortdesc:base.module_maintenance
 msgid "Maintenance"
-msgstr ""
+msgstr "မွန်းမံပြင်ဆင်ရေး"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_maintenance
@@ -27374,6 +27562,11 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_recruitment_integration_website
 msgid "Manage Job board integrations with website"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,summary:base.module_website_sale_mrp
+msgid "Manage Kit product inventory & availability"
 msgstr ""
 
 #. module: base
@@ -27681,7 +27874,7 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_mrp
 #: model:res.partner.industry,name:base.res_partner_industry_C
 msgid "Manufacturing"
-msgstr ""
+msgstr "ထုတ်လုပ်ရေး"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_product_expiry
@@ -27722,12 +27915,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_product_margin
 msgid "Margins by Products"
-msgstr ""
+msgstr "ပစ္စည်း အလိုက် မာဂျင်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_margin
 msgid "Margins in Sales Orders"
-msgstr ""
+msgstr "အရောင်း အော်ဒါ များမှ မာဂျင်"
 
 #. module: base
 #: model:res.currency,currency_unit_label:base.BAM
@@ -27737,7 +27930,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_marketing
 msgid "Marketing"
-msgstr ""
+msgstr "မားကက်တင်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_marketing_agency
@@ -27764,7 +27957,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_marketing_marketing_card
 #: model:ir.module.module,shortdesc:base.module_marketing_card
 msgid "Marketing Card"
-msgstr ""
+msgstr "မားကက်တင်း ကဒ်"
 
 #. module: base
 #: model:res.country,name:base.mh
@@ -27902,17 +28095,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_room
 msgid "Meeting Rooms"
-msgstr ""
-
-#. module: base
-#: model:ir.model.fields.selection,name:base.selection__res_users__role__group_user
-msgid "Member"
-msgstr ""
+msgstr "မီတင်ခန်းများ"
 
 #. module: base
 #: model:res.company,partnership_label:base.main_company
 msgid "Members"
-msgstr ""
+msgstr "အဖွဲ့ဝင်များ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_members_club
@@ -27926,7 +28114,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.edit_menu_access
 #: model_terms:ir.ui.view,arch_db:base.edit_menu_access_search
 msgid "Menu"
-msgstr ""
+msgstr "မီနူး"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.grant_menu_access
@@ -27943,32 +28131,32 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_module_module__menus_by_module
 #: model_terms:ir.ui.view,arch_db:base.view_groups_form
 msgid "Menus"
-msgstr ""
+msgstr "မီနူးများ"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_partner_merge
 msgid "Merge"
-msgstr ""
+msgstr "ပေါင်း"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
 msgid "Merge Automatically"
-msgstr ""
+msgstr "အလိုအလျှောက်ပေါင်း"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
 msgid "Merge Automatically all process"
-msgstr ""
+msgstr "အလိုအလျှာက်ပေါင်းရန်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
 msgid "Merge Contacts"
-msgstr ""
+msgstr "ဆက်သွယ်ရန်များပေါင်းရန်"
 
 #. module: base
 #: model:ir.model,name:base.model_base_partner_merge_line
 msgid "Merge Partner Line"
-msgstr ""
+msgstr "ပါတနာလိုင်းများပေါင်း"
 
 #. module: base
 #: model:ir.model,name:base.model_base_partner_merge_automatic_wizard
@@ -27989,7 +28177,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_logging__message
 #: model:ir.model.fields,field_description:base.field_ir_model_constraint__message
 msgid "Message"
-msgstr ""
+msgstr "မက်ဆေ့ဂျ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_metal_fabricator
@@ -28196,7 +28384,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_B
 msgid "Mining"
-msgstr ""
+msgstr "တူးဖော်ရေး"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_cron__interval_type__minutes
@@ -28206,7 +28394,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Misc"
-msgstr ""
+msgstr "အထွေထွေ"
 
 #. module: base
 #. odoo-python
@@ -28230,7 +28418,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.contact
 #: model_terms:ir.ui.view,arch_db:base.res_device_view_kanban
 msgid "Mobile"
-msgstr ""
+msgstr "မိုဘိုင်း"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_window__mobile_view_mode
@@ -28264,7 +28452,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_view_search
 #: model_terms:ir.ui.view,arch_db:base.wizard_lang_export
 msgid "Model"
-msgstr ""
+msgstr "မော်ဒယ်"
 
 #. module: base
 #. odoo-python
@@ -28308,12 +28496,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_model_search
 #: model_terms:ir.ui.view,arch_db:base.view_model_tree
 msgid "Model Description"
-msgstr ""
+msgstr "မော်ဒယ် ဖော်ပြချက်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_language_export__domain
 msgid "Model Domain"
-msgstr ""
+msgstr "မော်ဒယ် ဒိုမိန်း"
 
 #. module: base
 #: model:ir.model,name:base.model_ir_model_inherit
@@ -28328,7 +28516,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_model_data__model
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__model
 msgid "Model Name"
-msgstr ""
+msgstr "မော်ဒယ် အမည်"
 
 #. module: base
 #: model:ir.actions.report,name:base.report_ir_model_overview
@@ -28374,7 +28562,7 @@ msgstr ""
 #: model:ir.ui.menu,name:base.ir_model_model_menu
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
 msgid "Models"
-msgstr ""
+msgstr "မော်ဒယ်များ"
 
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_ir_model_inherit_uniq
@@ -28408,7 +28596,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_model_data_search
 #: model_terms:ir.ui.view,arch_db:base.view_module_filter
 msgid "Module"
-msgstr ""
+msgstr "မော်ဂျူး"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_module_category_form
@@ -28418,7 +28606,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.module_view_kanban
 msgid "Module Info"
-msgstr ""
+msgstr "မော်ဂျူး အချက်အလက်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module__shortdesc
@@ -28542,7 +28730,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_lang__week_start__1
 msgid "Monday"
-msgstr ""
+msgstr "တနင်္လာ"
 
 #. module: base
 #: model:ir.module.module,description:base.module_theme_monglia
@@ -28557,12 +28745,12 @@ msgstr ""
 #. module: base
 #: model:res.currency,currency_subunit_label:base.MNT
 msgid "Mongo"
-msgstr ""
+msgstr "မွန်ဂို"
 
 #. module: base
 #: model:res.country,name:base.mn
 msgid "Mongolia"
-msgstr ""
+msgstr "မွန်ဂိုလီးယား"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_mn
@@ -28597,7 +28785,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_cron__interval_type__months
 msgid "Months"
-msgstr ""
+msgstr "လ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_company__font__montserrat
@@ -28699,12 +28887,12 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.mm
 msgid "Myanmar"
-msgstr ""
+msgstr "မြန်မာ"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_N
 msgid "N - ADMINISTRATIVE AND SUPPORT SERVICE ACTIVITIES"
-msgstr ""
+msgstr "N - စီမံခန့်ခွဲမှုနှင့် အထောက်အပံ့ဝန်ဆောင်မှုလုပ်ငန်းများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_us_payment_nacha
@@ -28789,7 +28977,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_tree
 msgid "Name"
-msgstr ""
+msgstr "အမည်"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_model_fields__currency_field
@@ -28818,7 +29006,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodeloverview
 msgid "Name:"
-msgstr ""
+msgstr "အမည် :"
 
 #. module: base
 #: model:res.country,name:base.na
@@ -29036,6 +29224,11 @@ msgid "Nigeria - Accounting Reports"
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_night_clubs
+msgid "Night Clubs"
+msgstr ""
+
+#. module: base
 #: model:res.country,name:base.nu
 msgid "Niue"
 msgstr ""
@@ -29149,11 +29342,11 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_mail_server__smtp_encryption__none
 msgid "None"
-msgstr ""
+msgstr "(None)မသတ်မှတ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_non_profit_organization
-msgid "Nonprofit Organization"
+msgid "Nonprofit organization"
 msgstr ""
 
 #. module: base
@@ -29165,7 +29358,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/res_bank.py:0
 msgid "Normal"
-msgstr ""
+msgstr "ပုံမှန်"
 
 #. module: base
 #: model:res.country,name:base.kp
@@ -29224,7 +29417,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_bank_form
 msgid "Note"
-msgstr ""
+msgstr "မှတ်စု"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__comment
@@ -29235,7 +29428,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_res_groups_privilege_form
 msgid "Notes"
-msgstr ""
+msgstr "မှတ်စုများ"
 
 #. module: base
 #: model:ir.module.module,description:base.module_theme_notes
@@ -29251,7 +29444,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__companies_count
 msgid "Number of Companies"
-msgstr ""
+msgstr "ကုမ္ပဏီ အရေအတွက်"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_users__accesses_count
@@ -29291,7 +29484,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_O
 msgid "O - PUBLIC ADMINISTRATION AND DEFENCE; COMPULSORY SOCIAL SECURITY"
-msgstr ""
+msgstr "O - အများပြည်သူအုပ်ချုပ်ရေးနှင့် ကာကွယ်ရေး၊ လူမှုဖူလုံရေးလုပ်ငန်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_auth_oauth
@@ -30497,7 +30690,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mail_bot
 msgid "OdooBot"
-msgstr ""
+msgstr "အိုဒူးဘော့"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mail_bot_hr
@@ -30512,7 +30705,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.demo_failures_dialog
 msgid "Ok"
-msgstr ""
+msgstr "အိုကေ"
 
 #. module: base
 #: model:res.country,name:base.om
@@ -30684,7 +30877,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_profile__speedscope_url
 msgid "Open"
-msgstr ""
+msgstr "ဖွင့်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_update
@@ -30798,7 +30991,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model__order
 msgid "Order"
-msgstr ""
+msgstr "အော်ဒါ"
 
 #. module: base
 #: model:res.currency,currency_subunit_label:base.DKK
@@ -31037,7 +31230,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__type__other
 msgid "Other"
-msgstr ""
+msgstr "အခြား"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_extra
@@ -31057,7 +31250,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_S
 msgid "Other Services"
-msgstr ""
+msgstr "အခြား ဝန်ဆောင်မှူ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_model_form
@@ -31124,7 +31317,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_microsoft_calendar
 msgid "Outlook Calendar"
-msgstr ""
+msgstr "Outlook ပြက္ခဒိန်"
 
 #. module: base
 #: model:ir.module.module,description:base.module_microsoft_outlook
@@ -31140,17 +31333,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_base_language_import__overwrite
 #: model:ir.model.fields,field_description:base.field_base_language_install__overwrite
 msgid "Overwrite Existing Terms"
-msgstr ""
+msgstr "လက်ရှိအသုံးအနှုန်းများကိုပါပြင်ရန်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_attachment_search
 msgid "Owner"
-msgstr ""
+msgstr "ပိုင်ရှင်"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_P
 msgid "P - EDUCATION"
-msgstr ""
+msgstr "P - ပညာရေးလုပ်ငန်း"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_report__report_type__qweb-pdf
@@ -31211,7 +31404,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_sale_margin
 msgid "POS - Sale Margin"
-msgstr ""
+msgstr "POS - အရောင်း မာဂျင်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_sale
@@ -31366,6 +31559,11 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_urban_piper_ubereats
 msgid "POS UrbanPiper - Uber Eats"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_pos_imin
+msgid "POS iMin"
 msgstr ""
 
 #. module: base
@@ -31675,7 +31873,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_actions_report__paperformat_id
 #: model:ir.ui.menu,name:base.paper_format_menuitem
 msgid "Paper Format"
-msgstr ""
+msgstr "စာရွက် ဖော်မက်"
 
 #. module: base
 #: model:ir.model,name:base.model_report_paperformat
@@ -31690,7 +31888,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__paperformat_id
 msgid "Paper format"
-msgstr ""
+msgstr "စာရွက် ဖော်မက်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.paperformat_view_form
@@ -31755,7 +31953,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_base_partner_merge_automatic_wizard__group_by_parent_id
 #: model:ir.model.fields,field_description:base.field_res_company__parent_id
 msgid "Parent Company"
-msgstr ""
+msgstr "မိခင် ကုမ္ပဏီ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_inherit__parent_field_id
@@ -31790,7 +31988,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_company__partner_id
 #: model_terms:ir.ui.view,arch_db:base.view_partner_address_form
 msgid "Partner"
-msgstr ""
+msgstr "မိတ်ဖက်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_partner_autocomplete
@@ -31834,7 +32032,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Partners"
-msgstr ""
+msgstr "ပါတနာများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_geolocalize
@@ -31971,7 +32169,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_payment
 msgid "Payment"
-msgstr ""
+msgstr "ငွေပေးချေမှု"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_payment
@@ -32096,7 +32294,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_payment_providers
 msgid "Payment Providers"
-msgstr ""
+msgstr "ပေးချေမှူ ဝန်ဆောင်သူများ"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_payment
@@ -32107,7 +32305,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_human_resources_payroll
 #: model:ir.module.module,shortdesc:base.module_hr_payroll
 msgid "Payroll"
-msgstr ""
+msgstr "လစာပေး"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_payroll_attendance
@@ -32272,7 +32470,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 #: model_terms:ir.ui.view,arch_db:base.view_users_simple_form
 msgid "Phone"
-msgstr ""
+msgstr "ဖုန်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_voip_ai
@@ -32395,7 +32593,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_human_resources_planning
 #: model:ir.module.module,shortdesc:base.module_planning
 msgid "Planning"
-msgstr ""
+msgstr "စီစဉ်ခြင်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_planning_hr_skills
@@ -32504,7 +32702,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_sales_point_of_sale
 #: model:ir.module.module,shortdesc:base.module_point_of_sale
 msgid "Point of Sale"
-msgstr ""
+msgstr "ပွိုင့်အော့ဖ်ဆေး"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_loyalty
@@ -32682,7 +32880,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "Preferences"
-msgstr ""
+msgstr "စိတ်ကြိုက် အပြင်အဆင်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence__prefix
@@ -32776,7 +32974,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_cron__priority
 #: model:ir.model.fields,field_description:base.field_ir_mail_server__sequence
 msgid "Priority"
-msgstr ""
+msgstr "ဉီးစားပေး"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_privacy_lookup
@@ -32927,7 +33125,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_services_project
 #: model:ir.module.module,shortdesc:base.module_project
 msgid "Project"
-msgstr ""
+msgstr "ပရောဂျက်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_project_account
@@ -33281,7 +33479,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_O
 msgid "Public Administration"
-msgstr ""
+msgstr "အုပ်ချုပ်ရေး လုံခြုံရေး"
 
 #. module: base
 #: model:res.groups,comment:base.group_public
@@ -33355,12 +33553,12 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_purchase
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Purchase"
-msgstr ""
+msgstr "အဝယ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_purchase_requisition
 msgid "Purchase Agreements"
-msgstr ""
+msgstr "အဝယ် သဘောတူညီချက်များ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_purchase_intrastat
@@ -33420,7 +33618,7 @@ msgstr ""
 #. module: base
 #: model:res.currency,currency_subunit_label:base.MMK
 msgid "Pya"
-msgstr ""
+msgstr "ပြား"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__code
@@ -33442,7 +33640,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_Q
 msgid "Q - HUMAN HEALTH AND SOCIAL WORK ACTIVITIES"
-msgstr ""
+msgstr "Q - လူသားကျန်းမာရေးနှင့် လူမှုဝန်ဆောင်မှုလုပ်ငန်းများ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_ui_view__type__qweb
@@ -33479,7 +33677,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_supply_chain_quality
 #: model:ir.module.module,shortdesc:base.module_quality_control
 msgid "Quality"
-msgstr ""
+msgstr "အရည်အသွေး"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_quality_control_picking_batch
@@ -33659,7 +33857,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_R
 msgid "R - ARTS, ENTERTAINMENT AND RECREATION"
-msgstr ""
+msgstr "R - အနုပညာ၊ ဖျော်ဖြေရေးနှင့် အားကစားလုပ်ငန်း"
 
 #. module: base
 #: model:res.country,vat_label:base.mx
@@ -33733,7 +33931,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_model_access__perm_read
 #: model_terms:ir.ui.view,arch_db:base.ir_access_view_search
 msgid "Read Access"
-msgstr ""
+msgstr "ဖတ်ခွင့်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__readonly
@@ -33749,7 +33947,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_L
 msgid "Real Estate"
-msgstr ""
+msgstr "အိမ်ခြံမြေ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_real_estate
@@ -33838,7 +34036,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_human_resources_recruitment
 #: model:ir.module.module,shortdesc:base.module_hr_recruitment
 msgid "Recruitment"
-msgstr ""
+msgstr "ဝန်ထမ်းခန့်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_recruitment_sms
@@ -33893,7 +34091,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_users__ref
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Reference"
-msgstr ""
+msgstr "မှီငြမ်းချက်"
 
 #. module: base
 #. odoo-python
@@ -33904,13 +34102,13 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_human_resources_referrals
 msgid "Referrals"
-msgstr ""
+msgstr "အညွန်းများ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__parent_id
 #: model:ir.model.fields,field_description:base.field_res_users__parent_id
 msgid "Related Company"
-msgstr ""
+msgstr "သက်ဆိုင်သော  ကုမ္ပဏီ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__related_field_id
@@ -33930,7 +34128,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__partner_id
 msgid "Related Partner"
-msgstr ""
+msgstr "သက်ဆိုင်သော ပါတနာ"
 
 #. module: base
 #. odoo-python
@@ -33978,7 +34176,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron_progress__remaining
 msgid "Remaining"
-msgstr ""
+msgstr "ပေးရန်ကျန်"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_human_resources_remote_work
@@ -33994,7 +34192,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_asset__directive__remove
 msgid "Remove"
-msgstr ""
+msgstr "ဖယ်ရှား"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
@@ -34021,7 +34219,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_renting
 msgid "Rental"
-msgstr ""
+msgstr "အငှား"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_mrp_renting
@@ -34056,7 +34254,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_repair
 msgid "Repairs"
-msgstr ""
+msgstr "ပစ္စည်းပြင်"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_cron__interval_number
@@ -34139,7 +34337,7 @@ msgstr ""
 #: model_terms:res.partner,website_description:base.res_partner_2
 #: model_terms:res.partner,website_description:base.res_partner_4
 msgid "Reporting"
-msgstr ""
+msgstr "ရီပို့ တင်ပြခြင်း"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_ar_reports
@@ -34153,7 +34351,7 @@ msgstr ""
 #: model:ir.ui.menu,name:base.menu_ir_action_report
 #: model:ir.ui.menu,name:base.reports_menuitem
 msgid "Reports"
-msgstr ""
+msgstr "အစီရင်ခံစာများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_kr
@@ -34174,7 +34372,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__required
 #: model_terms:ir.ui.view,arch_db:base.view_model_fields_search
 msgid "Required"
-msgstr ""
+msgstr "လိုအပ်သည်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__res_users_settings_ids
@@ -34225,7 +34423,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_exports__resource
 #: model:ir.module.module,shortdesc:base.module_resource
 msgid "Resource"
-msgstr ""
+msgstr "အရင်းအမြစ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment__res_field
@@ -34255,7 +34453,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_restaurant
 msgid "Restaurant"
-msgstr ""
+msgstr "စားသောက်ဆိုင်"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_restaurant
@@ -34281,7 +34479,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_retail
 #: model:ir.module.category,name:base.module_category_theme_retail
 msgid "Retail"
-msgstr ""
+msgstr "လက်လီရောင်းချခြင်း"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_server_action_history_wizard__revision
@@ -34320,12 +34518,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_paperformat__margin_right
 msgid "Right Margin (mm)"
-msgstr ""
+msgstr "ညာဘက် မာဂျင် (mm)"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_lang__direction__rtl
 msgid "Right-to-Left"
-msgstr ""
+msgstr "ညာ မှ ဘယ်"
 
 #. module: base
 #: model:res.currency,currency_unit_label:base.MYR
@@ -34353,11 +34551,6 @@ msgid "Role / Administrator"
 msgstr ""
 
 #. module: base
-#: model:res.groups,name:base.group_user
-msgid "Role / Member"
-msgstr ""
-
-#. module: base
 #: model:res.groups,name:base.group_portal
 msgid "Role / Portal"
 msgstr ""
@@ -34365,6 +34558,11 @@ msgstr ""
 #. module: base
 #: model:res.groups,name:base.group_public
 msgid "Role / Public"
+msgstr ""
+
+#. module: base
+#: model:res.groups,name:base.group_user
+msgid "Role / User"
 msgstr ""
 
 #. module: base
@@ -34425,7 +34623,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_productivity_room
 msgid "Room"
-msgstr ""
+msgstr "အခန်း"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__root_id
@@ -34472,7 +34670,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_rule
 msgid "Rule"
-msgstr ""
+msgstr "ရူးလ်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_form
@@ -34557,7 +34755,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_S
 msgid "S - OTHER SERVICE ACTIVITIES"
-msgstr ""
+msgstr "S - အခြားဝန်ဆောင်မှုလုပ်ငန်းများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_saft_import
@@ -34567,7 +34765,7 @@ msgstr ""
 #. module: base
 #: model:res.country.group,name:base.sepa_zone
 msgid "SEPA Countries"
-msgstr ""
+msgstr "SEPA နိုင်ငံများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_iso20022
@@ -34762,7 +34960,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_localizations_sale
 msgid "Sale"
-msgstr ""
+msgstr "အရောင်း"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_test_sale_purchase_edi_ubl
@@ -34787,7 +34985,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_commission_margin
 msgid "Sale Commission: Margin"
-msgstr ""
+msgstr "အရောင်း ကော်မရှင်: မာဂျင်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_commission_subscription
@@ -34827,7 +35025,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_mrp_margin
 msgid "Sale Mrp Margin"
-msgstr ""
+msgstr "အရောင်း MRP မာဂျင်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_planning
@@ -34872,7 +35070,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_stock_margin
 msgid "Sale Stock Margin"
-msgstr ""
+msgstr "အရောင်း စတော့ မာဂျင်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_stock_product_expiry
@@ -34937,12 +35135,12 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_sale_management
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Sales"
-msgstr ""
+msgstr "အရောင်းများ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Sales & Purchase"
-msgstr ""
+msgstr "အရောင်း နှင့် အဝယ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_project
@@ -34962,7 +35160,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_expense_margin
 msgid "Sales Expense Margin"
-msgstr ""
+msgstr "အရောင်း အသုံးစရိတ် မာဂျင်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_pdf_quote_builder
@@ -34973,7 +35171,7 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_sales_team
 #: model:ir.module.module,summary:base.module_sales_team
 msgid "Sales Teams"
-msgstr ""
+msgstr "အရောင်းအဖွဲ့များ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_timesheet
@@ -35016,7 +35214,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_users__user_id
 #: model_terms:ir.ui.view,arch_db:base.view_res_partner_filter
 msgid "Salesperson"
-msgstr ""
+msgstr "အရောင်းသမား"
 
 #. module: base
 #: model:res.country,name:base.ws
@@ -35088,7 +35286,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_lang__week_start__6
 msgid "Saturday"
-msgstr ""
+msgstr "စနေ"
 
 #. module: base
 #: model:res.country,name:base.sa
@@ -35128,6 +35326,11 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_sa_pos
 msgid "Saudi Arabia - Point of Sale"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_sa_withholding_tax
+msgid "Saudi Arabia - Withholding Tax"
 msgstr ""
 
 #. module: base
@@ -35207,7 +35410,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_M
 msgid "Scientific"
-msgstr ""
+msgstr "သိပ္ပံ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users_apikeys__scope
@@ -35223,7 +35426,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base.selection__ir_ui_view__type__search
 #: model_terms:ir.ui.view,arch_db:base.view_view_search
 msgid "Search"
-msgstr ""
+msgstr "ရှာဖွေ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.config_wizard_step_view_search
@@ -35280,7 +35483,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__secondary_color
 msgid "Secondary Color"
-msgstr ""
+msgstr "ဒုတိယ အရောင်"
 
 #. module: base
 #: model:ir.ui.menu,name:base.menu_security
@@ -35454,7 +35657,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_bank__allow_out_payment
 msgid "Send Money"
-msgstr ""
+msgstr "ငွေလွှဲ"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sms_twilio
@@ -35673,7 +35876,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_sequence_search
 #: model_terms:ir.ui.view,arch_db:base.view_view_tree
 msgid "Sequence"
-msgstr ""
+msgstr "Sequence"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence__code
@@ -35784,7 +35987,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_service
 msgid "Service"
-msgstr ""
+msgstr "ဝန်ဆောင်မှူ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_timesheet_margin
@@ -35801,13 +36004,13 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_theme_services
 #: model:res.partner.category,name:base.res_partner_category_11
 msgid "Services"
-msgstr ""
+msgstr "ဝန်ဆောင်မှူများ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_profile__session
 #: model_terms:ir.ui.view,arch_db:base.ir_profile_view_search
 msgid "Session"
-msgstr ""
+msgstr "ဆက်ရှင်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_device__session_identifier
@@ -35872,7 +36075,7 @@ msgstr ""
 #: model:ir.ui.menu,name:base.menu_administration
 #: model_terms:ir.ui.view,arch_db:base.res_config_settings_view_form
 msgid "Settings"
-msgstr ""
+msgstr "အပြင်အဆင်များ"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_settle_due
@@ -36093,7 +36296,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__singapore
 #: model:res.country,name:base.sg
 msgid "Singapore"
-msgstr ""
+msgstr "စင်ကာပူ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_sg
@@ -36118,7 +36321,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__size
 msgid "Size"
-msgstr ""
+msgstr "အရွယ်အစား"
 
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_ir_model_fields_size_gt_zero
@@ -36377,7 +36580,7 @@ msgstr ""
 #. module: base
 #: model:res.country.group,name:base.south_america
 msgid "South America"
-msgstr ""
+msgstr "တောင်အမေရိက"
 
 #. module: base
 #: model:res.country,name:base.gs
@@ -36392,6 +36595,11 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.ss
 msgid "South Sudan"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_spa_resort
+msgid "Spa Resort"
 msgstr ""
 
 #. module: base
@@ -36795,22 +37003,22 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_res_bank_form
 msgid "State"
-msgstr ""
+msgstr "ပြည်နယ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country_state__code
 msgid "State Code"
-msgstr ""
+msgstr "ပြည်နယ် ကုဒ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country_state__name
 msgid "State Name"
-msgstr ""
+msgstr "ပြည်နယ်အမည်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__state_required
 msgid "State Required"
-msgstr ""
+msgstr "ပြည်နယ် လိုအပ်သည်"
 
 #. module: base
 #: model:res.country,name:base.ps
@@ -36836,7 +37044,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_module_module_exclusion__state
 #: model_terms:ir.ui.view,arch_db:base.view_module_filter
 msgid "Status"
-msgstr ""
+msgstr "အခြေအနေ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence__number_increment
@@ -36981,7 +37189,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__street
 #: model:ir.model.fields,field_description:base.field_res_users__street
 msgid "Street"
-msgstr ""
+msgstr "လမ်း"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_company_form
@@ -36989,7 +37197,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_res_bank_form
 msgid "Street 2..."
-msgstr ""
+msgstr "လမ်း ၂..."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_company_form
@@ -36997,7 +37205,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_res_bank_form
 msgid "Street..."
-msgstr ""
+msgstr "လမ်း..."
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_bank__street2
@@ -37070,7 +37278,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_sales_subscriptions
 #: model:ir.module.module,shortdesc:base.module_sale_subscription
 msgid "Subscriptions"
-msgstr ""
+msgstr "ဝန်ဆောင်ခြင်းများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_subscription_partnership
@@ -37110,7 +37318,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_lang__week_start__7
 msgid "Sunday"
-msgstr ""
+msgstr "တနင်္ဂနွေ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_client__params
@@ -37157,7 +37365,7 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_survey
 #: model:ir.module.module,summary:base.module_hr_recruitment_survey
 msgid "Surveys"
-msgstr ""
+msgstr "စစ်တမ်းများ"
 
 #. module: base
 #: model:res.country,name:base.sj
@@ -37177,6 +37385,11 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_se_reports
 msgid "Sweden - Accounting Reports"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_se_returns
+msgid "Sweden - Accounting Returns"
 msgstr ""
 
 #. module: base
@@ -37207,12 +37420,12 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.language_install_view_form_lang_switch
 msgid "Switch to"
-msgstr ""
+msgstr "ဘာသာစကား"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.language_install_view_form_lang_switch
 msgid "Switch to language"
-msgstr ""
+msgstr "ဘာသာစကား ပြောင်းပါ"
 
 #. module: base
 #: model:res.country,name:base.ch
@@ -37242,12 +37455,12 @@ msgstr ""
 #. module: base
 #: model:res.country.group,name:base.ch_and_li
 msgid "Switzerland and Liechtenstein"
-msgstr ""
+msgstr "ဆွစ်ဇာလန်နှင့် လစ်ချ်တင်စတိန်း"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_currency__symbol
 msgid "Symbol"
-msgstr ""
+msgstr "သင်္ကေတ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_currency__position
@@ -37302,7 +37515,7 @@ msgstr ""
 msgid ""
 "T - ACTIVITIES OF HOUSEHOLDS AS EMPLOYERS; UNDIFFERENTIATED GOODS- AND "
 "SERVICES-PRODUCING ACTIVITIES OF HOUSEHOLDS FOR OWN USE"
-msgstr ""
+msgstr "T - အိမ်ထောင်စုများ၏ အလုပ်ရှင်အဖြစ်လုပ်ကိုင်မှုများ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__base_language_export__format__tgz
@@ -37352,13 +37565,13 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_partner_filter
 msgid "Tag"
-msgstr ""
+msgstr "တက်ဂ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__category_id
 #: model:ir.model.fields,field_description:base.field_res_users__category_id
 msgid "Tags"
-msgstr ""
+msgstr "တက်(ဒ်)များ"
 
 #. module: base
 #: model:res.country,name:base.tw
@@ -37439,7 +37652,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_asset__target
 msgid "Target"
-msgstr ""
+msgstr "တားဂက်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__crud_model_name
@@ -37462,7 +37675,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_timesheet
 msgid "Task Logs"
-msgstr ""
+msgstr "တာဝန် မှတ်တမ်းများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_tattoo_shop
@@ -37476,7 +37689,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__vat
 #: model:ir.model.fields,field_description:base.field_res_users__vat
 msgid "Tax ID"
-msgstr ""
+msgstr "အခွန် အိုင်ဒီ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__vat_label
@@ -37828,7 +38041,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_report__report_type__qweb-text
 msgid "Text"
-msgstr ""
+msgstr "စာသား"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_groups_privilege__placeholder
@@ -37843,9 +38056,14 @@ msgid "Text your Contacts on WhatsApp"
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_textile_manufacturing
+msgid "Textile Manufacturing"
+msgstr ""
+
+#. module: base
 #: model:res.country,name:base.th
 msgid "Thailand"
-msgstr ""
+msgstr "ထိုင်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_th
@@ -37953,7 +38171,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_lang_url_code_uniq
 msgid "The URL code of the language must be unique!"
-msgstr ""
+msgstr "ဘာသာစကား၏ URL ကုဒ်သည် တုနှိုင်းမဲ့ ဖြစ်သင့်သည်!"
 
 #. module: base
 #. odoo-python
@@ -37996,7 +38214,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_lang_code_uniq
 msgid "The code of the language must be unique!"
-msgstr ""
+msgstr "ဘာသာစကား၏ ကုဒ် သည် တုနှိုင်းမဲ့ ဖြစ်သင့်သည်!"
 
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_country_state_name_code_uniq
@@ -38204,7 +38422,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/res_lang.py:0
 msgid "The language %s is not installed."
-msgstr ""
+msgstr "%s ဘာသာစကား ကို မသွင်းခဲ့ပါ။"
 
 #. module: base
 #. odoo-python
@@ -38301,7 +38519,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_lang_name_uniq
 msgid "The name of the language must be unique!"
-msgstr ""
+msgstr "ဘာသာစကား၏ အမည်သည် တုနှိုင်းမဲ့ ဖြစ်သင့်သည်!"
 
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_ir_module_module_name_uniq
@@ -38598,6 +38816,11 @@ msgstr ""
 #: model:ir.ui.menu,name:base.menu_theme_store
 #: model:ir.ui.menu,name:base.theme_store
 msgid "Theme Store"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_test_themes
+msgid "Themes Testing Module"
 msgstr ""
 
 #. module: base
@@ -39129,6 +39352,11 @@ msgid "This module is used for Online bank synchronization."
 msgstr ""
 
 #. module: base
+#: model:ir.module.module,summary:base.module_l10n_dk_nemhandel
+msgid "This module is used to send/receive documents with Nemhandel"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,summary:base.module_account_peppol
 msgid "This module is used to send/receive documents with PEPPOL"
 msgstr ""
@@ -39148,6 +39376,17 @@ msgstr ""
 msgid ""
 "This module lets you use the full power of certifications within your "
 "courses."
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,description:base.module_test_themes
+msgid ""
+"This module will help you to quickly test all the Odoo\n"
+"    themes without having to switch from one theme to another on your "
+"website.\n"
+"    It will simply create a new website for each Odoo theme and install "
+"every\n"
+"    theme on one website."
 msgstr ""
 
 #. module: base
@@ -39185,12 +39424,17 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
 msgid "Thousands Separator"
+msgstr "ထောင်ဂဏန်း ပိုင်းခြားချက်"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_thrift_store
+msgid "Thrift Store"
 msgstr ""
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_lang__week_start__4
 msgid "Thursday"
-msgstr ""
+msgstr "ကြာသပတေး"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_helpdesk_livechat
@@ -39210,13 +39454,13 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__time_format
 msgid "Time Format"
-msgstr ""
+msgstr "အချိန် ပုံစံ"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_human_resources_time_off
 #: model:ir.module.module,shortdesc:base.module_hr_holidays
 msgid "Time Off"
-msgstr ""
+msgstr "နားခွင့်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_payroll_holidays
@@ -39242,7 +39486,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_timer
 msgid "Timer"
-msgstr ""
+msgstr "အချိန်မှတ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_timer
@@ -39268,7 +39512,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_services_timesheets
 #: model:ir.module.module,shortdesc:base.module_timesheet_grid
 msgid "Timesheets"
-msgstr ""
+msgstr "အချိန်ဇယားများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_timesheet_grid_holidays
@@ -39284,7 +39528,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__tz
 #: model:ir.model.fields,field_description:base.field_res_users__tz
 msgid "Timezone"
-msgstr ""
+msgstr "အချိန်ဇုန်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner__tz_offset
@@ -39305,14 +39549,14 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence_date_range__date_to
 msgid "To"
-msgstr ""
+msgstr "အထိ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_todo__state__open
 #: model:ir.model.fields.selection,name:base.selection__res_users_deletion__state__todo
 #: model_terms:ir.ui.view,arch_db:base.config_wizard_step_view_search
 msgid "To Do"
-msgstr ""
+msgstr "လုပ်ရန်"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_module_module__state__to_install
@@ -39352,7 +39596,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_productivity_to-do
 #: model:ir.module.module,shortdesc:base.module_project_todo
 msgid "To-Do"
-msgstr ""
+msgstr "လုပ်ရန်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_actions_todo_tree
@@ -39419,7 +39663,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_paperformat__margin_top
 msgid "Top Margin (mm)"
-msgstr ""
+msgstr "အပေါ်ဘက် မာဂျင် (mm)"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_search
@@ -39555,7 +39799,7 @@ msgstr ""
 #. module: base
 #: model:ir.ui.menu,name:base.menu_translation
 msgid "Translations"
-msgstr ""
+msgstr "ဘာသာပြန်ဆိုမှူများ"
 
 #. module: base
 #: model:ir.module.module,description:base.module_stock_fleet
@@ -39565,7 +39809,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_H
 msgid "Transportation/Logistics"
-msgstr ""
+msgstr "သွားလာရေး/ပို့ဆောင်ရေး"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_theme_aviato
@@ -39601,7 +39845,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_lang__week_start__2
 msgid "Tuesday"
-msgstr ""
+msgstr "အင်္ဂါ"
 
 #. module: base
 #: model:res.currency,currency_unit_label:base.MNT
@@ -39685,7 +39929,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_attachment_search
 #: model_terms:ir.ui.view,arch_db:base.view_view_search
 msgid "Type"
-msgstr ""
+msgstr "အမျိုးအစား"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_server__state
@@ -39759,17 +40003,17 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_U
 msgid "U - ACTIVITIES OF EXTRATERRITORIAL ORGANISATIONS AND BODIES"
-msgstr ""
+msgstr "U - အပြည်ပြည်ဆိုင်ရာအဖွဲ့အစည်းများနှင့် လုပ်ငန်းများ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__uct
 msgid "UCT"
-msgstr ""
+msgstr "ယူစီတီ"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_localizations_uk
 msgid "UK"
-msgstr ""
+msgstr "ယူကေ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_uk_reports
@@ -39818,12 +40062,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_attachment_search
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "URL"
-msgstr ""
+msgstr "ယူအာအလ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__url_code
 msgid "URL Code"
-msgstr ""
+msgstr "ယူအာအလ် ကုဒ်"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_server__webhook_url
@@ -39914,7 +40158,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_partner__tz__utc
 msgid "UTC"
-msgstr ""
+msgstr "ယူတီစီ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_data_merge_utm
@@ -39973,7 +40217,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.ua
 msgid "Ukraine"
-msgstr ""
+msgstr "ယူကရိန်း"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ua
@@ -40045,7 +40289,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.module_form
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
 msgid "Uninstall"
-msgstr ""
+msgstr "ဖြုတ်"
 
 #. module: base
 #. odoo-python
@@ -40133,7 +40377,7 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.us
 msgid "United States"
-msgstr ""
+msgstr "ယူနိုက်တက် စတိတ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_us_account
@@ -40192,7 +40436,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base.selection__ir_module_module_dependency__state__unknown
 #: model:ir.model.fields.selection,name:base.selection__ir_module_module_exclusion__state__unknown
 msgid "Unknown"
-msgstr ""
+msgstr "မသိ"
 
 #. module: base
 #. odoo-python
@@ -40283,14 +40527,14 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_model_data_search
 msgid "Updatable"
-msgstr ""
+msgstr "အပ်ဒိတ်နိုင်သည်"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_server__evaluation_type__value
 #: model_terms:ir.ui.view,arch_db:base.res_lang_tree
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_update
 msgid "Update"
-msgstr ""
+msgstr "အပ်ဒိတ်"
 
 #. module: base
 #. odoo-python
@@ -40301,17 +40545,17 @@ msgstr ""
 #. module: base
 #: model:ir.ui.menu,name:base.menu_view_base_module_update
 msgid "Update Apps List"
-msgstr ""
+msgstr "အက်ပ်စာရင်း အပ်ဒိတ်"
 
 #. module: base
 #: model:ir.model,name:base.model_base_module_update
 msgid "Update Module"
-msgstr ""
+msgstr "မော်ဂျူးအပ်ဒိတ်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_update
 msgid "Update Module List"
-msgstr ""
+msgstr "မော်ဂျူးစာရင်း အပ်ဒိတ်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
@@ -40321,20 +40565,20 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_server__state__object_write
 msgid "Update Record"
-msgstr ""
+msgstr "ရက်ကော့ အပ်ဒိတ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__update_related_model_id
 #: model:ir.model.fields,field_description:base.field_ir_cron__update_related_model_id
 msgid "Update Related Model"
-msgstr ""
+msgstr "သက်ဆိုင်သော မော်ဒယ် အပ်ဒိတ်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.module_form
 #: model_terms:ir.ui.view,arch_db:base.module_tree
 #: model_terms:ir.ui.view,arch_db:base.module_view_kanban
 msgid "Upgrade"
-msgstr ""
+msgstr "အပ်ဂရိတ်"
 
 #. module: base
 #: model:ir.model,name:base.model_base_module_upgrade
@@ -40350,7 +40594,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment__url
 msgid "Url"
-msgstr ""
+msgstr "ယူအာအယ်"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_country__image_url
@@ -40456,7 +40700,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_paperformat__css_margins
 msgid "Use css margins"
-msgstr ""
+msgstr "css မာဂျင် သုံး"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_loyalty
@@ -40570,12 +40814,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_users_apikeys__user_id
 #: model:ir.model.fields,field_description:base.field_res_users_deletion__user_id
 #: model:ir.model.fields,field_description:base.field_res_users_settings__user_id
+#: model:ir.model.fields.selection,name:base.selection__res_users__role__group_user
 #: model_terms:ir.ui.view,arch_db:base.ir_cron_view_search
 #: model_terms:ir.ui.view,arch_db:base.ir_default_search_view
 #: model_terms:ir.ui.view,arch_db:base.ir_filters_view_search
 #: model_terms:ir.ui.view,arch_db:base.view_users_search
 msgid "User"
-msgstr ""
+msgstr "အသုံးပြုသူ"
 
 #. module: base
 #. odoo-python
@@ -40588,7 +40833,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:base.action_user_device
 #: model:ir.ui.menu,name:base.menu_action_user_device
 msgid "User Devices"
-msgstr ""
+msgstr "ဝင်ရောက်ထားသော စက်များ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users_deletion__user_id_int
@@ -40613,7 +40858,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__device_ids
 msgid "User devices"
-msgstr ""
+msgstr "ဝင်ရောက်ထားသော စက်များ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users__log_ids
@@ -40655,7 +40900,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:base.selection__ir_mail_server__smtp_authentication__login
 #: model_terms:ir.ui.view,arch_db:base.ir_mail_server_form
 msgid "Username"
-msgstr ""
+msgstr "အသုံးပြုသူအမည်"
 
 #. module: base
 #. odoo-python
@@ -40674,12 +40919,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_users_simple_form
 #: model_terms:ir.ui.view,arch_db:base.view_users_tree
 msgid "Users"
-msgstr ""
+msgstr "အသုံးပြုသူများ"
 
 #. module: base
 #: model:ir.ui.menu,name:base.menu_users
 msgid "Users & Companies"
-msgstr ""
+msgstr "အသုံးပြုသူများ နှင့် ကုမ္ပဏီများ"
 
 #. module: base
 #: model:ir.model,name:base.model_res_users_apikeys
@@ -40787,7 +41032,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_cron__value
 #: model:ir.model.fields,field_description:base.field_ir_model_fields_selection__value
 msgid "Value"
-msgstr ""
+msgstr "တန်ဖိုး"
 
 #. module: base
 #. odoo-python
@@ -40842,7 +41087,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.category,name:base.res_partner_category_0
 msgid "Vendor"
-msgstr ""
+msgstr "ရောင်းချသူ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_3way_match
@@ -40852,7 +41097,7 @@ msgstr ""
 #. module: base
 #: model:ir.actions.act_window,name:base.action_partner_supplier_form
 msgid "Vendors"
-msgstr ""
+msgstr "ရောင်းချသူများ"
 
 #. module: base
 #: model:res.country,name:base.ve
@@ -40868,6 +41113,11 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/ir_qweb_fields.py:0
 msgid "Vertical bar"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_veterinary_clinic
+msgid "Veterinary Clinic"
 msgstr ""
 
 #. module: base
@@ -40896,7 +41146,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_reset_view_arch_wizard__view_id
 #: model_terms:ir.ui.view,arch_db:base.view_view_search
 msgid "View"
-msgstr ""
+msgstr "ဗျူး"
 
 #. module: base
 #. odoo-python
@@ -40928,7 +41178,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_ui_view__name
 #: model:ir.model.fields,field_description:base.field_reset_view_arch_wizard__view_name
 msgid "View Name"
-msgstr ""
+msgstr "ဗျူးအမည်"
 
 #. module: base
 #. odoo-python
@@ -40945,7 +41195,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_actions_act_window_view__view_mode
 #: model:ir.model.fields,field_description:base.field_ir_ui_view__type
 msgid "View Type"
-msgstr ""
+msgstr "ဗျူးအမျိုးအစား"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account_reports
@@ -40986,7 +41236,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_view_tree
 #: model_terms:ir.ui.view,arch_db:base.view_window_action_form
 msgid "Views"
-msgstr ""
+msgstr "ဗျူးများ"
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_ui_view
@@ -41081,7 +41331,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_actions_server__warning
 #: model:ir.model.fields,field_description:base.field_ir_cron__warning
 msgid "Warning"
-msgstr ""
+msgstr "❗သတိပေးချက်"
 
 #. module: base
 #. odoo-python
@@ -41098,7 +41348,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_E
 msgid "Water supply"
-msgstr ""
+msgstr "ရေသန့် နှင့် ရေပေးဝေရေး"
 
 #. module: base
 #: model:res.partner,website_short_description:base.res_partner_18
@@ -41213,7 +41463,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_address_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Website"
-msgstr ""
+msgstr "ဝဘ်ဆိုဒ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_appointment_crm
@@ -41370,12 +41620,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_lang__week_start__3
 msgid "Wednesday"
-msgstr ""
+msgstr "ဗုဒ္ဓဟူး"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_cron__interval_type__weeks
 msgid "Weeks"
-msgstr ""
+msgstr "ရက်သတ္တပါတ်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_wellness_practitioner
@@ -41565,7 +41815,7 @@ msgstr ""
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_G
 msgid "Wholesale/Retail"
-msgstr ""
+msgstr "လက်လီ/လက်ကား"
 
 #. module: base
 #. odoo-python
@@ -41632,7 +41882,7 @@ msgstr ""
 #: model:res.currency,currency_unit_label:base.KPW
 #: model:res.currency,currency_unit_label:base.KRW
 msgid "Won"
-msgstr ""
+msgstr "အောင်မြင်"
 
 #. module: base
 #: model:res.partner,website_short_description:base.res_partner_1
@@ -41644,7 +41894,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_work_entry
 msgid "Work Entries"
-msgstr ""
+msgstr "အလုပ်မှတ်တမ်းများ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_work_entry_attendance
@@ -41696,7 +41946,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_ir_model_access__perm_write
 #: model_terms:ir.ui.view,arch_db:base.ir_access_view_search
 msgid "Write Access"
-msgstr ""
+msgstr "ပြင်ခွင့်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_relation__write_date
@@ -42111,7 +42361,7 @@ msgstr ""
 #: model:res.currency,currency_unit_label:base.CNH
 #: model:res.currency,currency_unit_label:base.CNY
 msgid "Yuan"
-msgstr ""
+msgstr "ယွမ်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_company_form
@@ -42119,7 +42369,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_res_bank_form
 msgid "ZIP"
-msgstr ""
+msgstr "စာတိုက် သင်္ကေတ"
 
 #. module: base
 #: model:res.country,name:base.zm
@@ -42162,12 +42412,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner__zip
 #: model:ir.model.fields,field_description:base.field_res_users__zip
 msgid "Zip"
-msgstr ""
+msgstr "စာတိုက် သင်္ကေတ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__zip_required
 msgid "Zip Required"
-msgstr ""
+msgstr "စာတိုက်ကုဒ် လိုအပ်သည်"
 
 #. module: base
 #: model:res.currency,currency_unit_label:base.PLN
@@ -42183,7 +42433,7 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_account
 #: model:ir.module.category,name:base.module_category_services_payroll_account
 msgid "account"
-msgstr ""
+msgstr "အကောင့်"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_qr_code_emv
@@ -42354,50 +42604,50 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
 msgid "e.g. Follow-up"
-msgstr ""
+msgstr "ဉပမာ- Follow - up"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
 msgid "e.g. French"
-msgstr ""
+msgstr "ဉပမာ- ပြင်သစ်"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form
 #: model_terms:ir.ui.view,arch_db:base.view_users_simple_form
 msgid "e.g. John Doe"
-msgstr ""
+msgstr "ဉပမာ- ဂျွန်ဒိုး"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_simple_form
 msgid "e.g. Lumber Inc"
-msgstr ""
+msgstr "ဉပမာ- Lumber Inc"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_company_form
 msgid "e.g. My Company"
-msgstr ""
+msgstr "ဉပမာ- My Company"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_mail_server_form
 msgid "e.g. My Outgoing Server"
-msgstr ""
+msgstr "ဉပမာ- My Outgoing Server"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_simple_form
 msgid "e.g. Sales Director"
-msgstr ""
+msgstr "ဉပမာ အရောင်း ဒါရိုက်တာ"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_mail_server_form
 msgid "e.g. email@domain.com, domain.com"
-msgstr ""
+msgstr "ဉပမာ- email@domain.com, domain.com"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_import_language
 msgid "e.g. en_US"
-msgstr ""
+msgstr "ဉပမာ- en_US"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
@@ -42409,7 +42659,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_partner_address_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "e.g. https://www.odoo.com"
-msgstr ""
+msgstr "ဉပမာ- https://www.odoo.com"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale
@@ -42455,12 +42705,17 @@ msgstr ""
 #: model:ir.module.category,name:base.module_category_website_elearning
 #: model:ir.module.module,shortdesc:base.module_website_slides
 msgid "eLearning"
+msgstr "သင်ကြားရေး"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_elearning_platform
+msgid "eLearning Platform"
 msgstr ""
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_services_expenses
 msgid "expenses"
-msgstr ""
+msgstr "အသုံးစရိတ်များ"
 
 #. module: base
 #. odoo-python
@@ -42505,6 +42760,8 @@ msgid ""
 "                            Users can choose their favorite language in "
 "their preferences."
 msgstr ""
+"ကိုအောင်မြင်စွာသွင်းပြီးပါပြီ။\n"
+"                             အသုံးပြုသူသည် သူ့စိတ်ကြိုက်ဘာသာစကားကို အပြင်အဆင်တွင်ရွေးနိုင်သည်။"
 
 #. module: base
 #. odoo-python
@@ -42520,6 +42777,11 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_server__value_field_to_show__html_value
 msgid "html_value"
+msgstr ""
+
+#. module: base
+#: model:ir.module.module,summary:base.module_pos_imin
+msgid "iMin ePOS Printers in PoS"
 msgstr ""
 
 #. module: base
@@ -42609,13 +42871,13 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/ir_qweb_fields.py:0
 msgid "month"
-msgstr ""
+msgstr "လ"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/ir_fields.py:0
 msgid "name"
-msgstr ""
+msgstr "အမည်"
 
 #. module: base
 #. odoo-python
@@ -42695,12 +42957,12 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__properties
 msgid "properties"
-msgstr ""
+msgstr "ဝိသေသများ"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__properties_definition
 msgid "properties_definition"
-msgstr ""
+msgstr "ဝိသေသများ သတ်မှတ်ချက်"
 
 #. module: base
 #. odoo-python
@@ -42839,13 +43101,13 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_model_fields__ttype__text
 msgid "text"
-msgstr ""
+msgstr "စာသား"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/ir_fields.py:0
 msgid "true"
-msgstr ""
+msgstr "မှန်"
 
 #. module: base
 #. odoo-python
@@ -42861,7 +43123,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__ir_actions_server__value_field_to_show__value
 msgid "value"
-msgstr ""
+msgstr "တန်ဖိုး"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_studio_ai_fields
@@ -42882,7 +43144,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/ir_qweb_fields.py:0
 msgid "week"
-msgstr ""
+msgstr "ရက်သတ္တပါတ်"
 
 #. module: base
 #. odoo-python
@@ -42894,13 +43156,13 @@ msgstr ""
 #. odoo-python
 #: code:addons/base/models/ir_rule.py:0
 msgid "write"
-msgstr ""
+msgstr "ရေး"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/ir_qweb_fields.py:0
 msgid "year"
-msgstr ""
+msgstr "နှစ်"
 
 #. module: base
 #. odoo-python

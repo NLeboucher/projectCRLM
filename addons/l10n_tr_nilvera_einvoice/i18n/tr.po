@@ -4,31 +4,47 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~18.4+e\n"
+"Project-Id-Version: Odoo Server 19.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-08 08:47+0000\n"
-"PO-Revision-Date: 2025-09-08 08:47+0000\n"
+"POT-Creation-Date: 2025-12-19 19:11+0000\n"
+"PO-Revision-Date: 2025-10-15 12:44+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
 #. module: l10n_tr_nilvera_einvoice
+#: model:res.partner.category,name:l10n_tr_nilvera_einvoice.partner_demo_company_tr_tag
+msgid "0-123456780100019"
+msgstr ""
+
+#. module: l10n_tr_nilvera_einvoice
+#: model:res.partner.category,name:l10n_tr_nilvera_einvoice.l10n_tr_res_partner_1_tag
+msgid "0-123456780200020"
+msgstr ""
+
+#. module: l10n_tr_nilvera_einvoice
+#: model:res.partner.category,name:l10n_tr_nilvera_einvoice.l10n_tr_res_partner_2_tag
+msgid "0-424519348000017"
+msgstr ""
+
+#. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_aboneno
 msgid "ABONENO"
-msgstr "ABONENO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_aracikurumetiket
 msgid "ARACIKURUMETIKET"
-msgstr "ARACIKURUMETIKET"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_aracikurumvkn
 msgid "ARACIKURUMVKN"
-msgstr "ARACIKURUMVKN"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:ir.model,name:l10n_tr_nilvera_einvoice.model_account_move_send
@@ -38,30 +54,26 @@ msgstr "Hesap Hareketi Yollandı"
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_bayino
 msgid "BAYINO"
-msgstr "BAYINO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_ciftcino
 msgid "CIFTCINO"
-msgstr "CIFTCINO"
-
-#. module: l10n_tr_nilvera_einvoice
-#. odoo-python
-#: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
-msgid "Check Street 2 on Partner(s)"
-msgstr "Ortak(lar) üzerindeki 2. Adres Satırını Kontrol Edin"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
 #: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
 msgid "Check Tax ID, City, Street, State, and Country or Company(s)"
-msgstr "Vergi Numarası, Şehir, Adres, Eyalet ve Ülke veya Şirket(ler)i Kontrol Edin"
+msgstr ""
+"Vergi Numarası, Şehir, Adres, Eyalet ve Ülke veya Şirket(ler)i Kontrol Edin"
 
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
 #: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
 msgid "Check Tax ID, City, Street, State, and Country or Partner(s)"
-msgstr "Vergi Numarası, Şehir, Adres, Eyalet ve Ülke veya Ortak(lar)ı Kontrol Edin"
+msgstr ""
+"Vergi Numarası, Şehir, Adres, Eyalet ve Ülke veya Ortak(lar)ı Kontrol Edin"
 
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
@@ -72,20 +84,15 @@ msgstr "Fatura(lar)daki Verileri Kontrol Edin"
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
 #: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
-msgid "Check data on Partner(s)"
-msgstr "Ortak(lar) üzerindeki verileri kontrol edin"
-
-#. module: l10n_tr_nilvera_einvoice
-#. odoo-python
-#: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
 msgid "Check e-Invoice Format or Nilvera Status on Partner(s)"
-msgstr "Ortak(lar) üzerindeki e-Fatura Formatını veya Nilvera Durumunu Kontrol Edin"
+msgstr ""
+"Ortak(lar) üzerindeki e-Fatura Formatını veya Nilvera Durumunu Kontrol Edin"
 
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
 #: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
-msgid "Check reference on Company(s)"
-msgstr "Şirket(ler) üzerindeki referansı kontrol edin"
+msgid "Check name on Invoice(s)"
+msgstr "Fatura(ları) ismi kontrol edin"
 
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
@@ -102,12 +109,12 @@ msgstr "Şirket(ler) üzerindeki etiketleri kontrol edin"
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_distributorno
 msgid "DISTRIBUTORNO"
-msgstr "DISTRIBUTORNO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_dosyano
 msgid "DOSYANO"
-msgstr "DOSYANO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:ir.model.fields,field_description:l10n_tr_nilvera_einvoice.field_account_edi_xml_ubl_tr__display_name
@@ -121,7 +128,7 @@ msgstr "Görünüm Adı"
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_epdkno
 msgid "EPDKNO"
-msgstr "EPDKNO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:ir.model.fields.selection,name:l10n_tr_nilvera_einvoice.selection__account_move__l10n_tr_nilvera_send_status__error
@@ -129,14 +136,20 @@ msgid "Error"
 msgstr "Hata"
 
 #. module: l10n_tr_nilvera_einvoice
+#: model_terms:ir.ui.view,arch_db:l10n_tr_nilvera_einvoice.account_nilvera_view_invoice_tree
+#: model_terms:ir.ui.view,arch_db:l10n_tr_nilvera_einvoice.account_nilvera_view_move_form
+msgid "Fetch Nilvera PDF"
+msgstr ""
+
+#. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_hastano
 msgid "HASTANO"
-msgstr "HASTANO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_hizmetno
 msgid "HIZMETNO"
-msgstr "HIZMETNO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:ir.model.fields,field_description:l10n_tr_nilvera_einvoice.field_account_edi_xml_ubl_tr__id
@@ -150,7 +163,7 @@ msgstr ""
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_imalatcino
 msgid "IMALATCINO"
-msgstr "IMALATCINO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:ir.model,name:l10n_tr_nilvera_einvoice.model_account_journal
@@ -165,23 +178,18 @@ msgstr "Yevmiye Kaydı"
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_mersisno
 msgid "MERSISNO"
-msgstr "MERSISNO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_musterino
 msgid "MUSTERINO"
-msgstr "MUSTERINO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:ir.model.fields,field_description:l10n_tr_nilvera_einvoice.field_account_bank_statement_line__l10n_tr_nilvera_uuid
 #: model:ir.model.fields,field_description:l10n_tr_nilvera_einvoice.field_account_move__l10n_tr_nilvera_uuid
 msgid "Nilvera Document UUID"
 msgstr "Nilvera Belge UUID'si"
-
-#. module: l10n_tr_nilvera_einvoice
-#: model_terms:ir.ui.view,arch_db:l10n_tr_nilvera_einvoice.account_journal_dashboard_kanban_view
-msgid "Sync Nilvera Invoices"
-msgstr "Nilvera Faturalarını Senkronize Et"
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:ir.model.fields,field_description:l10n_tr_nilvera_einvoice.field_account_bank_statement_line__l10n_tr_nilvera_send_status
@@ -198,23 +206,40 @@ msgid "Nilvera document has been received successfully"
 msgstr "Nilvera belgesi başarıyla alındı"
 
 #. module: l10n_tr_nilvera_einvoice
-#: model:ir.actions.server,name:l10n_tr_nilvera_einvoice.ir_cron_nilvera_get_invoice_status_ir_actions_server
-msgid "Nilvera: retrieve invoice status"
-msgstr "Nilvera: fatura durumunu al"
-
-#. module: l10n_tr_nilvera_einvoice
 #. odoo-python
 #: code:addons/l10n_tr_nilvera_einvoice/models/account_edi_xml_ubl_tr.py:0
 #: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
 msgid ""
 "Nilvera portal cannot process negative quantity nor negative price on "
 "invoice lines"
-msgstr "Nilvera portalı, fatura satırlarında negatif miktar veya negatif fiyat işleyemez."
+msgstr ""
+"Nilvera portalı, fatura satırlarında negatif miktar veya negatif fiyat "
+"işleyemez."
 
 #. module: l10n_tr_nilvera_einvoice
-#: model:ir.actions.server,name:l10n_tr_nilvera_einvoice.ir_cron_nilvera_get_new_documents_ir_actions_server
-msgid "Nilvera: retrieve new documents"
-msgstr "Nilvera: yeni belgeler alın"
+#: model:ir.actions.server,name:l10n_tr_nilvera_einvoice.ir_cron_nilvera_get_new_einvoice_sale_documents_ir_actions_server
+msgid "Nilvera: retrieve E-Invoice new sale documents"
+msgstr "Nilvera: yeni E-Fatura satış belgelerini al"
+
+#. module: l10n_tr_nilvera_einvoice
+#: model:ir.actions.server,name:l10n_tr_nilvera_einvoice.ir_cron_nilvera_get_invoice_status_ir_actions_server
+msgid "Nilvera: retrieve invoice status"
+msgstr "Nilvera: fatura durumunu al"
+
+#. module: l10n_tr_nilvera_einvoice
+#: model:ir.actions.server,name:l10n_tr_nilvera_einvoice.ir_cron_nilvera_get_new_earchive_sale_documents_ir_actions_server
+msgid "Nilvera: retrieve new E-Archive sale documents"
+msgstr "Nilvera: yeni E-Arşiv satış belgelerini al"
+
+#. module: l10n_tr_nilvera_einvoice
+#: model:ir.actions.server,name:l10n_tr_nilvera_einvoice.ir_cron_nilvera_get_new_purchase_documents_ir_actions_server
+msgid "Nilvera: retrieve new purchase documents"
+msgstr "Nilvera: yeni satın alma belgelerini al"
+
+#. module: l10n_tr_nilvera_einvoice
+#: model:ir.actions.server,name:l10n_tr_nilvera_einvoice.ir_cron_nilvera_get_sale_pdf_ir_actions_server
+msgid "Nilvera: retrieve sale PDFs"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:ir.model.fields.selection,name:l10n_tr_nilvera_einvoice.selection__account_move__l10n_tr_nilvera_send_status__not_sent
@@ -234,7 +259,7 @@ msgstr ""
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_pasaportno
 msgid "PASAPORTNO"
-msgstr "PASAPORTNO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:ir.model,name:l10n_tr_nilvera_einvoice.model_res_partner_category
@@ -246,9 +271,10 @@ msgstr "Ortak Etiketleri"
 #: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
 msgid ""
 "Please ensure that your company contact has either the 'MERSISNO' or "
-"''TICARETSICILNO' tag with a value assigned."
-msgstr "Lütfen şirket kontaktınızda 'MERSISNO' veya "
-"'TICARETSICILNO' etiketinin değerle birlikte ekli olduğundan emin olun."
+"'TICARETSICILNO' tag with a value assigned."
+msgstr ""
+"Lütfen şirket kontaktınızda 'MERSISNO' veya 'TICARETSICILNO' etiketinin "
+"değerle birlikte ekli olduğundan emin olun."
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_sayacno
@@ -279,28 +305,44 @@ msgstr "Başarılı"
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_tapdkno
 msgid "TAPDKNO"
-msgstr "TAPDKNO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_telefonno
 msgid "TELEFONNO"
-msgstr "TELEFONNO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_tesisatno
 msgid "TESISATNO"
-msgstr "TESISATNO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_ticaretsicilno
 msgid "TICARETSICILNO"
-msgstr "TICARETSICILNO"
+msgstr ""
+
+#. module: l10n_tr_nilvera_einvoice
+#. odoo-python
+#: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
+msgid "TR Company(s)"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
 #: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
 msgid "Testing mode is enabled."
 msgstr "Test modu etkinleştirildi."
+
+#. module: l10n_tr_nilvera_einvoice
+#. odoo-python
+#: code:addons/l10n_tr_nilvera_einvoice/models/res_partner_category.py:0
+msgid ""
+"The Contact Tag(s) cannot be deleted because it is used in Türkiye "
+"electronic integrations."
+msgstr ""
+"Aşağıdaki E-Fatura ortaklarının referans alanı vergi dairesi adı olarak "
+"ayarlanmalıdır."
 
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
@@ -316,11 +358,19 @@ msgstr ""
 #. odoo-python
 #: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
 msgid ""
+"The following TR Company(s) must have the reference field set to the tax "
+"office name."
+msgstr ""
+
+#. module: l10n_tr_nilvera_einvoice
+#. odoo-python
+#: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
+msgid ""
 "The following company(s) either do not have their country set as Türkiye or "
 "are missing at least one of these fields: Tax ID, Street, City, or State"
 msgstr ""
-"Aşağıdaki şirket(ler)in ya ülkesi Türkiye olarak ayarlanmamış ya da "
-"şu alanlardan en az biri eksik: Vergi Numarası, Adres, Şehir veya İl"
+"Aşağıdaki şirket(ler)in ya ülkesi Türkiye olarak ayarlanmamış ya da şu "
+"alanlardan en az biri eksik: Vergi Numarası, Adres, Şehir veya İl"
 
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
@@ -331,16 +381,6 @@ msgid ""
 msgstr ""
 "Aşağıdaki fatura(lar)ın tüm Fatura Satırlarında aynı Başlangıç Tarihi ve "
 "Bitiş Tarihi bulunmalıdır."
-
-#. module: l10n_tr_nilvera_einvoice
-#. odoo-python
-#: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
-msgid ""
-"The following company(s) must have the reference field set to the tax office"
-" name."
-msgstr ""
-"Aşağıdaki şirket(ler)in referans alanı vergi dairesi adı olarak "
-"ayarlanmalıdır."
 
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
@@ -364,12 +404,6 @@ msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
-#: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
-msgid "The following partner(s) must have Street 2 empty"
-msgstr "Aşağıdaki ortak(lar)ın 2. Adres Satırı boş olmalıdır"
-
-#. module: l10n_tr_nilvera_einvoice
-#. odoo-python
 #: code:addons/l10n_tr_nilvera_einvoice/models/account_move.py:0
 msgid "The invoice couldn't be sent due to the following errors:\n"
 msgstr "Fatura aşağıdaki hatalar nedeniyle gönderilemedi:\n"
@@ -388,9 +422,30 @@ msgstr "Fatura Nilvera'ya başarıyla gönderildi."
 
 #. module: l10n_tr_nilvera_einvoice
 #. odoo-python
+#: code:addons/l10n_tr_nilvera_einvoice/models/account_move_send.py:0
+msgid ""
+"The invoice name must follow the format when sending to Nilvera: 3 "
+"alphanumeric characters, followed by the year, and then a sequential number. "
+"Example: INV/2025/000001"
+msgstr ""
+"Fatura isim Nilvera'ya gönderirken şu formatta olmalıdır: 3 alfanümerik "
+"karakter, ardından yıl, ve ardından sıralı bir numara. Örnek: INV/2025/000001"
+
+#. module: l10n_tr_nilvera_einvoice
+#. odoo-python
 #: code:addons/l10n_tr_nilvera_einvoice/models/account_move.py:0
 msgid "The invoice status couldn't be retrieved from Nilvera."
 msgstr "Fatura durumu Nilvera'dan alınamadı."
+
+#. module: l10n_tr_nilvera_einvoice
+#. odoo-python
+#: code:addons/l10n_tr_nilvera_einvoice/models/account_move.py:0
+#: model_terms:ir.ui.view,arch_db:l10n_tr_nilvera_einvoice.account_nilvera_view_move_form
+msgid ""
+"To preserve accounting integrity and comply with legal requirements, "
+"invoices cannot be reused once an error occurs. Please create a new invoice "
+"to continue."
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:ir.model,name:l10n_tr_nilvera_einvoice.model_account_edi_xml_ubl_tr
@@ -400,7 +455,7 @@ msgstr ""
 #. module: l10n_tr_nilvera_einvoice
 #: model:res.partner.category,name:l10n_tr_nilvera_einvoice.res_partner_category_ureticino
 msgid "URETICINO"
-msgstr "URETICINO"
+msgstr ""
 
 #. module: l10n_tr_nilvera_einvoice
 #: model:ir.model.fields,help:l10n_tr_nilvera_einvoice.field_account_bank_statement_line__l10n_tr_nilvera_uuid

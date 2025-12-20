@@ -7,13 +7,14 @@
 # JH CHOI <hwangtog@gmail.com>, 2022
 # Sarah Park, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# "Kwanghee Park (kwpa)" <kwpa@odoo.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 13:59+0000\n"
-"PO-Revision-Date: 2025-09-16 04:41+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-10-08 18:39+0000\n"
+"PO-Revision-Date: 2025-12-09 14:05+0000\n"
+"Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19/portal/ko/"
 ">\n"
 "Language: ko\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_my_security
@@ -89,8 +90,8 @@ msgid ""
 "<i class=\"oi oi-chevron-left\" role=\"img\" aria-label=\"Previous\" "
 "title=\"Previous\"/>"
 msgstr ""
-"<i class=\"oi oi-chevron-left\" role=\"img\" aria-label=\"Previous\" title="
-"\"Previous\"/>"
+"<i class=\"oi oi-chevron-left\" role=\"img\" aria-label=\"Previous\" "
+"title=\"Previous\"/>"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.record_pager
@@ -98,8 +99,8 @@ msgid ""
 "<i class=\"oi oi-chevron-right\" role=\"img\" aria-label=\"Next\" "
 "title=\"Next\"/>"
 msgstr ""
-"<i class=\"oi oi-chevron-right\" role=\"img\" aria-label=\"Next\" title="
-"\"Next\"/>"
+"<i class=\"oi oi-chevron-right\" role=\"img\" aria-label=\"Next\" "
+"title=\"Next\"/>"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.my_addresses
@@ -150,8 +151,8 @@ msgid ""
 "                        </small>"
 msgstr ""
 "<small class=\"form-text text-muted\">\n"
-"                            부가가치세 번호는 회계 계정에서만 변경이 "
-"가능합니다.\n"
+"                            부가가치세 번호는 회계 계정에서만 변경이 가능합니"
+"다.\n"
 "                        </small>"
 
 #. module: portal
@@ -166,8 +167,8 @@ msgid ""
 msgstr ""
 "<small class=\"form-text text-muted\">\n"
 "                    계정에 대한 문서 발급이 완료된 후에는 국가를\n"
-"                    변경할 수 없습니다. 관련된 작업에 대해서는 직접 "
-"연락주시기\n"
+"                    변경할 수 없습니다. 관련된 작업에 대해서는 직접 연락주시"
+"기\n"
 "                    바랍니다.\n"
 "                </small>"
 
@@ -186,8 +187,8 @@ msgid ""
 "<span class=\"oi oi-chevron-right\" role=\"img\" aria-label=\"Next\" "
 "title=\"Next\"/>"
 msgstr ""
-"<span class=\"oi oi-chevron-right\" role=\"img\" aria-label=\"Next\" title="
-"\"Next\"/>"
+"<span class=\"oi oi-chevron-right\" role=\"img\" aria-label=\"Next\" "
+"title=\"Next\"/>"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.address_footer
@@ -251,7 +252,7 @@ msgstr "메모 추가"
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.my_addresses
 msgid "Add an address"
-msgstr ""
+msgstr "주소 추가"
 
 #. module: portal
 #. odoo-javascript
@@ -349,8 +350,9 @@ msgstr ""
 msgid ""
 "Changing your country is not allowed once document(s) have been issued for "
 "your account. Please contact us directly for this operation."
-msgstr "계정에 대한 문서가 발급되면 국가를 변경할 수 없습니다. 이 경우 직접 "
-"연락주시기 바랍니다."
+msgstr ""
+"계정에 대한 문서가 발급되면 국가를 변경할 수 없습니다. 이 경우 직접 연락주시"
+"기 바랍니다."
 
 #. module: portal
 #. odoo-javascript
@@ -434,7 +436,7 @@ msgstr "연락처"
 #. odoo-javascript
 #: code:addons/portal/static/src/interactions/portal_composer.js:0
 msgid "Could not save file %s"
-msgstr ""
+msgstr "파일을 저장할 수 없습니다 %s"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.address_form_fields
@@ -529,8 +531,8 @@ msgid ""
 msgstr ""
 "계정이 비활성화되어 더 이상 로그인하실 수 없습니다.<br/>\n"
 "                                        <b>\n"
-"                                            <i class="
-"\"fa fa-exclamation-triangle text-danger\"/>\n"
+"                                            <i class=\"fa fa-exclamation-"
+"triangle text-danger\"/>\n"
 "                                            이 작업은 취소할 수 없습니다.\n"
 "                                        </b>"
 
@@ -640,8 +642,8 @@ msgid ""
 "                Your login is still necessary for interactive usage."
 msgstr ""
 "다음은 새로운 API 키입니다, RPC 접속 시 비밀번호 대신 사용하시기 바랍니다.\n"
-"                인터랙티브 사용 목적으로는 계속 로그인 방식을 사용하셔야 "
-"합니다."
+"                인터랙티브 사용 목적으로는 계속 로그인 방식을 사용하셔야 합니"
+"다."
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_breadcrumbs
@@ -672,8 +674,8 @@ msgid ""
 "backend. If you wish to change your name or email address, please do so in "
 "the account settings or contact your administrator."
 msgstr ""
-"외부인을 위한 주문은 백엔드를 통해 생성할 수 있습니다. 이름이나 이메일 "
-"주소를 수정하려면 계정 설정에서 변경하거나 관리자에게 문의하시기 바랍니다."
+"외부인을 위한 주문은 백엔드를 통해 생성할 수 있습니다. 이름이나 이메일 주소"
+"를 수정하려면 계정 설정에서 변경하거나 관리자에게 문의하시기 바랍니다."
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.address_form_fields
@@ -782,7 +784,7 @@ msgstr "모든 기기에서 로그아웃"
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.address_card
 msgid "Main Address"
-msgstr ""
+msgstr "기본 주소"
 
 #. module: portal
 #: model:ir.model,name:portal.model_mail_message
@@ -795,8 +797,9 @@ msgstr "메시지"
 msgid ""
 "Model %(model_name)s does not support token signature, as it does not have %"
 "(field_name)s field."
-msgstr "%(field_name)s 필드가 없는 관계로 %(model_name)s 모델에서는 토큰 서명을 "
-"지원하지 않습니다."
+msgstr ""
+"%(field_name)s 필드가 없는 관계로 %(model_name)s 모델에서는 토큰 서명을 지원"
+"하지 않습니다."
 
 #. module: portal
 #. odoo-python
@@ -933,7 +936,8 @@ msgstr "이전"
 #: model_terms:ir.ui.view,arch_db:portal.portal_my_security
 msgid ""
 "Put my email and phone in a block list to make sure I'm never contacted again"
-msgstr "차단 목록에 나의 이메일과 전화번호를 넣어서 다시는 연락을 받지 않도록 합니다."
+msgstr ""
+"차단 목록에 나의 이메일과 전화번호를 넣어서 다시는 연락을 받지 않도록 합니다."
 
 #. module: portal
 #: model:ir.model,name:portal.model_ir_qweb
@@ -968,7 +972,7 @@ msgstr "관련 문서 모델"
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.address_card
 msgid "Remove this address"
-msgstr ""
+msgstr "주소 제거하기"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.wizard_view
@@ -1192,7 +1196,8 @@ msgstr "\"%ss\" 협력사에 포털 접근 권한이 없거나 내부용 권한�
 msgid ""
 "The template \"Portal: new user\" not found for sending email to the portal "
 "user."
-msgstr "포털 사용자에게 이메일을 전송하기 위한 \"포털: 새로운 사용자\" 서식을 찾을 "
+msgstr ""
+"포털 사용자에게 이메일을 전송하기 위한 \"포털: 새로운 사용자\" 서식을 찾을 "
 "수 없습니다."
 
 #. module: portal
@@ -1211,13 +1216,15 @@ msgstr "고객 포털의 미리보기 화면입니다."
 msgid ""
 "This partner is linked to an internal User and already has access to the "
 "Portal."
-msgstr "내부 사용자에게 연결되어 있는 협력사이며 이미 포털에 대한 접근 권한이 "
-"있습니다."
+msgstr ""
+"내부 사용자에게 연결되어 있는 협력사이며 이미 포털에 대한 접근 권한이 있습니"
+"다."
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.wizard_view
 msgid "This text is included at the end of the email sent to new portal users."
-msgstr "이 문구는 새로운 포털 사용자에게 전송되는 이메일의 마지막 내용에 포함됩니다."
+msgstr ""
+"이 문구는 새로운 포털 사용자에게 전송되는 이메일의 마지막 내용에 포함됩니다."
 
 #. module: portal
 #: model:ir.model.fields,help:portal.field_portal_wizard__welcome_message
@@ -1238,7 +1245,7 @@ msgstr "사용자"
 #. odoo-python
 #: code:addons/portal/controllers/portal.py:0
 msgid "User Dashboard"
-msgstr ""
+msgstr "사용자 현황판"
 
 #. module: portal
 #: model:ir.model.fields,field_description:portal.field_portal_wizard__user_ids

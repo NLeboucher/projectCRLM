@@ -40,7 +40,7 @@ patch(PosOrder.prototype, {
     recomputeChanges() {
         const lines = this.lines;
         for (const line of lines) {
-            if (typeof line.id === "string") {
+            if (!line.isSynced) {
                 continue;
             }
 
@@ -62,5 +62,12 @@ patch(PosOrder.prototype, {
                 delete this.uiState.lineChanges[uuid];
             }
         }
+    },
+    serializeForORM(opts = {}) {
+        const data = super.serializeForORM(opts);
+        if (this.email && !data.email) {
+            data.email = this.email;
+        }
+        return data;
     },
 });

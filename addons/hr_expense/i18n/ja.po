@@ -9,13 +9,15 @@
 # Martin Trigaux, 2023
 # Ryoko Tsuda <ryoko@quartile.co>, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# "Junko Augias (juau)" <juau@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 13:56+0000\n"
-"PO-Revision-Date: 2025-09-14 21:12+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-12-12 18:35+0000\n"
+"PO-Revision-Date: 2025-12-09 14:04+0000\n"
+"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19/"
 "hr_expense/ja/>\n"
 "Language: ja\n"
@@ -23,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.report_expense
@@ -75,8 +77,9 @@ msgstr "%(expense_name)s: あなたはマネジャーでも人事担当でもあ
 msgid ""
 "%(expense_name)s: Your are neither a Manager nor a HR Officer of this "
 "expense's company"
-msgstr "%(expense_name)s: "
-"あなたはこの経費の会社のマネジャーでも人事担当でもありません。"
+msgstr ""
+"%(expense_name)s: あなたはこの経費の会社のマネジャーでも人事担当でもありませ"
+"ん。"
 
 #. module: hr_expense
 #. odoo-python
@@ -112,8 +115,9 @@ msgstr "2023-08-11"
 #. odoo-javascript
 #: code:addons/hr_expense/static/src/js/tours/hr_expense.js:0
 msgid "<b>Wasting time recording your receipts?</b> Let’s try a better way."
-msgstr "<b>領収書の記録に時間を無駄にしていませんか？</b> "
-"もっと良い方法を試して見ましょう。"
+msgstr ""
+"<b>領収書の記録に時間を無駄にしていませんか？</b> もっと良い方法を試して見ま"
+"しょう。"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
@@ -194,12 +198,12 @@ msgstr "活動"
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "例外活動文字装飾"
+msgstr "例外の活動を示す装飾"
 
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__activity_state
 msgid "Activity State"
-msgstr "活動状態"
+msgstr "活動ステータス"
 
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__activity_type_icon
@@ -442,7 +446,7 @@ msgstr "会社"
 #. module: hr_expense
 #: model:ir.model,name:hr_expense.model_res_config_settings
 msgid "Config Settings"
-msgstr "詳細設定"
+msgstr "構成設定"
 
 #. module: hr_expense
 #: model:ir.ui.menu,name:hr_expense.menu_hr_expense_configuration
@@ -475,6 +479,8 @@ msgid ""
 "Create prepaid virtual and physical cards for both one-time and recurring "
 "expenses, integrated into Odoo through Stripe Issuing."
 msgstr ""
+"Stripe Issuingを通じてOdooと連携した、1回限りの出費にも定期的な出費にも対応す"
+"るプリペイドカードを作成できます。"
 
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__create_uid
@@ -699,7 +705,7 @@ msgstr "経費承認者"
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
 msgid "Expense Card"
-msgstr ""
+msgstr "経費カード"
 
 #. module: hr_expense
 #: model:ir.actions.act_window,name:hr_expense.hr_expense_product
@@ -872,7 +878,8 @@ msgstr "%(other_expense_name)sと同様の領収書がある経費。"
 msgid ""
 "Failed to send mails for submitted expenses. No valid email was found for "
 "the company"
-msgstr "提出された経費のメール送信に失敗しました。会社に有効なEメールが見つかりません"
+msgstr ""
+"提出された経費のメール送信に失敗しました。会社に有効なEメールが見つかりません"
 "でした。"
 
 #. module: hr_expense
@@ -931,7 +938,7 @@ msgstr "顧客または仕入先への贈答品"
 #. odoo-python
 #: code:addons/hr_expense/models/hr_expense.py:0
 msgid "Go to Account"
-msgstr ""
+msgstr "会計を開く"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.product_product_expense_form_view
@@ -996,7 +1003,7 @@ msgstr "チェックした場合は、新しいメッセージに注意が必要
 #: model:ir.model.fields,help:hr_expense.field_hr_expense__message_has_error
 #: model:ir.model.fields,help:hr_expense.field_hr_expense__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "チェックした場合は、一部のメッセージに配信エラーが発生されました。"
+msgstr "選択されている場合、一部のメッセージで配信エラーが発生しています。"
 
 #. module: hr_expense
 #: model:ir.model.fields.selection,name:hr_expense.selection__hr_expense__state__in_payment
@@ -1128,7 +1135,7 @@ msgstr "最終更新日"
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_view_search
 msgid "Late Activities"
-msgstr "遅れた活動"
+msgstr "期限超過の活動"
 
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_res_config_settings__hr_expense_use_mailgateway
@@ -1152,7 +1159,8 @@ msgstr "経費に戻りましょう。"
 msgid ""
 "Link your stripe issuing account to manage company credit cards for your "
 "employees through Odoo"
-msgstr "Stripeの発行アカウントをリンクし、Odooを通じて従業員用の会社クレジットカード"
+msgstr ""
+"Stripeの発行アカウントをリンクし、Odooを通じて従業員用の会社クレジットカード"
 "を管理できます。"
 
 #. module: hr_expense
@@ -1178,7 +1186,8 @@ msgstr "マネジャー"
 msgid ""
 "Managers can approve the expense here, then an accountant can post the "
 "accounting entries."
-msgstr "マネジャーはここで経費を承認し、その後、会計担当者が会計仕訳を計上します。"
+msgstr ""
+"マネジャーはここで経費を承認し、その後、会計担当者が会計仕訳を計上します。"
 
 #. module: hr_expense
 #. odoo-javascript
@@ -1256,7 +1265,7 @@ msgid ""
 "New expenses are awaiting your approval.\n"
 "                You can review them by following this link"
 msgstr ""
-"新しい経費が承認待ちの状態になっています。\n"
+"新しい経費が承認待ちのステータスになっています。\n"
 "                次のリンクから確認できます。"
 
 #. module: hr_expense
@@ -1342,7 +1351,7 @@ msgstr "エラー数"
 #. module: hr_expense
 #: model:ir.model.fields,help:hr_expense.field_hr_expense__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "アクションを必要とするメッセージの数"
+msgstr "対応が必要なメッセージ数"
 
 #. module: hr_expense
 #: model:ir.model.fields,help:hr_expense.field_hr_expense__message_has_error_counter
@@ -1369,11 +1378,10 @@ msgid ""
 "Give Odoo a hand to find an account by setting up an expense account.\n"
 "%(expense)s %(expense_name)s.\n"
 msgstr ""
-"Odoo "
-"は、経費、そのプロダクト、会社、仕訳帳を確認しましたが、何も見つかりませんで"
-"した。\n"
-"費用勘定を設定して、Odoo "
-"が勘定科目を見つけられるように手助けしましょう。%(expense)s%(expense_name)s\n"
+"Odoo は、経費、そのプロダクト、会社、仕訳帳を確認しましたが、何も見つかりませ"
+"んでした。\n"
+"費用勘定を設定して、Odoo が勘定科目を見つけられるように手助けしましょう。%"
+"(expense)s%(expense_name)s\n"
 
 #. module: hr_expense
 #: model_terms:ir.actions.act_window,help:hr_expense.action_hr_expense_account
@@ -1395,8 +1403,9 @@ msgstr "<b>経費</b>が準備できたら、マネジャーに提出し、承�
 #: code:addons/hr_expense/models/hr_expense.py:0
 msgid ""
 "Only HR Officers, accountants, or the concerned employee can reset to draft."
-msgstr "人事担当者、会計担当者、または関係する従業員のみがドラフトにリセットできます"
-"。"
+msgstr ""
+"人事担当者、会計担当者、または関係する従業員のみがドラフトにリセットできま"
+"す。"
 
 #. module: hr_expense
 #. odoo-python
@@ -1584,7 +1593,7 @@ msgstr "プロダクトバリアント"
 #. module: hr_expense
 #: model:ir.model,name:hr_expense.model_hr_employee_public
 msgid "Public Employee"
-msgstr "公務員"
+msgstr "公開従業員"
 
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__quantity
@@ -1605,8 +1614,8 @@ msgid ""
 "don't <em>need to save</em> - Odoo will save eveyrthing for you when you "
 "navigate."
 msgstr ""
-"準備はいいですか？ここから手動で保存したり、変更を破棄することができます。<em"
-">保存する必要</em>はありません。Odooがナビゲート時にすべて保存します。"
+"準備はいいですか？ここから手動で保存したり、変更を破棄することができます。"
+"<em>保存する必要</em>はありません。Odooがナビゲート時にすべて保存します。"
 
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense_refuse_wizard__reason
@@ -1693,7 +1702,7 @@ msgstr "レストラン、ビジネスランチなど"
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "SMS配信エラー"
+msgstr "SMS送信エラー"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.product_product_expense_categories_tree_view
@@ -1708,7 +1717,7 @@ msgstr "同一の領収書経費"
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.res_config_settings_view_form
 msgid "Save this page and come back here to set up the feature."
-msgstr ""
+msgstr "このページを保存して、戻って機能を設定してください。"
 
 #. module: hr_expense
 #. odoo-javascript
@@ -1817,7 +1826,7 @@ msgstr "標準価格更新の警告"
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_view_search
 #: model_terms:ir.ui.view,arch_db:hr_expense.view_move_list_expense
 msgid "Status"
-msgstr "状態"
+msgstr "ステータス"
 
 #. module: hr_expense
 #: model:ir.model.fields,help:hr_expense.field_hr_expense__activity_state
@@ -1936,7 +1945,8 @@ msgstr ""
 msgid ""
 "The first word of the email subject did not correspond to any category code. "
 "You'll have to set the category manually on the expense."
-msgstr "メールの件名の最初の単語がカテゴリコードに対応していません。カテゴリを手動で"
+msgstr ""
+"メールの件名の最初の単語がカテゴリコードに対応していません。カテゴリを手動で"
 "設定する必要があります。"
 
 #. module: hr_expense
@@ -1945,8 +1955,18 @@ msgid ""
 "The following approved expenses have similar employee, amount and category "
 "than some expenses of this report. Please verify this report does not "
 "contain duplicates."
-msgstr "以下の承認された経費は、本レポートの一部の経費と従業員、金額、カテゴリが類似"
+msgstr ""
+"以下の承認された経費は、本レポートの一部の経費と従業員、金額、カテゴリが類似"
 "しています。このレポートに重複がないことを確認して下さい。"
+
+#. module: hr_expense
+#. odoo-python
+#: code:addons/hr_expense/models/hr_expense.py:0
+msgid ""
+"The following expenses payment method leads to several accounts payable and "
+"this isn't supported:\n"
+"%(expenses)s"
+msgstr ""
 
 #. module: hr_expense
 #: model:ir.model.fields,help:hr_expense.field_hr_expense_post_wizard__employee_journal_id
@@ -2135,11 +2155,6 @@ msgid "Vendor"
 msgstr "仕入先"
 
 #. module: hr_expense
-#: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_view_expenses_analysis_tree
-msgid "View Attachments"
-msgstr "添付を見る"
-
-#. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_template_register
 msgid "View Expense"
 msgstr "経費を表示"
@@ -2224,8 +2239,9 @@ msgstr "承認の経費のみ会計仕訳生成できます。"
 msgid ""
 "You can't post simultaneously employee-paid expenses belonging to different "
 "companies"
-msgstr "異なる会社に属する従業員によって支払済の経費を同時に投稿することはできません"
-"。"
+msgstr ""
+"異なる会社に属する従業員によって支払済の経費を同時に投稿することはできませ"
+"ん。"
 
 #. module: hr_expense
 #. odoo-python
@@ -2282,7 +2298,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/hr_expense/models/hr_expense.py:0
 msgid "You cannot reset to draft an expense linked to a posted journal entry."
-msgstr "記帳済の仕訳にリンクした経費をドラフトにリセットすることはできません。"
+msgstr "記帳済の仕訳にリンクした経費をドラフトに戻すことはできません。"
 
 #. module: hr_expense
 #. odoo-python
@@ -2320,7 +2336,8 @@ msgstr "仕訳帳(%s)に手動支払方法を追加する必要があります�
 msgid ""
 "You need to have at least one category that can be expensed in your database "
 "to proceed!"
-msgstr "次に進むには、データベースに費用計上可能なカテゴリが少なくとも1つある必要があ"
+msgstr ""
+"次に進むには、データベースに費用計上可能なカテゴリが少なくとも1つある必要があ"
 "ります！"
 
 #. module: hr_expense
@@ -2392,6 +2409,15 @@ msgstr "OCRを使用して請求書の写真からデータを入力"
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_view_form
 msgid "with the same receipt already exists."
 msgstr "同じ領収書が既に存在します。"
+
+#~ msgid "View Attachments"
+#~ msgstr "添付を見る"
+
+#~ msgid "Accounting Settings"
+#~ msgstr "会計設定"
+
+#~ msgid "You should install a Fiscal Localization first."
+#~ msgstr "まずは会計ローカライゼーションをインストールして下さい。"
 
 #~ msgid ""
 #~ "<span class=\"d-inline-block\"><i class=\"text-muted\">Use this reference "

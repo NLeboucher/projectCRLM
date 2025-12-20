@@ -7,13 +7,14 @@
 # Wil Odoo, 2025
 #
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server saas~18.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-09 20:37+0000\n"
-"PO-Revision-Date: 2025-09-16 08:12+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-10-08 18:39+0000\n"
+"PO-Revision-Date: 2025-11-16 22:43+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-19/website_mass_mailing/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -24,32 +25,36 @@ msgstr ""
 "X-Generator: Weblate 5.12.2\n"
 
 #. module: website_mass_mailing
-#: model_terms:ir.ui.view,arch_db:website_mass_mailing.newsletter_subscribe_options
-msgid ".o_newsletter_popup"
-msgstr ".o_newsletter_popup"
-
-#. module: website_mass_mailing
-#: model_terms:ir.ui.view,arch_db:website_mass_mailing.newsletter_subscribe_options
-msgid ""
-".s_newsletter_block .s_newsletter_list, .o_newsletter_popup "
-".s_newsletter_list, .s_newsletter_box .s_newsletter_list, "
-".s_newsletter_centered .s_newsletter_list, .s_newsletter_grid "
-".s_newsletter_list"
+#: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_mail_block_footer_social
+msgid "<font class=\"text-white\">|</font>"
 msgstr ""
-".s_newsletter_block .s_newsletter_list, .o_newsletter_popup "
-".s_newsletter_list, .s_newsletter_box .s_newsletter_list, "
-".s_newsletter_centered .s_newsletter_list, .s_newsletter_grid "
-".s_newsletter_list"
 
 #. module: website_mass_mailing
-#: model_terms:ir.ui.view,arch_db:website_mass_mailing.newsletter_subscribe_options
-msgid ".s_newsletter_list"
-msgstr ".s_newsletter_list"
+#: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_benefits_popup
+msgid ""
+"<i class=\"fa fa-check text-o-color-1\" role=\"img\"/>  Curated Industry "
+"Insights"
+msgstr ""
+
+#. module: website_mass_mailing
+#: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_benefits_popup
+msgid ""
+"<i class=\"fa fa-check text-o-color-1\" role=\"img\"/>  Expert Tips &amp; "
+"How-Tos"
+msgstr ""
+
+#. module: website_mass_mailing
+#: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_benefits_popup
+msgid ""
+"<i class=\"fa fa-check text-o-color-1\" role=\"img\"/>  Guides &amp; "
+"Resources"
+msgstr ""
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_grid
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_form
-msgid "<i class=\"fa fa-check-circle-o\" role=\"img\"/> Thanks for registering!"
+msgid ""
+"<i class=\"fa fa-check-circle-o\" role=\"img\"/> Thanks for registering!"
 msgstr "<i class=\"fa fa-check-circle-o\" role=\"img\"/> 感謝註冊！"
 
 #. module: website_mass_mailing
@@ -59,16 +64,19 @@ msgid ""
 "                                <span class=\"s_website_form_mark\"> *</span>"
 msgstr ""
 "<span class=\"s_website_form_label_content\">電郵</span>\n"
-"                                <span class=\"s_website_form_mark\"> *（必填）</span>"
+"                                <span class=\"s_website_form_mark\"> *（必"
+"填）</span>"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_block_form_template
 msgid ""
-"<span class=\"s_website_form_label_content\">I agree to receive updates</span>\n"
+"<span class=\"s_website_form_label_content\">I agree to receive updates</"
+"span>\n"
 "                                <span class=\"s_website_form_mark\"> *</span>"
 msgstr ""
 "<span class=\"s_website_form_label_content\">同意接收最新消息</span>\n"
-"                                <span class=\"s_website_form_mark\"> *（必填）</span>"
+"                                <span class=\"s_website_form_mark\"> *（必"
+"填）</span>"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_block_form_template
@@ -77,7 +85,8 @@ msgid ""
 "                                <span class=\"s_website_form_mark\"> *</span>"
 msgstr ""
 "<span class=\"s_website_form_label_content\">名稱</span>\n"
-"                                <span class=\"s_website_form_mark\"> *（必填）</span>"
+"                                <span class=\"s_website_form_mark\"> *（必"
+"填）</span>"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_block_form_template
@@ -86,7 +95,8 @@ msgid ""
 "                                <span class=\"s_website_form_mark\"> *</span>"
 msgstr ""
 "<span class=\"s_website_form_label_content\">訂閱</span>\n"
-"                                <span class=\"s_website_form_mark\"> *（必填）</span>"
+"                                <span class=\"s_website_form_mark\"> *（必"
+"填）</span>"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_popup
@@ -107,6 +117,7 @@ msgstr "成為第一個了解所有最新消息、<br/>產品資訊與趨勢的�
 #. module: website_mass_mailing
 #. odoo-javascript
 #: code:addons/website_mass_mailing/static/src/xml/website_mass_mailing.xml:0
+#: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_benefits_popup
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_popup
 msgid "Close"
 msgstr "關閉"
@@ -129,7 +140,7 @@ msgstr "顯示名稱"
 
 #. module: website_mass_mailing
 #. odoo-javascript
-#: code:addons/website_mass_mailing/static/src/js/website_mass_mailing.editor.js:0
+#: code:addons/website_mass_mailing/static/src/website_builder/mailing_list_subscribe_option.xml:0
 msgid "Display Thanks Message"
 msgstr "顯示感謝訊息"
 
@@ -144,15 +155,10 @@ msgid "Email Address"
 msgstr "電子郵件地址"
 
 #. module: website_mass_mailing
-#: model_terms:ir.ui.view,arch_db:website_mass_mailing.newsletter_subscribe_options
+#. odoo-javascript
+#: code:addons/website_mass_mailing/static/src/website_builder/newsletter_layout_option.xml:0
 msgid "Email Subscription"
 msgstr "電郵訂閱"
-
-#. module: website_mass_mailing
-#. odoo-javascript
-#: code:addons/website_mass_mailing/static/src/interactions/subscribe.js:0
-msgid "Error"
-msgstr "錯誤"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_block_form_template
@@ -160,7 +166,8 @@ msgid "First Name"
 msgstr "名字"
 
 #. module: website_mass_mailing
-#: model_terms:ir.ui.view,arch_db:website_mass_mailing.newsletter_subscribe_options
+#. odoo-javascript
+#: code:addons/website_mass_mailing/static/src/website_builder/newsletter_layout_option.xml:0
 msgid "Form Subscription"
 msgstr "表格訂閱"
 
@@ -171,7 +178,8 @@ msgstr "表格訂閱"
 msgid ""
 "Get all the latest news, blog posts and product updates from our company, "
 "delivered directly to your inbox."
-msgstr "收取有關公司動向、最新網誌文章、產品更新等最新消息，直接發送至你的收件箱。"
+msgstr ""
+"收取有關公司動向、最新網誌文章、產品更新等最新消息，直接發送至你的收件箱。"
 
 #. module: website_mass_mailing
 #: model:ir.model.fields,field_description:website_mass_mailing.field_res_company__id
@@ -182,6 +190,13 @@ msgstr "識別號"
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_block_form_template
 msgid "John Smith"
 msgstr "例：Alex Wong"
+
+#. module: website_mass_mailing
+#: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_benefits_popup
+msgid ""
+"Join our mailing list to receive carefully curated resources, tips, and "
+"updates straight to your inbox."
+msgstr ""
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_block_form_template
@@ -195,10 +210,16 @@ msgid "Mailing List(s) not found!"
 msgstr "找不到郵寄清單！"
 
 #. module: website_mass_mailing
-#: model_terms:ir.ui.view,arch_db:website_mass_mailing.newsletter_subscribe_options_common
+#. odoo-javascript
+#: code:addons/website_mass_mailing/static/src/website_builder/mailing_list_subscribe_option.xml:0
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.snippets
 msgid "Newsletter"
 msgstr "最新消息"
+
+#. module: website_mass_mailing
+#: model_terms:ir.ui.view,arch_db:website_mass_mailing.snippets
+msgid "Newsletter Benefits"
+msgstr ""
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.snippets
@@ -227,14 +248,22 @@ msgstr "最新消息彈出視窗"
 
 #. module: website_mass_mailing
 #. odoo-javascript
-#: code:addons/website_mass_mailing/static/src/js/website_mass_mailing.editor.js:0
+#: code:addons/website_mass_mailing/static/src/website_builder/mailing_list_subscribe_option_plugin.js:0
 msgid ""
 "No mailing list found, do you want to create a new one? This will save all "
 "your changes, are you sure you want to proceed?"
-msgstr "未找到郵件列表，您要建立一個新列表嗎？這將儲存您的所有更改，您確定要繼續嗎？"
+msgstr ""
+"未找到郵件列表，您要建立一個新列表嗎？這將儲存您的所有更改，您確定要繼續嗎？"
 
 #. module: website_mass_mailing
-#: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_subscribe_form_options
+#. odoo-javascript
+#: code:addons/website_mass_mailing/static/src/website_builder/mailing_list_subscribe_option.xml:0
+msgid "None"
+msgstr "無"
+
+#. module: website_mass_mailing
+#. odoo-javascript
+#: code:addons/website_mass_mailing/static/src/website_builder/mailing_list_subscribe_option.xml:0
 msgid "Placeholder"
 msgstr "提示文字"
 
@@ -244,9 +273,15 @@ msgid "Popup"
 msgstr "彈出方塊"
 
 #. module: website_mass_mailing
-#: model_terms:ir.ui.view,arch_db:website_mass_mailing.newsletter_subscribe_options_common
+#. odoo-javascript
+#: code:addons/website_mass_mailing/static/src/website_builder/recaptcha_subscribe_option.xml:0
 msgid "Show reCaptcha Policy"
 msgstr "顯示 reCaptcha 政策"
+
+#. module: website_mass_mailing
+#: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_benefits_popup
+msgid "Stay Ahead with weekly insights &amp; updates"
+msgstr ""
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_block_form_template
@@ -269,12 +304,7 @@ msgstr "訂閱我們的電子報"
 
 #. module: website_mass_mailing
 #. odoo-javascript
-#: code:addons/website_mass_mailing/static/src/interactions/subscribe.js:0
-msgid "Success"
-msgstr "成功"
-
-#. module: website_mass_mailing
-#: model_terms:ir.ui.view,arch_db:website_mass_mailing.newsletter_subscribe_options
+#: code:addons/website_mass_mailing/static/src/website_builder/newsletter_layout_option.xml:0
 msgid "Template"
 msgstr "範本文字"
 
@@ -284,6 +314,7 @@ msgid "Thank you for subscribing!"
 msgstr "感謝訂閱！"
 
 #. module: website_mass_mailing
+#: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_benefits_popup
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_box
 msgid "Thanks for registering!"
 msgstr "感謝登記！"
@@ -299,7 +330,9 @@ msgstr "感謝您的訂閱！"
 msgid ""
 "We send one weekly newsletter per list and always try to keep it "
 "interesting. You can unsubscribe at any time."
-msgstr "我們每星期只會向每個郵寄清單發送一次時事通訊，並會努力令它有趣。你隨時可以取消訂閱。"
+msgstr ""
+"我們每星期只會向每個郵寄清單發送一次時事通訊，並會努力令它有趣。你隨時可以取"
+"消訂閱。"
 
 #. module: website_mass_mailing
 #. odoo-python
@@ -330,8 +363,8 @@ msgid ""
 "form, updates, digest, bulletin, announcements, notifications, "
 "communication, email, modal, alert, dialog, prompt, pop-up, subscription"
 msgstr ""
-"表單, 表格, 更新, 摘要, 快訊, 宣佈, 公告, 通知, 通訊, 電子郵件, 電郵, 模式, 警報, 警示, 對話, 提示, 彈出視窗, 訂閱, "
-"定期訂購"
+"表單, 表格, 更新, 摘要, 快訊, 宣佈, 公告, 通知, 通訊, 電子郵件, 電郵, 模式, "
+"警報, 警示, 對話, 提示, 彈出視窗, 訂閱, 定期訂購"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.s_newsletter_block_form_template
@@ -345,8 +378,8 @@ msgid ""
 "promotional, email, alert, dialog, prompt, subscription, subscribe, mailing-"
 "list, news"
 msgstr ""
-"更新, 摘要, 快訊, 宣佈, 公告, 通知, 通訊, 推廣, 宣傳, 促銷, 電子郵件, 電郵, 警報, 警示, 對話, 提示, 訂閱, 定期訂購, "
-"訂購, 郵寄清單, 新消息"
+"更新, 摘要, 快訊, 宣佈, 公告, 通知, 通訊, 推廣, 宣傳, 促銷, 電子郵件, 電郵, "
+"警報, 警示, 對話, 提示, 訂閱, 定期訂購, 訂購, 郵寄清單, 新消息"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.snippets
@@ -355,8 +388,9 @@ msgid ""
 "promotional, email, alert, dialog, prompt, subscription, subscribe, mailing-"
 "list, news, box, image, picture"
 msgstr ""
-"更新, 摘要, 快訊, 宣佈, 公告, 通知, 通訊, 推廣, 宣傳, 促銷, 電子郵件, 電郵, 警報, 警示, 對話, 提示, 訂閱, 定期訂購, "
-"訂購, 郵寄清單, 新消息, 框框, 方格, 圖像, 圖片, 照片"
+"更新, 摘要, 快訊, 宣佈, 公告, 通知, 通訊, 推廣, 宣傳, 促銷, 電子郵件, 電郵, "
+"警報, 警示, 對話, 提示, 訂閱, 定期訂購, 訂購, 郵寄清單, 新消息, 框框, 方格, "
+"圖像, 圖片, 照片"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.snippets
@@ -365,5 +399,21 @@ msgid ""
 "promotional, email, alert, dialog, prompt, subscription, subscribe, mailing-"
 "list, news, grid, image, picture"
 msgstr ""
-"更新, 摘要, 快訊, 宣佈, 公告, 通知, 通訊, 推廣, 宣傳, 促銷, 電子郵件, 電郵, 警報, 警示, 對話, 提示, 訂閱, 定期訂購, "
-"訂購, 郵寄清單, 新消息, 網格, 格網, 圖像, 圖片, 照片"
+"更新, 摘要, 快訊, 宣佈, 公告, 通知, 通訊, 推廣, 宣傳, 促銷, 電子郵件, 電郵, "
+"警報, 警示, 對話, 提示, 訂閱, 定期訂購, 訂購, 郵寄清單, 新消息, 網格, 格網, "
+"圖像, 圖片, 照片"
+
+#~ msgid ".o_newsletter_popup"
+#~ msgstr ".o_newsletter_popup"
+
+#~ msgid ".s_newsletter_block .s_newsletter_list, .o_newsletter_popup .s_newsletter_list, .s_newsletter_box .s_newsletter_list, .s_newsletter_centered .s_newsletter_list, .s_newsletter_grid .s_newsletter_list"
+#~ msgstr ".s_newsletter_block .s_newsletter_list, .o_newsletter_popup .s_newsletter_list, .s_newsletter_box .s_newsletter_list, .s_newsletter_centered .s_newsletter_list, .s_newsletter_grid .s_newsletter_list"
+
+#~ msgid ".s_newsletter_list"
+#~ msgstr ".s_newsletter_list"
+
+#~ msgid "Error"
+#~ msgstr "錯誤"
+
+#~ msgid "Success"
+#~ msgstr "成功"

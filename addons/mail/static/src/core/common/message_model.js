@@ -5,8 +5,9 @@ import {
     EMOJI_REGEX,
     convertBrToLineBreak,
     decorateEmojis,
+    generateEmojisOnHtml,
+    getNonEditableMentions,
     htmlToTextContentInline,
-    prettifyMessageContent,
 } from "@mail/utils/common/format";
 
 import { browser } from "@web/core/browser/browser";
@@ -59,6 +60,7 @@ export class Message extends Record {
         },
     });
     composer = fields.One("Composer", { inverse: "message", onDelete: (r) => r.delete() });
+    composerAsReplyToMessage = fields.One("Composer", { inverse: "replyToMessage" });
     date = fields.Datetime();
     /** @type {string} */
     default_subject;
@@ -79,6 +81,15 @@ export class Message extends Record {
             }
             const div = createElementWithContent("div", this.body);
             return Boolean(div.querySelector("a:not([data-oe-model])"));
+        },
+    });
+    hasMailNotificationSummary = fields.Attr(false, {
+        compute() {
+            return Boolean(
+                createDocumentFragmentFromContent(this.body).querySelector(
+                    '[summary="o_mail_notification"]'
+                )
+            );
         },
     });
     /** @type {number|string} */
@@ -302,13 +313,15 @@ export class Message extends Record {
     isTranslatable(thread) {
         return (
             !this.isEmpty &&
+            !this.isBodyEmpty &&
+            !this.hasMailNotificationSummary &&
             this.store.hasMessageTranslationFeature &&
             !["discuss.channel", "mail.box"].includes(thread?.model)
         );
     }
 
     get hasTextContent() {
-        return !this.isBodyEmpty;
+        return !this.isBodyEmpty || this.edited;
     }
 
     isEmpty = fields.Attr(false, {
@@ -539,6 +552,7 @@ export class Message extends Record {
             mentionedChannels,
             mentionedPartners,
             mentionedRoles,
+            thread: this.thread,
         });
         const hadLink = this.hasLink; // to remove old previews if message no longer contains any link
         const updateData = {
@@ -548,7 +562,7 @@ export class Message extends Record {
             attachment_tokens: attachments
                 .concat(this.attachment_ids)
                 .map((attachment) => attachment.ownership_token),
-            body: await prettifyMessageContent(body, { validMentions }),
+            body: await generateEmojisOnHtml(body),
             partner_ids: validMentions?.partners?.map((partner) => partner.id),
             role_ids: validMentions?.roles?.map((role) => role.id),
         };
@@ -566,14 +580,25 @@ export class Message extends Record {
     }
 
     /** @param {import("models").Thread} thread the thread where the message is being viewed when starting edition */
-    enterEditMode(thread) {
+    async enterEditMode(thread) {
+        const doc = createDocumentFragmentFromContent(this.body);
+        const validChannels = (
+            await Promise.all(
+                Array.from(
+                    doc.querySelectorAll(".o_channel_redirect[data-oe-model='discuss.channel']")
+                ).map(async (el) =>
+                    this.store.Thread.getOrFetch({ id: el.dataset.oeId, model: "discuss.channel" })
+                )
+            )
+        ).filter((channel) => channel?.exists());
         const text = convertBrToLineBreak(this.body);
         if (thread?.messageInEdition) {
             thread.messageInEdition.composer = undefined;
         }
         this.composer = {
+            composerHtml: getNonEditableMentions(this.body),
+            mentionedChannels: validChannels,
             mentionedPartners: this.partner_ids,
-            composerHtml: this.body,
             selection: {
                 start: text.length,
                 end: text.length,
@@ -598,7 +623,7 @@ export class Message extends Record {
      * @returns {string}
      */
     getPersonaName(persona) {
-        return this.thread?.getPersonaName(persona) || persona.displayName || persona.name;
+        return this.thread?.getPersonaName(persona) || persona?.displayName || persona?.name;
     }
 
     async onClickToggleTranslation() {

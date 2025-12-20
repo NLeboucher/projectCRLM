@@ -7,13 +7,15 @@
 # Martin Trigaux, 2023
 # Erwin van der Ploeg <erwin@odooexperts.nl>, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# Bren Driesen <brdri@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 13:57+0000\n"
-"PO-Revision-Date: 2025-09-14 08:06+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-12-19 18:37+0000\n"
+"PO-Revision-Date: 2025-11-24 12:08+0000\n"
+"Last-Translator: Bren Driesen <brdri@odoo.com>\n"
 "Language-Team: Dutch <https://translate.odoo.com/projects/odoo-19/"
 "hr_timesheet/nl/>\n"
 "Language: nl\n"
@@ -90,8 +92,8 @@ msgid ""
 "'%(missing_plan_names)s' analytic plan(s) required on the project '%"
 "(project_name)s' linked to the timesheet."
 msgstr ""
-"'%(missing_plan_names)s' analyseplan(nen) vereist voor het project "
-"'%(project_name)s' gekoppeld aan de urenstaat."
+"'%(missing_plan_names)s' analyseplan(nen) vereist voor het project '%"
+"(project_name)s' gekoppeld aan de urenstaat."
 
 #. module: hr_timesheet
 #. odoo-python
@@ -183,8 +185,8 @@ msgstr ""
 "                            Hier zijn twee opties: verwijder die timesheets "
 "of overweeg de werknemer te archiveren.\n"
 "                        </span>\n"
-"                        <span invisible=\"has_active_employee\" groups="
-"\"hr_timesheet.group_hr_timesheet_approver\">\n"
+"                        <span invisible=\"has_active_employee\" "
+"groups=\"hr_timesheet.group_hr_timesheet_approver\">\n"
 "                            Verwijder eerst al hun timesheets.\n"
 "                        </span>\n"
 "                    </span>\n"
@@ -519,7 +521,7 @@ msgstr "Negeren"
 #: model:ir.model.fields,field_description:hr_timesheet.field_timesheets_analysis_report__display_name
 #: model:ir.model.fields,field_description:hr_timesheet.field_uom_uom__display_name
 msgid "Display Name"
-msgstr "Schermnaam"
+msgstr "Weergavenaam"
 
 #. module: hr_timesheet
 #: model:ir.model.fields,field_description:hr_timesheet.field_account_analytic_applicability__business_domain
@@ -596,7 +598,7 @@ msgstr "Heeft toegang tot afdelingsmanager"
 #. module: hr_timesheet
 #: model:ir.model.fields,field_description:hr_timesheet.field_hr_employee_public__has_timesheet
 msgid "Has Timesheet"
-msgstr ""
+msgstr "Heeft urenstaten"
 
 #. module: hr_timesheet
 #: model:ir.model.fields.selection,name:hr_timesheet.selection__res_config_settings__timesheet_encode_method__hours
@@ -628,7 +630,7 @@ msgstr "ID"
 #. odoo-python
 #: code:addons/hr_timesheet/models/hr_timesheet.py:0
 msgid "Import Template for Timesheets"
-msgstr ""
+msgstr "Sjabloon importeren voor urenstaten"
 
 #. module: hr_timesheet
 #. odoo-python
@@ -764,6 +766,12 @@ msgstr "Nog geen gegevens!"
 
 #. module: hr_timesheet
 #. odoo-python
+#: code:addons/hr_timesheet/models/hr_timesheet.py:0
+msgid "No timesheets created: employees aren’t working on the selected days"
+msgstr ""
+
+#. module: hr_timesheet
+#. odoo-python
 #: code:addons/hr_timesheet/controllers/portal.py:0
 msgid "None"
 msgstr "Geen"
@@ -855,7 +863,7 @@ msgstr "Urenstaten project"
 #. module: hr_timesheet
 #: model:ir.model,name:hr_timesheet.model_hr_employee_public
 msgid "Public Employee"
-msgstr ""
+msgstr "Openbare werknemer"
 
 #. module: hr_timesheet
 #: model_terms:ir.actions.act_window,help:hr_timesheet.act_hr_timesheet_line_by_project
@@ -972,6 +980,14 @@ msgid ""
 msgstr ""
 "Sommige werkboekingen blokkeren deze taken. Verwijder ze eerst om de taken "
 "te kunnen verwijderen!"
+
+#. module: hr_timesheet
+#. odoo-python
+#: code:addons/hr_timesheet/models/hr_timesheet.py:0
+msgid ""
+"Some timesheets were not created: employees aren’t working on the selected "
+"days"
+msgstr ""
 
 #. module: hr_timesheet
 #: model_terms:ir.ui.view,arch_db:hr_timesheet.timesheet_report_subtask
@@ -1327,12 +1343,6 @@ msgid "Timesheets cannot be created on a private task."
 msgstr "Urenstaten kunnen niet aangemaakt worden op een privé taak."
 
 #. module: hr_timesheet
-#. odoo-javascript
-#: code:addons/hr_timesheet/static/src/views/timesheet_calendar/timesheet_calendar_model.js:0
-msgid "Timesheets could not be created for any of the selected days"
-msgstr ""
-
-#. module: hr_timesheet
 #. odoo-python
 #: code:addons/hr_timesheet/models/hr_timesheet.py:0
 msgid ""
@@ -1358,10 +1368,10 @@ msgid "Timesheets of %(name)s"
 msgstr "Urenstaten van %(name)s"
 
 #. module: hr_timesheet
-#. odoo-javascript
-#: code:addons/hr_timesheet/static/src/views/timesheet_calendar/timesheet_calendar_model.js:0
+#. odoo-python
+#: code:addons/hr_timesheet/models/hr_timesheet.py:0
 msgid "Timesheets successfully created"
-msgstr ""
+msgstr "Urenstaten succesvol aangemaakt"
 
 #. module: hr_timesheet
 #: model:digest.tip,name:hr_timesheet.digest_tip_hr_timesheet_0
@@ -1377,8 +1387,8 @@ msgid ""
 "timesheets feature."
 msgstr ""
 "Om de urenverantwoordingsfunctie te kunnen gebruiken, heb je een analytische "
-"rekening voor je project nodig. Maak er een aan in de analytisch dimensie "
-"'%(plan_name)s' of schakel de urenverantwoordingsfunctie uit."
+"rekening voor je project nodig. Maak er een aan in de analytisch dimensie '%"
+"(plan_name)s' of schakel de urenverantwoordingsfunctie uit."
 
 #. module: hr_timesheet
 #. odoo-python
@@ -1451,6 +1461,17 @@ msgid ""
 "        Make sure to use the right format and order e.g. Improve the "
 "configuration screen 5h #feature #v16 @Mitchell !"
 msgstr ""
+"Gebruik deze trefwoorden in de titel om nieuwe taken in te stellen:\n"
+"\n"
+"        30h Wijs 30 uur toe aan de taak\n"
+"        #label Stel labels in op de taak\n"
+"        @user Wijs de taak toe aan een gebruiker\n"
+"        ! Geef de taak een gemiddelde prioriteit\n"
+"        !! Geef de taak een hoge prioriteit\n"
+"        !!! Geef de taak een urgente prioriteit\n"
+"\n"
+"        Zorg ervoor dat je de juiste indeling en volgorde gebruikt, bv.: "
+"Verbeter het configuratiescherm 5h #feature #v16 @Mitchell !"
 
 #. module: hr_timesheet
 #: model:ir.model.fields,field_description:hr_timesheet.field_account_analytic_line__user_id
@@ -1558,8 +1579,8 @@ msgid ""
 "span>)"
 msgstr ""
 "op\n"
-"                            <span class=\"fw-bold text-dark\"> "
-"Subtaken</span>)"
+"                            <span class=\"fw-bold text-dark\"> Subtaken</"
+"span>)"
 
 #. module: hr_timesheet
 #: model_terms:ir.ui.view,arch_db:hr_timesheet.project_sharing_inherit_project_task_view_form
@@ -1569,6 +1590,10 @@ msgid ""
 msgstr ""
 "op\n"
 "                        <span class=\"fw-bold text-dark\"> Subtaken</span>)"
+
+#~ msgid "Timesheets could not be created for any of the selected days"
+#~ msgstr ""
+#~ "Urenstaten konden niet worden aangemaakt voor de geselecteerde dagen"
 
 #~ msgid "%s Spent"
 #~ msgstr "%s Besteed"

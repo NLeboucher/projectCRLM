@@ -143,6 +143,13 @@ class TestAccountMoveOutInvoiceOnchanges(AccountTestInvoicingCommon):
             self.term_line_vals_1,
         ], self.move_vals)
 
+    def test_basic_tax_lock(self):
+        tax_tag = self.env['account.account.tag'].create({'name': 'HiddenFromIRS', 'applicability': 'taxes'})
+        inv = self.init_invoice('out_invoice', amounts=[10], post=True)
+        inv.company_id.tax_lock_date = inv.date
+        with self.assertRaisesRegex(UserError, 'lock date'):
+            inv.line_ids.tax_tag_ids = tax_tag.ids
+
     @freeze_time('2020-01-15')
     def test_out_invoice_onchange_invoice_date(self):
         for tax_date, invoice_date, accounting_date in [
@@ -1521,6 +1528,8 @@ class TestAccountMoveOutInvoiceOnchanges(AccountTestInvoicingCommon):
         })
 
     def test_out_invoice_line_onchange_currency_1(self):
+        self.other_currency.rounding = 0.001
+
         move_form = Form(self.invoice)
         move_form.currency_id = self.other_currency
         move_form.save()
@@ -4726,6 +4735,32 @@ class TestAccountMoveOutInvoiceOnchanges(AccountTestInvoicingCommon):
             "Narration should be preserved after partner change when invoice terms are disabled"
         )
 
+    def test_narration_translation_on_partner_language_change(self):
+        """Ensure narration translates when partner.lang changes (HTML terms link)."""
+        self.env['ir.config_parameter'].sudo().set_param('account.use_invoice_terms', True)
+        self.env['res.lang']._activate_lang('fr_FR')
+
+        self.env.company.terms_type = 'html'
+
+        # Baseline: en_US user/partner
+        self.partner_a.lang = 'en_US'
+
+        # Create invoice
+        invoice = self.init_invoice(move_type='out_invoice', partner=self.partner_a)
+
+        baseurl = self.env.company.get_base_url() + '/terms'
+
+        # Check the initial narration is in English
+        expected_en = f"<p>Terms &amp; Conditions: {baseurl}</p>"
+        self.assertEqual(invoice.narration, expected_en)
+
+        # Switch to fr_FR
+        self.partner_a.lang = 'fr_FR'
+
+        # Check the narration is in French
+        expected_fr = f"<p>Conditions générales : {baseurl}</p>"
+        self.assertEqual(invoice.narration, expected_fr)
+
     def test_multiple_currency_change(self):
         """
         Test amount currency and balance are correctly recomputed when switching currency multiple times
@@ -4831,3 +4866,139 @@ class TestAccountMoveOutInvoiceOnchanges(AccountTestInvoicingCommon):
         invoice_terms[1].no_followup = False
         self.assertFalse(invoice.no_followup)
         self.assertEqual(invoice_terms.mapped('no_followup'), [False, False, False])
+
+    def test_invoice_epd_cash_rounding_amount(self):
+        """
+        This test checks the correct calculation of early payment discount on an
+        invoice having also cash discount applied
+        """
+        tax = self.env['account.tax'].create({
+            'name': '8.1%',
+            'type_tax_use': 'sale',
+            'amount': 8.1,
+        })
+        self.cash_rounding_a.rounding_method = 'HALF-UP'
+        payment_terms = self.env['account.payment.term'].create({
+            'name': "2/7 Net 30",
+            'company_id': self.company_data['company'].id,
+            'discount_percentage': 2,
+            'discount_days': 7,
+            'early_discount': True,
+        })
+
+        invoice = self.env['account.move'].create({
+            'move_type': 'out_invoice',
+            'partner_id': self.partner_a.id,
+            'invoice_payment_term_id': payment_terms.id,
+            'invoice_cash_rounding_id': self.cash_rounding_a.id,
+            'invoice_line_ids': [Command.create({
+                'name': 'test line',
+                'price_unit': 50.00,
+                'tax_ids': [Command.set(tax.ids)],
+            })],
+        })
+        invoice.action_post()
+        invoice = invoice.with_context(active_model='account.move', active_id=invoice.id)
+        discounted_amount = invoice.invoice_payment_term_id._get_amount_due_after_discount(
+            total_amount=invoice.amount_total,
+            untaxed_amount=invoice.amount_tax,
+        )
+        self.assertEqual(discounted_amount, 52.95)
+
+    def test_search_move_sent_values(self):
+        # Create a partner to only get invoices from this test
+        partner = self.env['res.partner'].create({
+            'name': 'Test Partner',
+        })
+
+        invoice_sent = self.init_invoice('out_invoice', products=self.product_a, partner=partner, post=True)
+        invoice_sent._generate_and_send()
+
+        invoice_not_sent = self.init_invoice('out_invoice', products=self.product_a, partner=partner, post=True)
+
+        res = self.env['account.move'].search([('partner_id', '=', partner.id), ('move_sent_values', '=', 'sent')])
+        self.assertEqual(invoice_sent, res)
+
+        res = self.env['account.move'].search([('partner_id', '=', partner.id), ('move_sent_values', '=', 'not_sent')])
+        self.assertEqual(invoice_not_sent, res)
+
+    def test_invoice_currency_rate_round_globally(self):
+        """Ensure that when the tax rounding method is set to 'global', changing the currency rate directly
+         on the invoice results in journal entries that are rounded globally, not per line. """
+
+        self.env.company.tax_calculation_rounding_method = 'round_globally'
+        eur = self.setup_other_currency('EUR')
+        invoice = self.env['account.move'].create({
+            'move_type': 'out_invoice',
+            'partner_id': self.partner_a.id,
+            'currency_id': eur.id,
+            'invoice_line_ids': [
+                Command.create({
+                    'name': 'test line',
+                    'quantity': 0.80,
+                    'price_unit': 894.34,
+                }),
+            ],
+        })
+        invoice.invoice_currency_rate = 1 / 1189.5
+
+        self.assertRecordValues(invoice.line_ids, [
+            {'balance': -851053.94},
+            {'balance': 851053.94},
+        ])
+
+    def test_tax_recomputed_when_changing_base_lines(self):
+        percent_tax = self.company_data['default_tax_sale']
+
+        invoice = self.init_invoice('out_invoice', self.partner_a, '2019-01-01', amounts=[500.0, 900.0], taxes=[percent_tax])
+
+        invoice.invoice_line_ids = [
+            Command.unlink(invoice.line_ids[1].id),
+            Command.create({
+                'name': 'line3',
+                'debit': 100.0,
+                'credit': 0.0,
+                'account_id': self.company_data['default_account_revenue'].id,
+            }),
+        ]
+
+        tax_line = invoice.line_ids.filtered('tax_repartition_line_id')
+        self.assertRecordValues(tax_line, [
+            {
+                'balance': -75.0,
+                'tax_base_amount': -500.0,
+                'tax_line_id': percent_tax.id,
+            }
+        ])
+
+    def test_out_invoice_custom_currency_rate(self):
+        ''' Check the invoice_date will be set automatically at the post date. '''
+        move = self.env['account.move'].create({
+            'move_type': 'out_invoice',
+            'partner_id': self.partner_a.id,
+            'currency_id': self.other_currency.id,
+            'invoice_currency_rate': 5,
+            'invoice_line_ids': [Command.create({'product_id': self.product_a.id})],
+            'invoice_date': False,
+        })
+        expected_lines_vals = [
+            {
+                'balance': -400.0,
+                'amount_currency': -2000.0,
+            },
+            {
+                'balance': -60.0,
+                'amount_currency': -300.0,
+            },
+            {
+                'balance': 460.0,
+                'amount_currency': 2300.0,
+            },
+        ]
+        self.assertRecordValues(move.line_ids, expected_lines_vals)
+        move.action_post()
+        self.assertRecordValues(move.line_ids, expected_lines_vals)
+        self.assertRecordValues(move, [{
+            'invoice_currency_rate': 5.0,
+            'expected_currency_rate': 2.0,
+        }])

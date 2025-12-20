@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from collections import deque
+from datetime import datetime
 
 from odoo import api, Command, fields, models, _
+from odoo.fields import Date
 from odoo.tools.float_utils import float_round, float_is_zero, float_compare
 from odoo.exceptions import UserError
 
@@ -44,7 +46,7 @@ class StockMove(models.Model):
         super()._compute_description_picking()
         for move in self:
             if move.purchase_line_id:
-                seller = move.sudo().purchase_line_id.selected_seller_id
+                seller = move.purchase_line_id.sudo().selected_seller_id
                 vendor_reference = f'[{seller.product_code}]' if seller.product_code else ''
                 vendor_reference += f' {seller.product_name}' if seller.product_name else ''
                 no_variant_attributes = '\n'.join(f'{attribute.attribute_id.name}: {attribute.name}' for attribute in move.purchase_line_id.sudo().product_no_variant_attribute_value_ids)
@@ -147,31 +149,60 @@ class StockMove(models.Model):
 
     def _get_value_from_account_move(self, quantity, at_date=None):
         valuation_data = super()._get_value_from_account_move(quantity, at_date=at_date)
-        if not (self.purchase_line_id and self.purchase_line_id):
+        if not self.purchase_line_id:
             return valuation_data
 
-        quantity = 0
+        if isinstance(at_date, datetime):
+            # Since aml.date are Date, we don't need the extra precision here.
+            at_date = Date.to_date(at_date)
+
+        aml_quantity = 0
         value = 0
         aml_ids = set()
         for aml in self.purchase_line_id.invoice_lines:
-            if at_date and fields.Datetime.to_datetime(aml.date) > at_date:
+            if at_date and aml.date > at_date:
                 continue
             if aml.move_id.state != 'posted':
                 continue
             aml_ids.add(aml.id)
             if aml.move_type == 'in_invoice':
-                quantity += aml.quantity
-                value += aml.price_subtotal
+                aml_quantity += aml.product_uom_id._compute_quantity(aml.quantity, self.product_id.uom_id)
+                value += aml.currency_id._convert(aml.price_subtotal, self.company_id.currency_id, date=aml.date)
             elif aml.move_type == 'in_refund':
-                quantity -= aml.quantity
-                value -= aml.price_subtotal
+                aml_quantity -= aml.product_uom_id._compute_quantity(aml.quantity, self.product_id.uom_id)
+                value -= aml.currency_id._convert(aml.price_subtotal, self.company_id.currency_id, date=aml.date)
 
-        valuation_data['quantity'] = quantity
-        valuation_data['value'] = value
+        if aml_quantity <= 0:
+            return valuation_data
+
+        other_candidates_qty = 0
+        for move in self.purchase_line_id.move_ids:
+            if move.product_id != self.product_id:
+                continue
+            if move.date > self.date or (move.date == self.date and move.id > self.id):
+                continue
+            if move.is_in or move.is_dropship:
+                other_candidates_qty += move._get_valued_qty()
+            elif move.is_out:
+                other_candidates_qty -= -move._get_valued_qty()
+
+        if self.product_uom.compare(aml_quantity, other_candidates_qty) <= 0:
+            return valuation_data
+
+        # Remove quantity from prior moves.
+        value = value * ((aml_quantity - other_candidates_qty) / aml_quantity)
+        aml_quantity = aml_quantity - other_candidates_qty
+
+        if quantity >= aml_quantity:
+            valuation_data['quantity'] = aml_quantity
+            valuation_data['value'] = value
+        else:
+            valuation_data['quantity'] = quantity
+            valuation_data['value'] = quantity * value / aml_quantity
         account_moves = self.env['account.move.line'].browse(aml_ids).move_id
-        valuation_data['description'] = _('%(value)s for %(quantity)s %(unit)s from %(bills)s',
-            value=value, quantity=quantity, unit=self.product_id.uom_id.name,
-            bills=', '.join(account_move.name for account_move in account_moves))
+        valuation_data['description'] = self.env._('%(value)s for %(quantity)s %(unit)s from %(bills)s',
+            value=self.company_currency_id.format(value), quantity=aml_quantity, unit=self.product_id.uom_id.name,
+            bills=account_moves.mapped('display_name'))
         return valuation_data
 
     def _get_value_from_quotation(self, quantity, at_date=None):
@@ -179,11 +210,15 @@ class StockMove(models.Model):
         if not self.purchase_line_id:
             return super()._get_value_from_quotation(quantity, at_date)
         price_unit = self.purchase_line_id._get_stock_move_price_unit()
-        quantity = min(quantity, self.quantity)
+        uom_quantity = self.product_uom._compute_quantity(quantity, self.product_id.uom_id)
+        quantity = min(quantity, uom_quantity)
+        value = price_unit * quantity
         return {
-            'value': price_unit * quantity,
+            'value': value,
             'quantity': quantity,
-            'description': _('From %(quotation)s', quotation=self.purchase_line_id.order_id.name),
+            'description': self.env._('%(value)s for %(quantity)s %(unit)s from %(quotation)s (not billed)',
+                value=self.company_currency_id.format(value), quantity=quantity, unit=self.product_id.uom_id.name,
+                quotation=self.purchase_line_id.order_id.display_name),
         }
 
     def _get_related_invoices(self):

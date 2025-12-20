@@ -7,13 +7,14 @@
 # Martin Trigaux, 2023
 #
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# "Junko Augias (juau)" <juau@odoo.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 13:55+0000\n"
-"PO-Revision-Date: 2025-09-14 21:19+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-11-07 18:36+0000\n"
+"PO-Revision-Date: 2025-11-12 05:39+0000\n"
+"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19/"
 "base_vat/ja/>\n"
 "Language: ja\n"
@@ -65,7 +66,8 @@ msgstr "49-098-576 または 49098576"
 #. odoo-python
 #: code:addons/base_vat/models/res_partner.py:0
 msgid "CHE-123.456.788 TVA or CHE-123.456.788 MWST or CHE-123.456.788 IVA"
-msgstr "CHE-123.456.788 TVA または CHE-123.456.788 MWST または CHE-123.456.788 IVA"
+msgstr ""
+"CHE-123.456.788 TVA または CHE-123.456.788 MWST または CHE-123.456.788 IVA"
 
 #. module: base_vat
 #: model:ir.model,name:base_vat.model_res_company
@@ -75,7 +77,7 @@ msgstr "会社"
 #. module: base_vat
 #: model:ir.model,name:base_vat.model_res_config_settings
 msgid "Config Settings"
-msgstr "詳細設定"
+msgstr "構成設定"
 
 #. module: base_vat
 #. odoo-python
@@ -127,7 +129,8 @@ msgstr "欧州VAT番号はVIESデータベースで自動的にチェックさ�
 #: code:addons/base_vat/models/res_partner.py:0
 msgid ""
 "Example: '219999830019' (format: 12 digits, all numbers, valid check digit)"
-msgstr "例: '219999830019' (フォーマット: 112桁、すべて数字、有効なチェックデジット)"
+msgstr ""
+"例: '219999830019' (フォーマット: 112桁、すべて数字、有効なチェックデジット)"
 
 #. module: base_vat
 #. odoo-python
@@ -165,8 +168,16 @@ msgstr "ID"
 msgid ""
 "If this checkbox is ticked, the default fiscal position that applies will "
 "depend upon the output of the verification by the European VIES Service."
-msgstr "このチェックボックスをオンにした場合、適用されるデフォルトの財政ポジションは"
-"、欧州VIESサービスによる検証の出力によって異なります。"
+msgstr ""
+"このチェックボックスをオンにした場合、適用されるデフォルトの財政ポジション"
+"は、欧州VIESサービスによる検証の出力によって異なります。"
+
+#. module: base_vat
+#. odoo-python
+#: code:addons/base_vat/models/res_partner.py:0
+msgid ""
+"If you are trying to input a European number, this is the expected format: "
+msgstr "欧州の電話番号を入力する場合、以下の形式が想定されています： "
 
 #. module: base_vat
 #: model:ir.model.fields,field_description:base_vat.field_res_partner__vies_valid
@@ -199,7 +210,8 @@ msgstr "登録番号"
 msgid ""
 "The %(vat_label)s number [%(wrong_vat)s] does not seem to be valid. %"
 "(expected_note)s"
-msgstr "%(vat_label)s の数 [%(wrong_vat)s] が有効ではないようです。 %(expected_note)s"
+msgstr ""
+"%(vat_label)s の数 [%(wrong_vat)s] が有効ではないようです。 %(expected_note)s"
 
 #. module: base_vat
 #. odoo-python
@@ -208,8 +220,8 @@ msgid ""
 "The %(vat_label)s number [%(wrong_vat)s] for %(record_label)s does not seem "
 "to be valid. %(expected_note)s"
 msgstr ""
-"%(vat_label)s の数 [%(wrong_vat)s] (%(record_label)s 用) "
-"が有効ではないようです。 %(expected_note)s"
+"%(vat_label)s の数 [%(wrong_vat)s] (%(record_label)s 用) が有効ではないようで"
+"す。 %(expected_note)s"
 
 #. module: base_vat
 #: model:ir.model.fields,help:base_vat.field_res_partner__vat
@@ -219,9 +231,8 @@ msgid ""
 "country format. You can use '/' to indicate that the partner is not subject "
 "to tax."
 msgstr ""
-"登録番号(Tax Identification "
-"Number)。ここでの値は、国の形式に基づいて検証されます。取引先に税金がかからな"
-"いことを示すには、'/' を使用して下さい。"
+"登録番号(Tax Identification Number)。ここでの値は、国の形式に基づいて検証され"
+"ます。取引先に税金がかからないことを示すには、'/' を使用して下さい。"
 
 #. module: base_vat
 #. odoo-python
@@ -235,14 +246,16 @@ msgstr "VAT 番号 %s はVIESサーバで解釈することはできませんで
 msgid ""
 "The request for VAT validation was not processed. VIES service has responded "
 "with the following error: %s"
-msgstr "VAT検証のリクエストは処理されませんでした。VIESサービスは以下のエラーで応答し"
+msgstr ""
+"VAT検証のリクエストは処理されませんでした。VIESサービスは以下のエラーで応答し"
 "ました:%s"
 
 #. module: base_vat
 #. odoo-python
 #: code:addons/base_vat/models/res_partner.py:0
 msgid "To explicitly indicate no (valid) VAT, use '/' instead. "
-msgstr "(有効な)VATが存在しないことを明示するには、代わりに '/' を使用してください。 "
+msgstr ""
+"(有効な)VATが存在しないことを明示するには、代わりに '/' を使用してください。 "
 
 #. module: base_vat
 #. odoo-python
@@ -265,7 +278,8 @@ msgstr "ヨーロッパのVIESサービスを使用してVAT番号を確認す�
 #. odoo-python
 #: code:addons/base_vat/models/res_partner.py:0
 msgid "XXXXXXXXX [9 digits] and it should respect the Luhn algorithm checksum"
-msgstr "XXXXXXXXX [9 桁] でLuhnアルゴリズムのチェックサムにならう必要があります。"
+msgstr ""
+"XXXXXXXXX [9 桁] でLuhnアルゴリズムのチェックサムにならう必要があります。"
 
 #. module: base_vat
 #. odoo-python

@@ -29,7 +29,10 @@ export class PartnerList extends Component {
         this.modalRef = useChildRef();
         this.modalContent = null;
         this.state = useState({
-            initialPartners: this.pos.models["res.partner"].getAll(),
+            initialPartners: this.pos.models["res.partner"].filter((p) => {
+                const par = p.property_account_receivable_id;
+                return !par || par.non_trade !== true;
+            }),
             loadedPartners: [],
             query: "",
             loading: false,
@@ -94,7 +97,7 @@ export class PartnerList extends Component {
     }
 
     goToOrders(partner) {
-        this.props.close();
+        this.clickPartner(this.props.partner);
         const partnerHasActiveOrders = this.pos
             .getOpenOrders()
             .some((order) => order.partner?.id === partner.id);

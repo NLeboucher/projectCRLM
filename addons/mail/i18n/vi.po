@@ -12,13 +12,15 @@
 # Nancy Momoland <thanhnguyen.icsc@gmail.com>, 2023
 # Thi Huong Nguyen, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# "Thi Huong Nguyen (thng)" <thng@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-12 14:47+0000\n"
-"PO-Revision-Date: 2025-09-16 02:34+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-12-12 18:35+0000\n"
+"PO-Revision-Date: 2025-12-04 17:51+0000\n"
+"Last-Translator: \"Thi Huong Nguyen (thng)\" <thng@odoo.com>\n"
 "Language-Team: Vietnamese <https://translate.odoo.com/projects/odoo-19/mail/"
 "vi/>\n"
 "Language: vi\n"
@@ -26,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_ir_actions_server__followers_type
@@ -110,7 +112,8 @@ msgstr "# Tin nhắn"
 #. odoo-python
 #: code:addons/mail/wizard/mail_activity_schedule.py:0
 msgid "%(activity)s, assigned to %(name)s, due on the %(deadline)s"
-msgstr "%(activity)s, được phân công cho %(name)s, có thời hạn vào %(deadline)s"
+msgstr ""
+"%(activity)s, được phân công cho %(name)s, có thời hạn vào %(deadline)s"
 
 #. module: mail
 #. odoo-javascript
@@ -177,8 +180,8 @@ msgid ""
 "%(emoji)s reacted by %(person1)s, %(person2)s, %(person3)s, and %(count)s "
 "others"
 msgstr ""
-"%(emoji)s được bày tỏ cảm xúc bởi %(person1)s, %(person2)s, %(person3)s, và "
-"%(count)s người khác"
+"%(emoji)s được bày tỏ cảm xúc bởi %(person1)s, %(person2)s, %(person3)s, và %"
+"(count)s người khác"
 
 #. module: mail
 #. odoo-javascript
@@ -246,26 +249,18 @@ msgid ""
 "(bold_start)s:emoji:%(bold_end)s to insert an emoji in your message."
 msgstr ""
 "%(new_line)s%(new_line)sNhập %(bold_start)s@username%(bold_end)s để nhắc đến "
-"ai đó và thu hút sự chú ý của họ.%(new_line)sNhập "
-"%(bold_start)s#channel%(bold_end)s để nhắc đến một kênh.%(new_line)sNhập "
-"%(bold_start)s/command%(bold_end)s để thực thi một lệnh. %(new_line)sNhập "
-"%(bold_start)s:shortcut%(bold_end)s để chèn một câu trả lời soạn sẵn trong "
-"nội dung của bạn.%(new_line)sNhập %(bold_start)s:emoji:%(bold_end)s để chèn "
-"một emoji trong nội dung của bạn."
+"ai đó và thu hút sự chú ý của họ.%(new_line)sNhập %(bold_start)s#channel%"
+"(bold_end)s để nhắc đến một kênh.%(new_line)sNhập %(bold_start)s/command%"
+"(bold_end)s để thực thi một lệnh. %(new_line)sNhập %(bold_start)s:shortcut%"
+"(bold_end)s để chèn một câu trả lời soạn sẵn trong nội dung của bạn.%"
+"(new_line)sNhập %(bold_start)s:emoji:%(bold_end)s để chèn một emoji trong "
+"nội dung của bạn."
 
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/js/rotting_mixin/rotting_widget.js:0
 msgid "%(numberOfDays)sd"
-msgstr ""
-
-#. module: mail
-#. odoo-javascript
-#: code:addons/mail/static/src/core/common/composer.js:0
-msgid ""
-"%(open_button)s%(icon)s%(open_em)sDiscard editing%(close_em)s%(close_button)s"
-msgstr ""
-"%(open_button)s%(icon)s%(open_em)sHuỷ chỉnh sửa%(close_em)s%(close_button)s"
+msgstr "%(numberOfDays)sd"
 
 #. module: mail
 #. odoo-javascript
@@ -275,9 +270,9 @@ msgid ""
 "(close_cancel)s%(close_em)s, %(open_samp)sCTRL-Enter%(close_samp)s %"
 "(open_em)sto %(open_save)ssave%(close_save)s%(close_em)s"
 msgstr ""
-"%(open_samp)sThoát%(close_samp)s %(open_em)sđể "
-"%(open_cancel)shuỷ%(close_cancel)s%(close_em)s, %(open_samp)sCTRL-"
-"Enter%(close_samp)s %(open_em)sđể %(open_save)slưu%(close_save)s%(close_em)s"
+"%(open_samp)sThoát%(close_samp)s %(open_em)sđể %(open_cancel)shuỷ%"
+"(close_cancel)s%(close_em)s, %(open_samp)sCTRL-Enter%(close_samp)s %"
+"(open_em)sđể %(open_save)slưu%(close_save)s%(close_em)s"
 
 #. module: mail
 #. odoo-javascript
@@ -287,10 +282,9 @@ msgid ""
 "(close_cancel)s%(close_em)s, %(open_samp)sEnter%(close_samp)s %(open_em)sto %"
 "(open_save)ssave%(close_save)s%(close_em)s"
 msgstr ""
-"%(open_samp)sThoát%(close_samp)s %(open_em)sđể "
-"%(open_cancel)shuỷ%(close_cancel)s%(close_em)s, "
-"%(open_samp)sNhập%(close_samp)s %(open_em)sđể "
-"%(open_save)slưu%(close_save)s%(close_em)s"
+"%(open_samp)sThoát%(close_samp)s %(open_em)sđể %(open_cancel)shuỷ%"
+"(close_cancel)s%(close_em)s, %(open_samp)sNhập%(close_samp)s %(open_em)sđể %"
+"(open_save)slưu%(close_save)s%(close_em)s"
 
 #. module: mail
 #. odoo-python
@@ -323,6 +317,12 @@ msgid "%(user)s connected. This is their first connection. Wish them luck."
 msgstr ""
 "%(user)s đã được kết nối. Đây là lần kết nối đầu tiên của họ. Hãy chúc họ "
 "may mắn nào!"
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/core/common/message_model.js:0
+msgid "%(user)s deleted the thread \"%(thread_name)s\""
+msgstr ""
 
 #. module: mail
 #. odoo-python
@@ -547,8 +547,8 @@ msgid ""
 "<i class=\"fa fa-cogs fa-fw me-2\" role=\"img\" aria-label=\"Steps count\" "
 "title=\"Steps count\"/>"
 msgstr ""
-"<i class=\"fa fa-cogs fa-fw me-2\" role=\"img\" aria-label=\"Số bước\" title="
-"\"Số bước\"/>"
+"<i class=\"fa fa-cogs fa-fw me-2\" role=\"img\" aria-label=\"Số bước\" "
+"title=\"Số bước\"/>"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_document_file_kanban
@@ -695,8 +695,8 @@ msgstr ""
 "<span invisible=\"mail_post_method != 'email'\">\n"
 "                                Tin nhắn sẽ được gửi dưới dạng email cho "
 "người nhận mẫu\n"
-"                                và sẽ không xuất hiện trong lịch sử nhắn tin."
-"\n"
+"                                và sẽ không xuất hiện trong lịch sử nhắn "
+"tin.\n"
 "                            </span>\n"
 "                            <span invisible=\"mail_post_method != 'note'\">\n"
 "                                Tin nhắn sẽ được đăng dưới dạng ghi chú nội "
@@ -704,8 +704,8 @@ msgstr ""
 "                                nội bộ có thể nhìn thấy trong lịch sử nhắn "
 "tin.\n"
 "                            </span>\n"
-"                            <span invisible=\"mail_post_method != 'comment'\""
-">\n"
+"                            <span invisible=\"mail_post_method != "
+"'comment'\">\n"
 "                                Tin nhắn sẽ được đăng dưới dạng tin nhắn "
 "trong bản ghi để thông báo\n"
 "                                cho tất cả người theo dõi. Nó sẽ xuất hiện "
@@ -761,8 +761,8 @@ msgstr ""
 #: model_terms:web_tour.tour,rainbow_man_message:mail.discuss_channel_tour
 msgid "<span><b>Good job!</b> You went through all steps of this tour.</span>"
 msgstr ""
-"<span><b>Tốt lắm!</b> Bạn đã xem qua tất cả các bước của tour hướng dẫn "
-"này.</span>"
+"<span><b>Tốt lắm!</b> Bạn đã xem qua tất cả các bước của tour hướng dẫn này."
+"</span>"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.res_config_settings_view_form
@@ -791,7 +791,8 @@ msgstr ""
 #. odoo-python
 #: code:addons/mail/models/mail_scheduled_message.py:0
 msgid "A Scheduled Message cannot be scheduled in the past"
-msgstr "Không thể lên lịch Tin nhắn đã lên lịch vào một thời điểm trong quá khứ"
+msgstr ""
+"Không thể lên lịch Tin nhắn đã lên lịch vào một thời điểm trong quá khứ"
 
 #. module: mail
 #: model:ir.model.constraint,message:mail.constraint_discuss_channel_member_partner_or_guest_exists
@@ -828,7 +829,8 @@ msgstr "Một tin nhắn chỉ có thể được lên lịch ở chế độ b�
 #: code:addons/mail/models/mail_scheduled_message.py:0
 msgid ""
 "A message cannot be scheduled on a model that does not have a mail thread."
-msgstr "Không thể lên lịch gửi tin nhắn trên một mô hình không có chủ đề email."
+msgstr ""
+"Không thể lên lịch gửi tin nhắn trên một mô hình không có chủ đề email."
 
 #. module: mail
 #: model:ir.model.constraint,message:mail.constraint_mail_message_reaction_partner_or_guest_exists
@@ -1041,11 +1043,13 @@ msgstr "Hoạt động phải được liên kết với các bản ghi có res_
 #. module: mail
 #: model:ir.model.constraint,message:mail.constraint_mail_activity_check_user_id_is_set_if_model
 msgid "Activities must be assigned if not attached to a document."
-msgstr "Hoạt động phải được phân công nếu không được đính kèm với một tài liệu."
+msgstr ""
+"Hoạt động phải được phân công nếu không được đính kèm với một tài liệu."
 
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/chatter/web/chatter.xml:0
+#: code:addons/mail/static/src/core/web/activity_menu.js:0
 #: code:addons/mail/static/src/core/web/activity_menu.xml:0
 #: model:ir.model,name:mail.model_mail_activity
 #: model:ir.model.fields.selection,name:mail.selection__ir_actions_act_window_view__view_mode__activity
@@ -1215,12 +1219,6 @@ msgstr "Thêm Người theo dõi"
 #: code:addons/mail/static/src/discuss/gif_picker/common/composer_actions_patch.js:0
 msgid "Add GIFs"
 msgstr "Thêm GIF"
-
-#. module: mail
-#. odoo-javascript
-#: code:addons/mail/static/src/core/common/message_reactions.xml:0
-msgid "Add Reaction"
-msgstr "Thêm biểu tượng cảm xúc"
 
 #. module: mail
 #. odoo-javascript
@@ -1429,9 +1427,9 @@ msgid ""
 "(alias_model_name)s (%(matching_id)s) and used by the %(parent_name)s %"
 "(parent_model_name)s."
 msgstr ""
-"Bí danh %(matching_name)s (%(current_id)s) đã được liên kết với "
-"%(alias_model_name)s (%(matching_id)s) và được sử dụng bởi %(parent_name)s "
-"%(parent_model_name)s."
+"Bí danh %(matching_name)s (%(current_id)s) đã được liên kết với %"
+"(alias_model_name)s (%(matching_id)s) và được sử dụng bởi %(parent_name)s %"
+"(parent_model_name)s."
 
 #. module: mail
 #. odoo-python
@@ -1440,8 +1438,8 @@ msgid ""
 "Alias %(matching_name)s (%(current_id)s) is already linked with %"
 "(alias_model_name)s (%(matching_id)s)."
 msgstr ""
-"Bí danh %(matching_name)s (%(current_id)s) đã được liên kết với "
-"%(alias_model_name)s (%(matching_id)s)."
+"Bí danh %(matching_name)s (%(current_id)s) đã được liên kết với %"
+"(alias_model_name)s (%(matching_id)s)."
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_alias__alias_contact
@@ -1768,6 +1766,7 @@ msgstr "Tệp đính kèm"
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_settings.xml:0
+#: code:addons/mail/static/src/discuss/call/common/quick_voice_settings.xml:0
 msgid "Audio Output"
 msgstr ""
 
@@ -1785,7 +1784,7 @@ msgstr "Đối tác đã xác thực"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_ice_server_form
 msgid "Authentication"
-msgstr ""
+msgstr "Xác thực"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_compose_message__author_id
@@ -1884,6 +1883,11 @@ msgid ""
 msgstr ""
 "Tự động lên lịch trình cho hoạt động này ngay khi hoạt động hiện tại được "
 "đánh dấu hoàn thành."
+
+#. module: mail
+#: model_terms:ir.ui.view,arch_db:mail.mail_activity_type_view_form
+msgid "Available everywhere"
+msgstr ""
 
 #. module: mail
 #. odoo-javascript
@@ -2028,15 +2032,20 @@ msgid ""
 "Blocked by deletion of portal account %(portal_user_name)s by %(user_name)s "
 "(#%(user_id)s)"
 msgstr ""
-"Bị chặn do việc xóa tài khoản cổng thông tin %(portal_user_name)s bởi "
-"%(user_name)s (#%(user_id)s)"
+"Bị chặn do việc xóa tài khoản cổng thông tin %(portal_user_name)s bởi %"
+"(user_name)s (#%(user_id)s)"
 
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_actions.js:0
-#: code:addons/mail/static/src/discuss/core/public/welcome_page.js:0
 msgid "Blur Background"
 msgstr "Nền mờ"
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/call/common/quick_video_settings.xml:0
+msgid "Blur background"
+msgstr ""
 
 #. module: mail
 #. odoo-javascript
@@ -2109,8 +2118,9 @@ msgid ""
 "Bounce/Catchall '%(matching_alias_name)s' is already used by %"
 "(document_name)s. Choose another alias or change it on the other document."
 msgstr ""
-"Bí danh trả về/nhận tất cả '%(matching_alias_name)s' đã được %(document_name)"
-"s sử dụng. Chọn bí danh khác hoặc thay đổi bí danh này trong tài liệu kia."
+"Bí danh trả về/nhận tất cả '%(matching_alias_name)s' đã được %"
+"(document_name)s sử dụng. Chọn bí danh khác hoặc thay đổi bí danh này trong "
+"tài liệu kia."
 
 #. module: mail
 #. odoo-python
@@ -2163,8 +2173,8 @@ msgstr "Trình duyệt"
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/device_select.xml:0
-msgid "Browser default"
-msgstr "Mặc định trình duyệt"
+msgid "Browser Default"
+msgstr ""
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_push_device__endpoint
@@ -2241,9 +2251,9 @@ msgstr "Cuộc gọi kéo dài trong %(duration)s."
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_settings.xml:0
-#: code:addons/mail/static/src/discuss/core/public/welcome_page.xml:0
+#: code:addons/mail/static/src/discuss/call/common/quick_video_settings.xml:0
 msgid "Camera"
-msgstr ""
+msgstr "Máy ảnh"
 
 #. module: mail
 #. odoo-javascript
@@ -2256,12 +2266,6 @@ msgstr ""
 #: code:addons/mail/static/src/discuss/call/common/rtc_service.js:0
 msgid "Camera and microphone access blocked. Enable in browser settings."
 msgstr ""
-
-#. module: mail
-#. odoo-javascript
-#: code:addons/mail/static/src/discuss/core/public/welcome_page.xml:0
-msgid "Camera is off"
-msgstr "Camera đã tắt"
 
 #. module: mail
 #. odoo-javascript
@@ -2377,6 +2381,9 @@ msgid ""
 "in your messages. Type '::' followed by the name of your shortcut "
 "(e.g. ::hello) to use in your messages."
 msgstr ""
+"Câu trả lời soạn sẵn sẽ tự động được thay thế bằng nội dung dài hơn trong "
+"tin nhắn của bạn. Gõ '::' và sau đó là tên phím tắt của bạn (ví dụ: ::hello) "
+"để sử dụng trong tin nhắn."
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_canned_response_view_tree
@@ -2489,7 +2496,7 @@ msgstr "Loại chuỗi"
 #. module: mail
 #: model:ir.actions.act_window,name:mail.action_res_users_my_fullpage
 msgid "Change My Preferences"
-msgstr ""
+msgstr "Thay đổi tùy chọn của tôi"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_activity__activity_decoration
@@ -2901,7 +2908,7 @@ msgstr "Thật tuyệt vời, hộp thư đến của bạn đã không còn mai
 #. odoo-python
 #: code:addons/mail/models/res_users.py:0
 msgid "Connection Test Successful!"
-msgstr ""
+msgstr "Kiểm thử kết nối thành công!"
 
 #. module: mail
 #. odoo-javascript
@@ -3422,6 +3429,7 @@ msgstr "Thời hạn: %s"
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_actions.js:0
+#: code:addons/mail/static/src/discuss/call/common/quick_voice_settings.xml:0
 msgid "Deafen"
 msgstr "Tắt tiếng"
 
@@ -3523,8 +3531,8 @@ msgid ""
 "'notifications@example.com' to override all outgoing emails."
 msgstr ""
 "Mặc định từ khi nó không khớp với bộ lọc máy chủ thư đi. Có thể là một phần "
-"cục bộ, ví dụ: 'thông báo' hoặc địa chỉ email đầy đủ, ví dụ: 'notifications@"
-"example.com' để ghi đè tất cả các email gửi đi."
+"cục bộ, ví dụ: 'thông báo' hoặc địa chỉ email đầy đủ, ví dụ: "
+"'notifications@example.com' để ghi đè tất cả các email gửi đi."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_template__use_default_to
@@ -3586,6 +3594,13 @@ msgstr "Xoá email"
 
 #. module: mail
 #. odoo-javascript
+#: code:addons/mail/static/src/discuss/core/common/delete_thread_dialog.xml:0
+#: code:addons/mail/static/src/discuss/core/common/thread_actions.js:0
+msgid "Delete Thread"
+msgstr ""
+
+#. module: mail
+#. odoo-javascript
 #: code:addons/mail/static/src/core/common/link_preview_confirm_delete.xml:0
 msgid "Delete all previews"
 msgstr "Xoá tất cả bản xem trước"
@@ -3594,7 +3609,7 @@ msgstr "Xoá tất cả bản xem trước"
 #. odoo-javascript
 #: code:addons/mail/static/src/core/common/message.xml:0
 msgid "Deleted document"
-msgstr ""
+msgstr "Xoá tài liệu"
 
 #. module: mail
 #. odoo-javascript
@@ -3704,6 +3719,12 @@ msgstr "Huỷ bỏ"
 
 #. module: mail
 #. odoo-javascript
+#: code:addons/mail/static/src/core/common/composer.xml:0
+msgid "Discard editing"
+msgstr ""
+
+#. module: mail
+#. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_actions.js:0
 #: code:addons/mail/static/src/discuss/call/common/thread_actions.js:0
 #: model_terms:ir.ui.view,arch_db:mail.discuss_channel_rtc_session_view_tree
@@ -3713,8 +3734,8 @@ msgstr "Ngắt kết nối"
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/rtc_service.js:0
-msgid "Disconnected from the RTC call by the server"
-msgstr "Máy chủ đã ngắt kết nối khỏi cuộc gọi RTC"
+msgid "Disconnected from the call by the server"
+msgstr ""
 
 #. module: mail
 #: model:ir.actions.client,name:mail.action_discuss
@@ -4903,7 +4924,7 @@ msgid ""
 "e.g.`42` or `My custom name` or the selected record."
 msgstr ""
 "Với các biểu thức Python, trường này có thể chứa một biểu thức Python có thể "
-"sử dụng các giá trị giống như trường mã trên tác vụ máy chủ. VD: "
+"sử dụng các giá trị giống như trường mã trên tác vụ phía máy chủ. VD: "
 "`env.user.name` để đặt tên người dùng hiện tại làm giá trị hoặc `record.id` "
 "để đặt ID của bản ghi mà tác vụ được chạy trên đó.\n"
 "\n"
@@ -4979,7 +5000,7 @@ msgstr "Video toàn màn hình"
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_actions.js:0
 msgid "Fullscreen"
-msgstr ""
+msgstr "Toàn màn hình"
 
 #. module: mail
 #. odoo-javascript
@@ -5136,7 +5157,7 @@ msgstr "Có lỗi"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_users__has_external_mail_server
 msgid "Has External Mail Server"
-msgstr ""
+msgstr "Có máy chủ thư bên ngoài"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_ir_model__is_mail_activity
@@ -5242,6 +5263,12 @@ msgstr "Ẩn tin nhắn đã ghim"
 #: code:addons/mail/static/src/core/common/chat_hub.js:0
 msgid "Hide all conversations"
 msgstr "Ẩn tất cả cuộc trò chuyện"
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/call/common/call_invitation.js:0
+msgid "Hide camera preview"
+msgstr ""
 
 #. module: mail
 #. odoo-javascript
@@ -5659,7 +5686,7 @@ msgstr "In %(country)s"
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__res_users__notification_type__inbox
 msgid "In Odoo"
-msgstr ""
+msgstr "Trong Odoo"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_compose_message__scheduled_date
@@ -5692,12 +5719,6 @@ msgid "Inbox"
 msgstr "Hộp thư đến"
 
 #. module: mail
-#. odoo-javascript
-#: code:addons/mail/static/src/discuss/call/common/call_invitation.xml:0
-msgid "Incoming Call..."
-msgstr "Cuộc gọi đến..."
-
-#. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__mail_message__message_type__email
 #: model_terms:ir.ui.view,arch_db:mail.view_mail_search
 msgid "Incoming Email"
@@ -5723,15 +5744,17 @@ msgstr "Máy chủ thư đến"
 
 #. module: mail
 #. odoo-javascript
-#: code:addons/mail/static/src/discuss/call/common/call_invitation.xml:0
-msgid "Incoming Video Call..."
-msgstr "Cuộc gọi video đến..."
-
-#. module: mail
 #. odoo-python
 #: code:addons/mail/models/discuss/discuss_channel_member.py:0
+#: code:addons/mail/static/src/discuss/call/common/call_invitation.js:0
 msgid "Incoming call"
 msgstr "Cuộc gọi đến"
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/call/common/call_invitation.js:0
+msgid "Incoming call from %(inviter)s"
+msgstr ""
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_activity__automated
@@ -5902,8 +5925,8 @@ msgstr ""
 #: code:addons/mail/models/mail_thread.py:0
 msgid "Invalid template or view source record %(svalue)s, is %(model)s instead"
 msgstr ""
-"Mẫu hoặc bản ghi nguồn chế độ xem %(svalue)s không hợp lệ, thay vào đó là "
-"%(model)s."
+"Mẫu hoặc bản ghi nguồn chế độ xem %(svalue)s không hợp lệ, thay vào đó là %"
+"(model)s."
 
 #. module: mail
 #. odoo-python
@@ -5941,6 +5964,18 @@ msgstr "URL lời mời"
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/core/common/channel_invitation.xml:0
 msgid "Invitation already sent to this address"
+msgstr ""
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/core/common/channel_invitation.js:0
+msgid "Invitation link copied!"
+msgstr ""
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/core/common/channel_invitation.js:0
+msgid "Invitation link copy failed (Permission denied?)!"
 msgstr ""
 
 #. module: mail
@@ -5985,6 +6020,12 @@ msgstr "Mời một người dùng"
 #: code:addons/mail/static/src/discuss/core/public_web/discuss_command_palette.xml:0
 msgid "Invite people"
 msgstr "Mời mọi người"
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/core/common/channel_invitation.js:0
+msgid "Invite people or email"
+msgstr ""
 
 #. module: mail
 #. odoo-javascript
@@ -6192,7 +6233,7 @@ msgstr "Gia nhập Kênh"
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_actions.js:0
 msgid "Join Video Call"
-msgstr ""
+msgstr "Tham gia cuộc gọi video"
 
 #. module: mail
 #: model:ir.actions.act_window,name:mail.discuss_channel_action_view
@@ -6517,12 +6558,6 @@ msgstr "Xem trước liên kết"
 #: model:ir.model,name:mail.model_mail_message_link_preview
 msgid "Link between link previews and messages"
 msgstr "Liên kết giữa bản xem trước liên kết và tin nhắn"
-
-#. module: mail
-#. odoo-javascript
-#: code:addons/mail/static/src/discuss/core/common/channel_invitation.js:0
-msgid "Link copied!"
-msgstr "Liên kết đã được sao chép!"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_activity_schedule_view_form
@@ -6858,8 +6893,8 @@ msgid ""
 "Mailing or posting with a source should not be called with an empty %"
 "(source_type)s"
 msgstr ""
-"Không nên gọi hành động gửi thư hoặc đăng nội dung có nguồn với "
-"%(source_type)s  trống"
+"Không nên gọi hành động gửi thư hoặc đăng nội dung có nguồn với %"
+"(source_type)s  trống"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_mail__mail_ids
@@ -7298,7 +7333,7 @@ msgstr "Siêu dữ liệu cho tệp đính kèm dạng giọng nói"
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_settings.xml:0
-#: code:addons/mail/static/src/discuss/core/public/welcome_page.xml:0
+#: code:addons/mail/static/src/discuss/call/common/quick_voice_settings.xml:0
 msgid "Microphone"
 msgstr ""
 
@@ -7386,15 +7421,6 @@ msgid "Models"
 msgstr "Mô hình"
 
 #. module: mail
-#: model_terms:ir.ui.view,arch_db:mail.mail_activity_type_view_form
-msgid ""
-"Modifying the model can have an impact on existing activities using this "
-"activity type, be careful."
-msgstr ""
-"Việc điều chỉnh mô hình có thể gây ảnh hưởng tới các hoạt động hiện có đang "
-"sử dụng loại hoạt động này. Hãy cẩn thận."
-
-#. module: mail
 #: model:ir.model,name:mail.model_base_module_uninstall
 msgid "Module Uninstall"
 msgstr "Gỡ cài đặt phân hệ"
@@ -7419,6 +7445,7 @@ msgstr "Thêm tác vụ"
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_actions.js:0
+#: code:addons/mail/static/src/discuss/call/common/call_preview.js:0
 msgid "Mute"
 msgstr "Tắt tiếng"
 
@@ -7752,8 +7779,8 @@ msgstr ""
 msgid ""
 "No responsible specified for %(activity_type_name)s: %(activity_summary)s."
 msgstr ""
-"Không có người phụ trách nào được chỉ định cho %(activity_type_name)s: "
-"%(activity_summary)s."
+"Không có người phụ trách nào được chỉ định cho %(activity_type_name)s: %"
+"(activity_summary)s."
 
 #. module: mail
 #: model_terms:ir.actions.act_window,help:mail.res_role_action
@@ -8201,6 +8228,8 @@ msgid ""
 "One or more attachments do not exist, or you do not have the rights to "
 "access them."
 msgstr ""
+"Một hoặc nhiều tệp đính kèm không tồn tại hoặc bạn không có quyền truy cập "
+"vào chúng."
 
 #. module: mail
 #. odoo-javascript
@@ -8297,8 +8326,8 @@ msgid ""
 "Oops! We couldn't save your template due to an issue with this value: %"
 "(template_txt)s. Correct it and try again."
 msgstr ""
-"Rất tiếc! Chúng tôi không thể lưu mẫu của bạn do có sự cố với giá trị sau: "
-"%(template_txt)s. Vui lòng chỉnh sửa và thử lại."
+"Rất tiếc! Chúng tôi không thể lưu mẫu của bạn do có sự cố với giá trị sau: %"
+"(template_txt)s. Vui lòng chỉnh sửa và thử lại."
 
 #. module: mail
 #. odoo-javascript
@@ -8420,6 +8449,10 @@ msgid ""
 "usually be a placeholder expression that provides the appropriate language, "
 "e.g. {{ object.partner_id.lang }}."
 msgstr ""
+"Ngôn ngữ dịch thuật tùy chọn (mã ISO) cần chọn khi gửi email. Nếu không được "
+"thiết lập, ngôn ngữ của đối tác chính sẽ được sử dụng. Đây thường là một "
+"biểu thức giữ chỗ cung cấp ngôn ngữ phù hợp, ví dụ: "
+"{{ object.partner_id.lang }}."
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
@@ -8536,12 +8569,6 @@ msgstr "Thư gửi đi"
 #: model:ir.model.fields,field_description:mail.field_mail_message__mail_server_id
 msgid "Outgoing mail server"
 msgstr "Máy chủ gửi email"
-
-#. module: mail
-#. odoo-javascript
-#: code:addons/mail/static/src/discuss/core/public/welcome_page.xml:0
-msgid "Output"
-msgstr ""
 
 #. module: mail
 #. odoo-javascript
@@ -8774,6 +8801,18 @@ msgid "Performance Warning:"
 msgstr ""
 
 #. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/core/common/delete_thread_dialog.xml:0
+msgid "Permanently delete this thread?"
+msgstr ""
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/call/common/device_select.xml:0
+msgid "Permission Needed"
+msgstr ""
+
+#. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_partner__phone
 #: model:ir.model.fields,field_description:mail.field_res_users__phone
 msgid "Phone"
@@ -8969,6 +9008,9 @@ msgid ""
 "- By Emails: notifications are sent to your email address\n"
 "- In Odoo: notifications appear in your Odoo Inbox"
 msgstr ""
+"Chính sách xử lý thông báo của cửa sổ trò chuyện:\n"
+"- Bằng email: thông báo được gửi tới địa chỉ email của bạn\n"
+"- Trong Odoo: thông báo xuất hiện trong hộp thư đến Odoo"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_alias__alias_contact
@@ -9054,8 +9096,8 @@ msgid ""
 "Posting a message should receive attachments records as a list of IDs "
 "(received %(aids)s)"
 msgstr ""
-"Việc đăng một tin nhắn sẽ nhận các bản ghi đính kèm dưới dạng danh sách ID "
-"(%(aids)s đã nhận)"
+"Việc đăng một tin nhắn sẽ nhận các bản ghi đính kèm dưới dạng danh sách ID (%"
+"(aids)s đã nhận)"
 
 #. module: mail
 #. odoo-python
@@ -9071,7 +9113,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mail.mail_notification_layout
 #: model_terms:ir.ui.view,arch_db:mail.mail_notification_light
 msgid "Powered by"
-msgstr "Cung cấp bởi"
+msgstr "Được hỗ trợ bởi"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_activity_type__previous_type_ids
@@ -9113,12 +9155,6 @@ msgid "Preview"
 msgstr "Xem trước"
 
 #. module: mail
-#. odoo-javascript
-#: code:addons/mail/static/src/discuss/call/common/call_invitation.xml:0
-msgid "Preview my camera"
-msgstr "Xem trước camera của tôi"
-
-#. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_activity__previous_activity_type_id
 msgid "Previous Activity Type"
 msgstr "Kiểu hoạt động trước"
@@ -9136,7 +9172,7 @@ msgstr "Tính riêng tư"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_canned_response_view_search
 msgid "Private"
-msgstr ""
+msgstr "Riêng tư"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_fetchmail_server__object_id
@@ -9207,6 +9243,12 @@ msgstr "Phím tắt bấm để nói"
 
 #. module: mail
 #. odoo-javascript
+#: code:addons/mail/static/src/discuss/call/common/quick_voice_settings.xml:0
+msgid "Push-to-Talk"
+msgstr ""
+
+#. module: mail
+#. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_settings.xml:0
 msgid "Push-to-talk key"
 msgstr "Phím bấm để nói"
@@ -9215,7 +9257,7 @@ msgstr "Phím bấm để nói"
 #. odoo-javascript
 #: code:addons/mail/static/src/core/common/notification_model.js:0
 msgid "Queued"
-msgstr ""
+msgstr "Đang đợi"
 
 #. module: mail
 #. odoo-javascript
@@ -9489,12 +9531,6 @@ msgid "Remove Blur"
 msgstr "Xoá hiệu ứng mờ"
 
 #. module: mail
-#. odoo-javascript
-#: code:addons/mail/static/src/discuss/core/public/welcome_page.js:0
-msgid "Remove Blur Background"
-msgstr ""
-
-#. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
 msgid "Remove Context Action"
 msgstr "Xoá tác vụ theo ngữ cảnh"
@@ -9523,7 +9559,8 @@ msgstr "Công cụ xoá email khỏi danh sách hạn chế"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
 msgid "Remove the contextual action to use this template on related documents"
-msgstr "Xóa tác vụ theo ngữ cảnh để sử dụng mẫu này trên các tài liệu liên quan"
+msgstr ""
+"Xóa tác vụ theo ngữ cảnh để sử dụng mẫu này trên các tài liệu liên quan"
 
 #. module: mail
 #. odoo-javascript
@@ -10197,6 +10234,12 @@ msgid "Select a user..."
 msgstr "Chọn một người dùng..."
 
 #. module: mail
+#. odoo-python
+#: code:addons/mail/wizard/mail_activity_schedule.py:0
+msgid "Selected user '%(user)s' cannot upload documents on model '%(model)s'"
+msgstr ""
+
+#. module: mail
 #: model:ir.model.fields,field_description:mail.field_discuss_channel__self_member_id
 msgid "Self Member"
 msgstr "Thành viên mặc định"
@@ -10242,7 +10285,7 @@ msgstr "Gửi email dưới dạng"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_template__email_from
 msgid "Send From"
-msgstr ""
+msgstr "Gửi từ"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
@@ -10253,7 +10296,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/mail/static/src/views/web/view_dialog/avatar_user_form_view_dialog.xml:0
 msgid "Send Invitation"
-msgstr ""
+msgstr "Gửi lời mời"
 
 #. module: mail
 #. odoo-javascript
@@ -10490,7 +10533,7 @@ msgstr "Chia sẻ màn hình"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_canned_response_view_search
 msgid "Shared"
-msgstr ""
+msgstr "Đã chia sẻ"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_template_form
@@ -10553,6 +10596,12 @@ msgstr "Hiển thị tất cả các bản ghi có ngày hoạt động tiếp t
 #: model_terms:ir.ui.view,arch_db:mail.res_partner_view_search_inherit_mail
 msgid "Show all records whose next activity date is past"
 msgstr "Hiển thị tất cả các bản ghi có ngày hoạt động tiếp theo đã quá hạn"
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/call/common/call_invitation.js:0
+msgid "Show camera preview"
+msgstr ""
 
 #. module: mail
 #. odoo-javascript
@@ -10635,7 +10684,7 @@ msgid ""
 "the server action."
 msgstr ""
 "Xác định trường được sử dụng để liên kết bản ghi mới được tạo trên bản ghi "
-"được sử dụng bởi tác vụ máy chủ."
+"được sử dụng bởi tác vụ phía máy chủ."
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_activity_plan__res_model
@@ -10795,6 +10844,7 @@ msgstr "Ngừng chia sẻ màn hình"
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_actions.js:0
+#: code:addons/mail/static/src/discuss/call/common/call_preview.js:0
 msgid "Stop camera"
 msgstr "Dừng camera"
 
@@ -10813,7 +10863,8 @@ msgstr "Ngừng chia sẻ"
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__mail_compose_message__reply_to_mode__update
 msgid "Store email and replies in the chatter of each record"
-msgstr "Lưu trữ email và email trả lời trong cửa sổ trò chuyện của từng bản ghi"
+msgstr ""
+"Lưu trữ email và email trả lời trong cửa sổ trò chuyện của từng bản ghi"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_link_preview
@@ -11068,8 +11119,8 @@ msgid ""
 "Template rendering should only be called with a list of IDs. Received “%"
 "(res_ids)s” instead."
 msgstr ""
-"Chỉ nên gọi kết xuất mẫu bằng danh sách ID. Thay vào đó đã nhận được "
-"“%(res_ids)s”."
+"Chỉ nên gọi kết xuất mẫu bằng danh sách ID. Thay vào đó đã nhận được “%"
+"(res_ids)s”."
 
 #. module: mail
 #. odoo-python
@@ -11116,12 +11167,12 @@ msgstr "Kiểm thử & Xác nhận"
 #. odoo-javascript
 #: code:addons/mail/static/src/views/fields/mail_server_configurator_selection/mail_server_configurator_selection.xml:0
 msgid "Test Connection"
-msgstr ""
+msgstr "Kiểm tra kết nối"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_template_preview_view_form
 msgid "Test Record"
-msgstr ""
+msgstr "Dữ liệu thử"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_mail__body_html
@@ -11193,9 +11244,9 @@ msgid ""
 "\"%(plan_name)s\" because it is limited to the model \"%"
 "(activity_type_model)s\"."
 msgstr ""
-"Loại hoạt động \"%(activity_type_name)s\" không tương thích với kế hoạch "
-"\"%(plan_name)s\" bởi vì nó bị giới hạn trong mô hình "
-"\"%(activity_type_model)s\"."
+"Loại hoạt động \"%(activity_type_name)s\" không tương thích với kế hoạch \"%"
+"(plan_name)s\" bởi vì nó bị giới hạn trong mô hình \"%"
+"(activity_type_model)s\"."
 
 #. module: mail
 #. odoo-javascript
@@ -11207,11 +11258,6 @@ msgstr "Avatar đã được cập nhật!"
 #: model:ir.model.constraint,message:mail.constraint_discuss_channel_uuid_unique
 msgid "The channel UUID must be unique"
 msgstr "Kênh UUID phải là duy nhất"
-
-#. module: mail
-#: model:ir.model.constraint,message:mail.constraint_discuss_channel_channel_type_not_null
-msgid "The channel type cannot be empty"
-msgstr "Loại kênh không được để trống"
 
 #. module: mail
 #. odoo-javascript
@@ -11321,8 +11367,8 @@ msgid ""
 "The message scheduled on %(model)s(%(id)s) with the following content could "
 "not be sent:%(original_message)s"
 msgstr ""
-"Không thể gửi tin nhắn đã lên lịch vào %(model)s(%(id)s) với nội dung sau: "
-"%(original_message)s"
+"Không thể gửi tin nhắn đã lên lịch vào %(model)s(%(id)s) với nội dung sau: %"
+"(original_message)s"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_discuss_channel__from_message_id
@@ -11680,8 +11726,8 @@ msgstr "Tuần này"
 msgid ""
 "Those values are not supported as options when rendering: %(param_names)s"
 msgstr ""
-"Những giá trị đó không được hỗ trợ dưới dạng tùy chọn khi kết xuất: "
-"%(param_names)s"
+"Những giá trị đó không được hỗ trợ dưới dạng tùy chọn khi kết xuất: %"
+"(param_names)s"
 
 #. module: mail
 #. odoo-python
@@ -11689,13 +11735,25 @@ msgstr ""
 msgid ""
 "Those values are not supported when posting or notifying: %(param_names)s"
 msgstr ""
-"Những giá trị đó không được hỗ trợ khi đăng nội dung hoặc thông báo: "
-"%(param_names)s"
+"Những giá trị đó không được hỗ trợ khi đăng nội dung hoặc thông báo: %"
+"(param_names)s"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_mail_search
 msgid "Thread"
 msgstr "Chủ đề"
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/core/common/delete_thread_dialog.js:0
+msgid "Thread \"%(thread_name)s\" has been deleted"
+msgstr ""
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/core/public_web/discuss_sidebar_categories.js:0
+msgid "Thread Actions"
+msgstr ""
 
 #. module: mail
 #. odoo-javascript
@@ -11732,15 +11790,9 @@ msgid "Threads"
 msgstr "Chủ đề"
 
 #. module: mail
-#. odoo-javascript
-#: code:addons/mail/static/src/discuss/core/public_web/discuss_sidebar_categories.js:0
-msgid "Threads Actions"
-msgstr "Tác vụ trong chủ đề"
-
-#. module: mail
 #: model:ir.model.fields,field_description:mail.field_ir_attachment__thumbnail
 msgid "Thumbnail"
-msgstr ""
+msgstr "Hình thu nhỏ"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_activity__user_tz
@@ -12006,6 +12058,7 @@ msgstr "Được kích hoạt tiếp theo"
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_actions.js:0
+#: code:addons/mail/static/src/discuss/call/common/call_preview.js:0
 msgid "Turn camera on"
 msgstr "Bật camera"
 
@@ -12049,7 +12102,7 @@ msgid ""
 "- 'Multi Actions': define an action that triggers several other server "
 "actions\n"
 msgstr ""
-"Loại tác vụ máy chủ. Các giá trị sau đây khả dụng:\n"
+"Loại tác vụ phía máy chủ. Các giá trị sau đây khả dụng:\n"
 "- 'Cập nhật bản ghi': cập nhật giá trị của bản ghi\n"
 "- 'Tạo hoạt động': tạo một hoạt động (Thảo luận)\n"
 "- 'Gửi email': gửi tin nhắn, ghi chú hoặc email (Thảo luận)\n"
@@ -12059,7 +12112,8 @@ msgstr ""
 "- 'Thực thi mã': một khối mã Python sẽ được thực thi\n"
 "- 'Gửi thông báo Webhook': gửi yêu cầu POST tới hệ thống bên ngoài, hay còn "
 "gọi là Webhook\n"
-"- 'Nhiều tác vụ': xác định một tác vụ kích hoạt một số tác vụ máy chủ khác\n"
+"- 'Nhiều tác vụ': xác định một tác vụ kích hoạt một số tác vụ phía máy chủ "
+"khác\n"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_ir_actions_server__activity_exception_decoration
@@ -12208,6 +12262,7 @@ msgstr "Lỗi không xác định: %(error)s"
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_actions.js:0
+#: code:addons/mail/static/src/discuss/call/common/call_preview.js:0
 msgid "Unmute"
 msgstr "Bỏ tắt tiếng"
 
@@ -12224,6 +12279,12 @@ msgstr "Bật lại thông báo cuộc trò chuyện"
 #: code:addons/mail/static/src/views/web/fields/many2many_tags_email/many2many_tags_email.js:0
 msgid "Unnamed"
 msgstr "Chưa đặt tên"
+
+#. module: mail
+#. odoo-python
+#: code:addons/mail/models/mail_tracking_value.py:0
+msgid "Unnamed %(record_model_name)s (%(record_id)s)"
+msgstr ""
 
 #. module: mail
 #. odoo-javascript
@@ -12473,6 +12534,8 @@ msgid ""
 "Use your own servers for calls to manage heavy traffic and ensure "
 "reliability if Twilio is unavailable"
 msgstr ""
+"Sử dụng máy chủ riêng của bạn để xử lý cuộc gọi nhằm quản lý lưu lượng truy "
+"cập lớn và đảm bảo độ tin cậy trong trường hợp Twilio không khả dụng."
 
 #. module: mail
 #: model_terms:ir.actions.act_window,help:mail.action_ice_servers
@@ -12480,6 +12543,8 @@ msgid ""
 "Use your own servers for calls to manage heavy traffic and ensure "
 "reliability if Twilio is unavailable."
 msgstr ""
+"Sử dụng máy chủ riêng của bạn để xử lý cuộc gọi nhằm quản lý lưu lượng truy "
+"cập lớn và đảm bảo độ tin cậy trong trường hợp Twilio không khả dụng."
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_alias_domain_view_form
@@ -12716,6 +12781,13 @@ msgstr "Video"
 
 #. module: mail
 #. odoo-javascript
+#: code:addons/mail/static/src/discuss/call/common/call_actions.js:0
+#: code:addons/mail/static/src/discuss/call/common/quick_video_settings.xml:0
+msgid "Video Settings"
+msgstr "Cài đặt video"
+
+#. module: mail
+#. odoo-javascript
 #: code:addons/mail/static/src/discuss/call/common/call_context_menu.xml:0
 msgid "Video player:"
 msgstr "Trình phát video:"
@@ -12774,9 +12846,21 @@ msgstr "Xem tất cả hoạt động"
 
 #. module: mail
 #. odoo-javascript
+#: code:addons/mail/static/src/discuss/call/common/call_invitation.js:0
+msgid "View chat with %(channel_name)s"
+msgstr ""
+
+#. module: mail
+#. odoo-javascript
 #: code:addons/mail/static/src/discuss/core/web/discuss_sidebar_categories_patch.js:0
 msgid "View or join channels"
 msgstr "Xem hoặc tham gia kênh"
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/call/common/call_invitation.js:0
+msgid "View the %(channel_name)s channel"
+msgstr ""
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_activity_plan_view_form
@@ -12798,6 +12882,9 @@ msgid "Voice & Video"
 msgstr "Giọng nói & video"
 
 #. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/call/web/quick_video_settings_patch.js:0
+#: code:addons/mail/static/src/discuss/call/web/quick_voice_settings_patch.js:0
 #: model:ir.actions.client,name:mail.discuss_call_settings_action
 msgid "Voice & Video Settings"
 msgstr "Cài đặt giọng nói & video"
@@ -12817,6 +12904,13 @@ msgstr "Phát hiện giọng nói"
 #: code:addons/mail/static/src/discuss/voice_message/common/voice_recorder.xml:0
 msgid "Voice Message"
 msgstr "Tin nhắn thoại"
+
+#. module: mail
+#. odoo-javascript
+#: code:addons/mail/static/src/discuss/call/common/call_actions.js:0
+#: code:addons/mail/static/src/discuss/call/common/quick_voice_settings.xml:0
+msgid "Voice Settings"
+msgstr "Cài đặt giọng nói"
 
 #. module: mail
 #. odoo-javascript
@@ -12948,8 +13042,8 @@ msgid ""
 msgstr ""
 "Khi in tài liệu và xuất/nhập dữ liệu, các giá trị thời gian được tính theo "
 "múi giờ này.\n"
-"Nếu múi giờ không được thiết lập, UTC (Giờ phối hợp quốc tế) sẽ được sử dụng."
-"\n"
+"Nếu múi giờ không được thiết lập, UTC (Giờ phối hợp quốc tế) sẽ được sử "
+"dụng.\n"
 "Với các thao tác khác, giá trị thời gian được tính theo chênh lệch múi giờ "
 "của trang web máy khách."
 
@@ -13098,7 +13192,8 @@ msgstr "Bạn không còn theo dõi \"%(thread_name)s\"."
 #. odoo-python
 #: code:addons/mail/models/mail_scheduled_message.py:0
 msgid "You are not allowed to change the target record of a scheduled message."
-msgstr "Bạn không được phép thay đổi bản ghi mục tiêu của tin nhắn đã lên lịch."
+msgstr ""
+"Bạn không được phép thay đổi bản ghi mục tiêu của tin nhắn đã lên lịch."
 
 #. module: mail
 #. odoo-python
@@ -13198,8 +13293,8 @@ msgid ""
 "You cannot use anything else than unaccented latin characters in the alias "
 "address %(alias_name)s."
 msgstr ""
-"Bạn chỉ có thể dùng các ký tự latin không dấu cho địa chỉ bí danh "
-"%(alias_name)s."
+"Bạn chỉ có thể dùng các ký tự latin không dấu cho địa chỉ bí danh %"
+"(alias_name)s."
 
 #. module: mail
 #. odoo-python
@@ -13302,8 +13397,8 @@ msgstr "Của bạn"
 msgid ""
 "Your account email has been changed from %(old_email)s to %(new_email)s."
 msgstr ""
-"Email tài khoản của bạn đã được thay đổi từ %(old_email)s thành "
-"%(new_email)s."
+"Email tài khoản của bạn đã được thay đổi từ %(old_email)s thành %"
+"(new_email)s."
 
 #. module: mail
 #. odoo-python
@@ -13316,12 +13411,6 @@ msgstr "Thông tin đăng nhập tài khoản của bạn đã được cập nh
 #: code:addons/mail/models/res_users.py:0
 msgid "Your account password has been updated"
 msgstr "Mật khẩu tài khoản của bạn đã được cập nhật"
-
-#. module: mail
-#. odoo-javascript
-#: code:addons/mail/static/src/discuss/core/public/welcome_page.xml:0
-msgid "Your browser does not support videoconference"
-msgstr "Trình duyệt của bạn không hỗ trợ họp qua video"
 
 #. module: mail
 #. odoo-javascript
@@ -13348,6 +13437,8 @@ msgid ""
 "Your email address is used by an alias domain, and so you can not create a "
 "mail server for it."
 msgstr ""
+"Địa chỉ email của bạn đang được sử dụng bởi một miền bí danh, vì vậy bạn "
+"không thể tạo máy chủ thư cho nó."
 
 #. module: mail
 #. odoo-javascript
@@ -13549,8 +13640,8 @@ msgstr "VD: \"Email chào mừng\""
 msgid ""
 "e.g. \"Welcome to MyCompany\" or \"Nice to meet you, {{ object.name }}\""
 msgstr ""
-"VD: \"Chào mừng đến với MyCompany\" hoặc "
-"\"Rất vui được gặp gỡ bạn, {{ object.name }}\""
+"VD: \"Chào mừng đến với MyCompany\" hoặc \"Rất vui được gặp gỡ bạn, "
+"{{ object.name }}\""
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_alias_domain_view_form
@@ -13606,7 +13697,7 @@ msgstr "vd: Thảo luận về đề xuất"
 #: model_terms:ir.ui.view,arch_db:mail.mail_canned_response_view_form
 #: model_terms:ir.ui.view,arch_db:mail.mail_canned_response_view_tree
 msgid "e.g. Hello, how may I help you?"
-msgstr ""
+msgstr "vd: Xin chào, tôi có thể giúp gì bạn?"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_activity_plan_template_view_form
@@ -13638,7 +13729,7 @@ msgstr ""
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_compose_message_wizard_form
 msgid "e.g. info@company.com"
-msgstr ""
+msgstr "VD: info@company.com"
 
 #. module: mail
 #. odoo-javascript
@@ -13889,7 +13980,8 @@ msgstr ""
 msgid ""
 "reply to model %s that does not accept document update, fall back on "
 "document creation"
-msgstr "mô hình %s không chấp nhận cập nhật tài liệu, hãy quay lại tạo tài liệu"
+msgstr ""
+"mô hình %s không chấp nhận cập nhật tài liệu, hãy quay lại tạo tài liệu"
 
 #. module: mail
 #. odoo-python
@@ -14011,6 +14103,53 @@ msgstr "bí danh của bạn"
 #: code:addons/mail/models/discuss/discuss_channel_member.py:0
 msgid "“%(member_name)s” in “%(channel_name)s”"
 msgstr "“%(member_name)s” trong “%(channel_name)s”"
+
+#~ msgid "Browser default"
+#~ msgstr "Mặc định trình duyệt"
+
+#~ msgid "Disconnected from the RTC call by the server"
+#~ msgstr "Máy chủ đã ngắt kết nối khỏi cuộc gọi RTC"
+
+#~ msgid "Link copied!"
+#~ msgstr "Liên kết đã được sao chép!"
+
+#~ msgid ""
+#~ "%(open_button)s%(icon)s%(open_em)sDiscard editing%(close_em)s%"
+#~ "(close_button)s"
+#~ msgstr ""
+#~ "%(open_button)s%(icon)s%(open_em)sHuỷ chỉnh sửa%(close_em)s%"
+#~ "(close_button)s"
+
+#~ msgid "The channel type cannot be empty"
+#~ msgstr "Loại kênh không được để trống"
+
+#~ msgid "Add Reaction"
+#~ msgstr "Thêm biểu tượng cảm xúc"
+
+#~ msgid "Camera is off"
+#~ msgstr "Camera đã tắt"
+
+#~ msgid "Incoming Call..."
+#~ msgstr "Cuộc gọi đến..."
+
+#~ msgid "Incoming Video Call..."
+#~ msgstr "Cuộc gọi video đến..."
+
+#~ msgid ""
+#~ "Modifying the model can have an impact on existing activities using this "
+#~ "activity type, be careful."
+#~ msgstr ""
+#~ "Việc điều chỉnh mô hình có thể gây ảnh hưởng tới các hoạt động hiện có "
+#~ "đang sử dụng loại hoạt động này. Hãy cẩn thận."
+
+#~ msgid "Preview my camera"
+#~ msgstr "Xem trước camera của tôi"
+
+#~ msgid "Threads Actions"
+#~ msgstr "Tác vụ trong chủ đề"
+
+#~ msgid "Your browser does not support videoconference"
+#~ msgstr "Trình duyệt của bạn không hỗ trợ họp qua video"
 
 #~ msgid "%(user_name)s invited you to follow %(document)s document: %(title)s"
 #~ msgstr ""

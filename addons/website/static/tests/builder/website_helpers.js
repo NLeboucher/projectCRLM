@@ -1,21 +1,17 @@
-import { patchWithCleanupImg } from "@html_builder/../tests/helpers";
+import {
+    confirmAddSnippet,
+    getSnippetStructure,
+    getSnippetView,
+    patchWithCleanupImg,
+    waitForEndOfOperation,
+} from "@html_builder/../tests/helpers";
 import { Builder } from "@html_builder/builder";
 import { SetupEditorPlugin } from "@html_builder/core/setup_editor_plugin";
-import { setContent } from "@html_editor/../tests/_helpers/selection";
-import { insertText } from "@html_editor/../tests/_helpers/user_actions";
 import { Plugin } from "@html_editor/plugin";
 import { withSequence } from "@html_editor/utils/resource";
 import { defineMailModels, startServer } from "@mail/../tests/mail_test_helpers";
-import { after, describe } from "@odoo/hoot";
-import {
-    advanceTime,
-    animationFrame,
-    click,
-    queryOne,
-    tick,
-    waitFor,
-    waitForNone,
-} from "@odoo/hoot-dom";
+import { describe } from "@odoo/hoot";
+import { advanceTime, animationFrame, click, queryOne, tick, waitFor } from "@odoo/hoot-dom";
 import {
     contains,
     defineModels,
@@ -25,6 +21,7 @@ import {
     mountWithCleanup,
     onRpc,
     patchWithCleanup,
+    waitUntilIdle,
 } from "@web/../tests/web_test_helpers";
 import { loadBundle } from "@web/core/assets";
 import { isBrowserFirefox } from "@web/core/browser/feature_detection";
@@ -37,6 +34,10 @@ import { WebsiteBuilderClientAction } from "@website/client_actions/website_prev
 import { WebsiteSystrayItem } from "@website/client_actions/website_preview/website_systray_item";
 import { mockImageRequests } from "./image_test_helpers";
 import { getWebsiteSnippets } from "./snippets_getter.hoot";
+import { BaseOptionComponent, revertPreview } from "@html_builder/core/utils";
+import { BorderConfigurator } from "@html_builder/plugins/border_configurator_option";
+import { WebsiteBuilder } from "@website/builder/website_builder";
+import { getTranslatedElements } from "./translated_elements_getter.hoot";
 
 class Website extends models.Model {
     _name = "website";
@@ -54,12 +55,8 @@ class IrUiView extends models.Model {
 
 export const setupWebsiteBuilderOeId = 539;
 
-export const exampleWebsiteContent = '<h1 class="title">Hello</h1>';
-
 export const invisibleEl =
     '<div class="s_invisible_el o_snippet_invisible" data-name="Invisible Element" data-invisible="1"></div>';
-
-export const wrapExample = `<div id="wrap" data-oe-model="ir.ui.view" data-oe-id="539" data-oe-field="arch">${exampleWebsiteContent}</div>`;
 
 export function defineWebsiteModels() {
     describe.current.tags("desktop");
@@ -108,11 +105,15 @@ export async function setupWebsiteBuilder(
     registry.category("services").remove("website_edit");
     let editor;
     let editableContent;
-    await mountWithCleanup(WebClient);
+    const comp = await mountWithCleanup(WebClient);
     let originalIframeLoaded;
     let resolveIframeLoaded = () => {};
     const bodyHTML = `${beforeWrapwrapContent}
-        <div id="wrapwrap">${headerContent} <div id="wrap" class="oe_structure oe_empty" data-oe-model="ir.ui.view" data-oe-id="${setupWebsiteBuilderOeId}" data-oe-field="arch">${websiteContent}</div></div>`;
+        <div id="wrapwrap">${headerContent} <div id="wrap" class="oe_structure oe_empty" ${
+        translateMode
+            ? ""
+            : `data-oe-model="ir.ui.view" data-oe-id="${setupWebsiteBuilderOeId}" data-oe-field="arch"`
+    }>${websiteContent}</div></div>`;
     const iframeLoaded = new Promise((resolve) => {
         resolveIframeLoaded = (el) => {
             const iframe = el;
@@ -141,6 +142,8 @@ export async function setupWebsiteBuilder(
         resolveEditAssetsLoaded = () => resolve();
     });
 
+    onRpc("/website/get_translated_elements", () => getTranslatedElements());
+
     patchWithCleanup(WebsiteBuilderClientAction.prototype, {
         setIframeLoaded() {
             super.setIframeLoaded();
@@ -148,6 +151,13 @@ export async function setupWebsiteBuilder(
             originalIframeLoaded = this.iframeLoaded;
             this.iframeLoaded = iframeLoaded;
         },
+        // Override for Firefox. Chrome doesn't load the initial iframe and
+        // never goes through this method. As Firefox does, it means it re-
+        // assigns `this.publicRootReady` to a deferred that is never resolved
+        // in tests, which prevents any Hoot builder test from working.
+        // Reimplement this method the day interactions within the iframe work
+        // with Hoot.
+        preparePublicRootReady() {},
         async loadAssetsEditBundle() {
             // To instantiate interactions in the iframe test we need to load
             // the frontend bundle in it. The problem is that Hoot does not have
@@ -199,11 +209,13 @@ export async function setupWebsiteBuilder(
     });
 
     let lastUpdatePromise;
-    const waitDomUpdated = async () => {
+    const waitSidebarUpdated = async () => {
+        await revertPreview(editor);
         // The tick ensures that lastUpdatePromise has correctly been assigned
         await tick();
         await lastUpdatePromise;
         await animationFrame();
+        await waitUntilIdle([comp.__owl__.app]);
     };
     patchWithCleanup(Builder.prototype, {
         setup() {
@@ -262,13 +274,17 @@ export async function setupWebsiteBuilder(
         getEditor: () => editor,
         getEditableContent: () => editableContent,
         openBuilderSidebar: async () => await openBuilderSidebar(editAssetsLoaded),
-        waitDomUpdated,
+        waitSidebarUpdated,
     };
 }
 
 async function openBuilderSidebar(editAssetsLoaded) {
     // The next line allow us to await asynchronous fetches and cache them before it is used
-    await Promise.all([getWebsiteSnippets(), loadBundle("website.website_builder_assets")]);
+    await Promise.all([
+        getWebsiteSnippets(),
+        loadBundle("website.website_builder_assets"),
+        loadBundle("html_editor.assets_image_cropper"),
+    ]);
 
     await click(".o-website-btn-custo-primary");
     await editAssetsLoaded;
@@ -284,83 +300,36 @@ async function openBuilderSidebar(editAssetsLoaded) {
     await animationFrame();
 }
 
-export function addPlugin(Plugin) {
-    registry.category("website-plugins").add(Plugin.id, Plugin);
-    after(() => {
-        registry.category("website-plugins").remove(Plugin.id);
+export function addPlugin(...Plugin) {
+    patchWithCleanup(WebsiteBuilder.prototype, {
+        get builderProps() {
+            const props = super.builderProps;
+            return { ...props, Plugins: [...props.Plugins, ...Plugin] };
+        },
     });
 }
 
-export function addOption({
-    selector,
-    exclude,
-    applyTo,
-    template,
-    Component,
-    sequence,
-    cleanForSave,
-    props,
-    editableOnly,
-    title,
-    reloadTarget,
-}) {
+export function addOption(option) {
     const pluginId = uniqueId("test-option");
-    const Class = makeOptionPlugin({
-        pluginId,
-        OptionComponent: Component,
-        template,
-        selector,
-        exclude,
-        applyTo,
-        sequence,
-        cleanForSave,
-        props,
-        editableOnly,
-        title,
-        reloadTarget,
-    });
-    registry.category("website-plugins").add(pluginId, Class);
-    after(() => {
-        registry.category("website-plugins").remove(pluginId);
-    });
-}
-function makeOptionPlugin({
-    pluginId,
-    template,
-    selector,
-    exclude,
-    applyTo,
-    sequence,
-    OptionComponent,
-    cleanForSave,
-    props,
-    editableOnly,
-    title,
-    reloadTarget,
-}) {
-    const option = {
-        OptionComponent,
-        template,
-        selector,
-        exclude,
-        applyTo,
-        cleanForSave,
-        props,
-        editableOnly,
-        title,
-        reloadTarget,
-    };
+    const BaseComponent = option.Component || BaseOptionComponent;
+    class Option extends BaseComponent {
+        static components = { ...BaseComponent.components, BorderConfigurator };
+    }
+    const staticProps = { ...option };
+    const sequence = staticProps.sequence;
+    delete staticProps.Component;
+    delete staticProps.sequence;
+    Object.assign(Option, staticProps);
 
-    const Class = {
+    const P = {
         [pluginId]: class extends Plugin {
             static id = pluginId;
             resources = {
-                builder_options: sequence ? withSequence(sequence, option) : option,
+                builder_options: sequence ? withSequence(sequence, Option) : Option,
             };
         },
     }[pluginId];
-
-    return Class;
+    addPlugin(P);
 }
 
 export function addActionOption(actions = {}) {
@@ -371,10 +340,7 @@ export function addActionOption(actions = {}) {
             builder_actions: actions,
         };
     }
-    registry.category("website-plugins").add(pluginId, P);
-    after(() => {
-        registry.category("website-plugins").remove(P);
-    });
+    addPlugin(P);
 }
 
 export function addDropZoneSelector(selector) {
@@ -386,62 +352,8 @@ export function addDropZoneSelector(selector) {
             dropzone_selector: [selector],
         };
     }
-
-    registry.category("website-plugins").add(pluginId, P);
-    after(() => {
-        registry.category("website-plugins").remove(P);
-    });
+    addPlugin(P);
 }
-
-export async function modifyText(editor, editableContent) {
-    setContent(editableContent, '<h1 class="title">H[]ello</h1>');
-    editor.shared.history.addStep();
-    await insertText(editor, "1");
-}
-
-export function getSnippetView(snippets) {
-    const { snippet_groups, snippet_custom, snippet_structure, snippet_content } = snippets;
-    return `
-    <snippets id="snippet_groups" string="Categories">
-        ${(snippet_groups || []).join("")}
-    </snippets>
-    <snippets id="snippet_structure" string="Structure">
-        ${(snippet_structure || []).join("")}
-    </snippets>
-    <snippets id="snippet_custom" string="Custom">
-        ${(snippet_custom || []).join("")}
-    </snippets>
-    <snippets id="snippet_content" string="Inner Content">
-        ${(snippet_content || []).join("")}
-    </snippets>`;
-}
-
-export function getSnippetStructure({
-    name,
-    content,
-    keywords = [],
-    groupName,
-    imagePreview = "",
-    moduleId = "",
-    moduleDisplayName = "",
-}) {
-    keywords = keywords.join(", ");
-    return `<div name="${name}" data-oe-snippet-id="123" data-o-image-preview="${imagePreview}" data-oe-keywords="${keywords}" data-o-group="${groupName}" data-module-id="${moduleId}" data-module-display-name="${moduleDisplayName}">${content}</div>`;
-}
-
-export function getInnerContent({
-    name,
-    content,
-    keywords = [],
-    imagePreview = "",
-    thumbnail = "",
-}) {
-    keywords = keywords.join(", ");
-    return `<div name="${name}" data-oe-type="snippet" data-oe-snippet-id="456" data-o-image-preview="${imagePreview}" data-oe-thumbnail="${thumbnail}" data-oe-keywords="${keywords}">${content}</div>`;
-}
-
-export const dummyBase64Img =
-    "data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUA\n        AAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO\n            9TXL0Y4OHwAAAABJRU5ErkJggg==";
 
 export async function setupWebsiteBuilderWithDummySnippet(content) {
     const getSnippetEl = (withColoredLevelClass = false) => {
@@ -468,16 +380,6 @@ export async function setupWebsiteBuilderWithDummySnippet(content) {
     const snippetContent = getSnippetEl(true);
 
     return { getEditor, getEditableContent, openBuilderSidebar, snippetContent };
-}
-
-export async function confirmAddSnippet(snippetName) {
-    let previewSelector = `.o_add_snippet_dialog .o_add_snippet_iframe:iframe .o_snippet_preview_wrap`;
-    if (snippetName) {
-        previewSelector += ":has([data-snippet='" + snippetName + "'])";
-    }
-    await waitForSnippetDialog();
-    await contains(previewSelector).click();
-    await animationFrame();
 }
 
 export async function insertCategorySnippet({ group, snippet } = {}) {
@@ -531,7 +433,16 @@ export async function setupWebsiteBuilderWithSnippet(snippetName, options = {}) 
 export async function getStructureSnippet(snippetName) {
     const html = await getWebsiteSnippets();
     const snippetsDocument = new DOMParser().parseFromString(html, "text/html");
-    return snippetsDocument.querySelector(`[data-snippet=${snippetName}]`).cloneNode(true);
+    const processors = registry.category("html_builder.snippetsPreprocessor").getAll();
+    for (const processor of Object.values(processors)) {
+        processor("website.snippets", snippetsDocument);
+    }
+    const snippetEl = snippetsDocument.querySelector(
+        `[data-snippet=${snippetName}]:not([data-snippet] [data-snippet])`
+    );
+    const el = snippetEl.cloneNode(true);
+    el.dataset.name = snippetEl.parentElement.getAttribute("name");
+    return el;
 }
 
 export async function insertStructureSnippet(editor, snippetName) {
@@ -539,27 +450,4 @@ export async function insertStructureSnippet(editor, snippetName) {
     const parentEl = editor.editable.querySelector("#wrap") || editor.editable;
     parentEl.append(snippetEl);
     editor.shared.history.addStep();
-}
-
-/**
- * Returns the dragged helper when drag and dropping snippets.
- */
-export function getDragHelper() {
-    return document.body.querySelector(".o_draggable_dragging .o_snippet_thumbnail");
-}
-
-/**
- * Returns the dragged helper when drag and dropping elements from the page.
- */
-export function getDragMoveHelper() {
-    return document.body.querySelector(".o_drag_move_helper");
-}
-
-/**
- * Waits for the loading element added by the mutex to be removed, indicating
- * that the operation is over.
- */
-export async function waitForEndOfOperation() {
-    await waitForNone(":iframe .o_loading_screen", { timeout: 600 });
-    await animationFrame();
 }

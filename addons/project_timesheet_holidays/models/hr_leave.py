@@ -26,7 +26,7 @@ class HrLeave(models.Model):
         for leave in self:
             project, task = leave.employee_id.company_id.internal_project_id, leave.employee_id.company_id.leave_timesheet_task_id
 
-            if not project or not task:
+            if not project or not task or leave.holiday_status_id.time_type == 'other':
                 continue
 
             leave_ids.append(leave.id)
@@ -34,7 +34,7 @@ class HrLeave(models.Model):
                 continue
 
             calendar = leave.employee_id.resource_calendar_id
-            calendar_timezone = pytz.timezone(calendar.tz)
+            calendar_timezone = pytz.timezone((calendar or leave.employee_id).tz)
 
             if calendar.flexible_hours and (leave.request_unit_hours or leave.request_unit_half or leave.date_from.date() == leave.date_to.date()):
                 leave_date = leave.date_from.astimezone(calendar_timezone).date()

@@ -16,13 +16,14 @@
 # Aleš Fiala <f.ales1@seznam.cz>, 2023
 # SlavekB <slavek.banko@axis.cz>, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 14:00+0000\n"
-"PO-Revision-Date: 2025-09-16 10:06+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-11-07 18:36+0000\n"
+"PO-Revision-Date: 2025-11-08 17:49+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Czech <https://translate.odoo.com/projects/odoo-19/product/cs/"
 ">\n"
 "Language: cs\n"
@@ -102,6 +103,7 @@ msgstr ""
 
 #. module: product
 #. odoo-python
+#: code:addons/product/models/product_category.py:0
 #: code:addons/product/models/product_pricelist.py:0
 #: code:addons/product/models/product_tag.py:0
 #: code:addons/product/models/product_template.py:0
@@ -162,7 +164,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_duration_month_1
 msgid "1 month"
-msgstr ""
+msgstr "1 měsíc"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_duration_year_1
@@ -182,7 +184,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_height_100
 msgid "100"
-msgstr ""
+msgstr "100"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_length_120
@@ -227,12 +229,12 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_duration_year_3
 msgid "3 years"
-msgstr ""
+msgstr "3 roky"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_shoe_size_39
 msgid "39"
-msgstr ""
+msgstr "39"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_size_3xl
@@ -257,27 +259,27 @@ msgstr "4 x 7 s cenou"
 #. module: product
 #: model:product.attribute.value,name:product.pav_shoe_size_40
 msgid "40"
-msgstr ""
+msgstr "40"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_shoe_size_41
 msgid "41"
-msgstr ""
+msgstr "41"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_shoe_size_42
 msgid "42"
-msgstr ""
+msgstr "42"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_shoe_size_43
 msgid "43"
-msgstr ""
+msgstr "43"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_height_45
 msgid "45"
-msgstr ""
+msgstr "45"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_size_4xl
@@ -297,7 +299,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_height_85
 msgid "85"
-msgstr ""
+msgstr "85"
 
 #. module: product
 #: model_terms:product.template,website_description:product.product_product_4_product_template
@@ -326,8 +328,8 @@ msgid ""
 "<i class=\"fa fa-money\" role=\"img\" aria-label=\"Currency\" "
 "title=\"Currency\"/>"
 msgstr ""
-"<i class=\"fa fa-money\" role=\"img\" aria-label=\"Currency\" title="
-"\"Currency\"/>"
+"<i class=\"fa fa-money\" role=\"img\" aria-label=\"Currency\" "
+"title=\"Currency\"/>"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_category_form_view
@@ -342,7 +344,7 @@ msgstr ""
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_attribute_view_form
 msgid "<span class=\"o_stat_text\">Products</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Produkty</span>"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_pricelist_item_form_view
@@ -437,6 +439,14 @@ msgstr ""
 "objednaných množstvích.\n"
 "            Toto je perfektní nástroj pro zpracování několika cen, sezónních "
 "slev atd."
+
+#. module: product
+#. odoo-python
+#: code:addons/product/models/product_pricelist_item.py:0
+msgid ""
+"A pricelist item with \"Other Pricelist\" as base must have a "
+"base_pricelist_id."
+msgstr ""
 
 #. module: product
 #. odoo-python
@@ -536,7 +546,7 @@ msgstr "Přidat"
 #. odoo-javascript
 #: code:addons/product/static/src/js/pricelist_report/product_pricelist_report.xml:0
 msgid "Add Products"
-msgstr ""
+msgstr "Přidat produkty"
 
 #. module: product
 #. odoo-javascript
@@ -659,7 +669,7 @@ msgstr "Hliník"
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_apple
 msgid "Apple"
-msgstr ""
+msgstr "Apple"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_pricelist_item_tree_view
@@ -675,7 +685,7 @@ msgstr "Použít na"
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_pricelist_item_form_view
 msgid "Apply To"
-msgstr ""
+msgstr "Použít na"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_pricelist_view
@@ -820,7 +830,7 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,field_description:product.field_uom_uom__product_uom_ids
 msgid "Barcodes"
-msgstr ""
+msgstr "Čárové kódy"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_pricelist_item__base
@@ -864,7 +874,7 @@ msgstr "Černá"
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_blue
 msgid "Blue"
-msgstr ""
+msgstr "Modrá"
 
 #. module: product
 #: model:product.template,description_sale:product.product_product_7_product_template
@@ -874,12 +884,12 @@ msgstr ""
 #. module: product
 #: model:product.attribute,name:product.pa_brand
 msgid "Brand"
-msgstr ""
+msgstr "Značka"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_brown
 msgid "Brown"
-msgstr ""
+msgstr "Hnědá"
 
 #. module: product
 #. odoo-javascript
@@ -962,7 +972,7 @@ msgstr "Vyberte rozvržení stránky pro tisk štítků"
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_cocacola
 msgid "Coca-Cola"
-msgstr ""
+msgstr "Coca-Cola"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_variant_easy_edit_view
@@ -1148,7 +1158,7 @@ msgstr "Skupiny zemí"
 #. module: product
 #: model:res.groups,name:product.group_product_manager
 msgid "Create"
-msgstr ""
+msgstr "Vytvořit"
 
 #. module: product
 #: model:ir.model,website_form_label:product.model_res_partner
@@ -1284,12 +1294,12 @@ msgstr "Přizpůsobitelná pracovní plocha"
 #. module: product
 #: model:product.attribute,name:product.pa_customization
 msgid "Customization"
-msgstr ""
+msgstr "Zakázkové úpravy"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_cyan
 msgid "Cyan"
-msgstr ""
+msgstr "Azurová"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_document__db_datas
@@ -1517,7 +1527,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_options_drawers
 msgid "Drawers"
-msgstr ""
+msgstr "Šuplíky"
 
 #. module: product
 #: model:product.attribute,name:product.pa_duration
@@ -1760,12 +1770,12 @@ msgstr "Poskytuje pořadí při zobrazování seznamu produktů"
 #. module: product
 #: model:product.attribute.value,name:product.pav_fabric_glass
 msgid "Glass"
-msgstr ""
+msgstr "Sklenice"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_gold
 msgid "Gold"
-msgstr ""
+msgstr "Zlato"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.report_pricelist_page
@@ -1797,7 +1807,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_green
 msgid "Green"
-msgstr ""
+msgstr "Zelená"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_h_m
@@ -1830,7 +1840,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute,name:product.pa_height
 msgid "Height"
-msgstr ""
+msgstr "Výška"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_attribute_value__html_color
@@ -2206,7 +2216,7 @@ msgstr "Aktivity po termínu"
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo__delay
 msgid "Lead Time"
-msgstr ""
+msgstr "Dodací lhůta"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_supplierinfo__delay
@@ -2236,7 +2246,7 @@ msgstr "Nohy"
 #. module: product
 #: model:product.attribute,name:product.pa_length
 msgid "Length"
-msgstr ""
+msgstr "Délka"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_lenovo
@@ -2359,7 +2369,7 @@ msgstr "Zprávy"
 #. module: product
 #: model:product.attribute.value,name:product.pav_fabric_metal
 msgid "Metal"
-msgstr ""
+msgstr "Kov"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_document__mimetype
@@ -2465,7 +2475,7 @@ msgstr "Nové"
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_new_balance
 msgid "New Balance"
-msgstr ""
+msgstr "Nový zůstatek"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist__activity_calendar_event_id
@@ -2639,8 +2649,8 @@ msgid ""
 "On the product %(product)s you cannot associate the value %(value)s with the "
 "attribute %(attribute)s because they do not match."
 msgstr ""
-"Na produktu %(product)s nemůžete přiřadit hodnotu %(value)s k atributu "
-"%(attribute)s, protože se neshodují."
+"Na produktu %(product)s nemůžete přiřadit hodnotu %(value)s k atributu %"
+"(attribute)s, protože se neshodují."
 
 #. module: product
 #. odoo-python
@@ -2662,7 +2672,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:product.field_product_combo_item__product_id
 #: model:product.attribute,name:product.pa_options
 msgid "Options"
-msgstr ""
+msgstr "Možnosti"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_oral_b
@@ -2672,7 +2682,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_orange
 msgid "Orange"
-msgstr ""
+msgstr "Oranžový"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_document__original_id
@@ -3297,7 +3307,7 @@ msgstr "Popis nákupu"
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_purple
 msgid "Purple"
-msgstr ""
+msgstr "Fialový"
 
 #. module: product
 #. odoo-javascript
@@ -3343,9 +3353,15 @@ msgid "Ray-Ban"
 msgstr ""
 
 #. module: product
+#. odoo-python
+#: code:addons/product/models/product_pricelist_item.py:0
+msgid "Recursive pricelist rules detected: %s"
+msgstr ""
+
+#. module: product
 #: model:product.attribute.value,name:product.pav_color_red
 msgid "Red"
-msgstr ""
+msgstr "Červená"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_reebok
@@ -3554,7 +3570,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_silver
 msgid "Silver"
-msgstr ""
+msgstr "Stříbrný"
 
 #. module: product
 #: model:product.attribute,name:product.pa_size
@@ -3681,7 +3697,7 @@ msgstr "Dodavatelský ceník"
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_tag_form_view
 msgid "Tag"
-msgstr ""
+msgstr "Štítek"
 
 #. module: product
 #: model:ir.model.constraint,message:product.constraint_product_tag_name_uniq
@@ -3851,8 +3867,8 @@ msgid ""
 "The value %(value)s is not defined for the attribute %(attribute)s on the "
 "product %(product)s."
 msgstr ""
-"Hodnota %(value)s není definována pro atribut %(attribute)s na produktu "
-"%(product)s."
+"Hodnota %(value)s není definována pro atribut %(attribute)s na produktu %"
+"(product)s."
 
 #. module: product
 #. odoo-python
@@ -3927,7 +3943,7 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_document__thumbnail
 msgid "Thumbnail"
-msgstr ""
+msgstr "Náhled"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_tide
@@ -4094,7 +4110,7 @@ msgstr ""
 #: model:ir.model.fields,help:product.field_res_partner__property_product_pricelist
 #: model:ir.model.fields,help:product.field_res_users__property_product_pricelist
 msgid "Used for sales to the current partner"
-msgstr ""
+msgstr "Používá se pro prodej současnému partnerovi"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute_value__is_used_on_products
@@ -4393,17 +4409,17 @@ msgstr "Datum zápisu"
 #. module: product
 #: model:product.attribute.value,name:product.pav_size_xl
 msgid "XL"
-msgstr ""
+msgstr "XL"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_size_xs
 msgid "XS"
-msgstr ""
+msgstr "XS"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_yellow
 msgid "Yellow"
-msgstr ""
+msgstr "Žlutý"
 
 #. module: product
 #. odoo-python
@@ -4476,13 +4492,6 @@ msgstr "Tento produkt nelze v katalogu upravit."
 msgid ""
 "You cannot archive this attribute as there are still products linked to it"
 msgstr ""
-
-#. module: product
-#. odoo-python
-#: code:addons/product/models/product_pricelist_item.py:0
-msgid ""
-"You cannot assign the Main Pricelist as Other Pricelist in PriceList Item"
-msgstr "V Ceníkové položce nemůžete hlavní ceník přiřadit jako jiný ceník"
 
 #. module: product
 #. odoo-python
@@ -4609,8 +4618,8 @@ msgid ""
 "methods, etc."
 msgstr ""
 "Musíte definovat produkt pro vše, co prodáváte nebo nakupujete,\n"
-"                ať už jde o fyzický produkt, spotřební materiál nebo službu."
-"\n"
+"                ať už jde o fyzický produkt, spotřební materiál nebo "
+"službu.\n"
 "                Formulář produktu obsahuje informace pro usnadnění "
 "prodejního procesu:\n"
 "                cenu, poznámky pro nabídku, účetní data, nákupní metody apod."
@@ -4779,6 +4788,10 @@ msgstr "k"
 #: code:addons/product/static/src/js/pricelist_report/product_pricelist_report.xml:0
 msgid "xlsx"
 msgstr "xlsx"
+
+#~ msgid ""
+#~ "You cannot assign the Main Pricelist as Other Pricelist in PriceList Item"
+#~ msgstr "V Ceníkové položce nemůžete hlavní ceník přiřadit jako jiný ceník"
 
 #~ msgid ""
 #~ "%(base)s with a %(discount)s %% discount and %(surcharge)s extra fee\n"

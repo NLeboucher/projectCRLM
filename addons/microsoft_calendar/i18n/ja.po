@@ -3,13 +3,14 @@
 # * microsoft_calendar
 #
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# "Junko Augias (juau)" <juau@odoo.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-26 08:55+0000\n"
-"PO-Revision-Date: 2025-09-14 21:11+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-10-08 18:38+0000\n"
+"PO-Revision-Date: 2025-11-13 06:14+0000\n"
+"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-19/"
 "microsoft_calendar/ja/>\n"
 "Language: ja\n"
@@ -62,19 +63,20 @@ msgstr "アクティブ"
 msgid ""
 "An administrator needs to configure Outlook Synchronization before you can "
 "use it!"
-msgstr "Outlook同期を使用する前に、管理者がOutlook同期を設定する必要があります！"
+msgstr ""
+"Outlook同期を使用する前に、管理者がOutlook同期を設定する必要があります！"
 
 #. module: microsoft_calendar
 #. odoo-python
 #: code:addons/microsoft_calendar/models/res_users.py:0
 msgid ""
-"An error occurred while generating the token. Your authorization code may be"
-" invalid or has already expired [%s]. You should check your Client ID and "
+"An error occurred while generating the token. Your authorization code may be "
+"invalid or has already expired [%s]. You should check your Client ID and "
 "secret on the Microsoft Azure portal or try to stop and restart your "
 "calendar synchronisation."
 msgstr ""
 "トークンの生成中にエラーが発生しました。認証コードが無効であるか、"
-"有効期限が切れています [%s] Microsoft "
+"使用期限が切れています [%s] Microsoft "
 "AzureポータルでクライアントIDとシークレットを確認するか、カレンダの同期を停止"
 "して再開して下さい。"
 
@@ -106,7 +108,7 @@ msgstr "クライアントシークレット"
 #. module: microsoft_calendar
 #: model:ir.model,name:microsoft_calendar.model_res_config_settings
 msgid "Config Settings"
-msgstr "詳細設定"
+msgstr "構成設定"
 
 #. module: microsoft_calendar
 #. odoo-javascript
@@ -157,7 +159,15 @@ msgid "Discard"
 msgstr "破棄"
 
 #. module: microsoft_calendar
+#: model:ir.model.fields,field_description:microsoft_calendar.field_calendar_alarm_manager__display_name
+#: model:ir.model.fields,field_description:microsoft_calendar.field_calendar_attendee__display_name
+#: model:ir.model.fields,field_description:microsoft_calendar.field_calendar_event__display_name
+#: model:ir.model.fields,field_description:microsoft_calendar.field_calendar_recurrence__display_name
 #: model:ir.model.fields,field_description:microsoft_calendar.field_microsoft_calendar_account_reset__display_name
+#: model:ir.model.fields,field_description:microsoft_calendar.field_microsoft_calendar_sync__display_name
+#: model:ir.model.fields,field_description:microsoft_calendar.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:microsoft_calendar.field_res_users__display_name
+#: model:ir.model.fields,field_description:microsoft_calendar.field_res_users_settings__display_name
 msgid "Display Name"
 msgstr "表示名"
 
@@ -167,20 +177,23 @@ msgstr "表示名"
 msgid ""
 "Due to an Outlook Calendar limitation, recurrence updates must be done "
 "directly in Outlook Calendar."
-msgstr "Outlookカレンダで制限されているため、再帰更新はOutlookカレンダで直接行う必要"
+msgstr ""
+"Outlookカレンダで制限されているため、再帰更新はOutlookカレンダで直接行う必要"
 "があります。"
 
 #. module: microsoft_calendar
 #. odoo-python
 #: code:addons/microsoft_calendar/models/calendar.py:0
 msgid ""
-"Due to an Outlook Calendar limitation, recurrence updates must be done directly in Outlook Calendar.\n"
-"If this recurrence is not shown in Outlook Calendar, you must delete it in Odoo Calendar and recreate it in Outlook Calendar."
+"Due to an Outlook Calendar limitation, recurrence updates must be done "
+"directly in Outlook Calendar.\n"
+"If this recurrence is not shown in Outlook Calendar, you must delete it in "
+"Odoo Calendar and recreate it in Outlook Calendar."
 msgstr ""
 "Outlookカレンダで制限されているため、再帰更新はOutlookカレンダで直接行う必要"
 "があります。\n"
-"この定期的な予定がOutlookカレンダに表示されていない場合、Odooカレンダで削除し"
-"、Outlookカレンダで再作成する必要があります。"
+"この定期的な予定がOutlookカレンダに表示されていない場合、Odooカレンダで削除"
+"し、Outlookカレンダで再作成する必要があります。"
 
 #. module: microsoft_calendar
 #. odoo-python
@@ -188,8 +201,14 @@ msgstr ""
 msgid ""
 "Due to an Outlook Calendar limitation, recurrent events must be created "
 "directly in Outlook Calendar."
-msgstr "Outlookカレンダで制限されているため、定期イベントはOutlookカレンダで直接作成"
+msgstr ""
+"Outlookカレンダで制限されているため、定期イベントはOutlookカレンダで直接作成"
 "する必要があります。"
+
+#. module: microsoft_calendar
+#: model:ir.model,name:microsoft_calendar.model_calendar_alarm_manager
+msgid "Event Alarm Manager"
+msgstr "イベントアラーム管理"
 
 #. module: microsoft_calendar
 #: model:ir.model,name:microsoft_calendar.model_calendar_recurrence
@@ -200,15 +219,18 @@ msgstr "イベント繰返規則"
 #. odoo-python
 #: code:addons/microsoft_calendar/models/calendar.py:0
 msgid ""
-"For a correct synchronization between Odoo and Outlook Calendar, all attendees must have an email address. However, some events do not respect this condition. As long as the events are incorrect, the calendars will not be synchronized.\n"
+"For a correct synchronization between Odoo and Outlook Calendar, all "
+"attendees must have an email address. However, some events do not respect "
+"this condition. As long as the events are incorrect, the calendars will not "
+"be synchronized.\n"
 "Either update the events/attendees or archive these events %(details)s:\n"
 "%(invalid_events)s"
 msgstr ""
 "OdooとOutlookカレンダを正しく同期させるためには、参加者全員がメールアドレスを"
-"持っている必要があります。しかし、一部のイベントはこの条件を満たしていません"
-"。イベントが正しくない限り、カレンダは同期されません。\n"
-"イベント/出席者を更新するか、これらのイベントをアーカイブして下さい%(details)"
-"s: \n"
+"持っている必要があります。しかし、一部のイベントはこの条件を満たしていませ"
+"ん。イベントが正しくない限り、カレンダは同期されません。\n"
+"イベント/出席者を更新するか、これらのイベントをアーカイブして下さい%"
+"(details)s: \n"
 "%(invalid_events)s"
 
 #. module: microsoft_calendar
@@ -217,11 +239,20 @@ msgstr ""
 msgid ""
 "For having a different organizer in your event, it is necessary that the "
 "organizer have its Odoo Calendar synced with Outlook Calendar."
-msgstr "異なる主催者をイベントに参加させるには、主催者のOdooカレンダがOutlookカレンダ"
+msgstr ""
+"異なる主催者をイベントに参加させるには、主催者のOdooカレンダがOutlookカレンダ"
 "と同期されている必要があります。"
 
 #. module: microsoft_calendar
+#: model:ir.model.fields,field_description:microsoft_calendar.field_calendar_alarm_manager__id
+#: model:ir.model.fields,field_description:microsoft_calendar.field_calendar_attendee__id
+#: model:ir.model.fields,field_description:microsoft_calendar.field_calendar_event__id
+#: model:ir.model.fields,field_description:microsoft_calendar.field_calendar_recurrence__id
 #: model:ir.model.fields,field_description:microsoft_calendar.field_microsoft_calendar_account_reset__id
+#: model:ir.model.fields,field_description:microsoft_calendar.field_microsoft_calendar_sync__id
+#: model:ir.model.fields,field_description:microsoft_calendar.field_res_config_settings__id
+#: model:ir.model.fields,field_description:microsoft_calendar.field_res_users__id
+#: model:ir.model.fields,field_description:microsoft_calendar.field_res_users_settings__id
 msgid "ID"
 msgstr "ID"
 
@@ -230,7 +261,8 @@ msgstr "ID"
 msgid ""
 "If the active field is set to false, it will allow you to hide the event "
 "alarm information without removing it."
-msgstr "アクティブなフィールドがfalseに設定されると、それを削除せずにイベントのアラー"
+msgstr ""
+"アクティブなフィールドがfalseに設定されると、それを削除せずにイベントのアラー"
 "ム情報を非表示にすることができます。"
 
 #. module: microsoft_calendar
@@ -244,7 +276,8 @@ msgstr "Outlookカレンダとの同期が一時停止されているかどう�
 msgid ""
 "It is necessary adding the proposed organizer as attendee before saving the "
 "event."
-msgstr "イベントを保存する前に、提案されたオーガナイザーを出席者として追加する必要が"
+msgstr ""
+"イベントを保存する前に、提案されたオーガナイザーを出席者として追加する必要が"
 "あります。"
 
 #. module: microsoft_calendar
@@ -413,15 +446,9 @@ msgstr "新しいイベントのみを同期する"
 #. odoo-javascript
 #: code:addons/microsoft_calendar/static/src/views/microsoft_calendar/microsoft_calendar_controller.js:0
 msgid ""
-"The Outlook Synchronization needs to be configured before you can use it, do"
-" you want to do it now?"
+"The Outlook Synchronization needs to be configured before you can use it, do "
+"you want to do it now?"
 msgstr "Outlook同期を使用するには、事前に設定が必要です。"
-
-#. module: microsoft_calendar
-#. odoo-python
-#: code:addons/microsoft_calendar/models/res_users.py:0
-msgid "The account for the Outlook Calendar service is not configured."
-msgstr ""
 
 #. module: microsoft_calendar
 #: model:ir.model.fields,help:microsoft_calendar.field_microsoft_calendar_account_reset__delete_policy

@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* website
+# * website
 #
 # Translators:
 # Zsolt Godó <zsolttokio@gmail.com>, 2022
@@ -21,20 +21,23 @@
 # Martin Trigaux, 2023
 # Tamás Németh <ntomasz81@gmail.com>, 2023
 # Szabolcs Rádi, 2023
-#
+# "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 14:03+0000\n"
-"PO-Revision-Date: 2022-09-22 05:56+0000\n"
-"Last-Translator: Szabolcs Rádi, 2023\n"
-"Language-Team: Hungarian (https://app.transifex.com/odoo/teams/41243/hu/)\n"
+"POT-Creation-Date: 2025-12-12 18:35+0000\n"
+"PO-Revision-Date: 2025-11-08 18:01+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Hungarian <https://translate.odoo.com/projects/odoo-19/"
+"website/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_quotes_carousel_compact
@@ -265,7 +268,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_pricelist_boxed
 msgid "$15.00"
-msgstr ""
+msgstr "$15.00"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_pricelist_boxed
@@ -331,12 +334,6 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
-msgid "%s List"
-msgstr ""
-
-#. module: website
-#. odoo-javascript
 #: code:addons/website/static/src/client_actions/website_preview/website_builder_action.js:0
 msgid "%s is not a valid URL."
 msgstr ""
@@ -345,6 +342,12 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/components/views/page_list.js:0
 msgid "%s record(s) selected, are you sure you want to publish them all?"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/customize_translation_tab_plugin.js:0
+msgid "%s text blocks were skipped during translation. Please try again."
 msgstr ""
 
 #. module: website
@@ -529,13 +532,13 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_countdown
 msgid "16"
-msgstr ""
+msgstr "16"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "1x"
-msgstr ""
+msgstr "1x"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
@@ -609,7 +612,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "2x"
-msgstr ""
+msgstr "2x"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_rating
@@ -619,7 +622,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_countdown
 msgid "30"
-msgstr ""
+msgstr "30"
 
 #. module: website
 #. odoo-javascript
@@ -661,7 +664,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "3x"
-msgstr ""
+msgstr "3x"
 
 #. module: website
 #. odoo-javascript
@@ -713,7 +716,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "4x"
-msgstr ""
+msgstr "4x"
 
 #. module: website
 #. odoo-javascript
@@ -761,7 +764,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "5x"
-msgstr ""
+msgstr "5x"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_numbers_charts
@@ -783,6 +786,11 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_links
 msgid "8000 Marina Blvd, Suite 300 <br/> Brisbane CA 94005 <br/>United States"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.template_footer_call_to_action
+msgid "8000 Marina Blvd, Suite 300 • Brisbane CA 94005 • United States"
 msgstr ""
 
 #. module: website
@@ -1094,7 +1102,7 @@ msgstr "<b>Válasszon</b> egy színpalettát."
 #. odoo-javascript
 #: code:addons/website/static/src/js/tours/tour_utils.js:0
 msgid "<b>Slide</b> this button to change the %s padding"
-msgstr "<b>Mozgassa</b> a csúszkát a %s behúzásának megváltoztatásához."
+msgstr "<b>Mozgassa</b> a gombot a %s behúzásának megváltoztatásához."
 
 #. module: website
 #. odoo-javascript
@@ -1253,13 +1261,6 @@ msgstr ""
 msgid ""
 "<font style=\"background-image: linear-gradient(45deg, var(--o-color-4) 15%, "
 "var(--o-color-5) 100%);\" class=\"text-gradient\">8+</font>"
-msgstr ""
-
-#. module: website
-#: model_terms:ir.ui.view,arch_db:website.template_footer_call_to_action
-msgid ""
-"<font style=\"color: rgba(255, 255, 255, 0.5);\">8000 Marina Blvd, Suite 300 "
-"• Brisbane CA 94005 • United States</font>"
 msgstr ""
 
 #. module: website
@@ -2313,7 +2314,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_website_form
 msgid "<span class=\"s_website_form_label_content\">Your Company</span>"
-msgstr ""
+msgstr "<span class=\"s_website_form_label_content\">Szervezet</span>"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_website_form
@@ -2339,7 +2340,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.website_controller_pages_form_view
 msgid "<span invisible=\"name_slugified\" class=\"bg-300\">...</span>"
-msgstr ""
+msgstr "<span invisible=\"name_slugified\" class=\"bg-300\">...</span>"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.website_page_properties_view_form
@@ -2703,7 +2704,6 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/floating_blocks/floating_blocks_option.xml:0
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
 msgid "A great subtitle"
 msgstr ""
 
@@ -2790,7 +2790,7 @@ msgstr "API kulcs"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_groups
 msgid "About"
-msgstr ""
+msgstr "Névjegy"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_about_personal_s_image_text
@@ -2833,7 +2833,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/website/models/website.py:0
 msgid "Access Denied"
-msgstr ""
+msgstr "Hozzáférés megtagadva"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_visitor__access_token
@@ -2859,7 +2859,7 @@ msgstr "Kiegészítők"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Accordion"
-msgstr ""
+msgstr "Harmonika"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -2884,13 +2884,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:website.field_website_rewrite__redirect_type
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
 msgid "Action"
-msgstr "Művelet"
+msgstr "Akció"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/header/header_elements_option.xml:0
 msgid "Actions"
-msgstr ""
+msgstr "Akciók"
 
 #. module: website
 #. odoo-javascript
@@ -2941,7 +2941,6 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
 #: code:addons/website/static/src/builder/plugins/options/card_image_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 #: code:addons/website/static/src/client_actions/configurator/configurator.xml:0
@@ -3033,12 +3032,18 @@ msgstr "Menüelem hozzáadása"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/timeline_list_option.xml:0
 msgid "Add Milestone"
-msgstr ""
+msgstr "Új mérföldkő"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/accordion_option.xml:0
 msgid "Add New"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
+msgid "Add New Option"
 msgstr ""
 
 #. module: website
@@ -3104,6 +3109,12 @@ msgstr "Adjon hozzá egy leírást"
 
 #. module: website
 #. odoo-javascript
+#: code:addons/website/static/src/client_actions/website_preview/website_switcher_systray_item.js:0
+msgid "Add a domain to your website."
+msgstr ""
+
+#. module: website
+#. odoo-javascript
 #: code:addons/website/static/src/client_actions/website_preview/new_content_systray_item.js:0
 msgid "Add a livechat widget"
 msgstr ""
@@ -3155,12 +3166,6 @@ msgid "Add languages"
 msgstr "Új nyelv"
 
 #. module: website
-#. odoo-javascript
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
-msgid "Add new cards using the sidebar"
-msgstr ""
-
-#. module: website
 #: model_terms:ir.ui.view,arch_db:website.view_edit_third_party_domains
 msgid "Add other domains here"
 msgstr ""
@@ -3188,12 +3193,12 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.external_snippets
 msgid "Add to Cart Button"
-msgstr "Kosárhoz ad gomb"
+msgstr "Kosárba gomb"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_process_steps
 msgid "Add to cart"
-msgstr "Kosárhoz ad"
+msgstr "Kosárba"
 
 #. module: website
 #. odoo-javascript
@@ -3262,7 +3267,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/theme/theme_tab_plugin.js:0
 msgid "Advanced"
-msgstr ""
+msgstr "Haladó"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_masonry_block_alternation_text_image_template
@@ -3309,7 +3314,7 @@ msgstr "Figyelmeztetés"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
 msgid "Alerts"
-msgstr ""
+msgstr "Figyelmeztetések"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_company_team_detail
@@ -3333,13 +3338,13 @@ msgstr "Gomb illesztése"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/timeline_list_option.xml:0
 msgid "Align Center"
-msgstr ""
+msgstr "Középre rendez"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/timeline_list_option.xml:0
 msgid "Align Left"
-msgstr ""
+msgstr "Balra rendez"
 
 #. module: website
 #. odoo-javascript
@@ -3352,7 +3357,7 @@ msgstr "Középre"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/timeline_list_option.xml:0
 msgid "Align Right"
-msgstr ""
+msgstr "Jobbra rendez"
 
 #. module: website
 #. odoo-javascript
@@ -3409,7 +3414,7 @@ msgstr "Összes"
 #. odoo-javascript
 #: code:addons/website/static/src/components/resource_editor/resource_editor.js:0
 msgid "All SCSS Files"
-msgstr ""
+msgstr "Összes SCSS fájl"
 
 #. module: website
 #: model:ir.model,name:website.model_website_route
@@ -3509,7 +3514,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/carousel_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 msgid "Always"
-msgstr ""
+msgstr "Mindig"
 
 #. module: website
 #. odoo-javascript
@@ -3642,6 +3647,12 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translate_announcement_scroll_plugin.js:0
+msgid "Apply"
+msgstr "Alkalmazás"
+
+#. module: website
+#. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/header/header_font_option.xml:0
 msgid "Apply a light contrast on dropdown buttons"
 msgstr ""
@@ -3742,7 +3753,7 @@ msgstr ""
 #. module: website
 #: model:ir.model,name:website.model_ir_asset
 msgid "Asset"
-msgstr "Vagyontárgy"
+msgstr "Eszköz"
 
 #. module: website
 #: model:ir.model,name:website.model_website_assets
@@ -3816,7 +3827,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/carousel_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 msgid "Autoplay"
-msgstr ""
+msgstr "Automatikus lejátszás"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website__auto_redirect_lang
@@ -3854,7 +3865,7 @@ msgstr "Háttér"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_about_s_features
 msgid "Backend"
-msgstr ""
+msgstr "Kezelőfelület"
 
 #. module: website
 #. odoo-javascript
@@ -3876,7 +3887,7 @@ msgstr "Háttér"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "Background Color"
-msgstr ""
+msgstr "Háttér szín"
 
 #. module: website
 #. odoo-javascript
@@ -3963,7 +3974,7 @@ msgstr "Alapnézet"
 #: code:addons/website/static/src/components/dialog/add_page_dialog.js:0
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_groups
 msgid "Basic"
-msgstr ""
+msgstr "Alapszintű"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
@@ -3978,7 +3989,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields.selection,name:website.selection__theme_ir_asset__directive__before
 msgid "Before"
-msgstr ""
+msgstr "Előtt"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_comparisons
@@ -4079,7 +4090,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/snippets_powerbox_plugin.js:0
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Blockquote"
-msgstr ""
+msgstr "Idézet"
 
 #. module: website
 #. odoo-javascript
@@ -4109,7 +4120,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Blogs"
-msgstr ""
+msgstr "Blogok"
 
 #. module: website
 #. odoo-javascript
@@ -4122,7 +4133,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/font/add_font_dialog.xml:0
 #: code:addons/website/static/src/builder/plugins/options/header/header_navigation_option.xml:0
 msgid "Bold"
-msgstr ""
+msgstr "Félkövér"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_call_to_action_menu
@@ -4309,7 +4320,6 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/layout_option/add_element_option_plugin.js:0
 #: code:addons/website/static/src/builder/plugins/theme/theme_colors_option.xml:0
 #: code:addons/website/static/src/builder/plugins/theme/theme_tab_plugin.js:0
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
 #: model_terms:ir.ui.view,arch_db:website.s_button
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -4411,7 +4421,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Call to Action"
-msgstr ""
+msgstr "Felhívás"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -4459,7 +4469,7 @@ msgstr "Publikálhat"
 #: model_terms:ir.ui.view,arch_db:website.view_edit_third_party_domains
 #: model_terms:ir.ui.view,arch_db:website.view_website_form_view_themes_modal
 msgid "Cancel"
-msgstr "Mégse"
+msgstr "Visszavonás"
 
 #. module: website
 #. odoo-javascript
@@ -4513,7 +4523,6 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/floating_blocks/floating_blocks_option.xml:0
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
 msgid "Card Title"
 msgstr ""
 
@@ -4573,7 +4582,7 @@ msgstr ""
 #: code:addons/website/static/src/snippets/s_dynamic_snippet_carousel/000.xml:0
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Carousel"
-msgstr ""
+msgstr "Körhinta"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -4616,12 +4625,12 @@ msgstr "Esettanulmányok"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Catalog"
-msgstr ""
+msgstr "Katalógus"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Categories"
-msgstr ""
+msgstr "Kategóriák"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -4725,7 +4734,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/snippets_powerbox_plugin.js:0
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Chart"
-msgstr ""
+msgstr "Grafikon"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_form_aside
@@ -4743,7 +4752,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/components/dialog/seo.xml:0
 msgid "Check"
-msgstr ""
+msgstr "Ellenőrzés"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_popup
@@ -4772,9 +4781,14 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
-#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
 msgid "Checkbox"
 msgstr "Jelölő négyzet"
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
+msgid "Checkbox List"
+msgstr ""
 
 #. module: website
 #. odoo-javascript
@@ -4798,7 +4812,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_company_team_grid
 #: model_terms:ir.ui.view,arch_db:website.s_company_team_spotlight
 msgid "Chief Executive Officer"
-msgstr ""
+msgstr "Vezérigazgató"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_company_team_card
@@ -4846,7 +4860,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_company_team_basic
 #: model_terms:ir.ui.view,arch_db:website.s_company_team_detail
 msgid "Chief Technical Officer"
-msgstr ""
+msgstr "Műszaki igazgató"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_company_team_card
@@ -5016,7 +5030,6 @@ msgstr ""
 #: code:addons/website/static/src/client_actions/website_preview/create_page_message.xml:0
 #: code:addons/website/static/src/components/resource_editor/resource_editor.xml:0
 #: code:addons/website/static/src/components/views/theme_preview.xml:0
-#: code:addons/website/static/src/snippets/s_image_gallery/000.xml:0
 #: code:addons/website/static/src/snippets/s_image_gallery/001.xml:0
 #: code:addons/website/static/src/xml/website.xml:0
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
@@ -5043,12 +5056,6 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Closer Look"
-msgstr ""
-
-#. module: website
-#. odoo-javascript
-#: code:addons/website/static/src/client_actions/configurator/configurator.xml:0
-msgid "Clothes, Marketing, ..."
 msgstr ""
 
 #. module: website
@@ -5126,7 +5133,7 @@ msgstr "Színek"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/layout_option/layout_option.xml:0
 msgid "Column"
-msgstr ""
+msgstr "Oszlop"
 
 #. module: website
 #. odoo-javascript
@@ -5171,7 +5178,7 @@ msgstr "Vállalat"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/header/header_elements_option.xml:0
 msgid "Company Logo"
-msgstr ""
+msgstr "Vállalati logó"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -5232,12 +5239,12 @@ msgstr "Conditionally"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
 msgid "Conditions"
-msgstr ""
+msgstr "Feltételek"
 
 #. module: website
 #: model:ir.model,name:website.model_res_config_settings
 msgid "Config Settings"
-msgstr "Beállítások módosítása"
+msgstr "Beállítások"
 
 #. module: website
 #: model:ir.ui.menu,name:website.menu_website_global_configuration
@@ -5288,7 +5295,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_landing_s_features
 msgid "Consulting"
-msgstr ""
+msgstr "Tanácsadás"
 
 #. module: website
 #. odoo-javascript
@@ -5323,7 +5330,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_website_form_info
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 msgid "Contact Us"
-msgstr "Vegye fel a kapcsolatot velünk"
+msgstr "Kapcsolatfelvétel"
 
 #. module: website
 #. odoo-python
@@ -5353,6 +5360,9 @@ msgid ""
 "                                    We'll do our best to get back to you as "
 "soon as possible."
 msgstr ""
+"Ha bármilyen kérdése lenne vállalatunkkal vagy a szolgáltatásainkkal "
+"kapcsolatban, itt felteheti.<br/>\n"
+"Próbálunk a lehető leghamarabb válaszolni."
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_contact
@@ -5435,7 +5445,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/website_builder.js:0
 #: code:addons/website/static/src/components/dialog/edit_menu.xml:0
 msgid "Continue"
-msgstr ""
+msgstr "Folytatás"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_media_list
@@ -5452,6 +5462,7 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
+#: code:addons/website/static/src/interactions/cookies/cookies_bar.js:0
 #: code:addons/website/static/src/xml/website.cookies_bar.xml:0
 #: model_terms:ir.ui.view,arch_db:website.cookie_policy
 msgid "Cookie Policy"
@@ -5585,7 +5596,7 @@ msgstr "Borító"
 #: code:addons/website/static/src/builder/plugins/options/dynamic_snippet_option.xml:0
 #: code:addons/website/static/src/components/dialog/seo.xml:0
 msgid "Cover Image"
-msgstr ""
+msgstr "Borítókép"
 
 #. module: website
 #. odoo-javascript
@@ -5764,7 +5775,7 @@ msgstr "Egyedi kód"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
 msgid "Custom Field"
-msgstr ""
+msgstr "Egyéni mező"
 
 #. module: website
 #. odoo-javascript
@@ -5810,7 +5821,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website.field_res_config_settings__auth_signup_uninvited
 #: model:ir.model.fields,field_description:website.field_website__auth_signup_uninvited
 msgid "Customer Account"
-msgstr "Ügyfélfiók"
+msgstr "Vevő fiók"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_numbers_grid
@@ -5833,7 +5844,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_cards
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_images_subtitles
 msgid "Customers"
-msgstr "Ügyfelek"
+msgstr "Vevők"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_reviews_wall
@@ -5917,7 +5928,7 @@ msgstr "Dátum"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
 msgid "Date & Time"
-msgstr ""
+msgstr "Dátum és idő"
 
 #. module: website
 #. odoo-javascript
@@ -5929,7 +5940,7 @@ msgstr "nap"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Debug"
-msgstr ""
+msgstr "Hibakeresés"
 
 #. module: website
 #. odoo-javascript
@@ -6004,7 +6015,7 @@ msgstr "Alapértelmezett szociális kép"
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/header/header_font_option.xml:0
-msgid "Default Text Color"
+msgid "Default Text Size and Color"
 msgstr ""
 
 #. module: website
@@ -6048,7 +6059,7 @@ msgstr "Késés"
 #. odoo-javascript
 #: code:addons/website/static/src/components/dialog/page_properties.xml:0
 msgid "Delete"
-msgstr ""
+msgstr "Törlés"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_features_grid
@@ -6206,13 +6217,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_banner_categories
 #: model_terms:ir.ui.view,arch_db:website.s_ecomm_categories_showcase
 msgid "Desks"
-msgstr ""
+msgstr "Íróasztalok"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/components/views/theme_preview.xml:0
 msgid "Desktop"
-msgstr ""
+msgstr "Asztal"
 
 #. module: website
 #. odoo-javascript
@@ -6263,6 +6274,12 @@ msgstr "Irány"
 #. module: website
 #: model:ir.model.fields,field_description:website.field_theme_ir_asset__directive
 msgid "Directive"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/options/website_page_config_option.xml:0
+msgid "Disable to hide the footer on this page"
 msgstr ""
 
 #. module: website
@@ -6414,6 +6431,11 @@ msgid "Discover our<br/>main three benefits"
 msgstr ""
 
 #. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_intro_pill
+msgid "Discover our<br/>services"
+msgstr ""
+
+#. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_numbers_showcase
 msgid "Discover outstanding and highly engaging web pages."
 msgstr ""
@@ -6561,14 +6583,16 @@ msgid "Display Name"
 msgstr "Megjelenített név"
 
 #. module: website
-#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
-msgid "Display a customizable cookies bar on your website"
-msgstr "Jelenítsen meg egy formázható cookie mezőt az oldalán"
-
-#. module: website
 #: model:ir.model.fields,help:website.field_res_config_settings__website_cookies_bar
 #: model:ir.model.fields,help:website.field_website__cookies_bar
 msgid "Display a customizable cookies bar on your website."
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"Display a customizable cookies bar on your website. Please ensure your site "
+"is GDPR-compliant (e.g. Google Fonts usage)."
 msgstr ""
 
 #. module: website
@@ -6730,7 +6754,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_banner_categories
 #: model_terms:ir.ui.view,arch_db:website.s_ecomm_categories_showcase
 msgid "Drawers"
-msgstr ""
+msgstr "Fiókok"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_menus_logos
@@ -6766,7 +6790,7 @@ msgstr "Legördülő menü"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/countdown_option.xml:0
 msgid "Due Date"
-msgstr "Esedékesség napja"
+msgstr "Fizetési határidő"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_features_grid
@@ -6798,18 +6822,18 @@ msgstr "Időtartam"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Dynamic Carousel"
-msgstr "Dinamikus Carousel"
+msgstr "Dinamikus körhinta"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/dynamic_svg_option.xml:0
 msgid "Dynamic Colors"
-msgstr ""
+msgstr "Dinamikus színek"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Dynamic Snippet"
-msgstr "Dinamikus Snippet"
+msgstr "Dinamikus töredék"
 
 #. module: website
 #: model:ir.model.fields,help:website.field_res_config_settings__website_homepage_url
@@ -7048,7 +7072,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
 #: model_terms:ir.ui.view,arch_db:website.website_visitor_view_tree
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
@@ -7132,12 +7156,6 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/builder/plugins/options/website_page_config_option.xml:0
-msgid "Enable to hide the footer on this page"
-msgstr ""
-
-#. module: website
-#. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/carousel_slides_option.xml:0
 msgid "Enable to make the slide clickable"
 msgstr ""
@@ -7163,6 +7181,12 @@ msgstr ""
 msgid ""
 "Enhance your experience with our user-focused designs, ensuring you get the "
 "best value.<br/>"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/xml/html_editor.xml:0
+msgid "Enter URL, /page, or #anchor"
 msgstr ""
 
 #. module: website
@@ -7285,7 +7309,7 @@ msgstr "Hiba"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
 msgid "Error Message"
-msgstr ""
+msgstr "Hibaüzenet"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_pricelist_cafe
@@ -7367,7 +7391,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/components/resource_editor/utils.js:0
 msgid "Expected %(char)s"
-msgstr ""
+msgstr "Várható %(char)s"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_numbers_grid
@@ -7393,11 +7417,6 @@ msgstr ""
 msgid ""
 "Experience the power of our software without breaking the bank – choose a "
 "plan that suits you best and start unlocking its full potential today."
-msgstr ""
-
-#. module: website
-#: model_terms:ir.ui.view,arch_db:website.s_intro_pill
-msgid "Experience the<br/>best quality services"
 msgstr ""
 
 #. module: website
@@ -7669,7 +7688,7 @@ msgstr "Jellemzők"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Features Grid"
-msgstr ""
+msgstr "Jellemzőrács"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -7695,6 +7714,12 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/dynamic_snippet_option.xml:0
 msgid "Fetched Elements"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/form/utils.js:0
+msgid "Field"
 msgstr ""
 
 #. module: website
@@ -7972,7 +7997,7 @@ msgstr "Betűkészlet"
 #: code:addons/website/static/src/builder/plugins/theme/theme_headings_option.xml:0
 #: code:addons/website/static/src/builder/plugins/theme/theme_tab.xml:0
 msgid "Font Family"
-msgstr ""
+msgstr "Betűkészlet család"
 
 #. module: website
 #. odoo-javascript
@@ -8049,7 +8074,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/options/header/header_font_option.xml:0
 #: code:addons/website/static/src/components/resource_editor/resource_editor.xml:0
 msgid "Format"
-msgstr ""
+msgstr "Formátum"
 
 #. module: website
 #. odoo-javascript
@@ -8126,7 +8151,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_attributes_horizontal
 msgid "Free shipping"
-msgstr ""
+msgstr "Ingyenes szállítás"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_columns
@@ -8230,7 +8255,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_groups
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Gallery"
-msgstr ""
+msgstr "Galéria"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_thumbnails
@@ -8240,7 +8265,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "General"
-msgstr ""
+msgstr "Általános"
 
 #. module: website
 #. odoo-javascript
@@ -8287,7 +8312,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_striped_center_top
 #: model_terms:ir.ui.view,arch_db:website.template_footer_call_to_action
 msgid "Get started"
-msgstr ""
+msgstr "Kezdje el"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_floating_blocks
@@ -8318,7 +8343,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_odoo_menu
 #: model_terms:ir.ui.view,arch_db:website.s_social_media
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website__social_github
@@ -8351,7 +8376,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/components/views/theme_preview.xml:0
 msgid "Go Back"
-msgstr ""
+msgstr "Visszatérés"
 
 #. module: website
 #. odoo-javascript
@@ -8415,7 +8440,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/social_media_option_plugin.js:0
 msgid "Google"
-msgstr ""
+msgstr "Google"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_res_config_settings__has_google_analytics
@@ -8512,12 +8537,12 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 #: model:ir.model.fields.selection,name:website.selection__website_controller_page__default_layout__grid
 msgid "Grid"
-msgstr "Tarifatáblázat"
+msgstr "Rács"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
 msgid "Group"
-msgstr ""
+msgstr "Csoport"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_controller_page__group_ids
@@ -8671,7 +8696,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/theme/theme_headings_option.xml:0
 msgid "Heading 1"
-msgstr ""
+msgstr "Címsor 1"
 
 #. module: website
 #. odoo-javascript
@@ -8742,7 +8767,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Help"
-msgstr ""
+msgstr "Súgó"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_images_subtitles
@@ -8797,7 +8822,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/progress_bar_option.xml:0
 msgid "Hide"
-msgstr ""
+msgstr "Elrejt"
 
 #. module: website
 #. odoo-javascript
@@ -8878,7 +8903,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "History"
-msgstr ""
+msgstr "Előzmények"
 
 #. module: website
 #. odoo-javascript
@@ -9001,7 +9026,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_company_team_detail
 msgid "Human Resources Manager"
-msgstr ""
+msgstr "Személyügyi igazgató"
 
 #. module: website
 #. odoo-javascript
@@ -9092,7 +9117,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website.field_website_track__id
 #: model:ir.model.fields,field_description:website.field_website_visitor__id
 msgid "ID"
-msgstr "Azonosító"
+msgstr "ID"
 
 #. module: website
 #: model:ir.model.fields,help:website.field_ir_actions_server__xml_id
@@ -9217,6 +9242,8 @@ msgid ""
 "If you reset this file, all your customizations will be lost as it will be "
 "reverted to the default file."
 msgstr ""
+"Ha visszaállítja ezt a fájl, az összes egyedi beállítás elveszik, és a fájl "
+"visszaáll az alapértelmezett állapotba."
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_unveil
@@ -9238,7 +9265,7 @@ msgstr "Kép"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Image - Text"
-msgstr ""
+msgstr "Kép - Szöveg"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -9307,11 +9334,10 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Image Gallery"
-msgstr ""
+msgstr "Képgaléria"
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/snippets/s_image_gallery/000.xml:0
 #: code:addons/website/static/src/snippets/s_image_gallery/001.xml:0
 msgid "Image Gallery Dialog"
 msgstr ""
@@ -9389,7 +9415,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Images Wall"
-msgstr ""
+msgstr "Képfal"
 
 #. module: website
 #. odoo-python
@@ -9439,7 +9465,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/accordion_option.xml:0
 msgid "Inactive"
-msgstr ""
+msgstr "Inaktív"
 
 #. module: website
 #: model:ir.model.fields.selection,name:website.selection__theme_ir_asset__directive__include
@@ -9677,7 +9703,7 @@ msgstr "Instagram fiók"
 #: code:addons/website/static/src/builder/plugins/options/instagram_option.xml:0
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Instagram Page"
-msgstr ""
+msgstr "Instagram Oldal"
 
 #. module: website
 #. odoo-javascript
@@ -10106,7 +10132,7 @@ msgstr "Tételek"
 #. odoo-javascript
 #: code:addons/website/static/src/components/resource_editor/resource_editor.js:0
 msgid "JS file: %s"
-msgstr ""
+msgstr "JS fájl: %s"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_menus_logos
@@ -10138,7 +10164,7 @@ msgstr "Munkakör"
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Jobs"
-msgstr ""
+msgstr "Állások"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_call_to_action
@@ -10268,7 +10294,7 @@ msgstr "Címkék szélessége"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_ecomm_categories_showcase
 msgid "Lamps"
-msgstr ""
+msgstr "Lámpák"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_groups
@@ -10418,7 +10444,7 @@ msgstr "Frissítette"
 #: model:ir.model.fields,field_description:website.field_website_snippet_filter__write_date
 #: model:ir.model.fields,field_description:website.field_website_visitor__write_date
 msgid "Last Updated on"
-msgstr "Frissítve ekkor"
+msgstr "Frissítve"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_visitor__last_visited_page_id
@@ -10652,7 +10678,7 @@ msgstr "Korlátozás"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/chart_option.xml:0
 msgid "Line"
-msgstr "Tétel"
+msgstr "Sor"
 
 #. module: website
 #. odoo-javascript
@@ -10697,7 +10723,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_social_media
 #: model_terms:ir.ui.view,arch_db:website.template_footer_centered
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website__social_linkedin
@@ -10727,7 +10753,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/options/controller_page_listing_layout_option.xml:0
 #: model:ir.model.fields.selection,name:website.selection__website_controller_page__default_layout__list
 msgid "List"
-msgstr ""
+msgstr "Lista"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_features
@@ -10771,7 +10797,7 @@ msgstr "Élő társalgás"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
 msgid "Livechat"
-msgstr ""
+msgstr "Élő társalgás"
 
 #. module: website
 #. odoo-javascript
@@ -10783,7 +10809,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/client_actions/website_preview/edit_website_systray_item.xml:0
 msgid "Loading"
-msgstr ""
+msgstr "Betöltés"
 
 #. module: website
 #. odoo-javascript
@@ -10880,7 +10906,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_about_s_features
 msgid "Management"
-msgstr ""
+msgstr "Vezetőség"
 
 #. module: website
 #. odoo-javascript
@@ -10912,7 +10938,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/theme/theme_headings_option.xml:0
 #: code:addons/website/static/src/builder/plugins/theme/theme_tab.xml:0
 msgid "Margins"
-msgstr ""
+msgstr "Árrések"
 
 #. module: website
 #. odoo-javascript
@@ -10946,7 +10972,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_landing_s_features
 msgid "Marketing"
-msgstr ""
+msgstr "Marketing"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_company_team_detail
@@ -10965,7 +10991,7 @@ msgstr "Piactér"
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Masonry"
-msgstr "Masonry (téglafal)"
+msgstr "Téglafal"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_about_s_features
@@ -11006,7 +11032,7 @@ msgstr "Média"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Media List"
-msgstr ""
+msgstr "Médialista"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_media_list
@@ -11033,7 +11059,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/options/social_media_option.xml:0
 #: code:addons/website/static/src/builder/plugins/size_option.xml:0
 msgid "Medium"
-msgstr "Közepes"
+msgstr "Médium"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_about_full_1_s_text_block_h2
@@ -11205,7 +11231,7 @@ msgstr ""
 #. module: website
 #: model:ir.model,name:website.model_base_partner_merge_automatic_wizard
 msgid "Merge Partner Wizard"
-msgstr ""
+msgstr "Merge partner wizard"
 
 #. module: website
 #. odoo-javascript
@@ -11266,7 +11292,7 @@ msgstr "Közép"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/timeline_list_option.xml:0
 msgid "Milestones"
-msgstr ""
+msgstr "Mérföldkövek"
 
 #. module: website
 #. odoo-javascript
@@ -11365,12 +11391,12 @@ msgstr "Modell adat"
 #. module: website
 #: model:ir.model,name:website.model_website_controller_page
 msgid "Model Page"
-msgstr ""
+msgstr "Modell oldal"
 
 #. module: website
 #: model:ir.ui.menu,name:website.menu_website_controller_pages_list
 msgid "Model Pages"
-msgstr ""
+msgstr "Modell oldalak"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_snippet_filter__model_name
@@ -11590,7 +11616,7 @@ msgstr "Név"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/searchbar_option_plugin.js:0
 msgid "Name (A-Z)"
-msgstr ""
+msgstr "Név - növekvő"
 
 #. module: website
 #. odoo-javascript
@@ -11627,7 +11653,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_columns
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Navigation"
-msgstr ""
+msgstr "Navigáció"
 
 #. module: website
 #. odoo-javascript
@@ -11661,7 +11687,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/carousel_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 msgid "Never"
-msgstr ""
+msgstr "Soha"
 
 #. module: website
 #. odoo-javascript
@@ -11749,7 +11775,6 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 #: code:addons/website/static/src/snippets/s_dynamic_snippet_carousel/000.xml:0
-#: code:addons/website/static/src/snippets/s_image_gallery/000.xml:0
 #: code:addons/website/static/src/snippets/s_image_gallery/001.xml:0
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
 #: model_terms:ir.ui.view,arch_db:website.s_carousel
@@ -11855,21 +11880,21 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/customize_translation_tab_plugin.js:0
+msgid "No translatable content found in the current webpage."
+msgstr ""
+
+#. module: website
+#. odoo-javascript
 #: code:addons/website/static/src/components/dialog/seo.xml:0
 msgid "No warning on images"
 msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/client_actions/website_preview/website_switcher_systray_item.js:0
-msgid "No website domain configured for this website."
-msgstr ""
-
-#. module: website
-#. odoo-javascript
 #: code:addons/website/static/src/components/dialog/page_properties.xml:0
 msgid "No, keep it"
-msgstr ""
+msgstr "Nem, tartsuk meg"
 
 #. module: website
 #. odoo-javascript
@@ -11956,7 +11981,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/countdown_option.xml:0
 msgid "Nothing"
-msgstr ""
+msgstr "Semmi"
 
 #. module: website
 #. odoo-javascript
@@ -11976,7 +12001,7 @@ msgstr "Nyelvek száma"
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Numbers"
-msgstr ""
+msgstr "Számok"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -12017,7 +12042,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/client_actions/configurator/configurator.xml:0
 msgid "OR"
-msgstr ""
+msgstr "VAGY"
 
 #. module: website
 #. odoo-javascript
@@ -12170,19 +12195,19 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/components/resource_editor/resource_editor.js:0
 msgid "Only Custom SCSS Files"
-msgstr ""
+msgstr "Csak egyedi SCSS fájlok"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/components/resource_editor/resource_editor.js:0
 msgid "Only Page SCSS Files"
-msgstr ""
+msgstr "Csak az oldlhoz tartozó SCSS fájlok"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/components/resource_editor/resource_editor.js:0
 msgid "Only Views"
-msgstr ""
+msgstr "Csak nézetek"
 
 #. module: website
 #. odoo-javascript
@@ -12251,7 +12276,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Opening Hours"
-msgstr ""
+msgstr "Nyitvatartás"
 
 #. module: website
 #. odoo-javascript
@@ -12273,12 +12298,6 @@ msgstr "SEO optimalizálása"
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
-msgid "Option"
-msgstr ""
-
-#. module: website
-#. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/utils.js:0
 msgid "Option 1"
 msgstr ""
@@ -12293,6 +12312,12 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/utils.js:0
 msgid "Option 3"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
+msgid "Option List"
 msgstr ""
 
 #. module: website
@@ -12372,7 +12397,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_landing_3_s_text_block_h2
 msgid "Our Offer"
-msgstr ""
+msgstr "Ajánlatunk"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_about_map_s_text_block_h2
@@ -12658,7 +12683,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/theme/theme_button_option.xml:0
 #: code:addons/website/static/src/builder/plugins/theme/theme_tab.xml:0
 msgid "Padding"
-msgstr ""
+msgstr "Szerkesztés"
 
 #. module: website
 #. odoo-javascript
@@ -12819,7 +12844,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/options/announcement_scroll_option.xml:0
 #: code:addons/website/static/src/builder/plugins/theme/theme_tab_plugin.js:0
 msgid "Paragraph"
-msgstr ""
+msgstr "Bekezdés"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.color_combinations_debug_view
@@ -12844,6 +12869,7 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/announcement_scroll_option.xml:0
+#: code:addons/website/static/src/builder/snippet_model.js:0
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Parallax"
 msgstr ""
@@ -12920,7 +12946,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/announcement_scroll_option.xml:0
 msgid "Pause"
-msgstr ""
+msgstr "Szünet"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_process_steps
@@ -12942,13 +12968,13 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "People"
-msgstr ""
+msgstr "Emberek"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_features
 #: model_terms:ir.ui.view,arch_db:website.s_features_wave
 msgid "Performance"
-msgstr ""
+msgstr "Teljesítmény"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_landing_2_s_cover
@@ -12970,7 +12996,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/js/send_mail_form.js:0
 msgid "Phone Number"
-msgstr ""
+msgstr "Telefonszám"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_thumbnails
@@ -13091,12 +13117,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_popup
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Popup"
-msgstr ""
+msgstr "Felugró ablak"
 
 #. module: website
 #: model:ir.model,name:website.model_portal_wizard_user
 msgid "Portal User Config"
-msgstr ""
+msgstr "Portál felhasználó beállítás"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_big_icons_subtitles
@@ -13150,7 +13176,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Press"
-msgstr ""
+msgstr "Billentyű:"
 
 #. module: website
 #. odoo-javascript
@@ -13181,13 +13207,12 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font/add_font_dialog.xml:0
 msgid "Preview of"
-msgstr ""
+msgstr "Előnézet:"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/image_gallery_option.xml:0
 #: code:addons/website/static/src/snippets/s_dynamic_snippet_carousel/000.xml:0
-#: code:addons/website/static/src/snippets/s_image_gallery/000.xml:0
 #: code:addons/website/static/src/snippets/s_image_gallery/001.xml:0
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
 #: model_terms:ir.ui.view,arch_db:website.s_carousel
@@ -13384,7 +13409,7 @@ msgstr "Tulajdonságok"
 #. module: website
 #: model:ir.model.fields.selection,name:website.selection__ir_ui_view__visibility__
 msgid "Public"
-msgstr ""
+msgstr "Nyilvános"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website__partner_id
@@ -13500,7 +13525,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Quotes"
-msgstr "Árajánlatok"
+msgstr "Idézetek"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -13525,7 +13550,7 @@ msgstr "Qweb mező kapcsolat"
 #. module: website
 #: model:ir.model,name:website.model_ir_qweb_field_html
 msgid "Qweb Field HTML"
-msgstr ""
+msgstr "Qweb mező HTML"
 
 #. module: website
 #. odoo-javascript
@@ -13536,8 +13561,13 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
-#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
 msgid "Radio"
+msgstr "Rádió"
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/form/form_option_plugin.js:0
+msgid "Radio Button List"
 msgstr ""
 
 #. module: website
@@ -13557,7 +13587,7 @@ msgstr "Értékelés"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/card_image_option.xml:0
 msgid "Ratio"
-msgstr ""
+msgstr "Arány"
 
 #. module: website
 #. odoo-javascript
@@ -13638,7 +13668,7 @@ msgstr "Címzett email címe"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/dynamic_snippet_option.xml:0
 msgid "Record"
-msgstr ""
+msgstr "Bejegyzés"
 
 #. module: website
 #: model:ir.model,name:website.model_ir_rule
@@ -13660,7 +13690,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/form/form_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/countdown_option.xml:0
 msgid "Redirect"
-msgstr "Átirányít"
+msgstr "Átirányítás"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.website_page_properties_view_form
@@ -13690,7 +13720,7 @@ msgstr "Átirányítások"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "References"
-msgstr "Hivatkozások"
+msgstr "Referenciák"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -13819,12 +13849,18 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/social_media_links.xml:0
 msgid "Remove link"
-msgstr ""
+msgstr "Hivatkozás eltávolítása"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.theme_view_kanban
 msgid "Remove theme"
 msgstr "Téma eltávolítása"
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/options/background_video_option.xml:0
+msgid "Remove video"
+msgstr ""
 
 #. module: website
 #. odoo-python
@@ -13874,7 +13910,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/options/animate_text.xml:0
 #: code:addons/website/static/src/components/resource_editor/resource_editor.xml:0
 msgid "Reset"
-msgstr ""
+msgstr "Visszaállítás"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.qweb_500
@@ -13903,7 +13939,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/components/resource_editor/resource_editor.js:0
 msgid "Reseting views is not supported yet"
-msgstr ""
+msgstr "A nézetek visszaállítása még nem támogatott"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_links
@@ -13921,6 +13957,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_columns
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Ressources"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/client_actions/configurator/configurator.xml:0
+msgid "Restaurant, Hair Salon, Clothing Store,..."
 msgstr ""
 
 #. module: website
@@ -13952,7 +13994,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Returns"
-msgstr ""
+msgstr "Visszatérések"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
@@ -13970,7 +14012,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/carousel_bottom_controllers_option.xml:0
 msgid "Reversed"
-msgstr ""
+msgstr "Megfordított"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -14102,7 +14144,7 @@ msgstr "Útvonal"
 #. odoo-javascript
 #: code:addons/website/static/src/components/resource_editor/resource_editor.js:0
 msgid "SCSS file: %s"
-msgstr ""
+msgstr "SCSS fájl: %s"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.website_pages_kanban_view
@@ -14160,6 +14202,7 @@ msgstr "Telítettség"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/embed_code_option_dialog.xml:0
 #: code:addons/website/static/src/builder/plugins/options/google_maps_option/google_maps_api_key_dialog.xml:0
+#: code:addons/website/static/src/builder/plugins/translate_announcement_scroll_plugin.js:0
 #: code:addons/website/static/src/builder/website_builder.xml:0
 #: code:addons/website/static/src/components/dialog/edit_menu.xml:0
 #: code:addons/website/static/src/components/dialog/seo.js:0
@@ -14180,7 +14223,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font/add_font_dialog.xml:0
 msgid "Save and Reload"
-msgstr ""
+msgstr "Mentés és újratöltés"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
@@ -14204,7 +14247,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/accordion_option.xml:0
 msgid "Scale"
-msgstr ""
+msgstr "Felbontás"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_thumbnails
@@ -14284,7 +14327,7 @@ msgstr "Keresés"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/header/header_elements_option.xml:0
 msgid "Search Bar"
-msgstr ""
+msgstr "Kereső sáv"
 
 #. module: website
 #. odoo-javascript
@@ -14442,7 +14485,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_dynamic_snippet_template
 msgid "See All"
-msgstr ""
+msgstr "Összes mutatása"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
@@ -14498,12 +14541,6 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_process_steps
 msgid "Select and delete blocks to remove some steps."
-msgstr ""
-
-#. module: website
-#. odoo-javascript
-#: code:addons/website/static/src/builder/customize_translation_tab.xml:0
-msgid "Select content on your page to translate it."
 msgstr ""
 
 #. module: website
@@ -14717,12 +14754,12 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Shipping"
-msgstr ""
+msgstr "Szállítás"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 msgid "Shipping Information"
-msgstr ""
+msgstr "Szállítási információ"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_menus_logos
@@ -14834,7 +14871,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Showcase"
-msgstr ""
+msgstr "Bemutató"
 
 #. module: website
 #. odoo-javascript
@@ -14857,7 +14894,7 @@ msgstr "Oldalsáv"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/header/header_elements_option.xml:0
 msgid "Sign In"
-msgstr ""
+msgstr "Bejelentkezés"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_process_steps
@@ -14910,7 +14947,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/dynamic_snippet_carousel_option.xml:0
 msgid "Single"
-msgstr ""
+msgstr "Egyedülálló"
 
 #. module: website
 #: model:ir.ui.menu,name:website.menu_site
@@ -14934,31 +14971,31 @@ msgstr "Méret"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "Size 1x"
-msgstr ""
+msgstr "1x méret"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "Size 2x"
-msgstr ""
+msgstr "2x méret"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "Size 3x"
-msgstr ""
+msgstr "3x méret"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "Size 4x"
-msgstr ""
+msgstr "4x méret"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/font_awesome_option.xml:0
 msgid "Size 5x"
-msgstr ""
+msgstr "5x méret"
 
 #. module: website
 #. odoo-javascript
@@ -15086,7 +15123,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_about_s_text_cover
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Social"
-msgstr ""
+msgstr "Közösség"
 
 #. module: website
 #. odoo-javascript
@@ -15384,7 +15421,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Structure"
-msgstr "Szerkezet"
+msgstr "Struktúra"
 
 #. module: website
 #. odoo-javascript
@@ -15419,7 +15456,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/js/send_mail_form.js:0
 msgid "Subject"
-msgstr ""
+msgstr "Tárgy"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.contactus
@@ -15460,7 +15497,7 @@ msgstr "Javaslatok"
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_links
 msgid "Support"
-msgstr ""
+msgstr "Támogatás"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_faq_horizontal
@@ -15504,19 +15541,18 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/snippets/s_floating_blocks/floating_blocks.edit.xml:0
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
 msgid "TIP:"
 msgstr ""
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Tab"
-msgstr ""
+msgstr "Tabulátor"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Table of Content"
-msgstr ""
+msgstr "Tartalomjegyzék"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_odoo_menu
@@ -15571,7 +15607,7 @@ msgstr "Cél"
 #: model:ir.model.fields,field_description:website.field_website_page_properties__target_model_id
 #: model:ir.model.fields,field_description:website.field_website_page_properties_base__target_model_id
 msgid "Target Model"
-msgstr ""
+msgstr "Cél modell"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_key_benefits
@@ -15655,7 +15691,7 @@ msgstr "Sablon"
 #. odoo-javascript
 #: code:addons/website/static/src/components/resource_editor/resource_editor.js:0
 msgid "Template ID: %s"
-msgstr ""
+msgstr "Sablon ID: %s"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.qweb_500
@@ -15666,7 +15702,7 @@ msgstr "Sablon visszakapcsolása"
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_columns
 msgid "Terms and Conditions"
-msgstr ""
+msgstr "Kikötések és feltételek"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_mega_cards
@@ -15709,7 +15745,7 @@ msgstr "Szöveg"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Text - Image"
-msgstr ""
+msgstr "Szöveg - Kép"
 
 #. module: website
 #. odoo-javascript
@@ -15727,7 +15763,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Text Cover"
-msgstr ""
+msgstr "Szöveges borító"
 
 #. module: website
 #. odoo-javascript
@@ -15741,7 +15777,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_text_highlight
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Text Highlight"
-msgstr ""
+msgstr "Szövegkiemelés"
 
 #. module: website
 #. odoo-javascript
@@ -15829,8 +15865,25 @@ msgstr ""
 "hacsak nem ad meg egyet."
 
 #. module: website
+#. odoo-python
+#: code:addons/website/models/website.py:0
+msgid ""
+"The domain path cannot contain relative path segments like '/./' or '/../'."
+msgstr ""
+
+#. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_striped
 msgid "The evolution of our company"
+msgstr ""
+
+#. module: website
+#. odoo-python
+#: code:addons/website/models/website_form.py:0
+msgid ""
+"The field '%(field)s' cannot be deleted because it is referenced in a "
+"website view.\n"
+"Model: %(model)s\n"
+"View: %(view)s"
 msgstr ""
 
 #. module: website
@@ -15954,6 +16007,12 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,help:website.field_website_controller_page__name_slugified
 msgid "The name of the page usable in a URL"
+msgstr ""
+
+#. module: website
+#. odoo-python
+#: code:addons/website/models/website.py:0
+msgid "The provided website domain is not a valid URL."
 msgstr ""
 
 #. module: website
@@ -16298,16 +16357,6 @@ msgid "This website does not have a domain configured."
 msgstr ""
 
 #. module: website
-#. odoo-javascript
-#: code:addons/website/static/src/client_actions/website_preview/website_switcher_systray_item.js:0
-msgid ""
-"This website does not have a domain configured. To avoid unexpected "
-"behaviours during website edition, we recommend closing (or refreshing) "
-"other browser tabs.\n"
-"To remove this message please set a domain in your website settings"
-msgstr ""
-
-#. module: website
 #: model_terms:ir.ui.view,arch_db:website.view_edit_third_party_domains
 msgid ""
 "Those services will be blocked on your website for users until they accept "
@@ -16370,7 +16419,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/options/facebook_option.xml:0
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Timeline"
-msgstr "Idővonalas"
+msgstr "Idővonal"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -16434,7 +16483,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_text_block_h2
 #: model_terms:ir.ui.view,arch_db:website.snippets
 msgid "Title"
-msgstr "Név"
+msgstr "Cím"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -16474,12 +16523,6 @@ msgid "To be successful your content needs to be useful to your readers."
 msgstr ""
 
 #. module: website
-#. odoo-javascript
-#: code:addons/website/static/src/builder/plugins/font/add_font_dialog.xml:0
-msgid "To comply with some local regulations"
-msgstr ""
-
-#. module: website
 #: model_terms:digest.tip,tip_description:website.digest_tip_website_2
 msgid ""
 "To get more visitors, you should target keywords that are often searched in "
@@ -16501,6 +16544,9 @@ msgid ""
 "list view and click on 'Portal Access Management' option in the dropdown "
 "menu *Action*."
 msgstr ""
+"B2B módban meghívó küldéséhez nyisson meg egy kapcsolatot (vagy válasszon ki "
+"többet lista nézetben), majd kattintson a 'Portálhozzáférés kezelése' "
+"lehetőségre az *Akció* legördülő menüben."
 
 #. module: website
 #. odoo-javascript
@@ -16593,7 +16639,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/faq_horizontal_option.xml:0
 msgid "Topics"
-msgstr ""
+msgstr "Témák"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -16677,7 +16723,7 @@ msgstr "Átmenet"
 #: code:addons/website/static/src/builder/plugins/options/accordion_option.xml:0
 #: code:addons/website/static/src/client_actions/website_preview/edit_website_systray_item.xml:0
 msgid "Translate"
-msgstr ""
+msgstr "Fordítás"
 
 #. module: website
 #. odoo-javascript
@@ -16699,8 +16745,26 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translate_announcement_scroll_plugin.js:0
+msgid "Translate Text"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/translation_plugin.js:0
 msgid "Translate header in the text. Menu is generated automatically."
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/translate_webpage_option.xml:0
+msgid "Translate the whole content with AI"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/translate_webpage_option.xml:0
+msgid "Translate to"
 msgstr ""
 
 #. module: website
@@ -16708,6 +16772,31 @@ msgstr ""
 #: code:addons/website/static/src/builder/translation_components/translatorInfoDialog.xml:0
 msgid "Translated content"
 msgstr "Lefordított tartalom"
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/translate_webpage_option.xml:0
+msgid "Translating..."
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translate_announcement_scroll_plugin.js:0
+#: code:addons/website/static/src/builder/plugins/translation_tab/customize_translation_tab_plugin.js:0
+msgid "Translation"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/customize_translation_tab_plugin.js:0
+msgid "Translation Error"
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/translation_tab/customize_translation_tab_plugin.js:0
+msgid "Translation Info"
+msgstr ""
 
 #. module: website
 #. odoo-javascript
@@ -16767,12 +16856,6 @@ msgid ""
 "url. (Eg: /shop -> /garden - Both url will be accessible but /shop will "
 "automatically be redirected to /garden)\n"
 "    "
-msgstr ""
-
-#. module: website
-#. odoo-javascript
-#: code:addons/website/static/src/xml/html_editor.xml:0
-msgid "Type your URL"
 msgstr ""
 
 #. module: website
@@ -16843,7 +16926,7 @@ msgstr ""
 #: code:addons/website/static/src/builder/plugins/options/header/header_navigation_option.xml:0
 #: code:addons/website/static/src/builder/plugins/options/navtabs_style_option.xml:0
 msgid "Underline"
-msgstr ""
+msgstr "Aláhúzott"
 
 #. module: website
 #. odoo-javascript
@@ -16856,9 +16939,8 @@ msgstr ""
 msgid ""
 "Understand how visitors engage with our website, via Google Analytics.\n"
 "                                                Learn more about <a "
-"class=\"o_translate_inline\" href=\"https://developers.google.com/analytics/"
-"resources/concepts/gaConceptsCookies?hl=en\">Analytics cookies and privacy "
-"information.</a>"
+"class=\"o_translate_inline\" href=\"https://support.google.com/analytics/"
+"answer/11397207?hl=en\">Analytics cookies and privacy information.</a>"
 msgstr ""
 
 #. module: website
@@ -16974,6 +17056,12 @@ msgstr "Webcímek és oldalak"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/google_maps_option/google_maps_api_key_dialog.xml:0
 msgid "Use Google Map on your website (Contact Us page, snippets, etc)."
+msgstr ""
+
+#. module: website
+#. odoo-javascript
+#: code:addons/website/static/src/builder/plugins/font/add_font_dialog.xml:0
+msgid "Use Google’s servers for fonts. It may impact GDPR compliance"
 msgstr ""
 
 #. module: website
@@ -17196,7 +17284,7 @@ msgstr "Videó"
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/background_option_plugin.js:0
 msgid "Videos"
-msgstr ""
+msgstr "Videók"
 
 #. module: website
 #: model:ir.model,name:website.model_ir_ui_view
@@ -17750,7 +17838,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.website_controller_pages_search_view
 #: model_terms:ir.ui.view,arch_db:website.website_visitor_view_search
 msgid "Website"
-msgstr "Honlap"
+msgstr "Weboldal"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_res_partner__website_absolute_url
@@ -17933,7 +18021,7 @@ msgstr "Weboldal téma oldal"
 #: model:ir.model.fields,field_description:website.field_website_published_multi_mixin__website_url
 #: model:ir.model.fields,field_description:website.field_website_snippet_filter__website_url
 msgid "Website URL"
-msgstr "Honlap címe"
+msgstr "Weboldal címe"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_ir_actions_server__website_url
@@ -17945,7 +18033,7 @@ msgstr "Honlap címe"
 #: model:ir.model,name:website.model_website_visitor
 #: model_terms:ir.ui.view,arch_db:website.website_visitor_view_form
 msgid "Website Visitor"
-msgstr ""
+msgstr "Weboldal látogató"
 
 #. module: website
 #. odoo-python
@@ -18262,7 +18350,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/layout_option/add_element_option_plugin.js:0
 msgid "Write something..."
-msgstr ""
+msgstr "Írjon valamit..."
 
 #. module: website
 #. odoo-javascript
@@ -18413,7 +18501,6 @@ msgstr ""
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/snippets/s_floating_blocks/floating_blocks.edit.xml:0
-#: code:addons/website/static/src/snippets/s_floating_blocks/options.xml:0
 msgid "You need at least two cards to perform the effect"
 msgstr ""
 
@@ -18434,7 +18521,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_mega_menu_odoo_menu
 #: model_terms:ir.ui.view,arch_db:website.s_social_media
 msgid "YouTube"
-msgstr ""
+msgstr "YouTube"
 
 #. module: website
 #. odoo-javascript
@@ -18453,7 +18540,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/js/send_mail_form.js:0
 msgid "Your Email"
-msgstr ""
+msgstr "Az Ön e-mail címe"
 
 #. module: website
 #. odoo-javascript
@@ -18490,7 +18577,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/js/send_mail_form.js:0
 msgid "Your Name"
-msgstr ""
+msgstr "Az Ön neve"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_floating_blocks
@@ -18503,13 +18590,13 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/js/send_mail_form.js:0
 msgid "Your Question"
-msgstr ""
+msgstr "Az Ön kérdése"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/carousel_slides_option.xml:0
 msgid "Your URL"
-msgstr ""
+msgstr "URL"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.new_page_template_landing_s_features
@@ -18623,14 +18710,14 @@ msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/client_actions/configurator/configurator.js:0
-msgid "a business website"
+#: code:addons/website/static/src/client_actions/configurator/configurator.xml:0
+msgid "a new image"
 msgstr ""
 
 #. module: website
 #. odoo-javascript
-#: code:addons/website/static/src/client_actions/configurator/configurator.xml:0
-msgid "a new image"
+#: code:addons/website/static/src/client_actions/configurator/configurator.js:0
+msgid "a website"
 msgstr ""
 
 #. module: website
@@ -18685,7 +18772,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.bs_debug_view
 #: model_terms:ir.ui.view,arch_db:website.color_combinations_debug_view
 msgid "breadcrumb"
-msgstr ""
+msgstr "navigációs útvonal"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.color_combinations_debug_view
@@ -18752,7 +18839,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/components/views/theme_preview.xml:0
 msgid "close"
-msgstr ""
+msgstr "zárás"
 
 #. module: website
 #. odoo-javascript
@@ -19317,7 +19404,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/client_actions/website_preview/website_builder_action.xml:0
 msgid "in the top right corner to start designing."
-msgstr ""
+msgstr "a job felső sarokban a weboldal megtervezéséhez."
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.template_footer_links
@@ -19545,7 +19632,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/highlight/highlight_configurator.xml:0
 msgid "px"
-msgstr ""
+msgstr "px"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippets
@@ -19709,13 +19796,13 @@ msgstr "theme.ir.ui.view"
 #. odoo-javascript
 #: code:addons/website/static/src/snippets/s_countdown/000.xml:0
 msgid "this page"
-msgstr "ez az oldal"
+msgstr "ezen az oldalon"
 
 #. module: website
 #. odoo-javascript
 #: code:addons/website/static/src/builder/plugins/options/animate_option.xml:0
 msgid "to"
-msgstr ""
+msgstr "eddig"
 
 #. module: website
 #: model:ir.model.constraint,message:website.constraint_website_controller_page_unique_name_slugified
@@ -19771,6 +19858,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website.s_key_benefits
 msgid "✽  What We Offer"
 msgstr ""
+
+#~ msgid "Option"
+#~ msgstr "Opció"
+
+#~ msgid "Display a customizable cookies bar on your website"
+#~ msgstr "Jelenítsen meg egy formázható cookie mezőt az oldalán"
 
 #~ msgid " Add Images"
 #~ msgstr " Képek hozzáadása"

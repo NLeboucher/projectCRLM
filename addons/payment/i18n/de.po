@@ -9,13 +9,15 @@
 # Larissa Manderfeld, 2023
 # Stefan Reisich <nafex@gmx.net>, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# "Larissa Manderfeld (lman)" <lman@odoo.com>, 2025.
+# "Malaz Siddig Elsayed Abuidris (msea)" <msea@odoo.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 13:58+0000\n"
-"PO-Revision-Date: 2025-09-20 02:31+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-11-21 18:35+0000\n"
+"PO-Revision-Date: 2025-12-09 14:05+0000\n"
+"Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
 "Language-Team: German <https://translate.odoo.com/projects/odoo-19/payment/"
 "de/>\n"
 "Language: de\n"
@@ -23,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.availability_report_records
@@ -70,10 +72,10 @@ msgid ""
 "transactions you intend to capture can only be captured in full. Handle the "
 "transactions individually to capture a partial amount.\"/>"
 msgstr ""
-"<i class=\"fa fa-info-circle oe_inline\" invisible="
-"\"support_partial_capture != 'full_only'\" title=\"Some of the transactions "
-"you intend to capture can only be captured in full. Handle the transactions "
-"individually to capture a partial amount.\"/>"
+"<i class=\"fa fa-info-circle oe_inline\" "
+"invisible=\"support_partial_capture != 'full_only'\" title=\"Some of the "
+"transactions you intend to capture can only be captured in full. Handle the "
+"transactions individually to capture a partial amount.\"/>"
 
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.token_form
@@ -81,8 +83,8 @@ msgid ""
 "<i class=\"fa fa-trash\" title=\"Delete payment method\" data-bs-"
 "toggle=\"tooltip\" data-bs-placement=\"top\" data-bs-delay=\"0\"/>"
 msgstr ""
-"<i class=\"fa fa-trash\" title=\"Delete payment method\" data-bs-toggle="
-"\"tooltip\" data-bs-placement=\"top\" data-bs-delay=\"0\"/>"
+"<i class=\"fa fa-trash\" title=\"Delete payment method\" data-bs-"
+"toggle=\"tooltip\" data-bs-placement=\"top\" data-bs-delay=\"0\"/>"
 
 #. module: payment
 #: model_terms:ir.actions.act_window,help:payment.action_payment_method
@@ -152,8 +154,8 @@ msgstr "<span><i class=\"fa fa-lock\"/> Gesichert durch</span>"
 msgid ""
 "<strong><i class=\"fa fa-file-text\"/> Show availability report</strong>"
 msgstr ""
-"<strong><i class=\"fa fa-file-text\"/> Verfügbarkeitsbericht "
-"anzeigen</strong>"
+"<strong><i class=\"fa fa-file-text\"/> Verfügbarkeitsbericht anzeigen</"
+"strong>"
 
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.no_pms_available_warning
@@ -235,8 +237,8 @@ msgstr "ACH-Lastschrift"
 
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.no_pms_available_warning
-msgid "ACTIVATE STRIPE"
-msgstr "STRIPE AKTIVIEREN"
+msgid "ACTIVATE"
+msgstr "AKTIVIEREN"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_abitab
@@ -257,7 +259,7 @@ msgstr "Aktiv"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_res_config_settings__active_provider_id
 msgid "Active Provider"
-msgstr ""
+msgstr "Aktiver Anbieter"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction__partner_address
@@ -332,7 +334,6 @@ msgstr "Bereits verworfen"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_aman
-#, fuzzy
 msgid "Aman"
 msgstr "Aman"
 
@@ -790,7 +791,7 @@ msgstr "Unternehmen"
 #. module: payment
 #: model:ir.model,name:payment.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Konfigurationseinstellungen"
 
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.payment_method_form
@@ -802,7 +803,7 @@ msgstr "Konfiguration"
 #. odoo-javascript
 #: code:addons/payment/static/src/interactions/payment_form.js:0
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"
 
 #. module: payment
 #. odoo-javascript
@@ -840,7 +841,7 @@ msgstr "Dazugehöriges Modul"
 #. odoo-python
 #: code:addons/payment/models/payment_provider.py:0
 msgid "Could not establish the connection to the payment provider."
-msgstr ""
+msgstr "Die Verbindung zum Zahlungsanbieter konnte nicht hergestellt werden."
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_method__supported_country_ids
@@ -1093,7 +1094,6 @@ msgstr "Flutterwave"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_forsa
-#, fuzzy
 msgid "Forsa"
 msgstr "Forsa"
 
@@ -1159,7 +1159,6 @@ msgstr "HTTP-Routing"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_halan
-#, fuzzy
 msgid "Halan"
 msgstr "Halan"
 
@@ -1171,7 +1170,7 @@ msgstr "Hat untergeordnete Entwürfe"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_res_config_settings__has_enabled_provider
 msgid "Has Enabled Provider"
-msgstr ""
+msgstr "Hat aktivierte Anbieter"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_capture_wizard__has_remaining_amount
@@ -1276,7 +1275,7 @@ msgstr "Ist zu erfassender Betrag gültig"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_res_country__is_mercado_pago_supported_country
 msgid "Is Mercado Pago Supported Country"
-msgstr ""
+msgstr "Ist ein von Mercado Pago unterstütztes Land"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction__is_post_processed
@@ -1302,7 +1301,7 @@ msgstr "Derzeit mit den folgenden Dokumenten verknüpft:"
 #. module: payment
 #: model:payment.provider,name:payment.payment_provider_iyzico
 msgid "Iyzico"
-msgstr ""
+msgstr "Iyzico"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_jcb
@@ -1311,7 +1310,6 @@ msgstr "JCB"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_jazzcash
-#, fuzzy
 msgid "JazzCash"
 msgstr "JazzCash"
 
@@ -1529,7 +1527,7 @@ msgstr "Mercado Pago"
 #. module: payment
 #: model:payment.method,name:payment.payment_method_mercado_pago_wallet
 msgid "Mercado Pago Wallet"
-msgstr ""
+msgstr "Mercado-Pago-Geldbörse"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction__state_message
@@ -1680,7 +1678,7 @@ msgstr "OmanNet"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_res_config_settings__onboarding_payment_module
 msgid "Onboarding Payment Module"
-msgstr ""
+msgstr "Einführungszahlungsmodul"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_online_banking_czech_republic
@@ -2002,7 +2000,6 @@ msgstr "Zahlungen"
 
 #. module: payment
 #: model:payment.provider,name:payment.payment_provider_paymob
-#, fuzzy
 msgid "Paymob"
 msgstr "Paymob"
 
@@ -2072,6 +2069,11 @@ msgid "Please wait..."
 msgstr "Bitte warten ..."
 
 #. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_transaction_form
+msgid "Post-process"
+msgstr "Nachbearbeitung"
+
+#. module: payment
 #: model:payment.method,name:payment.payment_method_post_finance
 msgid "PostFinance Pay"
 msgstr "PostFinance Pay"
@@ -2106,7 +2108,7 @@ msgstr "Verarbeitet von"
 #: model:ir.model.fields,field_description:payment.field_payment_transaction__is_live
 #: model_terms:ir.ui.view,arch_db:payment.payment_transaction_search
 msgid "Production Environment"
-msgstr ""
+msgstr "Produktionsumgebung"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_promptpay
@@ -2185,7 +2187,7 @@ msgstr "Redpagos"
 #. module: payment
 #: model:payment.provider,name:payment.payment_provider_redsys
 msgid "Redsys"
-msgstr ""
+msgstr "Redsys"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction__reference
@@ -2250,6 +2252,11 @@ msgid "RuPay"
 msgstr "RuPay"
 
 #. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_transaction_form
+msgid "Run the post-processing step for this transaction."
+msgstr "Führen Sie den Nachbearbeitungsschritt für diese Transaktion aus."
+
+#. module: payment
 #: model:payment.method,name:payment.payment_method_sepa_direct_debit
 #: model:payment.provider,name:payment.payment_provider_sepa_direct_debit
 msgid "SEPA Direct Debit"
@@ -2262,7 +2269,6 @@ msgstr "SPEI"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_stcpay
-#, fuzzy
 msgid "STCPay"
 msgstr "STCPay"
 
@@ -2289,7 +2295,7 @@ msgstr "Wählen Sie Länder aus. Lassen Sie es leer, um all zuzulassen."
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.payment_provider_form
 msgid "Select countries. Leave empty to make available everywhere."
-msgstr "Ländern auswählen. Leer lassen, um überall zur Verfügung zu stellen."
+msgstr "Länder auswählen. Leer lassen, um überall zur Verfügung zu stellen."
 
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.payment_provider_form
@@ -2350,7 +2356,6 @@ msgstr ""
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_souhoola
-#, fuzzy
 msgid "Souhoola"
 msgstr "Souhoola"
 
@@ -2406,7 +2411,6 @@ msgstr "Swish"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_sympl
-#, fuzzy
 msgid "Sympl"
 msgstr "Sympl"
 
@@ -2422,13 +2426,11 @@ msgstr "TTB"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_tabby
-#, fuzzy
 msgid "Tabby"
 msgstr "Tabby"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_tamara
-#, fuzzy
 msgid "Tamara"
 msgstr "Tamara"
 
@@ -2474,30 +2476,31 @@ msgstr "Vielen Dank!"
 #: code:addons/payment/models/payment_transaction.py:0
 msgid "The %(tx_label)s %(ref)s of %(formatted_amount)s encountered an error."
 msgstr ""
+"Mit %(tx_label)s %(ref)s von %(formatted_amount)s ist ein Fehler aufgetreten."
 
 #. module: payment
 #. odoo-python
 #: code:addons/payment/models/payment_transaction.py:0
 msgid "The %(tx_label)s %(ref)s of %(formatted_amount)s has been authorized."
-msgstr ""
+msgstr "%(tx_label)s %(ref)s von %(formatted_amount)s wurde autorisiert."
 
 #. module: payment
 #. odoo-python
 #: code:addons/payment/models/payment_transaction.py:0
 msgid "The %(tx_label)s %(ref)s of %(formatted_amount)s has been canceled."
-msgstr ""
+msgstr "%(tx_label)s %(ref)s von %(formatted_amount)s wurde storniert."
 
 #. module: payment
 #. odoo-python
 #: code:addons/payment/models/payment_transaction.py:0
 msgid "The %(tx_label)s %(ref)s of %(formatted_amount)s has been confirmed."
-msgstr ""
+msgstr "%(tx_label)s %(ref)s von %(formatted_amount)s wurde bestätigt."
 
 #. module: payment
 #. odoo-python
 #: code:addons/payment/models/payment_transaction.py:0
 msgid "The %(tx_label)s %(ref)s of %(formatted_amount)s is pending."
-msgstr ""
+msgstr "%(tx_label)s %(ref)s von %(formatted_amount)s ist ausstehend."
 
 #. module: payment
 #. odoo-python
@@ -2628,8 +2631,8 @@ msgid ""
 "provider allows it). In other countries, this payment method is not "
 "available to customers."
 msgstr ""
-"Die Liste der Länder, in denen diese Zahlungsmethode verwendet werden kann ("
-"wenn der Anbieter dies erlaubt). In anderen Ländern ist diese "
+"Die Liste der Länder, in denen diese Zahlungsmethode verwendet werden kann "
+"(wenn der Anbieter dies erlaubt). In anderen Ländern ist diese "
 "Zahlungsmethode nicht für Kunden verfügbar."
 
 #. module: payment
@@ -2639,9 +2642,9 @@ msgid ""
 "provider allows it). When paying with another currency, this payment method "
 "is not available to customers."
 msgstr ""
-"Die Liste der Währungen, dir von dieser Zahlungsmethode unterstützt werden ("
-"wenn der Anbieter dies erlaubt). Wenn Sie in einer anderen Währung bezahlen, "
-"ist diese Zahlungsmethode nicht für Kunden verfügbar."
+"Die Liste der Währungen, dir von dieser Zahlungsmethode unterstützt werden "
+"(wenn der Anbieter dies erlaubt). Wenn Sie in einer anderen Währung "
+"bezahlen, ist diese Zahlungsmethode nicht für Kunden verfügbar."
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_method__provider_ids
@@ -2713,6 +2716,8 @@ msgid ""
 "The payment provider rejected the request.\n"
 "%s"
 msgstr ""
+"Der Zahlungsanbieter hat die Anfrage abgelehnt.\n"
+"%s"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_method__primary_payment_method_id
@@ -2740,7 +2745,7 @@ msgstr "Die Anbieterreferenz der Transaktion"
 #. odoo-python
 #: code:addons/payment/models/payment_transaction.py:0
 msgid "The refund %(ref)s of %(formatted_amount)s has been initiated."
-msgstr ""
+msgstr "Die Rückerstattung %(ref)s von %(formatted_amount)s wurde veranlasst."
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_method__image_payment_form
@@ -2812,7 +2817,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/payment/models/payment_transaction.py:0
 msgid "The transaction %(ref)s of %(formatted_amount)s has been initiated."
-msgstr ""
+msgstr "Die Transaktion %(ref)s von %(formatted_amount)s wurde veranlasst."
 
 #. module: payment
 #: model_terms:ir.actions.act_window,help:payment.action_payment_transaction
@@ -2967,7 +2972,7 @@ msgstr ""
 #. module: payment
 #: model:payment.method,name:payment.payment_method_troy
 msgid "Troy"
-msgstr ""
+msgstr "Troy"
 
 #. module: payment
 #: model:payment.method,name:payment.payment_method_truemoney
@@ -3147,6 +3152,9 @@ msgid ""
 "Whether the transaction happened in a production environment. False for "
 "transactions created before this tracking was implemented."
 msgstr ""
+"Ob die Transaktion in einer Produktionumgebung vorgenommen wurde. False für "
+"Transaktionen, die erstellt wurden, bevor diese Verfolgung implementiert "
+"wurde."
 
 #. module: payment
 #: model:payment.provider,name:payment.payment_provider_transfer
@@ -3170,8 +3178,8 @@ msgid ""
 "You can't unarchive tokens linked to inactive payment methods or disabled "
 "providers."
 msgstr ""
-"Sie können Token, die mit inaktiven Zahlungsmethoden oder deaktivierten "
-"Anbietern verknüpft sind, nicht dearchivieren."
+"Sie können die Archivierung von Token, die mit inaktiven Zahlungsmethoden "
+"oder deaktivierten Anbietern verknüpft sind, nicht aufheben."
 
 #. module: payment
 #. odoo-python
@@ -3354,12 +3362,14 @@ msgid ""
 "Your payment operation could not be completed for following transactions: %"
 "(tx_refs)s"
 msgstr ""
+"Ihr Zahlvorgang konnte für folgende Transaktionen nicht abgeschlossen "
+"werden: %(tx_refs)s"
 
 #. module: payment
 #. odoo-python
 #: code:addons/payment/models/payment_transaction.py:0
 msgid "Your payment operation has been successfully submitted."
-msgstr ""
+msgstr "Ihr Zahlvorgang wurde erfolgreich gesendet."
 
 #. module: payment
 #: model_terms:ir.ui.view,arch_db:payment.payment_transaction_form
@@ -3471,6 +3481,9 @@ msgstr "Tokenisierung nicht unterstützt"
 #: code:addons/payment/const.py:0
 msgid "tokenization without payment no supported"
 msgstr "Tokenisierung ohne Zahlung nicht unterstützt"
+
+#~ msgid "ACTIVATE STRIPE"
+#~ msgstr "STRIPE AKTIVIEREN"
 
 #~ msgid " Data Fetched"
 #~ msgstr " Abgerufene Daten"

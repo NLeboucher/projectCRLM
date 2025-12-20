@@ -8,13 +8,14 @@
 # Sarah Park, 2022
 #
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0beta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 14:01+0000\n"
-"PO-Revision-Date: 2025-09-16 04:43+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-11-21 18:36+0000\n"
+"PO-Revision-Date: 2025-11-10 14:27+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19/"
 "sales_team/ko/>\n"
 "Language: ko\n"
@@ -43,23 +44,24 @@ msgid ""
 "<i class=\"fa fa-envelope me-1\" role=\"img\" aria-label=\"Email\" "
 "title=\"Email\"/>"
 msgstr ""
-"<i class=\"fa fa-envelope me-1\" role=\"img\" aria-label=\"Email\" title="
-"\"Email\"/>"
+"<i class=\"fa fa-envelope me-1\" role=\"img\" aria-label=\"Email\" "
+"title=\"Email\"/>"
 
 #. module: sales_team
 #: model_terms:ir.ui.view,arch_db:sales_team.crm_team_member_view_form
 msgid "<i class=\"fa fa-fw me-1 fa-building text-primary\" title=\"Company\"/>"
 msgstr ""
+"<i class=\"fa fa-fw me-1 fa-building text-primary\" title=\"Company\"/>"
 
 #. module: sales_team
 #: model_terms:ir.ui.view,arch_db:sales_team.crm_team_member_view_form
 msgid "<i class=\"fa fa-fw me-1 fa-envelope text-primary\" title=\"Email\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-fw me-1 fa-envelope text-primary\" title=\"Email\"/>"
 
 #. module: sales_team
 #: model_terms:ir.ui.view,arch_db:sales_team.crm_team_member_view_form
 msgid "<i class=\"fa fa-fw me-1 fa-phone text-primary\" title=\"Phone\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-fw me-1 fa-phone text-primary\" title=\"Phone\"/>"
 
 #. module: sales_team
 #: model_terms:ir.ui.view,arch_db:sales_team.crm_team_view_kanban_dashboard
@@ -290,8 +292,9 @@ msgstr "ID"
 msgid ""
 "If True, users may belong to several sales teams. Otherwise membership is "
 "limited to a single sales team."
-msgstr "True인 경우 여러 개의 영업팀에 배치할 수 있습니다. 그렇지 않은 경우 소속이 "
-"하나의 영업팀으로 제한됩니다."
+msgstr ""
+"True인 경우 여러 개의 영업팀에 배치할 수 있습니다. 그렇지 않은 경우 소속이 하"
+"나의 영업팀으로 제한됩니다."
 
 #. module: sales_team
 #: model:ir.model.fields,help:sales_team.field_crm_team__message_needaction
@@ -310,8 +313,9 @@ msgstr "이 옵션을 선택하면 일부 정보가 전달 오류를 생성합�
 msgid ""
 "If the active field is set to false, it will allow you to hide the Sales "
 "Team without removing it."
-msgstr "활성 필드를 false로 설정하면, 영업팀을 제거하지 않아도 필드를 숨길 수 "
-"있습니다."
+msgstr ""
+"활성 필드를 false로 설정하면, 영업팀을 제거하지 않아도 필드를 숨길 수 있습니"
+"다."
 
 #. module: sales_team
 #: model:ir.model.fields,field_description:sales_team.field_crm_team_member__image_1920
@@ -353,7 +357,8 @@ msgstr "최근 갱신 일자"
 msgid ""
 "Main user sales team. Used notably for pipeline, or to set sales team in "
 "invoicing or subscription."
-msgstr "주 사용자인 영업팀입니다. 특히 파이프라인을 관리하거나 영업팀을 청구서 발행 "
+msgstr ""
+"주 사용자인 영업팀입니다. 특히 파이프라인을 관리하거나 영업팀을 청구서 발행 "
 "또는 구독 업무에서 설정할 때 사용합니다."
 
 #. module: sales_team
@@ -593,11 +598,20 @@ msgid "The default company for this user."
 msgstr "해당 사용자의 회사 기본값입니다."
 
 #. module: sales_team
+#. odoo-python
+#: code:addons/sales_team/models/crm_team.py:0
+msgid ""
+"The following team members are not allowed in company '%(company)s' of the "
+"Sales Team '%(team)s': %(users)s"
+msgstr ""
+
+#. module: sales_team
 #: model_terms:ir.actions.act_window,help:sales_team.mail_activity_type_action_config_sales
 msgid ""
 "Those represent the different categories of things you have to do (e.g. "
 "\"Call\" or \"Prepare meeting\")."
-msgstr "이는 수행해야 하는 작업을 다양한 카테고리로 분류한 것입니다(예: '전화' 또는 "
+msgstr ""
+"이는 수행해야 하는 작업을 다양한 카테고리로 분류한 것입니다(예: '전화' 또는 "
 "'회의 준비')."
 
 #. module: sales_team
@@ -643,6 +657,14 @@ msgstr "영업기회 관리와 추적에 태그를 사용해 보세요 (품목 �
 #: model:ir.model,name:sales_team.model_res_users
 msgid "User"
 msgstr "사용자"
+
+#. module: sales_team
+#. odoo-python
+#: code:addons/sales_team/models/crm_team_member.py:0
+msgid ""
+"User '%(user)s' is not allowed in the company '%(company)s' of the Sales "
+"Team '%(team)s'."
+msgstr ""
 
 #. module: sales_team
 #: model:ir.model.fields,field_description:sales_team.field_crm_team_member__user_company_ids
@@ -701,7 +723,7 @@ msgstr "중복된 멤버십입니다. %(duplicates)s이(가) 이미 존재합니
 #. module: sales_team
 #: model_terms:ir.ui.view,arch_db:sales_team.crm_team_member_view_form
 msgid "e.g. John Doe"
-msgstr ""
+msgstr "예: 홍길동"
 
 #. module: sales_team
 #: model_terms:ir.ui.view,arch_db:sales_team.crm_team_view_form

@@ -105,6 +105,7 @@ patch(OrderPaymentValidation.prototype, {
                         return false;
                     }
 
+                    await this.pos.syncAllOrders({ orders: [this.order] });
                     onlinePaymentLine.setPaymentStatus("waiting");
                     this.order.selectPaymentline(onlinePaymentLine);
                     const onlinePaymentData = {
@@ -152,7 +153,7 @@ patch(OrderPaymentValidation.prototype, {
 
             await this.afterPaidOrderSavedOnServer(lastOrderServerOPData.paid_order);
             return false; // Cancel normal flow because the current order is already saved on the server.
-        } else if (typeof this.order.id === "number") {
+        } else if (this.order.isSynced) {
             const orderServerOPData = await this.pos.updateOnlinePaymentsDataWithServer(
                 this.order,
                 0
@@ -214,10 +215,10 @@ patch(OrderPaymentValidation.prototype, {
 
         // Now, do practically the normal flow
         if (
-            (this.order.isPaidWithCash() || this.order.getChange()) &&
+            (this.order.isPaidWithCash() || this.order.change) &&
             this.pos.config.iface_cashdrawer
         ) {
-            this.hardwareProxy.printer.openCashbox();
+            this.pos.hardwareProxy.openCashbox();
         }
 
         if (isInvoiceRequested) {
@@ -227,7 +228,7 @@ patch(OrderPaymentValidation.prototype, {
                     body: _t("The invoice could not be generated."),
                 });
             } else {
-                await this.invoiceService.downloadPdf(orderJSON[0].account_move);
+                await this.pos.env.services.account_move.downloadPdf(orderJSON[0].account_move);
             }
         }
 

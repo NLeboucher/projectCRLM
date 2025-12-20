@@ -591,7 +591,7 @@ class TestSaleProject(TestSaleProjectCommon):
         sale_order.action_confirm()
         self.assertEqual(sale_order.order_line.analytic_distribution, expected_analytic_distribution)
 
-    def test_include_archived_projects_in_stat_btn_related_view(self):
+    def test_exclude_archived_projects_in_stat_btn_related_view(self):
         """Checks if the project stat-button action includes both archived and active projects."""
         # Setup
         project_A = self.env['project.project'].create({'name': 'Project_A'})
@@ -647,11 +647,29 @@ class TestSaleProject(TestSaleProjectCommon):
         # Check if button action includes both projects BEFORE archivization
         action = sale_order.action_view_project_ids()
         self.assertEqual(len(get_project_ids_from_action_domain(action)), 2, "Domain should contain 2 projects.")
+        self.assertEqual(sale_order.project_count, 2, "Expected 2 projects linked to the sale order.")
 
         # Check if button action includes both projects AFTER archivization
         project_B.write({'active': False})
+        sale_order._compute_project_ids()
+        self.assertEqual(sale_order.project_count, 1, "Expected 1 project linked to the sale order.")
+
         action = sale_order.action_view_project_ids()
-        self.assertEqual(len(get_project_ids_from_action_domain(action)), 2, "Domain should contain 2 projects. (one archived, one not)")
+        self.assertEqual(
+            action['xml_id'],
+            'project.act_project_project_2_project_task_all',
+            "xml_id mismatch: expected 'project.act_project_project_2_project_task_all', got %s" % action['xml_id']
+        )
+        self.assertEqual(
+            action['type'],
+            'ir.actions.act_window',
+            "type mismatch: expected 'ir.actions.act_window', got %s" % action['type']
+        )
+        self.assertEqual(
+            action['res_model'],
+            'project.task',
+            "res_model mismatch: expected 'project.task', got %s" % action['res_model']
+        )
 
     def test_sale_order_line_view_form_editable(self):
         """ Check the behavior of the form view editable of `sale.order.line` introduced in that module
@@ -1836,3 +1854,40 @@ class TestSaleProject(TestSaleProjectCommon):
             so.project_ids.allow_milestones,
             'The generated project should have the "Allow Milestones" setting enabled, as one of the products has invoice policy based on milestones.',
         )
+
+    def test_sale_order_creation_without_service_product_for_project(self):
+        """Test that a sale order is created for a project using a non-service product"""
+        self.project_global.partner_id = self.partner
+        action_dict = self.project_global.with_context(
+            create_for_project_id=self.project_global.id,
+            default_project_id=self.project_global.id,
+            default_partner_id=self.partner.id
+        ).action_view_sos()
+
+        self.product_milestone.type = 'consu'
+        sale_order = self.env['sale.order'].with_context(action_dict['context']).create({
+            'order_line': [Command.create({
+                'product_id': self.product_milestone.id,
+                'product_uom_qty': 1,
+            })],
+        })
+
+        self.assertEqual(sale_order.project_id, self.project_global)
+        self.assertEqual(sale_order.partner_id, self.partner)
+        self.assertFalse(self.project_global.sale_line_id)
+        self.assertEqual(self.project_global.reinvoiced_sale_order_id, sale_order)
+
+    def test_allocated_hours_manual_delivery_service(self):
+        """
+        Test that allocated_hours match the quantity ordered on creation
+        when the service product has 'delivered_manual' service policy.
+        """
+        self.product_service_delivered_manual.service_tracking = 'task_in_project'
+        so = self.env['sale.order'].create({'partner_id': self.partner.id})
+        sol = self.env['sale.order.line'].create({
+            'order_id': so.id,
+            'product_id': self.product_service_delivered_manual.id,
+            'product_uom_qty': 10,
+        })
+        so.action_confirm()
+        self.assertEqual(sol.task_id.allocated_hours, 10, "The allocated hours should be 10.")

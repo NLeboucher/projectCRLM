@@ -61,7 +61,7 @@ registry.category("web_tour.tours").add("FloorScreenTour", {
                 trigger: `.edit-buttons i[aria-label="Add Table"]`,
                 run: "click",
             },
-            FloorScreen.selectedTableIs("1"),
+            FloorScreen.selectedTableIs("6"),
             FloorScreen.clickEditButton("Rename"),
 
             NumberPopup.enterValue("100"),
@@ -92,8 +92,8 @@ registry.category("web_tour.tours").add("FloorScreenTour", {
             FloorScreen.ctrlClickTable("3"),
             FloorScreen.selectedTableIs("3"),
             FloorScreen.clickEditButton("Clone"),
-            FloorScreen.selectedTableIs("2"),
             FloorScreen.selectedTableIs("4"),
+            FloorScreen.selectedTableIs("5"),
 
             //test delete multiple tables
             FloorScreen.clickEditButton("Delete"),
@@ -173,10 +173,10 @@ registry.category("web_tour.tours").add("TableMergeUnmergeTour", {
             FloorScreen.goTo("5"),
             Chrome.isTabActive("4 & 5"),
             inLeftSide(ProductScreen.orderLineHas("Coca-Cola", "1")),
-            ProductScreen.clickPayButton(),
+            ProductScreen.clickPayButton(false),
+            ProductScreen.discardOrderWarningDialog(),
             PaymentScreen.clickPaymentMethod("Cash"),
             PaymentScreen.clickValidate(),
-            ReceiptScreen.discardOrderWarningDialog(),
             ReceiptScreen.clickNextOrder(),
             Utils.negateStep(FloorScreen.isChildTable("5")),
 

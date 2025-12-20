@@ -26,6 +26,7 @@ from . import test_website_sale_gmc
 from . import test_website_sale_image
 from . import test_website_sale_invoice
 from . import test_website_sale_mail
+from . import test_website_sale_mail_template
 from . import test_website_sale_pricelist
 from . import test_website_sale_product_attribute_value_config
 from . import test_website_sale_product_configurator
@@ -33,6 +34,7 @@ from . import test_website_sale_product_filters
 from . import test_website_sale_product_page
 from . import test_website_sale_product_template
 from . import test_website_sale_reorder_from_portal
+from . import test_website_sale_settings
 from . import test_website_sale_shop_redirects
 from . import test_website_sale_show_compare_list_price
 from . import test_website_sale_snippets

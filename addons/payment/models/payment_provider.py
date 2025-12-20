@@ -23,6 +23,7 @@ class PaymentProvider(models.Model):
     _description = 'Payment Provider'
     _order = 'module_state, state desc, sequence, name'
     _check_company_auto = True
+    _check_company_domain = models.check_company_domain_parent_of
 
     def _valid_field_parameter(self, field, name):
         return name == 'required_if_provider' or super()._valid_field_parameter(field, name)
@@ -968,11 +969,15 @@ class PaymentProvider(models.Model):
         :param str provider_code: The code of the provider to setup.
         :return: None
         """
-        main_provider = self.search(self._get_provider_domain(provider_code, **kwargs), limit=1)
-        for company in self.env['res.company'].search([]):
-            if company != main_provider.company_id and not company.parent_id:
-                # Create a copy of the provider for each company.
-                main_provider.copy({'company_id': company.id})
+        existing_providers = self.search(self._get_provider_domain(provider_code, **kwargs))
+        main_provider = existing_providers[:1]
+        existing_provider_companies = existing_providers.company_id
+        companies_needing_provider = self.env['res.company'].search([
+            ('id', 'not in', existing_provider_companies.ids), ('parent_id', '=', False)
+        ])
+        for company in companies_needing_provider:
+            # Create a copy of the provider for each company.
+            main_provider.copy({'company_id': company.id})
 
     @api.model
     def _remove_provider(self, provider_code, **kwargs):

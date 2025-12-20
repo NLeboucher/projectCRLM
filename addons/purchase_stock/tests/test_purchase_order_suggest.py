@@ -36,7 +36,6 @@ class TestPurchaseOrderSuggest(PurchaseTestCommon, HttpCase):
         suggest_context = {
             "order_id": po.id,
             "partner_id": po.partner_id.id,
-            "domain": domain,
             "warehouse_id": warehouse_id,
             "suggest_based_on": based_on,
             "suggest_days": days,
@@ -603,6 +602,7 @@ class TestPurchaseOrderSuggest(PurchaseTestCommon, HttpCase):
         test_product = self.env['product.product'].create([{
             'name': "test_product",
             'is_storable': True,
+            'categ_id': self.product_category.id,
         }])
         self.env['product.supplierinfo'].create([{
             'partner_id': self.partner_1.id,
@@ -622,9 +622,12 @@ class TestPurchaseOrderSuggest(PurchaseTestCommon, HttpCase):
         )
         self.assertEqual(test_product.monthly_demand, 24)
 
-        # Create a and mark as todo a move in 20 days (for checking suggest/forecasted)
+        # Create and mark as todo a move in  18 & 20 days (for checking forecast on records and suggestion with Forecasted mode)
         self._create_and_process_delivery_at_date(
-            [(test_product, 100)], date=today + relativedelta(days=20), to_validate=False
+            [(test_product, 50)], date=today + relativedelta(days=18), to_validate=False
+        )
+        self._create_and_process_delivery_at_date(
+            [(test_product, 50)], date=today + relativedelta(days=20), to_validate=False
         )
         # Create a move yesterday on another warehouse
         other_warehouse = self.env.ref('stock.warehouse0')
@@ -632,5 +635,4 @@ class TestPurchaseOrderSuggest(PurchaseTestCommon, HttpCase):
         self._create_and_process_delivery_at_date(
             [(test_product, 1)], date=today - relativedelta(days=1), warehouse=other_warehouse
         )
-        # TODO fix not working on local with Debug & without step_delay (maybe due to xml Math.round)
         self.start_tour('/odoo/purchase', "test_purchase_order_suggest_search_panel_ux", login='admin')

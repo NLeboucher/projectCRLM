@@ -28,13 +28,15 @@
 # Maksym <ms@myodoo.pl>, 2023
 # Tadeusz Karpiński <tadeuszkarpinski@gmail.com>, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# "Marta (wacm)" <wacm@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 14:00+0000\n"
-"PO-Revision-Date: 2025-09-16 10:06+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-11-07 18:36+0000\n"
+"PO-Revision-Date: 2025-11-08 17:57+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-19/product/"
 "pl/>\n"
 "Language: pl\n"
@@ -90,8 +92,8 @@ msgid ""
 "(total_amount)s"
 msgstr ""
 "%(base)s z %(discount)s %% %(discount_type)s i %(surcharge)s opłatą\n"
-"Przykład: %(amount)s * %(discount_charge)s + %(price_surcharge)s → "
-"%(total_amount)s"
+"Przykład: %(amount)s * %(discount_charge)s + %(price_surcharge)s → %"
+"(total_amount)s"
 
 #. module: product
 #. odoo-python
@@ -123,6 +125,7 @@ msgstr "%(percentage)s %% zniżki od ceny sprzedaży"
 
 #. module: product
 #. odoo-python
+#: code:addons/product/models/product_category.py:0
 #: code:addons/product/models/product_pricelist.py:0
 #: code:addons/product/models/product_tag.py:0
 #: code:addons/product/models/product_template.py:0
@@ -167,8 +170,8 @@ msgstr "- %(amount)s rabatu"
 msgid ""
 "- Barcode \"%(barcode)s\" already assigned to product(s): %(product_list)s"
 msgstr ""
-"- Kod kreskowy \"%(barcode)s\" jest już przypisany do produktów: "
-"%(product_list)s"
+"- Kod kreskowy \"%(barcode)s\" jest już przypisany do produktów: %"
+"(product_list)s"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_attribute__create_variant
@@ -191,7 +194,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_duration_month_1
 msgid "1 month"
-msgstr ""
+msgstr "1 miesiąc"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_duration_year_1
@@ -211,7 +214,7 @@ msgstr "10 Jednostek"
 #. module: product
 #: model:product.attribute.value,name:product.pav_height_100
 msgid "100"
-msgstr ""
+msgstr "100"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_length_120
@@ -246,7 +249,7 @@ msgstr "2 x 7 z ceną"
 #. module: product
 #: model:product.attribute.value,name:product.pav_duration_year_2
 msgid "2 years"
-msgstr ""
+msgstr "2 lata"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_size_2xl
@@ -256,12 +259,12 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_duration_year_3
 msgid "3 years"
-msgstr ""
+msgstr "3 lata"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_shoe_size_39
 msgid "39"
-msgstr ""
+msgstr "39"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_size_3xl
@@ -286,27 +289,27 @@ msgstr "4 x 7 z ceną"
 #. module: product
 #: model:product.attribute.value,name:product.pav_shoe_size_40
 msgid "40"
-msgstr ""
+msgstr "40"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_shoe_size_41
 msgid "41"
-msgstr ""
+msgstr "41"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_shoe_size_42
 msgid "42"
-msgstr ""
+msgstr "42"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_shoe_size_43
 msgid "43"
-msgstr ""
+msgstr "43"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_height_45
 msgid "45"
-msgstr ""
+msgstr "45"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_size_4xl
@@ -321,12 +324,12 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_duration_month_6
 msgid "6 months"
-msgstr ""
+msgstr "6 miesięcy"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_height_85
 msgid "85"
-msgstr ""
+msgstr "85"
 
 #. module: product
 #: model_terms:product.template,website_description:product.product_product_4_product_template
@@ -346,8 +349,8 @@ msgid ""
 "<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow "
 "icon\" title=\"Arrow\"/>"
 msgstr ""
-"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label="
-"\"Arrow icon\" title=\"Arrow\"/>"
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow "
+"icon\" title=\"Arrow\"/>"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_pricelist_view_kanban
@@ -355,8 +358,8 @@ msgid ""
 "<i class=\"fa fa-money\" role=\"img\" aria-label=\"Currency\" "
 "title=\"Currency\"/>"
 msgstr ""
-"<i class=\"fa fa-money\" role=\"img\" aria-label=\"Currency\" title="
-"\"Currency\"/>"
+"<i class=\"fa fa-money\" role=\"img\" aria-label=\"Currency\" "
+"title=\"Currency\"/>"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_category_form_view
@@ -382,8 +385,8 @@ msgstr "<span>%</span>"
 #: model_terms:ir.ui.view,arch_db:product.product_variant_easy_edit_view
 msgid "<span>All general settings about this product are managed on</span>"
 msgstr ""
-"<span>Wszystkie ogólne ustawienia tego produktu są zarządzane na "
-"stronie</span>"
+"<span>Wszystkie ogólne ustawienia tego produktu są zarządzane na stronie</"
+"span>"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_pricelist_item_form_view
@@ -464,9 +467,17 @@ msgid ""
 "discounts, etc."
 msgstr ""
 "Cena to zestaw cen sprzedaży lub reguł obliczania ceny linii zamówień "
-"sprzedaży w oparciu o produkty, kategorie produktów, daty i zamówione ilości."
-"\n"
+"sprzedaży w oparciu o produkty, kategorie produktów, daty i zamówione "
+"ilości.\n"
 "Jest to idealne narzędzie do obsługi kilku cen, upustów sezonowych itp."
+
+#. module: product
+#. odoo-python
+#: code:addons/product/models/product_pricelist_item.py:0
+msgid ""
+"A pricelist item with \"Other Pricelist\" as base must have a "
+"base_pricelist_id."
+msgstr ""
 
 #. module: product
 #. odoo-python
@@ -694,7 +705,7 @@ msgstr "Aluminium"
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_apple
 msgid "Apple"
-msgstr ""
+msgstr "Apple"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_pricelist_item_tree_view
@@ -903,7 +914,7 @@ msgstr "Czarny"
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_blue
 msgid "Blue"
-msgstr ""
+msgstr "Niebieski"
 
 #. module: product
 #: model:product.template,description_sale:product.product_product_7_product_template
@@ -913,12 +924,12 @@ msgstr ""
 #. module: product
 #: model:product.attribute,name:product.pa_brand
 msgid "Brand"
-msgstr ""
+msgstr "Marka"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_brown
 msgid "Brown"
-msgstr ""
+msgstr "Brązowy"
 
 #. module: product
 #. odoo-javascript
@@ -1001,7 +1012,7 @@ msgstr "Wybierz układ arkusza do drukowania etykiet"
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_cocacola
 msgid "Coca-Cola"
-msgstr ""
+msgstr "Coca-Cola"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_variant_easy_edit_view
@@ -1189,7 +1200,7 @@ msgstr "Grupy krajów"
 #. module: product
 #: model:res.groups,name:product.group_product_manager
 msgid "Create"
-msgstr ""
+msgstr "Utwórz"
 
 #. module: product
 #: model:ir.model,website_form_label:product.model_res_partner
@@ -1280,12 +1291,12 @@ msgstr "Utworzono"
 #. module: product
 #: model:ir.model.fields.selection,name:product.selection__res_config_settings__product_volume_volume_in_cubic_feet__1
 msgid "Cubic Feet (ft³)"
-msgstr ""
+msgstr "Stopy sześcienne (ft³)"
 
 #. module: product
 #: model:ir.model.fields.selection,name:product.selection__res_config_settings__product_volume_volume_in_cubic_feet__0
 msgid "Cubic Meters (m³)"
-msgstr ""
+msgstr "Metry sześcienne (m³)"
 
 #. module: product
 #: model:ir.model,name:product.model_res_currency
@@ -1325,12 +1336,12 @@ msgstr "Biurko z możliwością dostosowania"
 #. module: product
 #: model:product.attribute,name:product.pa_customization
 msgid "Customization"
-msgstr ""
+msgstr "Personalizacja"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_cyan
 msgid "Cyan"
-msgstr ""
+msgstr "Cyjan"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_document__db_datas
@@ -1559,7 +1570,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_options_drawers
 msgid "Drawers"
-msgstr ""
+msgstr "Szuflady"
 
 #. module: product
 #: model:product.attribute,name:product.pa_duration
@@ -1584,7 +1595,8 @@ msgstr ""
 #. module: product
 #: model:ir.model.constraint,message:product.constraint_product_template_attribute_value_attribute_value_unique
 msgid "Each value should be defined only once per attribute per product."
-msgstr "Każda wartość powinna być zdefiniowana tylko raz na atrybut na produkt."
+msgstr ""
+"Każda wartość powinna być zdefiniowana tylko raz na atrybut na produkt."
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.report_packagingbarcode
@@ -1801,12 +1813,12 @@ msgstr "Określa kolejność podczas wyświetlania listy produktów."
 #. module: product
 #: model:product.attribute.value,name:product.pav_fabric_glass
 msgid "Glass"
-msgstr ""
+msgstr "Szkło"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_gold
 msgid "Gold"
-msgstr ""
+msgstr "Złoty"
 
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.report_pricelist_page
@@ -1833,12 +1845,12 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_gray
 msgid "Gray"
-msgstr ""
+msgstr "Szary"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_green
 msgid "Green"
-msgstr ""
+msgstr "Zielony"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_h_m
@@ -1871,7 +1883,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute,name:product.pa_height
 msgid "Height"
-msgstr ""
+msgstr "Wysokość"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_attribute_value__html_color
@@ -2164,7 +2176,7 @@ msgstr "Jest publicznym dokumentem"
 #. module: product
 #: model:ir.model.fields.selection,name:product.selection__res_config_settings__product_weight_in_lbs__0
 msgid "Kilograms (kg)"
-msgstr ""
+msgstr "Kilogramy (kg)"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_loreal
@@ -2251,7 +2263,7 @@ msgstr "Czynności zaległe"
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo__delay
 msgid "Lead Time"
-msgstr ""
+msgstr "Czas dostawy"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_supplierinfo__delay
@@ -2281,7 +2293,7 @@ msgstr "Nogi"
 #. module: product
 #: model:product.attribute,name:product.pa_length
 msgid "Length"
-msgstr ""
+msgstr "Długość"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_lenovo
@@ -2296,7 +2308,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_fabric_linen
 msgid "Linen"
-msgstr ""
+msgstr "Len"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute__attribute_line_ids
@@ -2403,7 +2415,7 @@ msgstr "Wiadomości"
 #. module: product
 #: model:product.attribute.value,name:product.pav_fabric_metal
 msgid "Metal"
-msgstr ""
+msgstr "Metal"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_document__mimetype
@@ -2510,7 +2522,7 @@ msgstr "Nowe"
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_new_balance
 msgid "New Balance"
-msgstr ""
+msgstr "Nowe saldo"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist__activity_calendar_event_id
@@ -2684,8 +2696,8 @@ msgid ""
 "On the product %(product)s you cannot associate the value %(value)s with the "
 "attribute %(attribute)s because they do not match."
 msgstr ""
-"W produkcie %(product)s nie można powiązać wartości %(value)s z atrybutem "
-"%(attribute)s, ponieważ nie są one zgodne."
+"W produkcie %(product)s nie można powiązać wartości %(value)s z atrybutem %"
+"(attribute)s, ponieważ nie są one zgodne."
 
 #. module: product
 #. odoo-python
@@ -2709,7 +2721,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:product.field_product_combo_item__product_id
 #: model:product.attribute,name:product.pa_options
 msgid "Options"
-msgstr ""
+msgstr "Opcje"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_oral_b
@@ -2719,7 +2731,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_orange
 msgid "Orange"
-msgstr ""
+msgstr "Pomarańczowy"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_document__original_id
@@ -2799,7 +2811,7 @@ msgstr "Kosz z pedałem"
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_pepsi
 msgid "Pepsi"
-msgstr ""
+msgstr "Pepsi"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item__percent_price
@@ -2819,7 +2831,7 @@ msgstr "Pigułki"
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_pink
 msgid "Pink"
-msgstr ""
+msgstr "Różowy"
 
 #. module: product
 #. odoo-javascript
@@ -2869,7 +2881,7 @@ msgstr "Określ wariant produktu, dla którego ta reguła powinna być stosowana
 #. module: product
 #: model:ir.model.fields.selection,name:product.selection__res_config_settings__product_weight_in_lbs__1
 msgid "Pounds (lb)"
-msgstr ""
+msgstr "Funty (lb)"
 
 #. module: product
 #: model_terms:product.template,website_description:product.product_product_4_product_template
@@ -3349,7 +3361,7 @@ msgstr "Opis zakupu"
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_purple
 msgid "Purple"
-msgstr ""
+msgstr "Purpurowy"
 
 #. module: product
 #. odoo-javascript
@@ -3392,12 +3404,18 @@ msgstr "Radio"
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_rayban
 msgid "Ray-Ban"
+msgstr "Ray-Ban"
+
+#. module: product
+#. odoo-python
+#: code:addons/product/models/product_pricelist_item.py:0
+msgid "Recursive pricelist rules detected: %s"
 msgstr ""
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_red
 msgid "Red"
-msgstr ""
+msgstr "Czerwony"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_reebok
@@ -3593,7 +3611,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute,name:product.pa_shoe_size
 msgid "Shoes size"
-msgstr ""
+msgstr "Rozmiar butów"
 
 #. module: product
 #. odoo-javascript
@@ -3609,7 +3627,7 @@ msgstr "Pokaż wszystkie zapisy, których data kolejnej aktywności wypada po"
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_silver
 msgid "Silver"
-msgstr ""
+msgstr "Srebrny"
 
 #. module: product
 #: model:product.attribute,name:product.pa_size
@@ -3736,7 +3754,7 @@ msgstr "Cennik dostawcy"
 #. module: product
 #: model_terms:ir.ui.view,arch_db:product.product_tag_form_view
 msgid "Tag"
-msgstr ""
+msgstr "Tag"
 
 #. module: product
 #: model:ir.model.constraint,message:product.constraint_product_tag_name_uniq
@@ -3765,7 +3783,7 @@ msgstr ""
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_teal
 msgid "Teal"
-msgstr ""
+msgstr "Turkusowy"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_attribute__template_value_ids
@@ -3791,8 +3809,8 @@ msgid ""
 "The attribute %(attribute)s must have at least one value for the product %"
 "(product)s."
 msgstr ""
-"Atrybut %(attribute)s musi mieć co najmniej jedną wartość dla produktu "
-"%(product)s."
+"Atrybut %(attribute)s musi mieć co najmniej jedną wartość dla produktu %"
+"(product)s."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_attribute_value__attribute_id
@@ -4004,7 +4022,7 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_document__thumbnail
 msgid "Thumbnail"
-msgstr ""
+msgstr "Miniaturka"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_brand_tide
@@ -4479,17 +4497,17 @@ msgstr "Wpisz datę"
 #. module: product
 #: model:product.attribute.value,name:product.pav_size_xl
 msgid "XL"
-msgstr ""
+msgstr "XL"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_size_xs
 msgid "XS"
-msgstr ""
+msgstr "XS"
 
 #. module: product
 #: model:product.attribute.value,name:product.pav_color_yellow
 msgid "Yellow"
-msgstr ""
+msgstr "Żółty"
 
 #. module: product
 #. odoo-python
@@ -4572,14 +4590,6 @@ msgstr ""
 
 #. module: product
 #. odoo-python
-#: code:addons/product/models/product_pricelist_item.py:0
-msgid ""
-"You cannot assign the Main Pricelist as Other Pricelist in PriceList Item"
-msgstr ""
-"Nie można przypisać Głównego Cennika jako Innego Cennika w Pozycji PriceList"
-
-#. module: product
-#. odoo-python
 #: code:addons/product/models/product_attribute.py:0
 msgid ""
 "You cannot change the Variants Creation Mode of the attribute %(attribute)s "
@@ -4607,8 +4617,8 @@ msgid ""
 "You cannot change the product of the value %(value)s set on product %"
 "(product)s."
 msgstr ""
-"Nie można zmienić produktu o wartości %(value)sustawionej na produkcie "
-"%(product)s."
+"Nie można zmienić produktu o wartości %(value)sustawionej na produkcie %"
+"(product)s."
 
 #. module: product
 #. odoo-python
@@ -4885,6 +4895,12 @@ msgstr "do"
 #: code:addons/product/static/src/js/pricelist_report/product_pricelist_report.xml:0
 msgid "xlsx"
 msgstr "xlsx"
+
+#~ msgid ""
+#~ "You cannot assign the Main Pricelist as Other Pricelist in PriceList Item"
+#~ msgstr ""
+#~ "Nie można przypisać Głównego Cennika jako Innego Cennika w Pozycji "
+#~ "PriceList"
 
 #~ msgid "%s %% discount"
 #~ msgstr "%s %% upust"

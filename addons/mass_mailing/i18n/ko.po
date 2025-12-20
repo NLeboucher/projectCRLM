@@ -8,12 +8,13 @@
 # Sarah Park, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
 # "Kwanghee Park (kwpa)" <kwpa@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 13:57+0000\n"
-"PO-Revision-Date: 2025-09-24 19:22+0000\n"
+"POT-Creation-Date: 2025-12-19 18:36+0000\n"
+"PO-Revision-Date: 2025-12-11 06:44+0000\n"
 "Last-Translator: \"Kwanghee Park (kwpa)\" <kwpa@odoo.com>\n"
 "Language-Team: Korean <https://translate.odoo.com/projects/odoo-19/"
 "mass_mailing/ko/>\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #. module: mass_mailing
 #. odoo-python
@@ -36,6 +37,8 @@ msgid ""
 "\" Write a quote here from one of your customers. Quotes are a great way to "
 "build confidence in your products or services. \""
 msgstr ""
+"\" 고객 중 한 명이 여기에 견적을 작성합니다. 견적서는 제품이나 서비스에 대한 "
+"자신감을 키울 수 있는 좋은 방법입니다. \""
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.mailing_contact_import_view_form
@@ -52,9 +55,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
 msgid ""
 "\"Engaging with this team was effortless from start to end. Their "
-"proficiency and meticulous approach greatly enhanced our project. I couldn’t "
+"proficiency and meticulous approach greatly enhanced our project. I couldn't "
 "be happier with the final product!\""
 msgstr ""
+"\"처음부터 끝까지 아주 쉽게 팀과 소통할 수 있었습니다. 꼼꼼하게 전문적으로 접"
+"근하여 프로젝트의 완성도를 크게 향상시켰습니다. 최종 결과물에 더할 나위 없이 "
+"만족합니다!\""
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
@@ -62,6 +68,8 @@ msgid ""
 "\"Exceptional service and great communication throughout the entire process. "
 "They went above and beyond to ensure our project was a complete success.\""
 msgstr ""
+"\"탁월한 서비스와 함께 원활한 소통을 전 과정에 걸쳐 할 수 있었습니다. 프로젝"
+"트가 완벽하게 성공할 수 있도록 최선을 다해 주셨습니다.\""
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
@@ -70,6 +78,9 @@ msgid ""
 "vision and turned it into something even better than we had imagined. Highly "
 "recommend!\""
 msgstr ""
+"\"첫 미팅부터 신뢰할 만한 적임자를 찾았다는 확신이 들었습니다. 우리가 계획하"
+"는 비전을 수용하여 예상했던 것보다도 훨씬 좋은 결과물을 제시해 주었습니다. 강"
+"력히 추천합니다!\""
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
@@ -78,6 +89,9 @@ msgid ""
 "skills and commitment to quality had a major impact on our project. I am "
 "thrilled with the final results!\""
 msgstr ""
+"\"이 팀과 작업하는 동안 모든 단계를 원활하게 효율적으로 진행할 수 있었습니"
+"다. 탁월한 기술과 품질에 대한 노력은 프로젝트에 지대한 영향을 미쳤습니다. 최"
+"종 결과물이 정말 만족스럽습니다!\""
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_mailing__mailing_filter_count
@@ -177,12 +191,12 @@ msgstr "(%s로 예약됨)"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_mail_block_footer_social
 msgid ", All Rights Reserved"
-msgstr ""
+msgstr ". 모든 권리가 귀속됩니다"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_link_list
 msgid "10 Books To Read in 2022"
-msgstr ""
+msgstr "2022년에 읽어야 할 책 10권"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -211,7 +225,7 @@ msgstr "2X"
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/options/image_tool_option.xml:0
 msgid "2X Size"
-msgstr ""
+msgstr "2배 크기"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -223,12 +237,12 @@ msgstr "3X"
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/options/image_tool_option.xml:0
 msgid "3X Size"
-msgstr ""
+msgstr "3배 크기"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
 msgid "4 out of 5 stars"
-msgstr ""
+msgstr "별 5개 중 4개"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -240,7 +254,7 @@ msgstr "4X"
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/options/image_tool_option.xml:0
 msgid "4X Size"
-msgstr ""
+msgstr "4배 크기"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -252,17 +266,17 @@ msgstr "5X"
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/options/image_tool_option.xml:0
 msgid "5X Size"
-msgstr ""
+msgstr "5배 크기"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_link_list
 msgid "7 Unexpected Signs You're Good At Your Job"
-msgstr ""
+msgstr "일을 잘하고 있다는 뜻밖의 신호 7가지"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_link_list
 msgid "7 Ways to Nurture Creativity"
-msgstr ""
+msgstr "창의력을 키우는 7가지 방법"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_image_text
@@ -270,6 +284,8 @@ msgid ""
 "<a href=\"https://www.example.com\" class=\"btn btn-secondary "
 "o_translate_inline\">Learn more</a>"
 msgstr ""
+"<a href=\"https://www.example.com\" class=\"btn btn-secondary "
+"o_translate_inline\">더 보기</a>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.mailing_list_view_kanban
@@ -282,8 +298,8 @@ msgid ""
 msgstr ""
 "<br/>\n"
 "                                    <span class=\"text-muted\">\n"
-"                                        <i class=\"fa fa-envelope-o\"/> "
-"연락처 \n"
+"                                        <i class=\"fa fa-envelope-o\"/> 연락"
+"처 \n"
 "                                    </span>"
 
 #. module: mass_mailing
@@ -294,8 +310,8 @@ msgid ""
 "span>"
 msgstr ""
 "<br/>\n"
-"                                    <span class=\"text-muted\">수신 "
-"거부</span>"
+"                                    <span class=\"text-muted\">수신 거부</"
+"span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.mailing_list_view_kanban
@@ -323,8 +339,8 @@ msgid ""
 "                                    <span class=\"text-muted\">Opt-Out</span>"
 msgstr ""
 "<br/>\n"
-"                                    <span class=\"text-muted\""
-">옵트아웃</span>"
+"                                    <span class=\"text-muted\">옵트아웃</"
+"span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.theme_default_template
@@ -336,28 +352,28 @@ msgid ""
 "sales."
 msgstr ""
 "<br/>저희 커뮤니티에 방문하신 것을 진심으로 환영합니다!\n"
-"                <br/>바로 사용할 수 있는 간편한 플랫폼을 통해 디지털 서명 "
-"비용을 절감하고 신규 고객을 유치하여 매출을 증대시켜보세요."
+"                <br/>바로 사용할 수 있는 간편한 플랫폼을 통해 디지털 서명 비"
+"용을 절감하고 신규 고객을 유치하여 매출을 증대시켜보세요."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team
 msgid "<font class=\"h5-fs\">Aline Turner</font>"
-msgstr ""
+msgstr "<font class=\"h5-fs\">Aline Turner</font>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team
 msgid "<font class=\"h5-fs\">Iris Joe</font>"
-msgstr ""
+msgstr "<font class=\"h5-fs\">Iris Joe</font>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team
 msgid "<font class=\"h5-fs\">Mich Stark</font>"
-msgstr ""
+msgstr "<font class=\"h5-fs\">Mich Stark</font>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team
 msgid "<font class=\"h5-fs\">Tony Fred</font>"
-msgstr ""
+msgstr "<font class=\"h5-fs\">Tony Fred</font>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_event
@@ -378,7 +394,7 @@ msgstr ""
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_text_highlight
 msgid "<font class=\"text-white\">Text Highlight</font>"
-msgstr ""
+msgstr "<font class=\"text-white\">텍스트 강조</font>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_cover
@@ -420,7 +436,7 @@ msgstr ""
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_numbers
 msgid "<font style=\"color: white;\">Beautiful snippets</font>"
-msgstr ""
+msgstr "<font style=\"color: white;\">편리한 스니펫</font>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_call_to_action
@@ -455,7 +471,7 @@ msgstr ""
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_color_blocks_2
 msgid "<font style=\"color:white;\">More Details</font>"
-msgstr ""
+msgstr "<font style=\"color:white;\">세부 내용 보기</font>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_picture
@@ -465,18 +481,18 @@ msgstr ""
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_numbers
-msgid "<font style=\"font-size: 48px;\">12</font>"
+msgid "<font style=\"font-size: 48px; color: white;\">45</font>"
 msgstr ""
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_numbers
-msgid "<font style=\"font-size: 48px;\">45</font>"
-msgstr ""
+msgid "<font style=\"font-size: 48px;\">12</font>"
+msgstr "<font style=\"font-size: 48px;\">12</font>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_numbers
 msgid "<font style=\"font-size: 48px;\">8</font>"
-msgstr ""
+msgstr "<font style=\"font-size: 48px;\">8</font>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.mailing_subscription_view_form
@@ -485,9 +501,9 @@ msgid ""
 "blacklisted for mass mailings\" aria-label=\"Blacklisted\" invisible=\"not "
 "is_blacklisted\" groups=\"base.group_user\"/>"
 msgstr ""
-"<i class=\"fa fa-ban text-danger\" role=\"img\" title="
-"\"This email is blacklisted for mass mailings\" aria-label=\"Blacklisted\" "
-"invisible=\"not is_blacklisted\" groups=\"base.group_user\"/>"
+"<i class=\"fa fa-ban text-danger\" role=\"img\" title=\"This email is "
+"blacklisted for mass mailings\" aria-label=\"Blacklisted\" invisible=\"not "
+"is_blacklisted\" groups=\"base.group_user\"/>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
@@ -499,44 +515,8 @@ msgstr "<i class=\"fa fa-bar-chart\"/> 버전 비교"
 msgid ""
 "<i class=\"fa fa-bullseye me-2\" role=\"img\" aria-label=\"Lead/"
 "Opportunity\"/>"
-msgstr "<i class=\"fa fa-bullseye me-2\" role=\"img\" aria-label=\"영업제안/기회\"/>"
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
-msgid ""
-"<i class=\"fa fa-check text-success\" role=\"img\"/>  Access all modules"
 msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
-msgid ""
-"<i class=\"fa fa-check text-success\" role=\"img\"/>  Account management"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
-msgid ""
-"<i class=\"fa fa-check text-success\" role=\"img\"/>  Complete CRM for any "
-"team"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
-msgid "<i class=\"fa fa-check text-success\" role=\"img\"/>  Email support"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
-msgid ""
-"<i class=\"fa fa-check text-success\" role=\"img\"/>  Limited customization"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
-msgid ""
-"<i class=\"fa fa-check text-success\" role=\"img\"/>  Sales &amp; marketing "
-"for 2"
-msgstr ""
+"<i class=\"fa fa-bullseye me-2\" role=\"img\" aria-label=\"영업제안/기회\"/>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
@@ -579,23 +559,6 @@ msgstr ""
 "title=\"Warning\"/>"
 
 #. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_cta_badge
-msgid ""
-"<i class=\"fa fa-fw fa-info-circle\" role=\"img\"/>  What do you want to "
-"promote&amp;nbsp;?"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
-msgid "<i class=\"fa fa-times text-danger\" role=\"img\"/>  No customization"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
-msgid "<i class=\"fa fa-times text-danger\" role=\"img\"/>  No support"
-msgstr ""
-
-#. module: mass_mailing
 #: model_terms:ir.actions.act_window,help:mass_mailing.mailing_subscription_action_report_optout
 msgid "<i class=\"oi oi-arrow-right\"></i> Configure Opt-out Reasons"
 msgstr "<i class=\"oi oi-arrow-right\"></i> 수신 거부 사유 구성"
@@ -610,43 +573,61 @@ msgid ""
 "address must belong to this database.\n"
 "                                                </small>"
 msgstr ""
-"<small class=\"oe_edit_only text-muted mb-2\" style=\"font-size:74%"
-"\" invisible=\"reply_to_mode == 'update' or mailing_model_name in "
+"<small class=\"oe_edit_only text-muted mb-2\" style=\"font-size:74%\" "
+"invisible=\"reply_to_mode == 'update' or mailing_model_name in "
 "['mailing.contact', 'res.partner', 'mailing.list']\">\n"
-"                                                    답장을 추적하려면 이 "
-"주소가 데이터베이스에 있어야 합니다.\n"
+"                                                    답장을 추적하려면 이 주소"
+"가 데이터베이스에 있어야 합니다.\n"
 "                                                </small>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
 msgid ""
-"<small class=\"text-center\">Instant setup, satisfied or reimbursed.</small>"
+"<span class=\"fa fa-check text-success\" role=\"img\"/>  Access all modules"
 msgstr ""
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
-msgid "<small class=\"text-muted\">/ month</small>"
+msgid ""
+"<span class=\"fa fa-check text-success\" role=\"img\"/>  Account management"
 msgstr ""
 
 #. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_attributes_horizontal
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
 msgid ""
-"<small class=\"text-muted\">Enjoy fast, free shipping on all orders, no "
-"minimum, no hidden fees.</small>"
+"<span class=\"fa fa-check text-success\" role=\"img\"/>  Complete CRM for "
+"any team"
 msgstr ""
 
 #. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_attributes_horizontal
-msgid ""
-"<small class=\"text-muted\">Free 30-day returns with quick refunds or easy "
-"exchanges and no stress.</small>"
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
+msgid "<span class=\"fa fa-check text-success\" role=\"img\"/>  Email support"
 msgstr ""
 
 #. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_attributes_horizontal
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
 msgid ""
-"<small class=\"text-muted\">Your information is protected with encrypted "
-"checkout and trusted payment methods.</small>"
+"<span class=\"fa fa-check text-success\" role=\"img\"/>  Limited "
+"customization"
+msgstr ""
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
+msgid ""
+"<span class=\"fa fa-check text-success\" role=\"img\"/>  Sales &amp; "
+"marketing for 2"
+msgstr ""
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_badge
+msgid "<span class=\"fa fa-fw fa-folder\"/>Category"
+msgstr "<span class=\"fa fa-fw fa-folder\"/>카테고리"
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_cta_badge
+msgid ""
+"<span class=\"fa fa-fw fa-info-circle\" role=\"img\"/>  What do you want to "
+"promote&amp;nbsp;?"
 msgstr ""
 
 #. module: mass_mailing
@@ -655,8 +636,8 @@ msgid ""
 "<span class=\"fa fa-hourglass-half me-2 small my-auto\" aria-"
 "label=\"Scheduled date\"/>"
 msgstr ""
-"<span class=\"fa fa-hourglass-half me-2 small my-auto\" aria-label="
-"\"예약된 날짜\"/>"
+"<span class=\"fa fa-hourglass-half me-2 small my-auto\" aria-label=\"예약된 "
+"날짜\"/>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_kanban
@@ -665,8 +646,8 @@ msgid ""
 "date\"/>\n"
 "                                        <span>Next Batch</span>"
 msgstr ""
-"<span class=\"fa fa-hourglass-o me-2 small my-auto\" aria-label="
-"\"Scheduled date\"/>\n"
+"<span class=\"fa fa-hourglass-o me-2 small my-auto\" aria-label=\"Scheduled "
+"date\"/>\n"
 "                                        <span>다음 일괄 배치</span>"
 
 #. module: mass_mailing
@@ -675,17 +656,34 @@ msgid ""
 "<span class=\"fa fa-paper-plane me-2 small my-auto\" aria-label=\"Sent "
 "date\"/>"
 msgstr ""
-"<span class=\"fa fa-paper-plane me-2 small my-auto\" aria-label=\"보낸 날짜\""
-"/>"
+"<span class=\"fa fa-paper-plane me-2 small my-auto\" aria-label=\"보낸 날짜"
+"\"/>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
-msgid "<span class=\"h2-fs\"><strong>$ 15.00</strong></span>"
+msgid ""
+"<span class=\"fa fa-times text-danger\" role=\"img\"/>  No customization"
 msgstr ""
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
-msgid "<span class=\"h2-fs\"><strong>$ 25.00</strong></span>"
+msgid "<span class=\"fa fa-times text-danger\" role=\"img\"/>  No support"
+msgstr ""
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
+msgid ""
+"<span class=\"h2-fs\"><strong>$ 15.00</strong></span>\n"
+"                                    <span class=\"o_small-fs\"><font "
+"style=\"color: rgb(99, 99, 99);\">/ month</font></span>"
+msgstr ""
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
+msgid ""
+"<span class=\"h2-fs\"><strong>$ 25.00</strong></span>\n"
+"                                    <span class=\"o_small-fs\"><font "
+"style=\"color: rgb(99, 99, 99);\">/ month</font></span>"
 msgstr ""
 
 #. module: mass_mailing
@@ -693,60 +691,91 @@ msgstr ""
 msgid ""
 "<span class=\"h3-fs\">Discover New <strong>Opportunities</strong></span>"
 msgstr ""
+"<span class=\"h3-fs\">새로운 <strong>영업기회를 발굴해 보세요</strong></span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_text_image
 msgid "<span class=\"h3-fs\">Enhance Your <strong>Experience</strong></span>"
 msgstr ""
+"<span class=\"h3-fs\">더욱 놀라운<strong> 경험을 보장해 드립니다</strong></"
+"span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_product_list
 msgid "<span class=\"h3-fs\">Our finest selection</span>"
-msgstr ""
+msgstr "<span class=\"h3-fs\">최고급 셀렉션</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team_shapes
 msgid "<span class=\"h5-fs\">Aline Turner</span>"
-msgstr ""
+msgstr "<span class=\"h5-fs\">Aline Turner</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_product_list
 msgid "<span class=\"h5-fs\">Balanced</span>"
-msgstr ""
+msgstr "<span class=\"h5-fs\">균형</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_product_list
 msgid "<span class=\"h5-fs\">Elegant</span>"
-msgstr ""
+msgstr "<span class=\"h5-fs\">우아함</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team_shapes
 msgid "<span class=\"h5-fs\">Iris Joe</span>"
-msgstr ""
+msgstr "<span class=\"h5-fs\">Iris Joe</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team_shapes
 msgid "<span class=\"h5-fs\">Mich Stark</span>"
-msgstr ""
+msgstr "<span class=\"h5-fs\">Mich Stark</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team_shapes
 msgid "<span class=\"h5-fs\">Pete Bluestork</span>"
-msgstr ""
+msgstr "<span class=\"h5-fs\">Pete Bluestork</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_product_list
 msgid "<span class=\"h5-fs\">Simple</span>"
-msgstr ""
+msgstr "<span class=\"h5-fs\">심플</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team_shapes
 msgid "<span class=\"h5-fs\">Sophia Langston</span>"
-msgstr ""
+msgstr "<span class=\"h5-fs\">Sophia Langston</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team_shapes
 msgid "<span class=\"h5-fs\">Tony Fred</span>"
+msgstr "<span class=\"h5-fs\">Tony Fred</span>"
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_attributes_horizontal
+msgid ""
+"<span class=\"o_small-fs\"><font style=\"color: rgb(99, 99, 99);\">Enjoy "
+"fast, free shipping on all orders, no minimum, no hidden fees.</font></span>"
+msgstr ""
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_attributes_horizontal
+msgid ""
+"<span class=\"o_small-fs\"><font style=\"color: rgb(99, 99, 99);\">Free 30-"
+"day returns with quick refunds or easy exchanges and no stress.</font></span>"
+msgstr ""
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_attributes_horizontal
+msgid ""
+"<span class=\"o_small-fs\"><font style=\"color: rgb(99, 99, 99);\">Your "
+"information is protected with encrypted checkout and trusted payment methods."
+"</font></span>"
+msgstr ""
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
+msgid ""
+"<span class=\"o_small-fs\">Instant setup, satisfied or reimbursed.</span>"
 msgstr ""
 
 #. module: mass_mailing
@@ -761,40 +790,6 @@ msgid ""
 msgstr "<span class=\"opacity-50\" invisible=\"이름\">예: \"홍길동\"</span>"
 
 #. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_badge
-msgid ""
-"<span class=\"s_badge badge text-bg-secondary\" data-name=\"Badge\" data-"
-"vxml=\"001\">\n"
-"        <i class=\"fa fa-fw fa-folder\"/>Category\n"
-"    </span>"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_blockquote
-msgid "<span class=\"text-muted\">CEO of MyCompany</span>"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
-msgid "<span class=\"text-muted\">Chief Financial Officer</span>"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
-msgid "<span class=\"text-muted\">Chief Technical Officer</span>"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
-msgid "<span class=\"text-muted\">Creative Director</span>"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
-msgid "<span class=\"text-muted\">Marketing Director</span>"
-msgstr ""
-
-#. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_kanban
 msgid "<span invisible=\"not mailing_on_mailing_list\">Mailing Contact</span>"
 msgstr "<span invisible=\"not mailing_on_mailing_list\">메일링 연락처</span>"
@@ -804,7 +799,8 @@ msgstr "<span invisible=\"not mailing_on_mailing_list\">메일링 연락처</spa
 msgid ""
 "<span name=\"canceled_text\">emails have been cancelled and will not be sent."
 "</span>"
-msgstr "<span name=\"canceled_text\">이메일이 취소되었으며 전송되지 않습니다.</span>"
+msgstr ""
+"<span name=\"canceled_text\">이메일이 취소되었으며 전송되지 않습니다.</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
@@ -817,8 +813,8 @@ msgid ""
 "<span name=\"mailing_schedule_type_now_text\">This mailing will be sent as "
 "soon as possible.</span>"
 msgstr ""
-"<span name=\"mailing_schedule_type_now_text\">최대한 빨리 해당 메일을 "
-"발송합니다.</span>"
+"<span name=\"mailing_schedule_type_now_text\">최대한 빨리 해당 메일을 발송합"
+"니다.</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
@@ -843,7 +839,8 @@ msgstr "<span name=\"refresh_text\">최대한 빨리 해당 메일을 발송합�
 msgid ""
 "<span name=\"scheduled_text\">emails are in queue and will be sent soon.</"
 "span>"
-msgstr "<span name=\"scheduled_text\">이메일이 대기 중이며 곧 전송됩니다.</span>"
+msgstr ""
+"<span name=\"scheduled_text\">이메일이 대기 중이며 곧 전송됩니다.</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
@@ -858,12 +855,12 @@ msgstr "<span style=\"color: #878d97;\">메일링 보고서 끄기</span>"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_event
 msgid "<span style=\"font-size: 18px\">Event Two</span>"
-msgstr ""
+msgstr "<span style=\"font-size: 18px\">행사 2</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_event
 msgid "<span style=\"font-size: 18px;\">Event One</span>"
-msgstr ""
+msgstr "<span style=\"font-size: 18px;\">행사 1</span>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_cover
@@ -900,11 +897,6 @@ msgstr ""
 "                            </strong>"
 
 #. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
-msgid "<strong class=\"s_rating_title\">Rating</strong>"
-msgstr ""
-
-#. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_schedule
 msgid "<strong>18h30:</strong>"
 msgstr "<strong>18h30:</strong>"
@@ -917,7 +909,7 @@ msgstr "<strong>19h00:</strong>"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_schedule
 msgid "<strong>19h30: </strong>"
-msgstr ""
+msgstr "<strong>19h30: </strong>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_schedule
@@ -925,23 +917,38 @@ msgid "<strong>8h:</strong>"
 msgstr "<strong>8h:</strong>"
 
 #. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
-msgid "<strong>Emil Foster</strong>"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
-msgid "<strong>James Carter</strong>"
-msgstr ""
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
-msgid "<strong>Jody Roberts</strong>"
-msgstr ""
-
-#. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_blockquote
-msgid "<strong>John DOE</strong>"
+msgid ""
+"<strong><span class=\"h6-fs\">John DOE</span></strong><br/>\n"
+"                                <span class=\"h6-fs\"><font "
+"class=\"text-600\">CEO of MyCompany</font></span>"
+msgstr ""
+"<strong><span class=\"h6-fs\">John DOE</span></strong><br/>\n"
+"                                <span class=\"h6-fs\"><font "
+"class=\"text-600\">MyCompany 회사 CEO</font></span>"
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
+msgid ""
+"<strong>Emil Foster</strong><br/>\n"
+"                                    <span class=\"text-muted\">Creative "
+"Director</span>"
+msgstr ""
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
+msgid ""
+"<strong>James Carter</strong><br/>\n"
+"                                    <span class=\"text-muted\">Chief "
+"Technical Officer</span>"
+msgstr ""
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
+msgid ""
+"<strong>Jody Roberts</strong><br/>\n"
+"                                    <span class=\"text-muted\">Chief "
+"Financial Officer</span>"
 msgstr ""
 
 #. module: mass_mailing
@@ -951,13 +958,21 @@ msgstr ""
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
-msgid "<strong>Sullivan Mitchell</strong>"
+msgid "<strong>Rating</strong>"
+msgstr "<strong>평점</strong>"
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
+msgid ""
+"<strong>Sullivan Mitchell</strong><br/>\n"
+"                                    <span class=\"text-muted\">Marketing "
+"Director</span>"
 msgstr ""
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_schedule
 msgid "<strong>Table Ronde</strong>"
-msgstr ""
+msgstr "<strong>Table Ronde</strong>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_schedule
@@ -967,7 +982,7 @@ msgstr "<strong>환영합니다</strong>"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_schedule
 msgid "<strong>[speaker] &amp; [speaker]'s conference</strong>"
-msgstr ""
+msgstr "<strong>[강연자] &amp; [강연자] 주관 컨퍼런스</strong>"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
@@ -986,6 +1001,8 @@ msgid ""
 "A delicious mix of four toppings: mushrooms, artichokes, ham, and olives, "
 "all on a bed of mozzarella and tomato sauce."
 msgstr ""
+"모짜렐라와 토마토 소스 위에 버섯, 아티초크, 햄, 올리브 등 네 가지 토핑을 층층"
+"이 맛있게 쌓아올린 요리입니다."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_showcase
@@ -993,6 +1010,8 @@ msgid ""
 "A feature section allows you to clearly showcase the main benefits and "
 "unique aspects of your product."
 msgstr ""
+"기능 섹션을 통해 제품의 주요 장점과 차별화된 특성을 명확하게 강조할 수 있습니"
+"다."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_showcase
@@ -1090,6 +1109,12 @@ msgid "A/B test option has not been enabled"
 msgstr "A/B 테스트 옵션을 활성화하지 않았습니다"
 
 #. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/options/options_container.xml:0
+msgid "ACCESS OPTIONS ANYWAY"
+msgstr "어쨌든 액세스 옵션 설정"
+
+#. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_contact__message_needaction
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_mailing__message_needaction
 msgid "Action Needed"
@@ -1141,6 +1166,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mass_mailing.mailing_contact_to_list_view_form
 msgid "Add"
 msgstr "추가"
+
+#. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/options/snippet_visibility_option.xml:0
+msgid "Add Conditions"
+msgstr "조건 추가"
 
 #. module: mass_mailing
 #: model:ir.model,name:mass_mailing.model_mailing_contact_to_list
@@ -1240,7 +1271,8 @@ msgstr "수신자가 자신을 블랙리스트에 올릴 수 있도록 허용"
 msgid ""
 "Allow the recipient to manage themselves their state in the blacklist via "
 "the unsubscription page."
-msgstr "수신자가 구독 취소 페이지를 통해 블랙리스트에서 자신의 상태를 직접 관리할 수 "
+msgstr ""
+"수신자가 구독 취소 페이지를 통해 블랙리스트에서 자신의 상태를 직접 관리할 수 "
 "있도록 합니다."
 
 #. module: mass_mailing
@@ -1253,8 +1285,8 @@ msgid ""
 msgstr ""
 "수신자가 구독 취소 페이지를 통해 블랙리스트에서 자신의 상태를 직접 관리할 수 "
 "있도록 합니다. 이 옵션을 활성화하면 구독 취소 페이지에서 '나를 블랙리스트에 "
-"추가하기' 버튼이 숨겨집니다. 잠재 고객과 협력사가 다시 구독할 수 있도록 "
-"'다시 구독하기' 버튼은 항상 표시됩니다."
+"추가하기' 버튼이 숨겨집니다. 잠재 고객과 협력사가 다시 구독할 수 있도록 '다"
+"시 구독하기' 버튼은 항상 표시됩니다."
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -1279,6 +1311,12 @@ msgstr "텍스트 이미지 대체"
 #: code:addons/mass_mailing/static/src/builder/options/masonry_block_template_option.xml:0
 msgid "Alternate Text Image Text"
 msgstr "텍스트 이미지 텍스트 대체"
+
+#. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/options/snippet_visibility_option.xml:0
+msgid "Always Visible"
+msgstr "항상 표시"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_numbers
@@ -1384,13 +1422,7 @@ msgstr "작성자"
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/options/blockquote_option.xml:0
 msgid "Author Alignment"
-msgstr ""
-
-#. module: mass_mailing
-#. odoo-javascript
-#: code:addons/mass_mailing/static/src/builder/options/height_option.xml:0
-msgid "Auto"
-msgstr "자동"
+msgstr "작성자 정렬"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_tree
@@ -1449,7 +1481,7 @@ msgstr "기본형"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_schedule
 msgid "Best practices to digitize your company"
-msgstr ""
+msgstr "기업 디지털화를 위한 모범 사례"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
@@ -1499,8 +1531,9 @@ msgstr "포털에서 차단 목록 삭제 요청"
 msgid ""
 "Blocklist removal request from portal of mailing %(mailing_link)s (document %"
 "(record_link)s)"
-msgstr "메일링 %(mailing_link)s의 포털에서 차단 목록 삭제 요청 (document "
-"%(record_link)s)"
+msgstr ""
+"메일링 %(mailing_link)s의 포털에서 차단 목록 삭제 요청 (document %"
+"(record_link)s)"
 
 #. module: mass_mailing
 #. odoo-python
@@ -1514,7 +1547,8 @@ msgstr "포털에서 차단 목록 요청"
 msgid ""
 "Blocklist request from portal of mailing %(mailing_link)s (document %"
 "(record_link)s)"
-msgstr "메일링 %(mailing_link)s의 포털에서 차단 목록 요청 (문서 %(record_link)s)"
+msgstr ""
+"메일링 %(mailing_link)s의 포털에서 차단 목록 요청 (문서 %(record_link)s)"
 
 #. module: mass_mailing
 #. odoo-python
@@ -1522,7 +1556,8 @@ msgstr "메일링 %(mailing_link)s의 포털에서 차단 목록 요청 (문서 
 msgid ""
 "Blocklist request from unsubscribe link of mailing %(mailing_link)s (direct "
 "link usage)"
-msgstr "메일링 %(mailing_link)s (링크 직접 사용)의 구독 취소에서 차단 목록 요청"
+msgstr ""
+"메일링 %(mailing_link)s (링크 직접 사용)의 구독 취소에서 차단 목록 요청"
 
 #. module: mass_mailing
 #. odoo-python
@@ -1530,8 +1565,9 @@ msgstr "메일링 %(mailing_link)s (링크 직접 사용)의 구독 취소에서
 msgid ""
 "Blocklist request from unsubscribe link of mailing %(mailing_link)s "
 "(document %(record_link)s)"
-msgstr "메일링 %(mailing_link)s의 수신 거부 링크에서 차단 목록 요청  (문서 "
-"%(record_link)s)"
+msgstr ""
+"메일링 %(mailing_link)s의 수신 거부 링크에서 차단 목록 요청  (문서 %"
+"(record_link)s)"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
@@ -1541,7 +1577,7 @@ msgstr "인용 블록"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
 msgid "Blog Title"
-msgstr ""
+msgstr "블로그 제목"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -1564,7 +1600,7 @@ msgstr "본문이 메일로 전송되도록 변환"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_showcase
 msgid "Boosts Conversions"
-msgstr ""
+msgstr "전환율 향상"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -1576,6 +1612,7 @@ msgstr "테두리"
 #. module: mass_mailing
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/options/padding_option.xml:0
+#: code:addons/mass_mailing/static/src/builder/tabs/design_tab.xml:0
 msgid "Bottom"
 msgstr "하단"
 
@@ -1598,8 +1635,8 @@ msgid ""
 "Bounce happens when a mailing cannot be delivered (fake address, server "
 "issues, ...). Check each record to see what went wrong."
 msgstr ""
-"반송은 메일을 정상적으로 전송할 수 없을 때 발생합니다 (잘못된 주소, 서버 "
-"문제 등). 각 레코드를 확인하여 반송 사유를 확인하세요."
+"반송은 메일을 정상적으로 전송할 수 없을 때 발생합니다 (잘못된 주소, 서버 문"
+"제 등). 각 레코드를 확인하여 반송 사유를 확인하세요."
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_mailing__bounced
@@ -1632,7 +1669,7 @@ msgstr "%(expected)i %(mailing_type)s를 발송함으로써 얻게 되는 비즈
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_schedule
 msgid "Business Case"
-msgstr ""
+msgstr "비즈니스 사례"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -1651,18 +1688,19 @@ msgstr "버튼 라벨"
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_author
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_blog_title
 msgid "By John Doe"
-msgstr ""
+msgstr "By John Doe"
 
 #. module: mass_mailing
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/js/tours/mass_mailing_tour.js:0
 msgid "By using the <b>Breadcrumb</b>, you can navigate back to the overview."
-msgstr "<b>사이트 이동 경로</b>를 사용하면 전체보기 화면으로 돌아갈 수 있습니다."
+msgstr ""
+"<b>사이트 이동 경로</b>를 사용하면 전체보기 화면으로 돌아갈 수 있습니다."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
 msgid "CTA Badge"
-msgstr ""
+msgstr "CTA 배지"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_mailing__calendar_date
@@ -1739,8 +1777,8 @@ msgid ""
 "Keep it empty if you prefer the first characters of your email content to "
 "appear instead."
 msgstr ""
-"눈에 띄는 문장으로 받는 사람이 이 이메일을 열람하게끔 유도하는 "
-"미리보기입니다.\n"
+"눈에 띄는 문장으로 받는 사람이 이 이메일을 열람하게끔 유도하는 미리보기입니"
+"다.\n"
 "대부분의 받은 편지함에서 이 문장은 제목 옆에 표시됩니다.\n"
 "이메일 콘텐츠의 첫 문자가 대신 표시되도록 하려면 비워두십시오."
 
@@ -1769,12 +1807,14 @@ msgstr "아이콘 변경"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.res_config_settings_view_form
 msgid "Check how well your mailing is doing a day after it has been sent"
-msgstr "메일을 전송한 지 하루가 지나면 메일링이 얼마나 잘 수행되고 있는지 확인하세요"
+msgstr ""
+"메일을 전송한 지 하루가 지나면 메일링이 얼마나 잘 수행되고 있는지 확인하세요"
 
 #. module: mass_mailing
 #: model:ir.model.fields,help:mass_mailing.field_res_config_settings__mass_mailing_reports
 msgid "Check how well your mailing is doing a day after it has been sent."
-msgstr "메일을 전송한 지 하루가 지나면 메일링이 얼마나 잘 수행되고 있는지 확인하세요."
+msgstr ""
+"메일을 전송한 지 하루가 지나면 메일링이 얼마나 잘 수행되고 있는지 확인하세요."
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -1785,22 +1825,22 @@ msgstr "이메일 주소를 확인한 후 보내기를 클릭합니다."
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team
 msgid "Chief Commercial Officer"
-msgstr ""
+msgstr "최고 커머셜 책임자"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team
 msgid "Chief Executive Officer"
-msgstr ""
+msgstr "최고 경영자"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team
 msgid "Chief Financial Officer"
-msgstr ""
+msgstr "최고 재무 책임자"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team
 msgid "Chief Technical Officer"
-msgstr ""
+msgstr "최고 기술 책임자"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.mailing_mailing_schedule_date_view_form
@@ -1826,6 +1866,8 @@ msgid ""
 "Classic pizza with fresh mozzarella, San Marzano tomatoes, and basil leaves, "
 "drizzled with extra virgin olive oil."
 msgstr ""
+"신선한 모짜렐라, 산마르자노 토마토, 바질 잎을 얹은 클래식 피자에 엑스트라 버"
+"진 올리브 오일을 뿌려 마무리한 피자입니다."
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -1861,13 +1903,13 @@ msgstr "여기를 클릭하세요"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_schedule
 msgid "Client Testimonials"
-msgstr ""
+msgstr "고객 후기"
 
 #. module: mass_mailing
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/mass_mailing_builder.xml:0
 msgid "Code View"
-msgstr ""
+msgstr "코드 보기"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -1931,6 +1973,14 @@ msgid ""
 "Comprehensive tools for growing businesses. Optimize your processes and "
 "productivity across your team."
 msgstr ""
+"성장하는 비즈니스를 위해 설계된 종합적인 도구입니다. 팀 전체의 프로세스와 생"
+"산성을 향상하세요."
+
+#. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/options/snippet_visibility_option.xml:0
+msgid "Conditionally"
+msgstr "조건부로"
 
 #. module: mass_mailing
 #: model:ir.model,name:mass_mailing.model_res_config_settings
@@ -2004,7 +2054,8 @@ msgstr "연락처"
 msgid ""
 "Contacts successfully imported. Number of contacts imported: %"
 "(imported_count)s"
-msgstr "연락처를 성공적으로 가져왔습니다. 가져온 연락처의 수입니다:%(imported_count)s"
+msgstr ""
+"연락처를 성공적으로 가져왔습니다. 가져온 연락처의 수입니다:%(imported_count)s"
 
 #. module: mass_mailing
 #. odoo-python
@@ -2025,8 +2076,8 @@ msgstr "콘텐츠 배경"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_media_list
 msgid ""
-"Continue reading <i class=\"fa fa-long-arrow-right align-middle ms-1\"/>"
-msgstr "<i class=\"fa fa-long-arrow-right align-middle ms-1\"/> 계속 읽기"
+"Continue reading <span class=\"fa fa-long-arrow-right align-middle ms-1\"/>"
+msgstr ""
 
 #. module: mass_mailing
 #. odoo-python
@@ -2135,17 +2186,23 @@ msgstr "사용자 정의"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
 msgid "Customer testimonials"
-msgstr ""
+msgstr "고객 후기"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
 msgid "Customers testimonials"
-msgstr ""
+msgstr "고객 후기"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_link_list
 msgid "DON'T MISS THIS"
-msgstr ""
+msgstr "놓치지 마세요,"
+
+#. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/plugins/mass_mailing_setup_plugin.js:0
+msgid "DRAG BUILDING BLOCKS HERE"
+msgstr "작성 블럭을 여기로 끌어오십시오"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -2179,7 +2236,7 @@ msgstr "전용 서버"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team
 msgid "Dedicated professionals driving our success"
-msgstr ""
+msgstr "성공을 이끄는 헌신적인 전문가들"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -2215,8 +2272,8 @@ msgid ""
 "Delete the above image or replace it with a picture that illustrates your "
 "message. Click on the picture to change its <em>rounded corner</em> style."
 msgstr ""
-"위의 이미지를 삭제하거나 메시지를 설명할 수 있는 사진으로 대체합니다. "
-"<em>둥근 모서리</em> 스타일로 변경하려면 사진을 클릭해 주세요."
+"위의 이미지를 삭제하거나 메시지를 설명할 수 있는 사진으로 대체합니다. <em>둥"
+"근 모서리</em> 스타일로 변경하려면 사진을 클릭해 주세요."
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_mailing__delivered
@@ -2263,7 +2320,7 @@ msgstr "목적지 메일링 목록"
 #. module: mass_mailing
 #: model:ir.model.fields.selection,name:mass_mailing.selection__mailing_trace__failure_type__mail_spam
 msgid "Detected As Spam"
-msgstr ""
+msgstr "스팸으로 인식"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_pricelist_boxed
@@ -2283,7 +2340,8 @@ msgstr "모든 기능 알아보기"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_media_list
-msgid "Discover more <i class=\"fa fa-long-arrow-right align-middle ms-1\"/>"
+msgid ""
+"Discover more <span class=\"fa fa-long-arrow-right align-middle ms-1\"/>"
 msgstr ""
 
 #. module: mass_mailing
@@ -2331,6 +2389,8 @@ msgid "Document model"
 msgstr "문서 모델"
 
 #. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/options/snippet_visibility_option.xml:0
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_mailing__mailing_domain
 #: model_terms:ir.ui.view,arch_db:mass_mailing.mailing_filter_view_form
 #: model_terms:ir.ui.view,arch_db:mass_mailing.mailing_filter_view_tree
@@ -2402,13 +2462,19 @@ msgstr "ENDOFSUMMER20"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_attributes_horizontal
 msgid "Easy returns"
-msgstr ""
+msgstr "간단한 반품 절차"
 
 #. module: mass_mailing
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/options/blockquote_option.xml:0
 msgid "Edge Spacing"
-msgstr ""
+msgstr "가장자리 간격"
+
+#. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/options/snippet_visibility_option.xml:0
+msgid "Edit Conditions"
+msgstr "조건 수정"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_features_grid
@@ -2447,7 +2513,8 @@ msgstr "이메일 마케팅"
 #: code:addons/mass_mailing/models/ir_mail_server.py:0
 msgid ""
 "Email Marketing uses it as its default mail server to send mass mailings"
-msgstr "이 서버를 이메일 마케팅의 기본 메일 서버로 사용하여 대량 메일을 전송합니다"
+msgstr ""
+"이 서버를 이메일 마케팅의 기본 메일 서버로 사용하여 대량 메일을 전송합니다"
 
 #. module: mass_mailing
 #: model:ir.model,name:mass_mailing.model_mail_thread
@@ -2491,7 +2558,7 @@ msgstr "%(expected)i 참여 %(mailing_type)s 전송"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_showcase
 msgid "Engages Visitors"
-msgstr ""
+msgstr "방문자 참여 유도"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_trace_report__error
@@ -2540,6 +2607,8 @@ msgid ""
 "enhancing<br/>technology with this latest innovation, crafted to elevate "
 "every athlete's journey."
 msgstr ""
+"모든 선수의 여정을 향상시키기 위해 설계된 최신 혁신 제품으로 최고의 편안함, "
+"<br/>최첨단 디자인, 퍼포먼스 향상 기술을 경험하세요."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_alert
@@ -2547,6 +2616,8 @@ msgid ""
 "Explain the benefits you offer. <br/>Don't write about products or services "
 "here, write about solutions."
 msgstr ""
+"당신이 제공하는 혜택을 설명하세요. <br/>여기에 제품이나 서비스에 대해 쓰지 말"
+"고 솔루션에 대해 써보세요."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.social_links
@@ -2612,18 +2683,13 @@ msgstr "기능 2"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
-msgid "Features"
-msgstr "기능"
-
-#. module: mass_mailing
-#: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
 msgid "Features Grid"
 msgstr "그리드 기능"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_showcase
 msgid "Features showcase"
-msgstr ""
+msgstr "기능 소개"
 
 #. module: mass_mailing
 #. odoo-python
@@ -2655,7 +2721,7 @@ msgstr "직접 저장한 필터"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_link_list
 msgid "Find Out Who's Employee Of The Month"
-msgstr ""
+msgstr "이달의 직원 알아보기"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_contact__first_name
@@ -2715,11 +2781,16 @@ msgid ""
 "                                marketing, and customer experience "
 "strategies."
 msgstr ""
+"창업자이자 최고의 선각자인 토니는 이 회사의 원동력입니다. 그는 소프트웨어 개"
+"발, \n"
+"                                마케팅 및 고객 경험 전략에 참여함으로써 자신"
+"의 역량을 최대한 \n"
+"                                발휘하기를 좋아합니다."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_attributes_horizontal
 msgid "Free shipping"
-msgstr ""
+msgstr "무료 배송"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_trace_report__email_from
@@ -2748,8 +2819,8 @@ msgid ""
 "Great stories are <strong>for everyone</strong> even when only written "
 "<strong>for just one person</strong>. If you try to write with a wide, "
 "general audience in mind, your story will sound fake and lack emotion. No "
-"one will be interested. Write for one person. If it’s genuine for the one, "
-"it’s genuine for the rest."
+"one will be interested. Write for one person. If it's genuine for the one, "
+"it's genuine for the rest."
 msgstr ""
 
 #. module: mass_mailing
@@ -2808,12 +2879,6 @@ msgid "Headings"
 msgstr "제목"
 
 #. module: mass_mailing
-#. odoo-javascript
-#: code:addons/mass_mailing/static/src/builder/options/height_option.xml:0
-msgid "Height"
-msgstr "높이"
-
-#. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_coupon_code
 msgid "Here's your coupon code - but hurry! Ends 9/28"
 msgstr "쿠폰 코드 - 서두르세요! 9/28에 만료됩니다"
@@ -2836,7 +2901,12 @@ msgstr "가장 높은 회신율"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_showcase
 msgid "Highlights Key Attributes"
-msgstr ""
+msgstr "주요 속성 하이라이트"
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
+msgid "Horizontal Attributes"
+msgstr "수평적인 속성"
 
 #. module: mass_mailing
 #: model:mailing.subscription.optout,name:mass_mailing.mailing_subscription_optout_data_1
@@ -2914,6 +2984,8 @@ msgid ""
 "Ideal for newcomers. Essential features to kickstart sales and marketing. "
 "Perfect for small teams."
 msgstr ""
+"영업 및 마케팅 활동을 시작하기 위한 필수 도구가 포함되어 있어 초보자에게 적합"
+"합니다. 소규모 팀에 이상적입니다."
 
 #. module: mass_mailing
 #: model:ir.model.fields,help:mass_mailing.field_mailing_contact__message_needaction
@@ -2945,7 +3017,8 @@ msgstr "이 옵션을 선택하면 일부 정보가 전달 오류를 생성합�
 msgid ""
 "If set, a mass mailing will be created so that you can track its results in "
 "the Email Marketing app."
-msgstr "설정 시, 대량 메일이 생성되며 이메일 마케팅 앱에서 결과를 추적할 수 있습니다."
+msgstr ""
+"설정 시, 대량 메일이 생성되며 이메일 마케팅 앱에서 결과를 추적할 수 있습니다."
 
 #. module: mass_mailing
 #: model:ir.model.fields,help:mass_mailing.field_mailing_contact__is_blacklisted
@@ -2978,8 +3051,9 @@ msgstr "이미지 텍스트 이미지"
 #: code:addons/mass_mailing/models/mailing.py:0
 msgid ""
 "Image size excessive, imported images must be smaller than 42 million pixel"
-msgstr "이미지 크기가 초과되었습니다. 4,200만 픽셀보다 작은 이미지만 가져올 수 "
-"있습니다."
+msgstr ""
+"이미지 크기가 초과되었습니다. 4,200만 픽셀보다 작은 이미지만 가져올 수 있습니"
+"다."
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -3028,7 +3102,7 @@ msgstr "대기열"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_link_list
 msgid "Infographic: Our Company Throughout The Generations"
-msgstr ""
+msgstr "인포그래픽: 세대를 아우르는 회사"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
@@ -3043,7 +3117,7 @@ msgstr "인스타그램"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_schedule
 msgid "Interactive Odoo demo"
-msgstr ""
+msgstr "상호적인 Odoo 데모"
 
 #. module: mass_mailing
 #: model:ir.model.fields.selection,name:mass_mailing.selection__mailing_trace__failure_type__mail_email_invalid
@@ -3098,6 +3172,7 @@ msgid ""
 "It captures your visitors' attention and helps them quickly understand the "
 "value of your product."
 msgstr ""
+"방문자의 시선을 사로잡고 제품의 가치를 빠르게 파악할 수 있도록 도와줍니다."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
@@ -3133,7 +3208,7 @@ msgstr "크게"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_pricelist_boxed
 msgid "Lasagna al Forno"
-msgstr ""
+msgstr "라자냐 알 포르노"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_contact__last_name
@@ -3183,11 +3258,13 @@ msgid ""
 "Layers of pasta, rich meat ragu, béchamel sauce, and melted mozzarella, "
 "baked to perfection."
 msgstr ""
+"진한 미트 라구, 베샤멜 소스, 녹인 모짜렐라를 층층이 쌓아 완벽하게 구운 파스"
+"타."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_text_image
 msgid "Learn more"
-msgstr ""
+msgstr "더 보기"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -3246,7 +3323,8 @@ msgstr "UTM 빌더 수"
 msgid ""
 "Link Trackers will measure how many times each link is clicked as well as "
 "the proportion of %s who clicked at least once in your mailing."
-msgstr "UTM 빌더는 각 링크를 클릭한 횟수와 메일링에서 한 번 이상 클릭한 %s의 비율을 "
+msgstr ""
+"UTM 빌더는 각 링크를 클릭한 횟수와 메일링에서 한 번 이상 클릭한 %s의 비율을 "
 "측정합니다."
 
 #. module: mass_mailing
@@ -3263,7 +3341,7 @@ msgstr "링크"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
 msgid "Links List"
-msgstr ""
+msgstr "링크 목록"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_trace__links_click_ids
@@ -3529,7 +3607,8 @@ msgstr "잘못된 메일링 주소: %s"
 msgid ""
 "Mailing contacts allow you to separate your marketing audience from your "
 "business contact directory."
-msgstr "메일링 연락처를 사용하면 마케팅 대상을 비즈니스 연락처 디렉토리에서 분리할 "
+msgstr ""
+"메일링 연락처를 사용하면 마케팅 대상을 비즈니스 연락처 디렉토리에서 분리할 "
 "수 있습니다."
 
 #. module: mass_mailing
@@ -3582,6 +3661,12 @@ msgstr "수동"
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_pricelist_boxed
 msgid "Margherita"
 msgstr "마르게리타"
+
+#. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/tabs/design_tab.xml:0
+msgid "Margin"
+msgstr "마진"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
@@ -3673,7 +3758,7 @@ msgstr "중간"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team
 msgid "Meet our team"
-msgstr ""
+msgstr "팀 소개"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -3744,8 +3829,8 @@ msgid ""
 "\">Customer Service</span>"
 msgstr ""
 "Michael Fletcher<br/>\n"
-"                   <span style=\"font-size: 12px; font-weight: bolder;\""
-">고객 서비스</span>"
+"                   <span style=\"font-size: 12px; font-weight: bolder;\">고"
+"객 서비스</span>"
 
 #. module: mass_mailing
 #: model:ir.model.fields.selection,name:mass_mailing.selection__mailing_trace__failure_type__mail_email_missing
@@ -3900,8 +3985,9 @@ msgstr "아직 메일링 데이터가 없습니다!"
 msgid ""
 "No contacts were imported. All email addresses are already in the mailing "
 "list."
-msgstr "가져올 연락처가 없습니다. 모든 이메일 주소가 이미 메일링 리스트에 등록되어 "
-"있습니다."
+msgstr ""
+"가져올 연락처가 없습니다. 모든 이메일 주소가 이미 메일링 리스트에 등록되어 있"
+"습니다."
 
 #. module: mass_mailing
 #: model_terms:ir.actions.act_window,help:mass_mailing.action_view_mail_mail_statistics_mailing
@@ -3926,7 +4012,8 @@ msgstr "메일링 캠페인을 찾을 수 없습니다."
 msgid ""
 "No mailing for this A/B testing campaign has been sent yet! Send one first "
 "and try again later."
-msgstr "A/B 테스트 캠페인에 대한 메일이 아직 전송되지 않았습니다. 하나를 먼저 전송 "
+msgstr ""
+"A/B 테스트 캠페인에 대한 메일이 아직 전송되지 않았습니다. 하나를 먼저 전송 "
 "후 나중에 다시 시도하세요."
 
 #. module: mass_mailing
@@ -3934,7 +4021,8 @@ msgstr "A/B 테스트 캠페인에 대한 메일이 아직 전송되지 않았�
 msgid ""
 "No need to import mailing lists, you can send mailings to contacts saved in "
 "other Odoo apps."
-msgstr "메일링 리스트를 가져올 필요 없이 Odoo 앱에 저장된 연락처로 메일을 전송할 수 "
+msgstr ""
+"메일링 리스트를 가져올 필요 없이 Odoo 앱에 저장된 연락처로 메일을 전송할 수 "
 "있습니다."
 
 #. module: mass_mailing
@@ -4055,20 +4143,22 @@ msgstr "읽음 (%i)"
 msgid ""
 "Once the best version is identified, we will send the best one to the "
 "remaining recipients."
-msgstr "가장 좋은 버전이 확인되면 다른 수신자에게도 가장 좋은 버전을 전송합니다."
+msgstr ""
+"가장 좋은 버전이 확인되면 다른 수신자에게도 가장 좋은 버전을 전송합니다."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
 msgid ""
 "Once you send these emails, they'll be making a grand entrance in all the "
 "inboxes, creating quite the buzz!"
-msgstr "이메일을 전송합니다. 수신자를 대상으로 모든 내용이 빠짐없이 작성되었는지 "
-"확인하세요!"
+msgstr ""
+"이메일을 전송합니다. 수신자를 대상으로 모든 내용이 빠짐없이 작성되었는지 확인"
+"하세요!"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
 msgid "One Liner"
-msgstr ""
+msgstr "한 줄 요약"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.mailing_trace_view_search
@@ -4119,8 +4209,8 @@ msgid ""
 "Opt out flag for a specific mailing list. This field should not be used in a "
 "view without a unique and active mailing list context."
 msgstr ""
-"특정 메일링 리스트에 대한 수신 거부 표시입니다. 이 필드는 고유하며, 활성 "
-"메일 목록 컨텍스트가 없는 보기에서는 사용할 수 없습니다."
+"특정 메일링 리스트에 대한 수신 거부 표시입니다. 이 필드는 고유하며, 활성 메"
+"일 목록 컨텍스트가 없는 보기에서는 사용할 수 없습니다."
 
 #. module: mass_mailing
 #: model:ir.actions.act_window,name:mass_mailing.mailing_subscription_action_report_optout
@@ -4169,6 +4259,8 @@ msgid ""
 "Organizing and presenting key information effectively increases the "
 "likelihood of turning your visitors into customers."
 msgstr ""
+"핵심 정보를 효과적으로 구성하고 제시하면 방문자를 고객으로 전환할 가능성이 높"
+"아집니다."
 
 #. module: mass_mailing
 #: model:mailing.subscription.optout,name:mass_mailing.mailing_subscription_optout_data_4
@@ -4178,7 +4270,7 @@ msgstr "기타"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_pricelist_boxed
 msgid "Our Menu"
-msgstr ""
+msgstr "메뉴 소개"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_references
@@ -4188,7 +4280,7 @@ msgstr "우리의 참고 문헌"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_company_team_shapes
 msgid "Our talented crew"
-msgstr ""
+msgstr "재능 있는 팀원"
 
 #. module: mass_mailing
 #: model:ir.model.fields.selection,name:mass_mailing.selection__mailing_trace__trace_status__outgoing
@@ -4234,7 +4326,7 @@ msgstr "대기 중"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_pricelist_boxed
 msgid "Penne all'Arrabbiata"
-msgstr ""
+msgstr "펜네 아라비아타"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_pricelist_boxed
@@ -4242,6 +4334,8 @@ msgid ""
 "Penne pasta tossed in a spicy tomato and garlic sauce with a hint of chili "
 "peppers, finished with fresh parsley."
 msgstr ""
+"칠리 페퍼가 살짝 가미된 매콤한 토마토와 마늘 소스에 버무린 펜네 파스타에 신선"
+"한 파슬리를 얹은 요리입니다."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
@@ -4340,13 +4434,13 @@ msgstr "텍스트 미리보기"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
 msgid "Pricelist Boxed"
-msgstr ""
+msgstr "박스형 가격표"
 
 #. module: mass_mailing
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/tabs/design_tab.xml:0
 msgid "Primary Button"
-msgstr ""
+msgstr "기본 버튼"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_mailing__process
@@ -4379,7 +4473,7 @@ msgstr "속성"
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_contact__properties_base_definition_id
 msgid "Properties Base Definition"
-msgstr ""
+msgstr "속성 기본 정의"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_rating
@@ -4389,13 +4483,19 @@ msgstr "품질 관리"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_pricelist_boxed
 msgid "Quattro Stagioni"
-msgstr ""
+msgstr "콰트로 스타지오니"
 
 #. module: mass_mailing
 #. odoo-python
 #: code:addons/mass_mailing/models/mailing.py:0
 msgid "RECEIVED (%i)"
 msgstr "수신됨 (%i)"
+
+#. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/options/options_container.xml:0
+msgid "REPLACE BY NEW VERSION"
+msgstr "새 버전으로 교체하기"
 
 #. module: mass_mailing
 #. odoo-python
@@ -4419,6 +4519,11 @@ msgstr "평가"
 #: code:addons/mass_mailing/static/src/js/tours/mass_mailing_tour.js:0
 msgid "Ready for take-off!"
 msgstr "준비가 완료되었습니다!"
+
+#. module: mass_mailing
+#: model_terms:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_form
+msgid "Ready to unleash emails?"
+msgstr ""
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_subscription__opt_out_reason_id
@@ -4572,25 +4677,25 @@ msgstr "보고"
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/tabs/design_tab.xml:0
 msgid "Resize Full"
-msgstr ""
+msgstr "전체 크기 조정"
 
 #. module: mass_mailing
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/tabs/design_tab.xml:0
 msgid "Resize Half"
-msgstr ""
+msgstr "절반으로 크기 조정"
 
 #. module: mass_mailing
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/tabs/design_tab.xml:0
 msgid "Resize Quarter"
-msgstr ""
+msgstr "사분의 일 크기로 조정"
 
 #. module: mass_mailing
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/tabs/design_tab.xml:0
 msgid "Resize Three Quarters"
-msgstr ""
+msgstr "3/4 크기 조정"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_mailing__user_id
@@ -4654,6 +4759,8 @@ msgid ""
 "Savor our fresh, local cuisine with a modern twist.<br/>Deliciously crafted "
 "for every taste!"
 msgstr ""
+"모든 입맛을 만족시키는 현대적인 감각으로 <br/>현지에서 조달한 신선한 요리를 "
+"맛보세요!"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_mailing__schedule_type
@@ -4711,16 +4818,16 @@ msgstr "기능의 두 번째 목록"
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/tabs/design_tab.xml:0
 msgid "Secondary Button"
-msgstr ""
+msgstr "추가 버튼"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_attributes_horizontal
 msgid "Secure payment"
-msgstr ""
+msgstr "안전 결제"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_cta_badge
-msgid "See more <i class=\"fa fa-long-arrow-right\" role=\"img\"/>"
+msgid "See more <span class=\"fa fa-long-arrow-right\" role=\"img\"/>"
 msgstr ""
 
 #. module: mass_mailing
@@ -4896,7 +5003,7 @@ msgstr "구분자"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
 msgid "Separator Title"
-msgstr ""
+msgstr "제목 구분 기호"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -4946,8 +5053,9 @@ msgstr "서명"
 msgid ""
 "Since the date and time for this test has not been scheduled, don't forget "
 "to manually send your preferred version."
-msgstr "이 테스트의 날짜와 시간이 정해지지 않았습니다. 수동으로 원하는 버전을 "
-"전송하는 것을 잊지 마세요."
+msgstr ""
+"이 테스트의 날짜와 시간이 정해지지 않았습니다. 수동으로 원하는 버전을 전송하"
+"는 것을 잊지 마세요."
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -4978,7 +5086,7 @@ msgstr "유입 경로"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_pricelist_boxed
 msgid "Spaghetti Carbonara"
-msgstr ""
+msgstr "스파게티 까르보나라"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_media_list
@@ -5002,6 +5110,8 @@ msgid ""
 "Spicy pepperoni paired with fiery chili flakes, mozzarella, and tomato sauce "
 "for a flavorful kick."
 msgstr ""
+"매콤한 페퍼로니와 불맛이 나는 칠리 플레이크, 모짜렐라, 토마토 소스가 어우러"
+"져 풍미를 더해줍니다."
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_res_config_settings__mass_mailing_split_contact_name
@@ -5016,7 +5126,7 @@ msgstr "처음부터 시작하기"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_comparisons
 msgid "Start Now"
-msgstr ""
+msgstr "지금 시작하기"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -5027,7 +5137,7 @@ msgstr "첫 번째 <b>메일링</b>을 생성하여 시작하세요."
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_image_text
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_text_image
-msgid "Start with the customer – find out what they want and give it to them."
+msgid "Start with the customer - find out what they want and give it to them."
 msgstr ""
 
 #. module: mass_mailing
@@ -5066,7 +5176,7 @@ msgstr ""
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_picture
 msgid "Step Up Your Game"
-msgstr ""
+msgstr "한 단계 업그레이드된 게임"
 
 #. module: mass_mailing
 #: model:ir.model.fields,help:mass_mailing.field_mailing_trace__links_click_datetime
@@ -5142,15 +5252,16 @@ msgstr "팀"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
 msgid "Team shapes"
-msgstr ""
+msgstr "팀 모양"
 
 #. module: mass_mailing
 #: model:ir.model.fields,help:mass_mailing.field_mailing_mailing__mail_server_available
 msgid ""
 "Technical field used to know if the user has activated the outgoing mail "
 "server option in the settings"
-msgstr "사용자가 설정에서 발신 메일 서버 옵션을 활성화했는지 확인하는 데 사용되는 "
-"기술적인 필드입니다."
+msgstr ""
+"사용자가 설정에서 발신 메일 서버 옵션을 활성화했는지 확인하는 데 사용되는 기"
+"술적인 필드입니다."
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -5215,7 +5326,7 @@ msgstr "텍스트 - 이미지"
 #. odoo-javascript
 #: code:addons/mass_mailing/static/src/builder/tabs/design_tab.xml:0
 msgid "Text Color"
-msgstr ""
+msgstr "텍스트 색상"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.email_designer_snippets
@@ -5259,8 +5370,9 @@ msgstr "이 수신자에 대한 필터 도메인이 유효하지 않습니다."
 msgid ""
 "The mailing list can be accessible by recipients in the subscription "
 "management page to allow them to update their preferences."
-msgstr "수신인이 구독 관리 페이지에 있는 메일링 리스트에 액세스하여 추가 설정을 "
-"변경할 수 있습니다."
+msgstr ""
+"수신인이 구독 관리 페이지에 있는 메일링 리스트에 액세스하여 추가 설정을 변경"
+"할 수 있습니다."
 
 #. module: mass_mailing
 #. odoo-python
@@ -5268,7 +5380,8 @@ msgstr "수신인이 구독 관리 페이지에 있는 메일링 리스트에 �
 msgid ""
 "The saved filter targets different recipients and is incompatible with this "
 "mailing."
-msgstr "저장된 필터는 다른 수신자를 대상으로 하며 이 메일링과 호환되지 않습니다."
+msgstr ""
+"저장된 필터는 다른 수신자를 대상으로 하며 이 메일링과 호환되지 않습니다."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.ab_testing_description
@@ -5276,8 +5389,8 @@ msgid ""
 "The winner has already been sent. Use <b>Compare Version</b> to get an "
 "overview of this A/B testing campaign."
 msgstr ""
-"우승자에게는 이미 메일이 발송되었습니다. <b>버전 비교</b>를 사용하여 A/B "
-"테스트 캠페인에 대한 전반적인 내용을 확인하세요."
+"우승자에게는 이미 메일이 발송되었습니다. <b>버전 비교</b>를 사용하여 A/B 테스"
+"트 캠페인에 대한 전반적인 내용을 확인하세요."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.ab_testing_description
@@ -5294,6 +5407,12 @@ msgstr "선택한 수신인이 없습니다."
 #: model_terms:ir.ui.view,arch_db:mass_mailing.ab_testing_description
 msgid "This"
 msgstr "해당"
+
+#. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/options/options_container.xml:0
+msgid "This block is outdated."
+msgstr "해당 블록은 최신 버전이 아닙니다"
 
 #. module: mass_mailing
 #. odoo-python
@@ -5347,8 +5466,9 @@ msgstr ""
 msgid ""
 "Thread: replies go to target document. Email: replies are routed to a given "
 "email."
-msgstr "스레드: 답변이 대상 문서로 이동합니다. 이메일: 답변이 지정된 이메일로 "
-"라우팅됩니다."
+msgstr ""
+"스레드: 답변이 대상 문서로 이동합니다. 이메일: 답변이 지정된 이메일로 라우팅"
+"됩니다."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.social_links
@@ -5389,8 +5509,9 @@ msgstr "우승자 메일링을 보내려면 동일한 캠페인을 메일링에 
 msgid ""
 "To track how many replies this mailing gets, make sure its reply-to address "
 "belongs to this database."
-msgstr "이 메일링으로 얼마나 많은 회신을 받았는지 추적하려면 회신 수신 주소가 이 "
-"데이터베이스에 속해 있는지 확인하세요."
+msgstr ""
+"이 메일링으로 얼마나 많은 회신을 받았는지 추적하려면 회신 수신 주소가 이 데이"
+"터베이스에 속해 있는지 확인하세요."
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -5431,6 +5552,8 @@ msgid ""
 "Traditional Roman dish with creamy egg, crispy pancetta, and Pecorino "
 "Romano, topped with black pepper."
 msgstr ""
+"크리미한 계란, 바삭한 판체타, 페코리노 로마노가 어우러진 클래식 로마 요리로 "
+"후추를 뿌려 마무리했습니다."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.ab_testing_description
@@ -5503,7 +5626,7 @@ msgstr "파일 업로드"
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mailing_mailing__use_exclusion_list
 msgid "Use Exclusion List"
-msgstr ""
+msgstr "제외 목록 사용"
 
 #. module: mass_mailing
 #: model:ir.model.fields,help:mass_mailing.field_mailing_mailing__mail_server_id
@@ -5532,7 +5655,8 @@ msgstr "지금 사용"
 msgid ""
 "Use this component for creating a list of featured elements to which you "
 "want to bring attention."
-msgstr "이 구성 요소를 사용하여 강조하고 싶은 주요 기능의 목록을 만들 수 있습니다."
+msgstr ""
+"이 구성 요소를 사용하여 강조하고 싶은 주요 기능의 목록을 만들 수 있습니다."
 
 #. module: mass_mailing
 #: model_terms:ir.actions.act_window,help:mass_mailing.mailing_trace_report_action_mail
@@ -5552,8 +5676,8 @@ msgid ""
 "create a list that fits your needs."
 msgstr ""
 "스니펫을 활용하여 텍스트와 함께 좌우로 정렬된 이미지를 포함한 다양한 유형의 "
-"구성 요소를 만들 수 있습니다. 구성 요소를 복사하여 필요에 맞게 목록을 "
-"만들어보십시오."
+"구성 요소를 만들 수 있습니다. 구성 요소를 복사하여 필요에 맞게 목록을 만들어"
+"보십시오."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_numbers
@@ -5583,13 +5707,20 @@ msgid "View Online"
 msgstr "온라인 보기"
 
 #. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/options/snippet_visibility_option.xml:0
+msgid "Visibility"
+msgstr "공개 범위"
+
+#. module: mass_mailing
 #. odoo-python
 #: code:addons/mass_mailing/models/mailing.py:0
 msgid ""
 "Wait until your mailing has been sent to check how many recipients you "
 "managed to reach."
-msgstr "메일이 전송 완료될 때까지 기다렸다가 얼마나 많은 수신자에게 도달했는지 "
-"확인하세요."
+msgstr ""
+"메일이 전송 완료될 때까지 기다렸다가 얼마나 많은 수신자에게 도달했는지 확인하"
+"세요."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.mailing_contact_import_view_form
@@ -5631,7 +5762,7 @@ msgstr "환영 메시지"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_reviews_wall
 msgid "What our customers are saying about us."
-msgstr ""
+msgstr "고객들이 평가한 내용을 직접 확인해 보세요."
 
 #. module: mass_mailing
 #: model:ir.actions.act_window,name:mass_mailing.mailing_mailing_schedule_date_action
@@ -5667,7 +5798,7 @@ msgstr ""
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_link_list
 msgid "Why You Need Two Types of Content Strategists"
-msgstr ""
+msgstr "두 가지 유형의 콘텐츠 전략가가 필요한 이유"
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -5688,6 +5819,8 @@ msgid ""
 "Write one or two paragraphs describing your product or services. To be "
 "successful your content needs to be useful to your readers."
 msgstr ""
+"제품이나 서비스에 대한 설명을 한두 개의 단락으로 작성하십시오. 방문자에게 유"
+"용한 콘텐츠일수록 성공 확률이 높아집니다."
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.mailing_contact_import_view_form
@@ -5739,6 +5872,12 @@ msgid "You can only apply this action from Mailing Lists."
 msgstr "이 작업은 메일링 리스트에서만 적용 가능합니다."
 
 #. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/options/options_container.xml:0
+msgid "You can still access the block options but it might be ineffective."
+msgstr "차단 옵션에 계속 액세스할 수는 있지만 효과가 없을 수 있습니다."
+
+#. module: mass_mailing
 #. odoo-python
 #: code:addons/mass_mailing/models/utm_medium.py:0
 msgid ""
@@ -5746,8 +5885,8 @@ msgid ""
 "mailings in Mass Mailing:\n"
 "%(mailing_names)s"
 msgstr ""
-"UTM 매체는 대량 메일링에서 다음 메일링과 연결되어 있으므로 삭제할 수 "
-"없습니다:\n"
+"UTM 매체는 대량 메일링에서 다음 메일링과 연결되어 있으므로 삭제할 수 없습니"
+"다:\n"
 "%(mailing_names)s"
 
 #. module: mass_mailing
@@ -5758,8 +5897,8 @@ msgid ""
 "mailings in Mass Mailing:\n"
 "%(mailing_names)s"
 msgstr ""
-"UTM 소스는 대량 메일링에서 다음 메일링과 연결되어 있으므로 삭제할 수 "
-"없습니다:\n"
+"UTM 소스는 대량 메일링에서 다음 메일링과 연결되어 있으므로 삭제할 수 없습니"
+"다:\n"
 "%(mailing_names)s"
 
 #. module: mass_mailing
@@ -5786,12 +5925,19 @@ msgid "You may also be interested in"
 msgstr "다음 항목에도 관심이 있으실 수 있습니다."
 
 #. module: mass_mailing
+#. odoo-javascript
+#: code:addons/mass_mailing/static/src/builder/options/options_container.xml:0
+msgid "You might not be able to customize it anymore."
+msgstr "더 이상 사용자 지정이 불가능할 수 있습니다."
+
+#. module: mass_mailing
 #. odoo-python
 #: code:addons/mass_mailing/models/mailing_contact.py:0
 msgid ""
 "You should give either list_ids, either subscription_ids to create new "
 "contacts."
-msgstr "새 연락처를 만들려면 list_ids 나 subscription_ids 중 하나를 제공해야 합니다."
+msgstr ""
+"새 연락처를 만들려면 list_ids 나 subscription_ids 중 하나를 제공해야 합니다."
 
 #. module: mass_mailing
 #. odoo-javascript
@@ -5811,12 +5957,12 @@ msgstr "앞으로는 이 메일링 리스트에서 어떠한 소식도 받지 �
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_subtitle
 msgid "Your Subtitle"
-msgstr ""
+msgstr "부제목"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_blog_title
 msgid "Your Super Article Title"
-msgstr ""
+msgstr "기사 제목"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_author
@@ -5982,12 +6128,25 @@ msgstr "이 버전을 수신하게 됩니다.<br/>"
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_pricelist_boxed
 msgid "✽  Pastas"
-msgstr ""
+msgstr "✽  파스타"
 
 #. module: mass_mailing
 #: model_terms:ir.ui.view,arch_db:mass_mailing.s_pricelist_boxed
 msgid "✽  Pizzas"
-msgstr ""
+msgstr "✽  피자"
+
+#~ msgid "Auto"
+#~ msgstr "자동"
+
+#~ msgid ""
+#~ "Continue reading <i class=\"fa fa-long-arrow-right align-middle ms-1\"/>"
+#~ msgstr "<i class=\"fa fa-long-arrow-right align-middle ms-1\"/> 계속 읽기"
+
+#~ msgid "Features"
+#~ msgstr "기능"
+
+#~ msgid "Height"
+#~ msgstr "높이"
 
 #~ msgid "$18"
 #~ msgstr "$18"
@@ -6095,9 +6254,6 @@ msgstr ""
 #~ "법입니다. 배경 이미지 또는 색상을 선택합니다. 블록의 크기를 조정하고 복제"
 #~ "하여 자신만의 레이아웃을 만들 수도 있습니다. 이미지 또는 아이콘을 추가하"
 #~ "여 블록을 사용자 정의합니다."
-
-#~ msgid "DRAG BUILDING BLOCKS HERE"
-#~ msgstr "작성 블럭을 여기로 끌어오십시오"
 
 #~ msgid "Delivered to"
 #~ msgstr "배송됨"

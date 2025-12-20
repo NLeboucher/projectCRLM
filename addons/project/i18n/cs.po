@@ -18,13 +18,14 @@
 # Aleš Fiala <f.ales1@seznam.cz>, 2023
 # Jiří Podhorecký, 2023
 # "Dylan Kiss (dyki)" <dyki@odoo.com>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-11 14:00+0000\n"
-"PO-Revision-Date: 2025-09-16 10:06+0000\n"
-"Last-Translator: \"Dylan Kiss (dyki)\" <dyki@odoo.com>\n"
+"POT-Creation-Date: 2025-11-07 18:35+0000\n"
+"PO-Revision-Date: 2025-11-08 19:16+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Czech <https://translate.odoo.com/projects/odoo-19/project/cs/"
 ">\n"
 "Language: cs\n"
@@ -401,8 +402,8 @@ msgid ""
 "<span class=\"fa fa-envelope-o me-2\" aria-label=\"Domain Alias\" "
 "title=\"Domain Alias\"/>"
 msgstr ""
-"<span class=\"fa fa-envelope-o me-2\" aria-label=\"Domain Alias\" title="
-"\"Domain Alias\"/>"
+"<span class=\"fa fa-envelope-o me-2\" aria-label=\"Domain Alias\" "
+"title=\"Domain Alias\"/>"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_project_kanban
@@ -508,7 +509,7 @@ msgstr "<u>Milníky</u>"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_update_default_description
 msgid "<u>Profitability</u>"
-msgstr ""
+msgstr "<u>Ziskovost</u>"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_update_default_description
@@ -1020,12 +1021,12 @@ msgid ""
 " * Neutral or bad feedback will set the kanban state to 'Changes Requested' "
 "(orange bullet).\n"
 msgstr ""
-"Automatická změna stavu, když zákazník odpoví na zpětnou vazbu pro tuto fázi."
-"\n"
+"Automatická změna stavu, když zákazník odpoví na zpětnou vazbu pro tuto "
+"fázi.\n"
 " * Dobrá zpětná vazba od zákazníka aktualizuje stav na \"Schváleno\" (zelená "
 "odrážka).\n"
-" * Neutrální nebo špatná zpětná vazba nastaví stav kanbanu na "
-"\"Požadované změny\" (oranžová odrážka).\n"
+" * Neutrální nebo špatná zpětná vazba nastaví stav kanbanu na \"Požadované "
+"změny\" (oranžová odrážka).\n"
 
 #. module: project
 #: model:mail.template,description:project.mail_template_data_project_task
@@ -1584,7 +1585,7 @@ msgstr "URL zákaznického portálu"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.task_type_edit
 msgid "Customer Rating"
-msgstr ""
+msgstr "Hodnocení zákazníků"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.rating_rating_action_project_report
@@ -1750,7 +1751,8 @@ msgstr ""
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.open_task_type_form
 msgid "Define the steps your tasks move through from creation to completion."
-msgstr "Definujte kroky, kterými úkoly procházejí od vytvoření až po dokončení."
+msgstr ""
+"Definujte kroky, kterými úkoly procházejí od vytvoření až po dokončení."
 
 #. module: project
 #: model:ir.actions.server,name:project.unlink_project_stage_action
@@ -1899,6 +1901,7 @@ msgstr "Zrušit"
 #: model:ir.model.fields,field_description:project.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:project.field_res_partner__display_name
 #: model:ir.model.fields,field_description:project.field_res_users__display_name
+#: model:ir.model.fields,field_description:project.field_res_users_settings__display_name
 #: model:ir.model.fields,field_description:project.field_task_share_wizard__display_name
 msgid "Display Name"
 msgstr "Zobrazovací název"
@@ -2110,7 +2113,7 @@ msgstr "Finance"
 #: model:ir.model.fields,field_description:project.field_project_project_stage__fold
 #: model:ir.model.fields,field_description:project.field_project_task_type__fold
 msgid "Folded"
-msgstr ""
+msgstr "Složeno"
 
 #. module: project
 #. odoo-javascript
@@ -2336,6 +2339,7 @@ msgstr "Jak jde tento projekt?"
 #: model:ir.model.fields,field_description:project.field_res_config_settings__id
 #: model:ir.model.fields,field_description:project.field_res_partner__id
 #: model:ir.model.fields,field_description:project.field_res_users__id
+#: model:ir.model.fields,field_description:project.field_res_users_settings__id
 #: model:ir.model.fields,field_description:project.field_task_share_wizard__id
 msgid "ID"
 msgstr "ID"
@@ -2488,8 +2492,8 @@ msgstr ""
 #. module: project
 #. odoo-javascript
 #: code:addons/project/static/src/components/subtask_kanban_list/subtask_kanban_list.js:0
-msgid "Invalid fields: "
-msgstr "Neplatná pole: "
+msgid "Invalid Display Name"
+msgstr ""
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_project__privacy_visibility__invited_users
@@ -2663,6 +2667,12 @@ msgstr "Opožděné milníky"
 #: model:project.task.type,name:project.project_personal_stage_demo_4
 msgid "Later"
 msgstr "Později"
+
+#. module: project
+#. odoo-javascript
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "Let's create a regular <b>project</b>."
+msgstr ""
 
 #. module: project
 #. odoo-javascript
@@ -3412,7 +3422,7 @@ msgstr "URL portálového přístupu"
 #. module: project
 #: model:ir.model,name:project.model_portal_share
 msgid "Portal Sharing"
-msgstr ""
+msgstr "Portálové sdílení"
 
 #. module: project
 #. odoo-python
@@ -4772,12 +4782,6 @@ msgid "Tasks in Recurrence"
 msgstr "Úkoly v opakování"
 
 #. module: project
-#. odoo-python
-#: code:addons/project/models/project_task.py:0
-msgid "Tasks in a project template cannot be converted into regular tasks."
-msgstr ""
-
-#. module: project
 #: model:ir.actions.act_window,name:project.project_milestone_action_view_tasks
 msgid "Tasks.test"
 msgstr ""
@@ -4816,7 +4820,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form_base
 msgid "Templates"
-msgstr ""
+msgstr "Vzory"
 
 #. module: project
 #. odoo-javascript
@@ -5209,7 +5213,7 @@ msgstr "Dnešní aktivity"
 #. odoo-javascript
 #: code:addons/project/static/src/views/project_task_control_panel/project_task_control_panel.xml:0
 msgid "Top Menu"
-msgstr ""
+msgstr "Hlavní menu"
 
 #. module: project
 #. odoo-javascript
@@ -5273,7 +5277,8 @@ msgstr "Sledujte čas strávený na projektech a úkolech"
 msgid ""
 "Transparent tags are not visible in the kanban view of your projects and "
 "tasks."
-msgstr "Průhledné značky nejsou v zobrazení kanbanu projektů a úkolů viditelné."
+msgstr ""
+"Průhledné značky nejsou v zobrazení kanbanu projektů a úkolů viditelné."
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_task_type__rating_status_period__bimonthly
@@ -5450,6 +5455,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project.portal_tasks_list
 msgid "User"
 msgstr "Uživatel"
+
+#. module: project
+#: model:ir.model,name:project.model_res_users_settings
+msgid "User Settings"
+msgstr "Uživatelské nastavení"
 
 #. module: project
 #: model:res.groups,comment:project.group_project_user
@@ -5743,7 +5753,7 @@ msgstr "Vaši manažeři rozhodnou, která zpětná vazba bude přijata"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.edit_project
 msgid "alias"
-msgstr ""
+msgstr "alias"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.edit_project
@@ -5980,6 +5990,9 @@ msgstr "👤 Nepřiřazeno"
 #: code:addons/project/models/project_task.py:0
 msgid "🔒 Private"
 msgstr "🔒 Soukromé"
+
+#~ msgid "Invalid fields: "
+#~ msgstr "Neplatná pole: "
 
 #~ msgid "# Tasks"
 #~ msgstr "# úkolů"

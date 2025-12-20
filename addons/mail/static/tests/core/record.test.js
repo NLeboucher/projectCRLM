@@ -7,6 +7,7 @@ import { Record, Store, makeStore } from "@mail/core/common/record";
 import { AND, fields } from "@mail/model/misc";
 import { serializeDateTime } from "@web/core/l10n/dates";
 import { registry } from "@web/core/registry";
+import { effect } from "@web/core/utils/reactive";
 
 const Markup = markup().constructor;
 
@@ -1218,16 +1219,19 @@ test("Can assign new record on Many field with One inverse", async () => {
     const thread = store.Thread.insert("general");
     const file1 = store.File.insert("file1.txt");
     const file2 = store.File.insert("file2.txt");
-    thread.files.push(file1);
-    expect(thread.files.length).toBe(1);
-    expectRecord(thread.files[0]).toEqual(file1);
-    expectRecord(file1.thread).toEqual(thread);
-    expect(file2.thread).toBe(undefined);
-    thread.files[0] = file2;
-    expect(thread.files.length).toBe(1);
-    expectRecord(thread.files[0]).toEqual(file2);
+    const file3 = store.File.insert("file3.txt");
+    const file4 = store.File.insert("file4.txt");
+    const file2Replacement = store.File.insert("file2repl.txt");
+    thread.files.push(file1, file2, file3, file4);
+    expect(thread.files.length).toBe(4);
+    expectRecord(thread.files[1]).toEqual(file2);
     expectRecord(file2.thread).toEqual(thread);
-    expect(file1.thread).toBe(undefined);
+    expect(file2Replacement.thread).toBe(undefined);
+    thread.files[1] = file2Replacement;
+    expect(thread.files.length).toBe(4);
+    expectRecord(thread.files[1]).toEqual(file2Replacement);
+    expectRecord(file2Replacement.thread).toEqual(thread);
+    expect(file2.thread).toBe(undefined);
 });
 
 test("Deleted records are not returned by 'Model.records' nor 'Model.get()'", async () => {
@@ -1336,4 +1340,75 @@ test("Delete record with side-effect compute to insert it should have resulting 
     discussApp.state.delete();
     expect(discussApp.state.status).toEqual("init");
     expect(discussApp.state.thread).toBe(undefined);
+});
+
+test("side-effect of double deletion of record should work as expected with no crash'", async () => {
+    (class Channel extends Record {
+        static id = "name";
+        name;
+        correspondent = fields.One("Member", {
+            compute() {
+                return this.members[0];
+            },
+        });
+        members = fields.Many("Member", {
+            onDelete: (r) => r.delete(),
+        });
+        parent = fields.One("Channel", {
+            onDelete() {
+                this.delete(); // important: triggers double-deletion when deleting sub-thread.
+            },
+        });
+        threads = fields.Many("Channel", { inverse: "parent" });
+    }).register(localRegistry);
+    (class Member extends Record {
+        static id = "partner";
+        partner = fields.One("Partner");
+        channel = fields.One("Channel", { inverse: "members" });
+    }).register(localRegistry);
+    (class Partner extends Record {
+        static id = "name";
+        name;
+    }).register(localRegistry);
+    const store = await start();
+    const general = store.Channel.insert("general");
+    const suggestions = store.Channel.insert("Suggestions");
+    suggestions.parent = general;
+    const mitchell = store.Partner.insert("Mitchell");
+    const marc = store.Partner.insert("Marc");
+    const joel = store.Partner.insert("Joel");
+    general.members.push({ partner: mitchell });
+    general.members.push({ partner: marc });
+    general.members.push({ partner: joel });
+    suggestions.members.push({ partner: mitchell });
+    const reactiveGeneral = reactive(general, render);
+    function render() {
+        // Important: observe computed field `correspondent` lazily to trigger internal onChange
+        void reactiveGeneral?.threads.forEach((t) => t.correspondent?.partner.name);
+    }
+    render();
+    suggestions.delete();
+    expect(suggestions.exists()).toBe(false);
+});
+
+test("Record exists is reactive", async () => {
+    (class Thread extends Record {
+        static id = "name";
+        name;
+    }).register(localRegistry);
+    const store = await start();
+    const thread = store.Thread.insert("General");
+    effect(
+        (rec) => {
+            if (rec.exists()) {
+                expect.step("thread exists");
+            } else {
+                expect.step("thread does not exist");
+            }
+        },
+        [thread]
+    );
+    await expect.waitForSteps(["thread exists"]);
+    thread.delete();
+    await expect.waitForSteps(["thread does not exist"]);
 });

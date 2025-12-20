@@ -5,6 +5,7 @@ import os
 import logging
 import re
 import requests
+import urllib.parse
 import werkzeug.urls
 import werkzeug.utils
 import werkzeug.wrappers
@@ -34,6 +35,7 @@ from odoo.addons.web.controllers.binary import Binary
 from odoo.addons.web.controllers.session import Session
 from odoo.addons.website.tools import get_base_domain
 from odoo.tools.json import scriptsafe as json
+from odoo.tools.translate import TRANSLATED_ELEMENTS
 
 _lt = LazyTranslate(__name__)
 logger = logging.getLogger(__name__)
@@ -68,11 +70,9 @@ class QueryURL:
                     paths[key] = "%s" % value
             elif value:
                 if isinstance(value, (list, set)):
-                    fragments.append(
-                        werkzeug.urls.url_encode([(key, item) for item in value if item])
-                    )
+                    fragments.append(urllib.parse.urlencode([(key, item) for item in value if item]))
                 else:
-                    fragments.append(werkzeug.urls.url_encode([(key, value)]))
+                    fragments.append(urllib.parse.urlencode([(key, value)]))
         for key in path_args:
             value = paths.get(key)
             if value is not None:
@@ -103,9 +103,6 @@ class Website(Home):
         Most DBs will just have a website.page with '/' as URL and keep the
         homepage_url setting empty.
         """
-        # prefetch all menus (it will prefetch website.page too)
-        top_menu = request.website.menu_id
-
         homepage_url = request.website._get_cached('homepage_url')
         if homepage_url and homepage_url != '/':
             request.reroute(homepage_url)
@@ -126,6 +123,9 @@ class Website(Home):
         # Fallback on first accessible menu
         def is_reachable(menu):
             return menu.is_visible and menu.url not in ('/', '', '#') and not menu.url.startswith(('/?', '/#', ' '))
+
+        # prefetch all menus (it will prefetch website.page too)
+        top_menu = request.website.menu_id
 
         reachable_menus = top_menu.child_id.filtered(is_reachable)
         if reachable_menus:
@@ -211,6 +211,10 @@ class Website(Home):
     @http.route('/website/get_languages', type='jsonrpc', auth="user", website=True, readonly=True)
     def website_languages(self, **kwargs):
         return [(py_to_js_locale(lg.code), lg.url_code, lg.name) for lg in request.website.language_ids]
+
+    @http.route('/website/get_translated_elements', type='jsonrpc', auth="user", readonly=True)
+    def translated_elements(self, **kwargs):
+        return list(TRANSLATED_ELEMENTS)
 
     @http.route('/website/lang/<lang>', type='http', auth="public", website=True, multilang=False)
     def change_lang(self, lang, r='/', **kwargs):
@@ -409,6 +413,10 @@ class Website(Home):
             ]
         }
 
+    @http.route('/website/check_existing_link', type='jsonrpc', auth="user", website=True, readonly=True)
+    def check_existing_link(self, link):
+        return request.website.check_existing_page(link)
+
     @http.route('/website/save_session_layout_mode', type='jsonrpc', auth='public', website=True, readonly=True)
     def save_session_layout_mode(self, layout_mode, view_id):
         assert layout_mode in ('grid', 'list'), "Invalid layout mode"
@@ -421,7 +429,9 @@ class Website(Home):
             dynamic_filter_sudo = dynamic_filter_sudo.search(
                 Domain('id', '=', filter_id) & request.website.website_domain()
             )
-        return dynamic_filter_sudo._render(**kwargs) or []
+        single_record_filter = kwargs.get('limit') == 1 and kwargs.get('res_model') and kwargs.get('res_id')
+        dynamic_filter_found = single_record_filter or dynamic_filter_sudo
+        return dynamic_filter_sudo._render(**kwargs) if dynamic_filter_found else []
 
     @http.route('/website/snippet/options_filters', type='jsonrpc', auth='user', website=True, readonly=True)
     def get_dynamic_snippet_filters(self, model_name=None, search_domain=None):
@@ -842,7 +852,9 @@ class Website(Home):
             record = request.env[model['model']].browse(model['id'])
             model['field'] = 'arch_db' if model['field'] == 'arch' else model['field']
             tree = html.fromstring(str(record[model['field']]))
-            for index, el in enumerate(tree.xpath('//img')):
+            # Only process static img elements (with src) - skip dynamic
+            # template images (t-att*)
+            for index, el in enumerate(tree.xpath('//img[@src]')):
                 role = el.get('role')
                 decorative = role == "presentation"
                 alt = el.get('alt')
